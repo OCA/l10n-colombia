@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <!-- Extending Partner Form View -->
+        <record id="view_partner_form" model="ir.ui.view">
+           <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+
+                <!-- Hiding some fields that will be replaced partially or just set to invisible -->
+                <field name="name" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+
+                <field name="company_type" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+
+                <field name="state_id" position="replace">
+                    <field name="state_id" invisible="1"/>
+                </field>
+
+                <field name="city" position="replace">
+                    <field name="city" invisible="1"/>
+                </field>
+
+                <field name="country_id" position="replace">
+                    <field name="country_id" invisible="1"/>
+                </field>
+
+
+                <!-- Dynamic Form which opens when creating a related contact to a company -->
+                <xpath expr="(//field[@name='city'])[4]" position="replace"></xpath>
+                <xpath expr="(//field[@name='state_id'])[4]" position="replace"></xpath>
+                <xpath expr="(//field[@name='country_id'])[4]" position="replace"></xpath>
+
+                <xpath expr="(//field[@name='zip'])[4]" position="after">
+                    <field name="change_country" class="oe_edit_only"
+                           attrs="{'invisible':[('change_country', '=', True)]}"/>
+
+                    <field name="country_id"
+                           attrs="{'readonly':[('change_country', '=', False)]}"
+                           options='{"no_open": True, "no_create": True}'
+                           placeholder="Country" on_change="onchange_location(country_id, False)"
+                           class="o_address_country" /> <!-- Country -->
+                    <field name="state_id"
+                           options="{'no_open': True}"
+                           placeholder="Department"
+                           attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('country_id', '=', False)], 'required': [('xcity', '!=', False)]}" on_change="onchange_location(False, state_id)" /> <!-- Department -->
+                    <field name="xcity"
+                           options="{'no_open': True}"
+                           placeholder="City"
+                           attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('state_id', '=', False)]}" />  <!-- City / Municipality -->
+
+                </xpath>
+
+                <xpath expr="(//field[@name='name'])[4]" position="before">
+                    <field name="pos_name" placeholder="Point of Sales Name or Direction" attrs="{'invisible':['|',('type', '!=', 'delivery')], 'required': [('type', '=', 'delivery')]}" />
+                    <field name="x_name1"
+                           placeholder="First Name" attrs="{'invisible':['|',('type', '=', 'delivery')], 'required': [('type', '!=', 'delivery')]}" />
+                    <field name="x_name2"
+                           placeholder="Second Name" attrs="{'invisible':['|',('type', '=', 'delivery')]}" />
+                    <field name="x_lastname1"
+                           placeholder="Last Name" attrs="{'invisible':['|',('type', '=', 'delivery')], 'required': [('type', '!=', 'delivery')]}" />
+                    <field name="x_lastname2"
+                           placeholder="Second Last Name" attrs="{'invisible':['|',('type', '=', 'delivery')]}" />
+                    <field name="xbirthday" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+
+                    <field name="doctype" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+                    <field name="xidentification"
+                           placeholder="e.g. 900301230"
+                           attrs="{'invisible':['|','|','|',('doctype', '=', 43), ('doctype', '=', 1), ('doctype', '=', False), ('type', '=', 'delivery')]}" />
+                    <field name="formatedNit"
+                           attrs="{'invisible':[('doctype', '!=', 31)]}"
+                           readonly="1" />
+                    <field name="dv" invisible="1" />
+                    <field name="x_pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+                    <field name="ciiu" attrs="{'invisible':[('type', '=', 'delivery')]}" domain="[('type', '=', 'other')]" />
+
+                </xpath>
+
+                <!-- Adding some more relevant fields to the form view -->
+                <field name="company_type" position="after">
+                    <field invisible="1"
+                           name="company_type"
+                           widget="radio"
+                           class="oe_edit_only"
+                           options="{'horizontal': true}"/>
+
+                    <field name="is_company" class="oe_inline" modifiers="{}"/>
+                    <label for="is_company" string="Is it a Company?"/>
+                </field>
+
+                <field name="parent_id" position="before">
+                    <h3>
+                        <field
+                                name="name"
+                                attrs="{'invisible':[('x_name1', '=', ''),('companyName', '=', False)]}"
+                                placeholder="Don't touch! Field will be filled up automatically!" />
+                    </h3>
+                </field>
+
+                <field name="type" position="before">
+                    <field name="personType"
+                           attrs="{'readonly':[('company_type', '=', 'person')]}"/>
+                    <field name="doctype" attrs="{'invisible':[('type', '=', 'delivery')], 'required': [('doctype', '=', False)]}" />
+                    <field name="xidentification"
+                           placeholder="e.g. 900301230"
+                           attrs="{'invisible':['|','|',('doctype', '=', 43), ('doctype', '=', 1), ('doctype', '=', False)]}" />
+                    <field name="formatedNit"
+                           attrs="{'invisible':[('doctype', '!=', 31)]}"
+                           readonly="1" />
+                    <field name="dv" invisible="1" />
+                    <field name="companyName"
+                           placeholder="Name of the Company"
+                           attrs="{'invisible':['|',('personType', '=', 1),('company_type', '=', 'person')], 'required': [('personType', '=', 2)]}" />
+                    <field name="pos_name" placeholder="Point of Sales Name or Direction" attrs="{'invisible':['|',('type', '!=', 'delivery')], 'required': [('type', '=', 'delivery')]}" />
+                    <field name="x_name1"
+                           placeholder="First Name"
+                           default_focus="1"
+                           attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')], 'required': [('personType', '=', 1), ('type', '!=', 'delivery')]}" />
+                    <field name="x_name2"
+                           placeholder="Second Name"
+                           attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')]}" />
+                    <field name="x_lastname1"
+                           placeholder="Last Name"
+                           attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')], 'required': [('personType', '=', 1), ('type', '!=', 'delivery')]}" />
+                    <field name="x_lastname2"
+                           placeholder="Second Last Name"
+                           attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')]}"  />
+                    <field name="xbirthday" attrs="{'invisible':[('is_company', '=', True)]}" />
+                    <field name="x_pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+                    <field name="ciiu" attrs="{'invisible':[('type', '=', 'delivery')]}"  domain="[('type', '=', 'other')]" />
+
+                </field>
+                <field name="website" position="before">
+
+                    <field name="change_country" class="oe_edit_only"
+                           attrs="{'invisible':[('change_country', '=', True)]}"/>
+
+                    <field name="country_id"
+                           attrs="{'readonly':[('change_country', '=', False)]}"
+                           options='{"no_open": True, "no_create": True}'
+                           placeholder="Country" on_change="onchange_location(country_id, False)"
+                           class="o_address_country" /> <!-- Country -->
+                    <field name="state_id"
+                           options="{'no_open': True}"
+                           placeholder="Department"
+                           attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('country_id', '=', False)], 'required': [('xcity', '!=', False)]}" on_change="onchange_location(False, state_id)" /> <!-- Department -->
+                    <field name="xcity"
+                           options="{'no_open': True}"
+                           placeholder="City"
+                           attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('state_id', '=', False)]}" />  <!-- City / Municipality -->
+                </field>
+            </field>
+        </record>
+
+        <!-- Extending the Partner Tree view -->
+        <record id="view_tree_res_partner_inherited" model="ir.ui.view">
+            <field name="name">Partner – User extension</field>
+                <field name="model">res.partner</field>
+                <field name="inherit_id" ref="base.view_partner_tree"/>
+                <field name="arch" type="xml">
+                    <tree position="attributes">
+                        <attribute name="colors">black:doctype==43;black:doctype==1;red:xidentification==False;red:xidentification=='';</attribute>
+                    </tree>
+                <field name="phone" position="before">
+                    <field name="xidentification" string="Identification" />
+                    <field name="doctype" invisible="1" />
+                </field>
+            </field>
+        </record>
+
+        <!-- Extending the Partner Kanban view -->
+        <record model="ir.ui.view" id="res_partner_kanban_view_extened">
+            <field name="name">res.partner.kanban.view.extened</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <xpath expr='//kanban/templates/t/div/div[3]/ul' position="before">
+                    <field name="doctype" invisible="1"/>
+
+                    <div attrs="{'invisible':[('xidentification', '=', False)]}">
+                        Document # <field name="xidentification" />
+                    </div>
+                    <div t-if="record.doctype.raw_value !=1">
+                        <div t-if="record.doctype.raw_value !=43">
+                            <div t-if="!record.xidentification.raw_value"
+                                 style="margin: 0px; padding:3px 3px 10px 3px; color:#F77171; background-color: #FFF3F3;">
+                                <b>Information is incomplete!</b><br/> Please update soon!
+                            </div>
+                        </div>
+                    </div>
+
+
+                </xpath>
+            </field>
+        </record>
+
+
+        <!-- Extending the Search: Making document number searchable -->
+        <record id="view_search_res_partner_inherited" model="ir.ui.view">
+            <field name="name">Search - extension</field>
+                <field name="model">res.partner</field>
+                <field name="inherit_id" ref="base.view_res_partner_filter"/>
+                <field name="arch" type="xml">
+                    <field name="name" position="replace">
+                        <field name="name" filter_domain="['|',('display_name','ilike',self), ('xidentification','ilike',self)]" />
+                    </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
