@@ -20,8 +20,8 @@
 from openerp import models, fields, api
 
 
-class Ciiu(models.Model):
-    _name = "ciiu"
+class Industrial_Classification(models.Model):
+    _name = "ciiu"  # res.co.ciiu
     _description = "ISIC List"
 
     name = fields.Char(

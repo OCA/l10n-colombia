@@ -56,13 +56,13 @@
 
                 <xpath expr="(//field[@name='name'])[4]" position="before">
                     <field name="pos_name" placeholder="Point of Sales Name or Direction" attrs="{'invisible':['|',('type', '!=', 'delivery')], 'required': [('type', '=', 'delivery')]}" />
-                    <field name="x_name1"
+                    <field name="name1"
                            placeholder="First Name" attrs="{'invisible':['|',('type', '=', 'delivery')], 'required': [('type', '!=', 'delivery')]}" />
-                    <field name="x_name2"
+                    <field name="name2"
                            placeholder="Second Name" attrs="{'invisible':['|',('type', '=', 'delivery')]}" />
-                    <field name="x_lastname1"
+                    <field name="lastname1"
                            placeholder="Last Name" attrs="{'invisible':['|',('type', '=', 'delivery')], 'required': [('type', '!=', 'delivery')]}" />
-                    <field name="x_lastname2"
+                    <field name="lastname2"
                            placeholder="Second Last Name" attrs="{'invisible':['|',('type', '=', 'delivery')]}" />
                     <field name="xbirthday" attrs="{'invisible':[('type', '=', 'delivery')]}" />
 
@@ -74,7 +74,7 @@
                            attrs="{'invisible':[('doctype', '!=', 31)]}"
                            readonly="1" />
                     <field name="dv" invisible="1" />
-                    <field name="x_pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+                    <field name="pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
                     <field name="ciiu" attrs="{'invisible':[('type', '=', 'delivery')]}" domain="[('type', '=', 'other')]" />
 
                 </xpath>
@@ -95,7 +95,7 @@
                     <h3>
                         <field
                                 name="name"
-                                attrs="{'invisible':[('x_name1', '=', ''),('companyName', '=', False)]}"
+                                attrs="{'invisible':[('name1', '=', ''),('companyName', '=', False)]}"
                                 placeholder="Don't touch! Field will be filled up automatically!" />
                     </h3>
                 </field>
@@ -115,21 +115,21 @@
                            placeholder="Name of the Company"
                            attrs="{'invisible':['|',('personType', '=', 1),('company_type', '=', 'person')], 'required': [('personType', '=', 2)]}" />
                     <field name="pos_name" placeholder="Point of Sales Name or Direction" attrs="{'invisible':['|',('type', '!=', 'delivery')], 'required': [('type', '=', 'delivery')]}" />
-                    <field name="x_name1"
+                    <field name="name1"
                            placeholder="First Name"
                            default_focus="1"
                            attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')], 'required': [('personType', '=', 1), ('type', '!=', 'delivery')]}" />
-                    <field name="x_name2"
+                    <field name="name2"
                            placeholder="Second Name"
                            attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')]}" />
-                    <field name="x_lastname1"
+                    <field name="lastname1"
                            placeholder="Last Name"
                            attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')], 'required': [('personType', '=', 1), ('type', '!=', 'delivery')]}" />
-                    <field name="x_lastname2"
+                    <field name="lastname2"
                            placeholder="Second Last Name"
                            attrs="{'invisible':['|',('personType', '=', 2), ('type', '=', 'delivery')]}"  />
                     <field name="xbirthday" attrs="{'invisible':[('is_company', '=', True)]}" />
-                    <field name="x_pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+                    <field name="pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
                     <field name="ciiu" attrs="{'invisible':[('type', '=', 'delivery')]}"  domain="[('type', '=', 'other')]" />
 
                 </field>

@@ -47,10 +47,10 @@ class PartnerInfoExtended(models.Model):
     companyType = fields.Selection(related='company_type')
 
     # Adding new name fields
-    x_name1 = fields.Char("First Name")
-    x_name2 = fields.Char("Second Name")
-    x_lastname1 = fields.Char("Last Name")
-    x_lastname2 = fields.Char("Second Last Name")
+    name1 = fields.Char("First Name")
+    name2 = fields.Char("Second Name")
+    lastname1 = fields.Char("Last Name")
+    lastname2 = fields.Char("Second Last Name")
 
     # Document information
     doctype = fields.Selection(
@@ -77,7 +77,7 @@ class PartnerInfoExtended(models.Model):
     )
 
     # Tributate regime
-    x_pn_retri = fields.Selection(
+    pn_retri = fields.Selection(
         [
             (6, "Simplified"),
             (23, "Natural Person"),
@@ -137,7 +137,6 @@ class PartnerInfoExtended(models.Model):
     xbirthday = fields.Date("Birthday")
 
 
-    @api.one
     @api.depends('xidentification')
     def _concat_nit(self):
         """
@@ -178,8 +177,7 @@ class PartnerInfoExtended(models.Model):
             self.dv = nitList[1]
 
 
-    @api.one
-    @api.onchange('x_name1', 'x_name2', 'x_lastname1', 'x_lastname2', 'companyName', 'pos_name')
+    @api.onchange('name1', 'name2', 'lastname1', 'lastname2', 'companyName', 'pos_name')
     def _concat_name(self):
         """
         This function concatenates the four name fields in order to be able to search
@@ -188,34 +186,34 @@ class PartnerInfoExtended(models.Model):
         @return: void
         """
         # Avoiding that "False" will be written into the name field
-        if self.x_name1 is False:
-            self.x_name1 = ''
+        if self.name1 is False:
+            self.name1 = ''
 
-        if self.x_name2 is False:
-            self.x_name2 = ''
+        if self.name2 is False:
+            self.name2 = ''
 
-        if self.x_lastname1 is False:
-            self.x_lastname1 = ''
+        if self.lastname1 is False:
+            self.lastname1 = ''
 
-        if self.x_lastname2 is False:
-            self.x_lastname2 = ''
+        if self.lastname2 is False:
+            self.lastname2 = ''
 
         # Collecting all names in a field that will be concatenated
         nameList = [
-            self.x_name1.encode(encoding='utf-8').strip(),
-            self.x_name2.encode(encoding='utf-8').strip(),
-            self.x_lastname1.encode(encoding='utf-8').strip(),
-            self.x_lastname2.encode(encoding='utf-8').strip()
+            self.name1.encode(encoding='utf-8').strip(),
+            self.name2.encode(encoding='utf-8').strip(),
+            self.lastname1.encode(encoding='utf-8').strip(),
+            self.lastname2.encode(encoding='utf-8').strip()
         ]
 
         formatedList = []
         if self.companyName is False:
             if self.type == 'delivery':
                 self.name = self.pos_name
-                self.x_name1 = False
-                self.x_name2 = False
-                self.x_lastname1 = False
-                self.x_lastname2 = False
+                self.name1 = False
+                self.name2 = False
+                self.lastname1 = False
+                self.lastname2 = False
                 self.doctype = 1
             else:
                 for item in nameList:
@@ -225,7 +223,6 @@ class PartnerInfoExtended(models.Model):
         else:
             self.name = self.companyName
 
-    @api.one
     @api.onchange('name')
     def onChangeName(self):
         """
@@ -235,8 +232,11 @@ class PartnerInfoExtended(models.Model):
         we have to ensure that this field can receive values unless we offer the four name fields.
         @return: void
         """
-        if self.x_name1 is not False:
-            if len(self.x_name1) > 0:
+        if self.name1 is not False:
+            if len(self.name1) > 0:
+                self._concat_name()
+        if self.companyName is not False:
+            if len(self.companyName) > 0:
                 self._concat_name()
 
     @api.onchange('personType')
@@ -247,16 +247,15 @@ class PartnerInfoExtended(models.Model):
         @return: void
         """
         if self.personType is 2:
-            self.x_name1 = ''
-            self.x_name2 = ''
-            self.x_lastname1 = ''
-            self.x_lastname2 = ''
-            self.x_pn_retri = 7
+            self.name1 = ''
+            self.name2 = ''
+            self.lastname1 = ''
+            self.lastname2 = ''
+            self.pn_retri = 7
         elif self.personType is 1:
             self.companyName = False
-            self.x_pn_retri = False
+            self.pn_retri = False
 
-    @api.one
     @api.onchange('doctype')
     def onChangeDocumentType(self):
         """
@@ -267,7 +266,6 @@ class PartnerInfoExtended(models.Model):
         """
         self.xidentification = False
 
-    @api.one
     @api.onchange('company_type')
     def onChangeCompanyType(self):
         """
@@ -285,7 +283,6 @@ class PartnerInfoExtended(models.Model):
             self.is_company = False
             self.doctype = 1
 
-    @api.one
     @api.onchange('is_company')
     def onChangeIsCompany(self):
         """
@@ -300,7 +297,6 @@ class PartnerInfoExtended(models.Model):
             self.is_company = False
             self.company_type = 'person'
 
-    @api.one
     @api.onchange('change_country')
     def onChangeAddress(self):
         """
@@ -412,14 +408,14 @@ class PartnerInfoExtended(models.Model):
             elif self.xidentification is False and self.doctype is not 43:
                 raise exceptions.ValidationError("¡Error! Número de identificación es obligatorio!")
 
-    @api.constrains('x_name1', 'x_name2', 'companyName')
+    @api.constrains('name1', 'name2', 'companyName')
     def _check_names(self):
         """
         Double check: Although validation is checked within the frontend (xml) we check it again to get sure
         """
         if self.is_company is True:
             if self.personType is 1:
-                if self.x_name1 is False or self.x_name1 == '':
+                if self.name1 is False or self.name1 == '':
                     raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la persona")
             elif self.personType is 2:
                 if self.companyName is False:
@@ -428,7 +424,7 @@ class PartnerInfoExtended(models.Model):
             if self.pos_name is False or self.pos_name == '':
                 raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la persona")
         else:
-            if self.x_name1 is False or self.x_name1 == '':
+            if self.name1 is False or self.name1 == '':
                 raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la persona")
 
     @api.constrains('personType')

@@ -199,7 +199,7 @@ msgid "Enter the Identification Number"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_x_name1
+#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_name1
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
 msgid "First Name"
 msgstr ""
@@ -280,7 +280,7 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_x_lastname1
+#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_lastname1
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
 msgid "Last Name"
 msgstr ""
@@ -364,13 +364,13 @@ msgid "Point of Sales Name or Direction"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_x_lastname2
+#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_lastname2
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
 msgid "Second Last Name"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_x_name2
+#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_name2
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
 msgid "Second Name"
 msgstr ""

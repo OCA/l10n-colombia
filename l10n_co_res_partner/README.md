@@ -1,11 +1,26 @@
+[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/195/9.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-l10n-columbia-201)
+[![Build Status](https://travis-ci.org/OCA/l10n-columbia.svg?branch=9.0)](https://travis-ci.org/OCA/l10n-columbia)
+[![Coverage Status](https://coveralls.io/repos/OCA/l10n-columbia/badge.svg?branch=9.0&service=github)](https://coveralls.io/github/OCA/l10n-columbia?branch=9.0)
+[![Code Climate](https://codeclimate.com/github/OCA/l10n-columbia/badges/gpa.svg)](https://codeclimate.com/github/OCA/l10n-columbia)
+
 Localización Colombia: Terceros
 ======
 
 ![main_screenshot.png](http://www.plastinorte.com/images/main_screenshot.png)
 
+Local Rules
+-----------------
+In Colombia there are some local rules that have to apply when creating a new contact. 
+This module is designed from the legal requirements of the tax authority in Colombia.
+
+- It is quite common that persons have up to 4 names. All of these are important to separate.
+- The CIIU Code of a company shows the Industrial Classification of a company. This information will be important for tax calculation and statistics
+- In Colombia there are many types of identification that have to be very clear in almost every transaction.
+- NIT is the identification number for almost every company. The verification code will be calculated automatically.
+
 What you get
 -----------------
-- Redesign of the contact form due to some local rules that have to apply
+- Redesign of the contact form due to the above mentioned local rules that have to apply in Colombia:
 - Additional fields: first name, second name, last name, second last name
 - Additional fields: Type of Person, Document Type, Document Number, Tributate regime, CIIU Code
 - Handling all kind of identification types that are relevant in Colombia
@@ -53,8 +68,7 @@ If you think something is missing please don't hesitate to drop a message.
 
 Contact
 -----------------
-This is how you can reach us: 
+This is how you can reach the contributors: 
 
-Twitter: @dkrimmer84 (Dominic), 
-Mail for technical subjects: dominic@plastinorte.com (Dominic Krimmer), 
-Mail concerning the content: quipus.total@gmail.com (Hector Ivan)
+Dominic Krimmer: dominic@plastinorte.com
+Hector Ivan Valencia Muñoz: quipus.total@gmail.com
