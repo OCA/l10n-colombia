@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+<!-- CIIU Related info-->
+
+    <!--CIIU List View-->
+    <record id="view_ciiu_transaction_tree" model="ir.ui.view">
+        <field name="name">ciiu.tree</field>
+        <field name="model">ciiu</field>
+        <field name="arch" type="xml">
+            <!-- this will be our title of list/tree view -->
+            <tree string="CIIU" colors="blue:type == 'view'; black:type == 'other'" toolbar="1" create="false" delete="false" edit="false">
+                <!-- these will automatically map table headers for our list view -->
+                <field name="code"/> 
+                <field name="description"/>
+                <field name="type" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- CIIU Form View-->
+    <record id="view_ciiu_transaction_form" model="ir.ui.view">
+        <field name="name">ciiu.view</field>
+        <field name="model">ciiu</field>
+        <field name="arch" type="xml">
+            <!-- this will be our title of list/tree view -->
+            <form string="CIIU" version="7.0" toolbar="1" create="false" delete="false" edit="false">
+                <group>
+                    <field name="code"/> 
+                    <field name="description"/> 
+                    <field name="hasParent" attrs="{'invisible':['|',('hasDivision', '=', True),('hasSection', '=', True)]}" />
+                    <field name="parent" attrs="{'invisible':[('hasParent', '=', False)]}"/> 
+                    <field name="hasDivision" attrs="{'invisible':['|',('hasParent', '=', True),('hasSection', '=', True)]}" />
+                    <field name="division" attrs="{'invisible':[('hasDivision', '=', False)]}"/> 
+                    <field name="hasSection" attrs="{'invisible':['|',('hasDivision', '=', True),('hasParent', '=', True)]}" />
+                    <field name="section" attrs="{'invisible':[('hasSection', '=', False)]}"/> 
+                    <field name="type"/>
+                    <field name="name" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ciiu_transaction" model="ir.actions.act_window">
+        <field name="name">CIIU</field>
+        <field name="res_model">ciiu</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id"  eval="False"/>
+        <field name="context">{}</field>
+        <field name="help">CIIU</field>
+    </record>
+
+    <menuitem action="action_ciiu_transaction"
+        id="menu_action_ciiu_transaction"
+        parent="account.account_account_menu" sequence="11"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://geoportal.dane.gov.co:8084/Divipola/ -->
+<openerp>
+    <!-- States -->
+    <data noupdate="1">
+
+        <record model="res.country.state" id="res_country_state_co_05">
+            <field name="name">ANTIOQUIA</field>
+            <field name="code">ANT</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_08">
+            <field name="name">ATLÁNTICO</field>
+            <field name="code">ATL</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_11">
+            <field name="name">BOGOTÁ, D.C.</field>
+            <field name="code">DC </field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_13">
+            <field name="name">BOLÍVAR</field>
+            <field name="code">BOL</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_15">
+            <field name="name">BOYACÁ</field>
+            <field name="code">BOY</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_17">
+            <field name="name">CALDAS</field>
+            <field name="code">CAL</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_18">
+            <field name="name">CAQUETÁ</field>
+            <field name="code">CAQ</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_19">
+            <field name="name">CAUCA</field>
+            <field name="code">CAU</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_20">
+            <field name="name">CESAR</field>
+            <field name="code">CES</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_23">
+            <field name="name">CÓRDOBA</field>
+            <field name="code">COR</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_25">
+            <field name="name">CUNDINAMARCA</field>
+            <field name="code">CUN</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_27">
+            <field name="name">CHOCÓ</field>
+            <field name="code">CHO</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_41">
+            <field name="name">HUILA</field>
+            <field name="code">HUI</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_44">
+            <field name="name">LA GUAJIRA</field>
+            <field name="code">LAG</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_47">
+            <field name="name">MAGDALENA</field>
+            <field name="code">MAG</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_50">
+            <field name="name">META</field>
+            <field name="code">MET</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_52">
+            <field name="name">NARIÑO</field>
+            <field name="code">NAR</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_54">
+            <field name="name">NORTE DE SANTANDER</field>
+            <field name="code">NSA</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_63">
+            <field name="name">QUINDIO</field>
+            <field name="code">QUI</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_66">
+            <field name="name">RISARALDA</field>
+            <field name="code">RIS</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_68">
+            <field name="name">SANTANDER</field>
+            <field name="code">SAN</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_70">
+            <field name="name">SUCRE</field>
+            <field name="code">SUC</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_73">
+            <field name="name">TOLIMA</field>
+            <field name="code">TOL</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_76">
+            <field name="name">VALLE DEL CAUCA</field>
+            <field name="code">VAC</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_81">
+            <field name="name">ARAUCA</field>
+            <field name="code">ARA</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_85">
+            <field name="name">CASANARE</field>
+            <field name="code">CAS</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_86">
+            <field name="name">PUTUMAYO</field>
+            <field name="code">PUT</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_88">
+            <field name="name">ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA</field>
+            <field name="code">SAP</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_91">
+            <field name="name">AMAZONAS</field>
+            <field name="code">AMA</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_94">
+            <field name="name">GUAINÍA</field>
+            <field name="code">GUA</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_95">
+            <field name="name">GUAVIARE</field>
+            <field name="code">GUV</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_97">
+            <field name="name">VAUPÉS</field>
+            <field name="code">VAU</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+        <record model="res.country.state" id="res_country_state_co_99">
+            <field name="name">VICHADA</field>
+            <field name="code">VID</field>
+
+            <field search="[('code','=','CO')]" model="res.country" name="country_id"/>
+        </record>
+
+    </data>
+</openerp>
