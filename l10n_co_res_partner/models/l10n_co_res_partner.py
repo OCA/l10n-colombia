@@ -150,7 +150,7 @@ class PartnerInfoExtended(models.Model):
         """
         # Executing only for Document Type 31 (NIT)
         for partner in self:
-            if self.doctype is 31:
+            if partner.doctype is 31:
                 # First check if entered value is valid
                 self._check_ident()
                 self._check_ident_num()
