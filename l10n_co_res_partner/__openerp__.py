@@ -1,14 +1,15 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Colombia - Terceros',
     'category': 'Localization',
-    'version': '1.0',
-    'author': 'Dominic Krimmer, Plastinorte S.A.S',
+    'version': '9.0.0.1.0',
+    'author': 'Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'maintainer': 'dominic.krimmer@gmail.com',
     'website': 'https://www.plastinorte.com',
-    'summary': 'Colombia Terceros: Extended Partner / Contact Module - Odoo 9.0',
+    'summary': 'Colombia Terceros: Extended Partner / '
+               'Contact Module - Odoo 9.0',
     'images': ['images/main_screenshot.png'],
-    'description': 'Colombia Terceros',
     'depends': [
         'account',
         'account_accountant',

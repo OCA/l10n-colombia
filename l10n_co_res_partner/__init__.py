@@ -6,6 +6,4 @@
 # Co-Authors    Hector Ivan Valencia Muñoz
 
 
-import models
-from models import l10n_co_res_partner
-
+from . import models

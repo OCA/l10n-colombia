@@ -19,6 +19,7 @@
 
 # Extended Partner Module
 from openerp import models, fields, api, exceptions
+from openerp.tools.translate import _
 import re
 
 
@@ -29,7 +30,8 @@ class CountryStateCity(models.Model):
     _description = 'Model to manipulate Cities'
     _name = 'res.country.state.city'
 
-    code = fields.Char('City Code', size=5, help='Code DANE - 5 digits-', required=True)
+    code = fields.Char('City Code', size=5, help='Code DANE - 5 digits-',
+                       required=True)
     name = fields.Char('City Name', size=64, required=True)
     state_id = fields.Many2one('res.country.state', 'State', required=True)
     country_id = fields.Many2one('res.country', 'Country', required=True)
@@ -68,11 +70,12 @@ class PartnerInfoExtended(models.Model):
 
         ], "Type of Identification"
     )
-    xidentification = fields.Char("Document Number", store=True, help="Enter the Identification Number")
+    xidentification = fields.Char("Document Number", store=True,
+                                  help="Enter the Identification Number")
     verificationDigit = fields.Integer('VD', size=2)
     formatedNit = fields.Char(
         string='NIT Formatted',
-        compute="_concat_nit",
+        compute="_compute_concat_nit",
         store=True
     )
 
@@ -120,7 +123,8 @@ class PartnerInfoExtended(models.Model):
     xcity = fields.Many2one('res.country.state.city', "Municipality")
     city = fields.Char(related="xcity.name")
 
-    # identification field has to be unique, therefore a constraint will validate it:
+    # identification field has to be unique,
+    # therefore a constraint will validate it:
     _sql_constraints = [
         ('ident_unique',
          'UNIQUE(doctype,xidentification)',
@@ -128,7 +132,8 @@ class PartnerInfoExtended(models.Model):
     ]
 
     # Check to handle change of Country, City and Municipality
-    change_country = fields.Boolean(string="Change Country / Department?", default=True, store=False)
+    change_country = fields.Boolean(string="Change Country / Department?",
+                                    default=True, store=False)
 
     # Name of point of sales / delivery contact
     pos_name = fields.Char("Point of Sales Name")
@@ -138,9 +143,11 @@ class PartnerInfoExtended(models.Model):
 
 
     @api.depends('xidentification')
-    def _concat_nit(self):
+    @api.one
+    def _compute_concat_nit(self):
         """
-        Concatenating and formatting the NIT number in order to have it consistent everywhere where it is needed
+        Concatenating and formatting the NIT number in order to have it
+        consistent everywhere where it is needed
         @return: void
         """
         # Executing only for Document Type 31 (NIT)
@@ -152,37 +159,39 @@ class PartnerInfoExtended(models.Model):
             # Instead of showing "False" we put en empty string
             if self.xidentification is False:
                 self.xidentification = ''
+            else:
+                self.formatedNit = ''
 
-            self.formatedNit = ''
+                # Formatting the NIT: xx.xxx.xxx-x
+                s = str(self.xidentification)[::-1]
+                newnit = '.'.join(s[i:i+3] for i in range(0, len(s), 3))
+                newnit = newnit[::-1]
 
-            # Formatting the NIT: xx.xxx.xxx-x
-            s = str(self.xidentification)[::-1]
-            newnit = '.'.join(s[i:i+3] for i in range(0, len(s), 3))
-            newnit = newnit[::-1]
+                nitList = [
+                    newnit,
+                    # Calling the NIT Function
+                    # which creates the Verification Code:
+                    self._check_dv(str(self.xidentification))
+                ]
 
-            nitList = [
-                newnit,
-                # Calling the NIT Function which creates the Verification Code:
-                self._check_dv(str(self.xidentification))
-            ]
+                formatedNitList = []
 
-            formatedNitList = []
+                for item in nitList:
+                    if item is not '':
+                        formatedNitList.append(item)
+                        self.formatedNit = '-' .join(formatedNitList)
 
-            for item in nitList:
-                if item is not '':
-                    formatedNitList.append(item)
-                    self.formatedNit = '-' .join(formatedNitList)
+                # Saving Verification digit in a proper field
+                self.dv = nitList[1]
 
-            # Saving Verification digit in a proper field
-            self.dv = nitList[1]
-
-
-    @api.onchange('name1', 'name2', 'lastname1', 'lastname2', 'companyName', 'pos_name')
+    @api.onchange('name1', 'name2', 'lastname1', 'lastname2', 'companyName',
+                  'pos_name')
     def _concat_name(self):
         """
-        This function concatenates the four name fields in order to be able to search
-        for the entire name. On the other hand the original name field should not be editable anymore
-        as the new name fields should fill it up automatically.
+        This function concatenates the four name fields in order to be able to
+        search for the entire name. On the other hand the original name field
+        should not be editable anymore as the new name fields should fill it up
+        automatically.
         @return: void
         """
         # Avoiding that "False" will be written into the name field
@@ -227,9 +236,11 @@ class PartnerInfoExtended(models.Model):
     def onChangeName(self):
         """
         The name field gets concatenated by the four name fields.
-        If a user enters a value anyway, the value will be deleted except first name has no value.
-        Reason: In certain forms of odoo it is still possible to add value to the original name field. Therefore
-        we have to ensure that this field can receive values unless we offer the four name fields.
+        If a user enters a value anyway, the value will be deleted except first
+        name has no value. Reason: In certain forms of odoo it is still
+        possible to add value to the original name field. Therefore we have to
+        ensure that this field can receive values unless we offer the four name
+        fields.
         @return: void
         """
         if self.name1 is not False:
@@ -242,8 +253,9 @@ class PartnerInfoExtended(models.Model):
     @api.onchange('personType')
     def onChangePersonType(self):
         """
-        Delete entries in name and company fields once the type of person changes.
-        This avoids unnecessary entries in the database and makes the contact cleaner and ready for analysis
+        Delete entries in name and company fields once the type of person
+        changes. This avoids unnecessary entries in the database and makes the
+        contact cleaner and ready for analysis
         @return: void
         """
         if self.personType is 2:
@@ -259,9 +271,10 @@ class PartnerInfoExtended(models.Model):
     @api.onchange('doctype')
     def onChangeDocumentType(self):
         """
-        If Document Type changes we delete the document number as for different document types there are different
-        rules that apply e.g. foreign documents (e.g. 21) allows letters in the value. Here we reduce the risk
-        of having corrupt information about the contact.
+        If Document Type changes we delete the document number as for different
+        document types there are different rules that apply e.g. foreign
+        documents (e.g. 21) allows letters in the value. Here we reduce the
+        risk of having corrupt information about the contact.
         @return: void
         """
         self.xidentification = False
@@ -270,8 +283,8 @@ class PartnerInfoExtended(models.Model):
     def onChangeCompanyType(self):
         """
         This function changes the person type once the company type changes.
-        If it is a company, document type 31 will be selected automatically as in Colombia it's more likely that
-        it will be chosen by the user.
+        If it is a company, document type 31 will be selected automatically as
+        in Colombia it's more likely that it will be chosen by the user.
         @return: void
         """
         if self.company_type == 'company':
@@ -286,7 +299,8 @@ class PartnerInfoExtended(models.Model):
     @api.onchange('is_company')
     def onChangeIsCompany(self):
         """
-        This function changes the person type field and the company type if checked / unchecked
+        This function changes the person type field and the company type if
+        checked / unchecked
         @return: void
         """
         if self.is_company is True:
@@ -300,7 +314,8 @@ class PartnerInfoExtended(models.Model):
     @api.onchange('change_country')
     def onChangeAddress(self):
         """
-        This function changes the person type field and the company type if checked / unchecked
+        This function changes the person type field and the company type if
+        checked / unchecked
         @return: void
         """
         if self.change_country is True:
@@ -310,7 +325,8 @@ class PartnerInfoExtended(models.Model):
 
     def _check_dv(self, nit):
         """
-        Function to calculate the check digit (DV) of the NIT. So there is no need to type it manually.
+        Function to calculate the check digit (DV) of the NIT. So there is no
+        need to type it manually.
         @param nit: Enter the NIT number without check digit
         @return: String
         """
@@ -342,10 +358,12 @@ class PartnerInfoExtended(models.Model):
         else:
             return str(11-result)
 
-    def onchange_location(self, cr, uid, ids, country_id=False, state_id=False):
+    def onchange_location(self, cr, uid, ids, country_id=False,
+                          state_id=False):
         """
-        This functions is a great helper when you enter the customer's location.
-        It solves the problem of various cities with the same name in a country
+        This functions is a great helper when you enter the customer's
+        location. It solves the problem of various cities with the same name in
+        a country
         @param country_id: Country Id (ISO)
         @param state_id: State Id (ISO)
         @return: object
@@ -374,27 +392,41 @@ class PartnerInfoExtended(models.Model):
     @api.constrains('xidentification')
     def _check_ident(self):
         """
-        This function checks the number length in the Identification field. Min 6, Max 12 digits.
+        This function checks the number length in the Identification field.
+        Min 6, Max 12 digits.
         @return: void
         """
         if self.doctype is not 1:
             if len(str(self.xidentification)) < 2:
-                raise exceptions.ValidationError("¡Error! Número de identificación debe tener entre 2 y 12 dígitos")
+                raise exceptions.ValidationError(
+                    "¡Error! Número de identificación debe tener entre 2 y 12 "
+                    "dígitos"
+                )
             elif len(str(self.xidentification)) > 12:
-                raise exceptions.ValidationError("¡Error! Número de identificación debe tener entre 2 y 12 dígitos")
+                raise exceptions.ValidationError(
+                    "¡Error! Número de identificación debe tener entre 2 y 12 "
+                    "dígitos"
+                )
 
     @api.constrains('xidentification')
     def _check_ident_num(self):
         """
-        This function checks the content of the identification fields: Type of document and number cannot be empty.
-        There are two document types that permit letters in the identification field: 21 and 41
+        This function checks the content of the identification fields: Type of
+        document and number cannot be empty.
+        There are two document types that permit letters in the identification
+        field: 21 and 41
         The rest does not permit any letters
         @return: void
         """
         if self.doctype is not 1:
-            if self.xidentification != False and self.doctype != 21 and self.doctype != 41:
+            if self.xidentification != False and \
+                            self.doctype != 21 and \
+                            self.doctype != 41:
                 if re.match("^[0-9]+$", self.xidentification) == None:
-                    raise exceptions.ValidationError("¡Error! El número de identificación sólo permite números")
+                    msg = _('\xc2\xa1Error! El n\xc3\xbamero de '
+                            'identificaci\xc3\xb3n s\xc3\xb3lo permite '
+                            'n\xc3\xbameros')
+                    raise exceptions.ValidationError(msg)
 
     @api.constrains('doctype', 'xidentification')
     def _checkDocType(self):
@@ -404,28 +436,41 @@ class PartnerInfoExtended(models.Model):
         """
         if self.doctype is not 1:
             if self.doctype is False:
-                raise exceptions.ValidationError("¡Error! Porfavor escoga un tipo de identificación")
+                raise exceptions.ValidationError(
+                    "¡Error! Porfavor escoga un tipo de identificación"
+                )
             elif self.xidentification is False and self.doctype is not 43:
-                raise exceptions.ValidationError("¡Error! Número de identificación es obligatorio!")
+                raise exceptions.ValidationError(
+                    "¡Error! Número de identificación es obligatorio!"
+                )
 
     @api.constrains('name1', 'name2', 'companyName')
     def _check_names(self):
         """
-        Double check: Although validation is checked within the frontend (xml) we check it again to get sure
+        Double check: Although validation is checked within the frontend (xml)
+        we check it again to get sure
         """
         if self.is_company is True:
             if self.personType is 1:
                 if self.name1 is False or self.name1 == '':
-                    raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la persona")
+                    raise exceptions.ValidationError(
+                        "¡Error! Porfavor ingrese el nombre de la persona"
+                    )
             elif self.personType is 2:
                 if self.companyName is False:
-                    raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la empresa")
+                    raise exceptions.ValidationError(
+                        "¡Error! Porfavor ingrese el nombre de la empresa"
+                    )
         elif self.type == 'delivery':
             if self.pos_name is False or self.pos_name == '':
-                raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la persona")
+                raise exceptions.ValidationError(
+                    "¡Error! Porfavor ingrese el nombre de la persona"
+                )
         else:
             if self.name1 is False or self.name1 == '':
-                raise exceptions.ValidationError("¡Error! Porfavor ingrese el nombre de la persona")
+                raise exceptions.ValidationError(
+                    "¡Error! Porfavor ingrese el nombre de la persona"
+                )
 
     @api.constrains('personType')
     def _check_person_type(self):
@@ -434,7 +479,9 @@ class PartnerInfoExtended(models.Model):
         @return: void
         """
         if self.personType is False:
-            raise exceptions.ValidationError("¡Error! Por favor selecciona un tipo de persona")
+            raise exceptions.ValidationError(
+                "¡Error! Por favor selecciona un tipo de persona"
+            )
 
 
 

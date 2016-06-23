@@ -20,21 +20,21 @@
 from openerp import models, fields, api
 
 
-class Industrial_Classification(models.Model):
+class IndustrialClassification(models.Model):
     _name = "ciiu"  # res.co.ciiu
     _description = "ISIC List"
 
     name = fields.Char(
         string="Code and Description",
         store=True,
-        compute="_concat_name"
+        compute="_compute_concat_name"
     )
     code = fields.Char('Code', required=True)
     description = fields.Char('Description', required=True)
     type = fields.Char(
         'Type',
         store=True,
-        compute="_set_type"
+        compute="_compute_set_type"
     )
     hasParent = fields.Boolean('Has Parent?')
     parent = fields.Many2one('ciiu', 'Parent')
@@ -54,9 +54,8 @@ class Industrial_Classification(models.Model):
         'Hierarchy'
     )
 
-    @api.one
     @api.depends('code', 'description')
-    def _concat_name(self):
+    def _compute_concat_name(self):
         """
         This function concatinates two fields in order to be able to search
         for CIIU as number or string
@@ -66,14 +65,13 @@ class Industrial_Classification(models.Model):
             self.name = ''
         else:
             self.name = str(self.code.encode('utf-8').strip()) + \
-                        ' - ' + str(self.description.encode('utf-8').strip())
+                ' - ' + str(self.description.encode('utf-8').strip())
 
-    @api.one
     @api.depends('hasParent')
-    def _set_type(self):
+    def _compute_set_type(self):
         """
-        Section, Division and Parent should be visually separated in the tree view.
-        Therefore we tag them accordingly as 'view' or 'other'
+        Section, Division and Parent should be visually separated in the tree
+        view. Therefore we tag them accordingly as 'view' or 'other'
         @return: void
         """
         # Child
