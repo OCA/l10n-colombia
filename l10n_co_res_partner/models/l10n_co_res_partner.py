@@ -141,9 +141,7 @@ class PartnerInfoExtended(models.Model):
     # Birthday of the contact (only useful for non-company contacts)
     xbirthday = fields.Date("Birthday")
 
-
     @api.depends('xidentification')
-    @api.one
     def _compute_concat_nit(self):
         """
         Concatenating and formatting the NIT number in order to have it
@@ -336,22 +334,22 @@ class PartnerInfoExtended(models.Model):
         nitString = '0'*(15-len(nit)) + nit
         vl = list(nitString)
         result = (
-                   int(vl[0])*71 +
-                   int(vl[1])*67 +
-                   int(vl[2])*59 +
-                   int(vl[3])*53 +
-                   int(vl[4])*47 +
-                   int(vl[5])*43 +
-                   int(vl[6])*41 +
-                   int(vl[7])*37 +
-                   int(vl[8])*29 +
-                   int(vl[9])*23 +
-                   int(vl[10])*19 +
-                   int(vl[11])*17 +
-                   int(vl[12])*13 +
-                   int(vl[13])*7 +
-                   int(vl[14])*3
-               ) % 11
+           int(vl[0])*71 +
+           int(vl[1])*67 +
+           int(vl[2])*59 +
+           int(vl[3])*53 +
+           int(vl[4])*47 +
+           int(vl[5])*43 +
+           int(vl[6])*41 +
+           int(vl[7])*37 +
+           int(vl[8])*29 +
+           int(vl[9])*23 +
+           int(vl[10])*19 +
+           int(vl[11])*17 +
+           int(vl[12])*13 +
+           int(vl[13])*7 +
+           int(vl[14])*3
+         ) % 11
 
         if result in (0, 1):
             return str(result)
@@ -397,16 +395,12 @@ class PartnerInfoExtended(models.Model):
         @return: void
         """
         if self.doctype is not 1:
+            msg = _('Error! Number of digits in Identification number must be'
+                    'between 2 and 12')
             if len(str(self.xidentification)) < 2:
-                raise exceptions.ValidationError(
-                    "¡Error! Número de identificación debe tener entre 2 y 12 "
-                    "dígitos"
-                )
+                raise exceptions.ValidationError(msg)
             elif len(str(self.xidentification)) > 12:
-                raise exceptions.ValidationError(
-                    "¡Error! Número de identificación debe tener entre 2 y 12 "
-                    "dígitos"
-                )
+                raise exceptions.ValidationError(msg)
 
     @api.constrains('xidentification')
     def _check_ident_num(self):
@@ -414,18 +408,16 @@ class PartnerInfoExtended(models.Model):
         This function checks the content of the identification fields: Type of
         document and number cannot be empty.
         There are two document types that permit letters in the identification
-        field: 21 and 41
-        The rest does not permit any letters
+        field: 21 and 41. The rest does not permit any letters
         @return: void
         """
         if self.doctype is not 1:
             if self.xidentification != False and \
-                            self.doctype != 21 and \
-                            self.doctype != 41:
+                    self.doctype != 21 and \
+                    self.doctype != 41:
                 if re.match("^[0-9]+$", self.xidentification) == None:
-                    msg = _('\xc2\xa1Error! El n\xc3\xbamero de '
-                            'identificaci\xc3\xb3n s\xc3\xb3lo permite '
-                            'n\xc3\xbameros')
+                    msg = _('Error! Identification number can only '
+                            'have numbers')
                     raise exceptions.ValidationError(msg)
 
     @api.constrains('doctype', 'xidentification')
@@ -436,13 +428,11 @@ class PartnerInfoExtended(models.Model):
         """
         if self.doctype is not 1:
             if self.doctype is False:
-                raise exceptions.ValidationError(
-                    "¡Error! Porfavor escoga un tipo de identificación"
-                )
+                msg = _('Error! Please choose an identification type')
+                raise exceptions.ValidationError(msg)
             elif self.xidentification is False and self.doctype is not 43:
-                raise exceptions.ValidationError(
-                    "¡Error! Número de identificación es obligatorio!"
-                )
+                msg = _('Error! Identification number is mandatory')
+                raise exceptions.ValidationError(msg)
 
     @api.constrains('name1', 'name2', 'companyName')
     def _check_names(self):
@@ -453,24 +443,20 @@ class PartnerInfoExtended(models.Model):
         if self.is_company is True:
             if self.personType is 1:
                 if self.name1 is False or self.name1 == '':
-                    raise exceptions.ValidationError(
-                        "¡Error! Porfavor ingrese el nombre de la persona"
-                    )
+                    msg = _('Error! Please enter the persons name')
+                    raise exceptions.ValidationError(msg)
             elif self.personType is 2:
                 if self.companyName is False:
-                    raise exceptions.ValidationError(
-                        "¡Error! Porfavor ingrese el nombre de la empresa"
-                    )
+                    msg = _('Error! Please enter the companys name')
+                    raise exceptions.ValidationError(msg)
         elif self.type == 'delivery':
             if self.pos_name is False or self.pos_name == '':
-                raise exceptions.ValidationError(
-                    "¡Error! Porfavor ingrese el nombre de la persona"
-                )
+                msg = _('Error! Please enter the persons name')
+                raise exceptions.ValidationError(msg)
         else:
             if self.name1 is False or self.name1 == '':
-                raise exceptions.ValidationError(
-                    "¡Error! Porfavor ingrese el nombre de la persona"
-                )
+                msg = _('Error! Please enter the name of the person')
+                raise exceptions.ValidationError(msg)
 
     @api.constrains('personType')
     def _check_person_type(self):
@@ -479,9 +465,5 @@ class PartnerInfoExtended(models.Model):
         @return: void
         """
         if self.personType is False:
-            raise exceptions.ValidationError(
-                "¡Error! Por favor selecciona un tipo de persona"
-            )
-
-
-
+            msg = _('Error! Please select a person type')
+            raise exceptions.ValidationError(msg)

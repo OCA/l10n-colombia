@@ -196,6 +196,60 @@ msgstr "DV"
 #. module: l10n_co_res_partner
 #: model:ir.model.fields,help:l10n_co_res_partner.field_res_partner_xidentification
 msgid "Enter the Identification Number"
+msgstr "Ingresa el numero de identifcacion"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:419
+#, python-format
+msgid "Error! Identification number can only have numbers"
+msgstr "¡Error! El número de identificación sólo permite números"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:434
+#, python-format
+msgid "Error! Identification number is mandatory"
+msgstr "¡Error! Número de identificación es obligatorio!"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:398
+#, python-format
+msgid "Error! Number of digits in Identification number must bebetween 2 and 12"
+msgstr "¡Error! Número de identificación debe tener entre 2 y 12 dígitos"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:431
+#, python-format
+msgid "Error! Please choose an identification type"
+msgstr "¡Error! Porfavor escoga un tipo de identificación"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:450
+#, python-format
+msgid "Error! Please enter the companys name"
+msgstr "¡Error! Porfavor ingrese el nombre de la empresa"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:458
+#, python-format
+msgid "Error! Please enter the name of the person"
+msgstr "¡Error! Porfavor ingrese el nombre de la persona"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:446
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:454
+#, python-format
+msgid "Error! Please enter the persons name"
+msgstr "¡Error! Porfavor ingrese el nombre de la persona"
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:468
+#, python-format
+msgid "Error! Please select a person type"
+msgstr "¡Error! Por favor selecciona un tipo de persona"
+
+#. module: l10n_co_res_partner
+#: model:ir.model.fields,help:l10n_co_res_partner.field_res_partner_xidentification
+msgid "Enter the Identification Number"
 msgstr "Ingrese el numero de identificación"
 
 #. module: l10n_co_res_partner

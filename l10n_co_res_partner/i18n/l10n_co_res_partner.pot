@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-10 02:00+0000\n"
-"PO-Revision-Date: 2016-06-10 02:00+0000\n"
+"POT-Creation-Date: 2016-06-23 17:20+0000\n"
+"PO-Revision-Date: 2016-06-23 17:20+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -105,17 +105,22 @@ msgid "Code"
 msgstr ""
 
 #. module: l10n_co_res_partner
+#: model:ir.model.fields,help:l10n_co_res_partner.field_res_country_state_city_code
+msgid "Code DANE - 5 digits-"
+msgstr ""
+
+#. module: l10n_co_res_partner
 #: model:ir.model.fields,field_description:l10n_co_res_partner.field_ciiu_name
 msgid "Code and Description"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "Common"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "Common Autorretenedor"
 msgstr ""
 
@@ -140,16 +145,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_co_res_partner.field_ciiu_create_date
 #: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_country_state_city_create_date
 msgid "Created on"
-msgstr ""
-
-#. module: l10n_co_res_partner
-#: model:ir.model.fields,help:l10n_co_res_partner.field_res_country_state_city_code
-msgid "Código DANE -5 dígitos-"
-msgstr ""
-
-#. module: l10n_co_res_partner
-#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_verificationDigit
-msgid "DV"
 msgstr ""
 
 #. module: l10n_co_res_partner
@@ -199,18 +194,67 @@ msgid "Enter the Identification Number"
 msgstr ""
 
 #. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:419
+#, python-format
+msgid "Error! Identification number can only have numbers"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:434
+#, python-format
+msgid "Error! Identification number is mandatory"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:398
+#, python-format
+msgid "Error! Number of digits in Identification number must bebetween 2 and 12"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:431
+#, python-format
+msgid "Error! Please choose an identification type"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:450
+#, python-format
+msgid "Error! Please enter the companys name"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:458
+#, python-format
+msgid "Error! Please enter the name of the person"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:446
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:454
+#, python-format
+msgid "Error! Please enter the persons name"
+msgstr ""
+
+#. module: l10n_co_res_partner
+#: code:addons/l10n_co_res_partner/models/l10n_co_res_partner.py:468
+#, python-format
+msgid "Error! Please select a person type"
+msgstr ""
+
+#. module: l10n_co_res_partner
 #: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_name1
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
 msgid "First Name"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "Great Contributor"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "Great Taxpayer Autorretenedor"
 msgstr ""
 
@@ -249,6 +293,11 @@ msgid "ISIC Activity"
 msgstr ""
 
 #. module: l10n_co_res_partner
+#: model:ir.model,name:l10n_co_res_partner.model_res_co_ciiu
+msgid "ISIC List"
+msgstr ""
+
+#. module: l10n_co_res_partner
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_tree_res_partner_inherited
 msgid "Identification"
 msgstr ""
@@ -259,7 +308,7 @@ msgid "Identification number must be unique!"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "International"
 msgstr ""
 
@@ -329,18 +378,13 @@ msgid "Natural"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "Natural Person"
 msgstr ""
 
 #. module: l10n_co_res_partner
 #: selection:res.partner,doctype:0
 msgid "No identification"
-msgstr ""
-
-#. module: l10n_co_res_partner
-#: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
-msgid "Nombre del Punto de Venta o dirección"
 msgstr ""
 
 #. module: l10n_co_res_partner
@@ -381,7 +425,7 @@ msgid "Section"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: selection:res.partner,x_pn_retri:0
+#: selection:res.partner,pn_retri:0
 msgid "Simplified"
 msgstr ""
 
@@ -391,13 +435,13 @@ msgid "State"
 msgstr ""
 
 #. module: l10n_co_res_partner
-#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_x_pn_retri
+#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_pn_retri
 msgid "Tax Regime"
 msgstr ""
 
 #. module: l10n_co_res_partner
 #: model:ir.model.fields,help:l10n_co_res_partner.field_res_partner_companyType
-msgid "Technical field, used only to display a boolean using a radio button. As for Odoo v9 RadioButton cannot be used on boolean fields, this one serves as interface. Due to the old API limitations with interface function field, we implement it by hand instead of a true function field. When migrating to the new API the code should be simplified. Changing thecompany_type of a company contact into a company will not displaythis contact as a company contact but as a standalone company."
+msgid "Technical field, used only to display a boolean using a radio button. As for Odoo v9 RadioButton cannot be used on boolean fields, this one serves as interface. Due to the old API limitations with interface function field, we implement it by hand instead of a true function field. When migrating to the new API the code should be simplified."
 msgstr ""
 
 #. module: l10n_co_res_partner
@@ -416,7 +460,11 @@ msgid "Type of Person"
 msgstr ""
 
 #. module: l10n_co_res_partner
+#: model:ir.model.fields,field_description:l10n_co_res_partner.field_res_partner_verificationDigit
+msgid "VD"
+msgstr ""
+
+#. module: l10n_co_res_partner
 #: model:ir.ui.view,arch_db:l10n_co_res_partner.view_partner_form
 msgid "e.g. 900301230"
 msgstr ""
-
