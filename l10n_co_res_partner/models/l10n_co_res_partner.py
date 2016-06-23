@@ -142,7 +142,6 @@ class PartnerInfoExtended(models.Model):
     xbirthday = fields.Date("Birthday")
 
     @api.depends('xidentification')
-    @api.multi
     def _compute_concat_nit(self):
         """
         Concatenating and formatting the NIT number in order to have it
@@ -150,38 +149,39 @@ class PartnerInfoExtended(models.Model):
         @return: void
         """
         # Executing only for Document Type 31 (NIT)
-        if self.doctype is 31:
-            # First check if entered value is valid
-            self._check_ident()
-            self._check_ident_num()
+        for partner in self:
+            if self.doctype is 31:
+                # First check if entered value is valid
+                self._check_ident()
+                self._check_ident_num()
 
-            # Instead of showing "False" we put en empty string
-            if self.xidentification is False:
-                self.xidentification = ''
-            else:
-                self.formatedNit = ''
+                # Instead of showing "False" we put en empty string
+                if partner.xidentification is False:
+                    partner.xidentification = ''
+                else:
+                    partner.formatedNit = ''
 
-                # Formatting the NIT: xx.xxx.xxx-x
-                s = str(self.xidentification)[::-1]
-                newnit = '.'.join(s[i:i+3] for i in range(0, len(s), 3))
-                newnit = newnit[::-1]
+                    # Formatting the NIT: xx.xxx.xxx-x
+                    s = str(partner.xidentification)[::-1]
+                    newnit = '.'.join(s[i:i+3] for i in range(0, len(s), 3))
+                    newnit = newnit[::-1]
 
-                nitList = [
-                    newnit,
-                    # Calling the NIT Function
-                    # which creates the Verification Code:
-                    self._check_dv(str(self.xidentification))
-                ]
+                    nitList = [
+                        newnit,
+                        # Calling the NIT Function
+                        # which creates the Verification Code:
+                        self._check_dv(str(partner.xidentification))
+                    ]
 
-                formatedNitList = []
+                    formatedNitList = []
 
-                for item in nitList:
-                    if item is not '':
-                        formatedNitList.append(item)
-                        self.formatedNit = '-' .join(formatedNitList)
+                    for item in nitList:
+                        if item is not '':
+                            formatedNitList.append(item)
+                            partner.formatedNit = '-' .join(formatedNitList)
 
-                # Saving Verification digit in a proper field
-                self.dv = nitList[1]
+                    # Saving Verification digit in a proper field
+                    self.dv = nitList[1]
 
     @api.onchange('name1', 'name2', 'lastname1', 'lastname2', 'companyName',
                   'pos_name')
