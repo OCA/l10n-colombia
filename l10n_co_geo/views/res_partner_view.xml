@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="view_partner_form_inherit_city">
+    <field name="name">partner.form.city</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form" />
+    <field name="mode">extension</field>
+    <field name="priority" eval="20" />
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <xpath expr='(//div[@class="o_address_format"])[1]' position="replace">
+        <div class="o_address_format">
+          <div class="oe_edit_only">
+            <button name="open_parent" type="object" string="(edit)" class="oe_link"
+              attrs="{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}"
+            />
+          </div>
+          <field name="street" placeholder="Street..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"
+          />
+          <field name="street2" placeholder="Street 2..." class="o_address_street"
+            attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"
+          />
+          <field name="city" invisible="1" />
+          <field name="city_id" class="oe_no_button o_address_city" placeholder="City"
+            style="width: 70%%" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': '1'}"
+            options='{"no_open": True}' />
+          <field name="state_id" invisible="1" on_change="onchange_state(state_id)"
+          />
+          <field name="zip" class="o_address_zip" placeholder="ZIP" style="width: 28%%"
+            attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"
+          />
+          <field name="country_id" invisible="1" />
+        </div>
+      </xpath>
+      <xpath expr='(//div[@class="o_address_format"])[2]' position="replace">
+        <div class="address_format">
+          <field name="street" placeholder="Street..." class="o_address_street" />
+          <field name="street2" placeholder="Street 2..." class="o_address_street"
+          />
+          <field name="city" invisible="1" />
+          <field name="city_id" class="oe_no_button o_address_city" placeholder="City"
+            style="width: 75%%" />
+          <field name="state_id" invisible="1" on_change="onchange_state(state_id)"
+          />
+          <field name="zip" class="o_address_zip" placeholder="ZIP" style="width: 25%%"
+          />
+          <field name="country_id" invisible="1" />
+        </div>
+      </xpath>
+      <xpath expr="//field[@name='child_ids']" position="attributes">
+        <attribute name="context">{'default_parent_id': active_id, 'default_street': street, 'default_street2':
+          street2, 'default_city': city, 'default_state_id': state_id,
+          'default_zip': zip, 'default_country_id': country_id, 'default_supplier':
+          supplier, 'default_customer': customer, 'default_lang': lang,
+          'default_city_id': city_id}</attribute>
+      </xpath>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_partner_filter_inherit_city">
+    <field name="name">res.partner.select.inherit.city</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter" />
+    <field name="mode">extension</field>
+    <field name="priority" eval="20" />
+    <field name="arch" type="xml">
+      <xpath expr='(//group/filter)[last()]' position="after">
+        <filter string="State" context="{'group_by': 'state_id'}" />
+        <filter string="City" context="{'group_by': 'city_id'}" />
+      </xpath>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_partner_address_form_inherit_city">
+    <field name="name">res.partner.form.address.inherit.city</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_address_form" />
+    <field name="arch" type="xml">
+      <xpath expr='(//div[@class="o_address_format"])' position="replace">
+        <div class="address_format">
+          <field name="street" placeholder="Street..." class="o_address_street" />
+          <field name="street2" placeholder="Street 2..." class="o_address_street"
+          />
+          <field name="city" invisible="1" />
+          <field name="city_id" class="oe_no_button o_address_city" placeholder="City"
+            style="width: 75%%" attrs="{'required': '1'}" />
+          <field name="state_id" invisible="1" on_change="onchange_state(state_id)"
+          />
+          <field name="zip" class="o_address_zip" placeholder="ZIP" style="width: 25%%"
+          />
+          <field name="country_id" invisible="1" />
+        </div>
+      </xpath>
+    </field>
+  </record>
+</odoo>
+

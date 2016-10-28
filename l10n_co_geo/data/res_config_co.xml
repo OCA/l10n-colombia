@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- until included in https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/res/res.lang.csv -->
+  <!-- https://github.com/odoo/odoo/pull/14065 -->
+  <record id="base.lang_es_CO" model="res.lang">
+    <field name="date_format">%d-%m-%Y</field>
+  </record>
+  <!-- until included in https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/res/res_country_data.xml -->
+  <!-- https://github.com/odoo/odoo/pull/14066 -->
+  <record id="base.co" model="res.country">
+    <field name="address_format" eval="'%(street)s\n%(street2)s\n%(city)s %(state_name)s %(zip)s\n%(country_name)s'"
+    />
+  </record>
+</odoo>
+
