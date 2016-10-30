@@ -34,7 +34,7 @@
     <field name="res_model">res.country.state.city</field>
     <field name="view_type">form</field>
   </record>
-  <menuitem action="action_city" id="menu_city_partner" parent="sales_team.menu_localisation"
+  <menuitem action="action_city" id="menu_city_partner" parent="base.menu_localisation"
     groups="base.group_no_one" />
 </odoo>
 

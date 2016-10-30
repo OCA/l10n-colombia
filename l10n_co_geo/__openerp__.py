@@ -8,7 +8,7 @@
     'author': 'DevCO Colombia SAS',
     'maintainer': 'DevCO Colombia',
     'website': 'http://devco.co',
-    'license': 'LGPL',
+    'license': 'LGPL-3',
     'category': 'Localization',
     'summary': 'Cities, departments and UI improvements.',
     'depends': ['base', 'sales_team'],

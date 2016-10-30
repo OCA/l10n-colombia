@@ -2,7 +2,7 @@
 # Copyright 2016 David Arnold, DevCO Colombia
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import api, SUPERUSER_ID
+from openerp import api, SUPERUSER_ID
 
 
 def _fill_city_id(cr, registry):
