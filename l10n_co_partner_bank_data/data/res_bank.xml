@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Left some banks out-commented, as they have a banking license, 
+    but we don't think they are relevant. Please open an Github issue, if there
+    is something wrong with this list or any comment bank should be included -->
+  <!-- <record model="res.bank" id="bank0">
+  <field name="name">ACH COLOMBIA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">ACHCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank1">
+  <field name="name">ALLIANCE ENTERPRISE S.A.S.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">HUBCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank2">
+  <field name="name">ALLIANZ SEGUROS DE VIDA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">COZVCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank3">
+  <field name="name">ALLIANZ SEGUROS S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">COZSCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank3">
+  <field name="name">ALMACENES EXITO S.A. (GRUPO EXITO)</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Envigado</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">GEXICOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank4">
+  <field name="name">ALPINA PRODUCTOS ALIMENTICIOS S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">AIPACOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>  
+ -->
+  <record model="res.bank" id="bank5">
+    <field name="name">Banco Agrario De Colombia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">CCAICOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank6">
+    <field name="name">Banco AV Villas S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">BAVICOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank7">
+    <field name="name">Banco Bilbao Vizcaya Argentaria Colombia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">GEROCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank8">
+    <field name="name">Banco Caja Social S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">CASOCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank9">
+    <field name="name">Banco Colpatria S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">COLPCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank10">
+    <field name="name">Banco Corpbanca Colombia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">BCTOCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank11">
+    <field name="name">Banco Davivienda S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">CAFECOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank12">
+    <field name="name">Banco De Bogota S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">BBOGCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <!-- <record model="res.bank" id="bank13">
+  <field name="name">BANCO DE COMERCIO EXTERIOR S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">BCEXCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank14">
+  <field name="name">BANCO DE LA REPUBLICA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">BREPCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <record model="res.bank" id="bank15">
+    <field name="name">Banco De Occidente</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Cali</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">BOCCICOBC</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank16">
+    <field name="name">Banco Falabella S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">FALACOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank17">
+    <field name="name">Banco GNB Sudameris</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">BSUDCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank18">
+    <field name="name">Banco Multibank S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">MCTBCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank19">
+    <field name="name">Banco Pichincha S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">PICHCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank20">
+    <field name="name">Banco Popular S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">BPOPCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank21">
+    <field name="name">Banco Procredit Colombia SA</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">PRCBCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank22">
+    <field name="name">Banco Santander De Negocios Colombia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">SANTCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank23">
+    <field name="name">Bancolombia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Medellin</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">COLOCOBM</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <!-- <record model="res.bank" id="bank24">
+  <field name="name">BBVA ASSET MANAGEMENT SOCIEDAD FIDUCIARIA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">FBBVCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank25">
+  <field name="name">BNP PARIBAS COLOMBIA CORPORACION FINANCIERA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">BNPACOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank26">
+  <field name="name">COLSUBSIDIO</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CCSFCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank27">
+  <field name="name">CAMARA DE COMPENSACION DE DIVISAS DE COLOMBIA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CCDCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank28">
+  <field name="name">CARVAJAL SERVICIOS S.A.S.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Cali</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CTYSCOBC</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank29">
+  <field name="name">CENIT TRANSPORTE Y LOGISTICA DE HIDROCARBUROS S.A.S.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CTLHCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <record model="res.bank" id="bank30">
+    <field name="name">Citibank Colombia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic">CTLHCOBB</field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <!-- <record model="res.bank" id="bank31">
+  <field name="name">COLOMBIA MOVIL SA ESP</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">TIGOCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank32">
+  <field name="name">COLTEFINANCIERA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Medellin</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CLTECOBM</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank33">
+  <field name="name">COMPANIA DE PROFESIONALES DE BOLSA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">PDBCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank34">
+  <field name="name">CORPBANCA INVESTMENT TRUST COLOMBIA S.A. SOCIEDAD FIDUCIARIA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">BSCHCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank35">
+  <field name="name">CORPORACION FINANCIERA COLOMBIANA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Cali</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CFVACOBC</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank36">
+  <field name="name">CREDICORP CAPITAL COLOMBIA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CRVLCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank37">
+  <field name="name">ECOPETROL S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">ECOPCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank38">
+  <field name="name">EMPRESA DE TELECOMUNICACIONES DE BOGOTA S.A E.SP.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">ETBCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank39">
+  <field name="name">FIDUCIARIA BANCOLOMBIA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Medellin</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">EFDBCCOBM</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank40">
+  <field name="name">FIDUCIARIA BOGOTA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">FBOGCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank41">
+  <field name="name">FINANCIERA DE DESARROLLO NACIONAL S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">FENSCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank42">
+  <field name="name">FONDO DE GARANTIAS DE INSTITUCIONES FINANCIERAS</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">FOGICOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank43">
+  <field name="name">FONDO LATINOAMERICANO DE RESERVAS</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">FLARCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank44">
+  <field name="name">FONDO VOLUNTARIO DE PENSIONES ADMINISTRADO POR ALLIANZ SEGUROS DE VIDA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">FPVCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank45">
+  <field name="name">GIROS Y FINANZAS C.F.C. S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Cali</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">GYDVCOBC</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank46">
+  <field name="name">HOCOL S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">HCOLCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank47">
+  <field name="name">ITAU BBA COLOMBIA SA CORPORACION FINANCEIRA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CBBACOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank48">
+  <field name="name">JPMORGAN CORPORACION FINANCIERA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">CHASCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank49">
+  <field name="name">MAPFRE SEGUROS GENERALES DE COLOMBIA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">MAPFCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank50">
+  <field name="name">MUNICIPIO DE MEDELLIN</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Medellin</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">MUMDCOBM</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank51">
+  <field name="name">OLEODUCTO CENTRAL S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">OCENCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank52">
+  <field name="name">OLEODUCTO DE COLOMBIA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">ODCCCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank53">
+  <field name="name">POLIPROPILENO DEL CARIBE S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">PPCOCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank54">
+  <field name="name">PORVENIR S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">PORVCOBB</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank55">
+  <field name="name">REFINERIA DE CARTAGENA S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Bogotá</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">RCARCOB2</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank56">
+  <field name="name">UNE EPM TELECOMUNICACIONES S.A.</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Medellin</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">UNETCOBM</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <!-- <record model="res.bank" id="bank57">
+  <field name="name">VALORES BANCOLOMBIA</field>
+  <field name="street"/>
+  <field name="zip"/>
+  <field name="city">Medellin</field>
+  <field name="phone"/>
+  <field name="fax"/>
+  <field name="email"/>
+  <field name="bic">VABCCOBM</field>
+  <field name="country" model="res.country" search="[('code','ilike','co')]"/>
+  <field name="active" eval="True"/>
+  </record>
+ -->
+  <record model="res.bank" id="bank58">
+    <field name="name">Bancamia S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank59">
+    <field name="name">Banco WWB S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Cali</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank60">
+    <field name="name">Banco Coomeva S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Cali</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank61">
+    <field name="name">Banco Finandina S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank62">
+    <field name="name">Banco Cooperativo Coopcentral S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank63">
+    <field name="name">Banco Mundo Mujer S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Popayán</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+  <record model="res.bank" id="bank64">
+    <field name="name">Banco Compartir S.A.</field>
+    <field name="street" />
+    <field name="zip" />
+    <field name="city">Bogotá</field>
+    <field name="phone" />
+    <field name="fax" />
+    <field name="email" />
+    <field name="bic"></field>
+    <field name="country" model="res.country" search="[('code','ilike','co')]"
+    />
+    <field name="active" eval="True" />
+  </record>
+</odoo>
+
