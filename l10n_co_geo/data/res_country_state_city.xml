@@ -80,7 +80,7 @@
   </record>
   <record id="city_0012" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Fé de Antioquia<</field>
+    <field name="name" type="char">Santa Fé de Antioquia</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">044</field>
     <field name="state_id" ref="state_01" />
@@ -234,7 +234,7 @@
   </record>
   <record id="city_0034" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Carmen de Viboral<</field>
+    <field name="name" type="char">El Carmen de Viboral</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">150</field>
     <field name="state_id" ref="state_01" />
@@ -626,7 +626,7 @@
   </record>
   <record id="city_0090" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Andrés de Cuerquía<</field>
+    <field name="name" type="char">San Andrés de Cuerquía</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">649</field>
     <field name="state_id" ref="state_01" />
@@ -654,14 +654,14 @@
   </record>
   <record id="city_0094" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José de La Montaña<</field>
+    <field name="name" type="char">San José de La Montaña</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">659</field>
     <field name="state_id" ref="state_01" />
   </record>
   <record id="city_0095" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Juan de Urabá<</field>
+    <field name="name" type="char">San Juan de Urabá</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">660</field>
     <field name="state_id" ref="state_01" />
@@ -675,14 +675,14 @@
   </record>
   <record id="city_0097" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Pedro de Los Milagros<</field>
+    <field name="name" type="char">San Pedro de Los Milagros</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">665</field>
     <field name="state_id" ref="state_01" />
   </record>
   <record id="city_0098" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Pedro de Urabá<</field>
+    <field name="name" type="char">San Pedro de Urabá</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">667</field>
     <field name="state_id" ref="state_01" />
@@ -717,7 +717,7 @@
   </record>
   <record id="city_0103" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Rosa de Osos<</field>
+    <field name="name" type="char">Santa Rosa de Osos</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">690</field>
     <field name="state_id" ref="state_01" />
@@ -843,7 +843,7 @@
   </record>
   <record id="city_0121" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Vigía del Fuerte<</field>
+    <field name="name" type="char">Vigía del Fuerte</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">885</field>
     <field name="state_id" ref="state_01" />
@@ -899,7 +899,7 @@
   </record>
   <record id="city_0129" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Campo de La Cruz<</field>
+    <field name="name" type="char">Campo de La Cruz</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">141</field>
     <field name="state_id" ref="state_02" />
@@ -920,7 +920,7 @@
   </record>
   <record id="city_0132" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Juan de Acosta<</field>
+    <field name="name" type="char">Juan de Acosta</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">421</field>
     <field name="state_id" ref="state_02" />
@@ -948,7 +948,7 @@
   </record>
   <record id="city_0136" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Palmar de Varela<</field>
+    <field name="name" type="char">Palmar de Varela</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">549</field>
     <field name="state_id" ref="state_02" />
@@ -1053,7 +1053,7 @@
   </record>
   <record id="city_0151" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Cartagena de Indias<</field>
+    <field name="name" type="char">Cartagena de Indias</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">001</field>
     <field name="state_id" ref="state_04" />
@@ -1067,7 +1067,7 @@
   </record>
   <record id="city_0153" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Altos del Rosario<</field>
+    <field name="name" type="char">Altos del Rosario</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">030</field>
     <field name="state_id" ref="state_04" />
@@ -1095,7 +1095,7 @@
   </record>
   <record id="city_0157" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Barranco de Loba<</field>
+    <field name="name" type="char">Barranco de Loba</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">074</field>
     <field name="state_id" ref="state_04" />
@@ -1137,7 +1137,7 @@
   </record>
   <record id="city_0163" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Carmen de Bolívar<</field>
+    <field name="name" type="char">El Carmen de Bolívar</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">244</field>
     <field name="state_id" ref="state_04" />
@@ -1158,7 +1158,7 @@
   </record>
   <record id="city_0166" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Hatillo de Loba<</field>
+    <field name="name" type="char">Hatillo de Loba</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">300</field>
     <field name="state_id" ref="state_04" />
@@ -1270,7 +1270,7 @@
   </record>
   <record id="city_0182" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Jacinto del Cauca<</field>
+    <field name="name" type="char">San Jacinto del Cauca</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">655</field>
     <field name="state_id" ref="state_04" />
@@ -1284,7 +1284,7 @@
   </record>
   <record id="city_0184" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Martín de Loba<</field>
+    <field name="name" type="char">San Martín de Loba</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">667</field>
     <field name="state_id" ref="state_04" />
@@ -1312,7 +1312,7 @@
   </record>
   <record id="city_0188" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Rosa del Sur<</field>
+    <field name="name" type="char">Santa Rosa del Sur</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">688</field>
     <field name="state_id" ref="state_04" />
@@ -1725,7 +1725,7 @@
   </record>
   <record id="city_0247" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Villa de Leyva<</field>
+    <field name="name" type="char">Villa de Leyva</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">407</field>
     <field name="state_id" ref="state_05" />
@@ -1865,7 +1865,7 @@
   </record>
   <record id="city_0267" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Paz de Río<</field>
+    <field name="name" type="char">Paz de Río</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">537</field>
     <field name="state_id" ref="state_05" />
@@ -1949,14 +1949,14 @@
   </record>
   <record id="city_0279" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José de Pare<</field>
+    <field name="name" type="char">San José de Pare</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">664</field>
     <field name="state_id" ref="state_05" />
   </record>
   <record id="city_0280" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Luis de Gaceno<</field>
+    <field name="name" type="char">San Luis de Gaceno</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">667</field>
     <field name="state_id" ref="state_05" />
@@ -1970,14 +1970,14 @@
   </record>
   <record id="city_0282" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Miguel de Sema<</field>
+    <field name="name" type="char">San Miguel de Sema</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">676</field>
     <field name="state_id" ref="state_05" />
   </record>
   <record id="city_0283" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Pablo de Borbur<</field>
+    <field name="name" type="char">San Pablo de Borbur</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">681</field>
     <field name="state_id" ref="state_05" />
@@ -1998,7 +1998,7 @@
   </record>
   <record id="city_0286" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Rosa de Viterbo<</field>
+    <field name="name" type="char">Santa Rosa de Viterbo</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">693</field>
     <field name="state_id" ref="state_05" />
@@ -2439,14 +2439,14 @@
   </record>
   <record id="city_0349" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Belén de Los Andaquíes<</field>
+    <field name="name" type="char">Belén de Los Andaquíes</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">094</field>
     <field name="state_id" ref="state_07" />
   </record>
   <record id="city_0350" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Cartagena del Chairá<</field>
+    <field name="name" type="char">Cartagena del Chairá</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">150</field>
     <field name="state_id" ref="state_07" />
@@ -2502,14 +2502,14 @@
   </record>
   <record id="city_0358" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José del Fragua<</field>
+    <field name="name" type="char">San José del Fragua</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">610</field>
     <field name="state_id" ref="state_07" />
   </record>
   <record id="city_0359" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Vicente del Caguán<</field>
+    <field name="name" type="char">San Vicente del Caguán</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">753</field>
     <field name="state_id" ref="state_07" />
@@ -2663,7 +2663,7 @@
   </record>
   <record id="city_0381" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">López de Micay<</field>
+    <field name="name" type="char">López de Micay</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">418</field>
     <field name="state_id" ref="state_08" />
@@ -2754,7 +2754,7 @@
   </record>
   <record id="city_0394" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santander de Quilichao<</field>
+    <field name="name" type="char">Santander de Quilichao</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">698</field>
     <field name="state_id" ref="state_08" />
@@ -2929,14 +2929,14 @@
   </record>
   <record id="city_0419" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">La Jagua de Ibirico<</field>
+    <field name="name" type="char">La Jagua de Ibirico</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">400</field>
     <field name="state_id" ref="state_09" />
   </record>
   <record id="city_0420" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Manaure Balcón del Cesar<</field>
+    <field name="name" type="char">Manaure Balcón del Cesar</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">443</field>
     <field name="state_id" ref="state_09" />
@@ -2964,7 +2964,7 @@
   </record>
   <record id="city_0424" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Río de Oro<</field>
+    <field name="name" type="char">Río de Oro</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">614</field>
     <field name="state_id" ref="state_09" />
@@ -3055,7 +3055,7 @@
   </record>
   <record id="city_0437" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Ciénaga de Oro<</field>
+    <field name="name" type="char">Ciénaga de Oro</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">189</field>
     <field name="state_id" ref="state_10" />
@@ -3139,7 +3139,7 @@
   </record>
   <record id="city_0449" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Purísima de La Concepción<</field>
+    <field name="name" type="char">Purísima de La Concepción</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">586</field>
     <field name="state_id" ref="state_10" />
@@ -3153,7 +3153,7 @@
   </record>
   <record id="city_0451" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Andrés de Sotavento<</field>
+    <field name="name" type="char">San Andrés de Sotavento</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">670</field>
     <field name="state_id" ref="state_10" />
@@ -3167,7 +3167,7 @@
   </record>
   <record id="city_0453" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Bernardo del Viento<</field>
+    <field name="name" type="char">San Bernardo del Viento</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">675</field>
     <field name="state_id" ref="state_10" />
@@ -3181,7 +3181,7 @@
   </record>
   <record id="city_0455" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José de Uré<</field>
+    <field name="name" type="char">San José de Uré</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">682</field>
     <field name="state_id" ref="state_10" />
@@ -3216,7 +3216,7 @@
   </record>
   <record id="city_0460" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Agua de Dios<</field>
+    <field name="name" type="char">Agua de Dios</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">001</field>
     <field name="state_id" ref="state_11" />
@@ -3307,7 +3307,7 @@
   </record>
   <record id="city_0473" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Carmen de Carupa<</field>
+    <field name="name" type="char">Carmen de Carupa</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">154</field>
     <field name="state_id" ref="state_11" />
@@ -3510,7 +3510,7 @@
   </record>
   <record id="city_0502" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Guayabal de Síquima<</field>
+    <field name="name" type="char">Guayabal de Síquima</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">328</field>
     <field name="state_id" ref="state_11" />
@@ -3748,7 +3748,7 @@
   </record>
   <record id="city_0536" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Antonio del Tequendama<</field>
+    <field name="name" type="char">San Antonio del Tequendama</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">645</field>
     <field name="state_id" ref="state_11" />
@@ -3776,7 +3776,7 @@
   </record>
   <record id="city_0540" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Juan de Rioseco<</field>
+    <field name="name" type="char">San Juan de Rioseco</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">662</field>
     <field name="state_id" ref="state_11" />
@@ -3944,7 +3944,7 @@
   </record>
   <record id="city_0564" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Villa de San Diego de Ubaté<<</field>
+    <field name="name" type="char">Villa de San Diego de Ubaté</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">843</field>
     <field name="state_id" ref="state_11" />
@@ -4084,14 +4084,14 @@
   </record>
   <record id="city_0584" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Cantón del San Pablo<</field>
+    <field name="name" type="char">El Cantón del San Pablo</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">135</field>
     <field name="state_id" ref="state_12" />
   </record>
   <record id="city_0585" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Carmen del Darién<</field>
+    <field name="name" type="char">Carmen del Darién</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">150</field>
     <field name="state_id" ref="state_12" />
@@ -4112,14 +4112,14 @@
   </record>
   <record id="city_0588" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Carmen de Atrato<</field>
+    <field name="name" type="char">El Carmen de Atrato</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">245</field>
     <field name="state_id" ref="state_12" />
   </record>
   <record id="city_0589" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Litoral del San Juan<</field>
+    <field name="name" type="char">El Litoral del San Juan</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">250</field>
     <field name="state_id" ref="state_12" />
@@ -4203,7 +4203,7 @@
   </record>
   <record id="city_0601" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José del Palmar<</field>
+    <field name="name" type="char">San José del Palmar</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">660</field>
     <field name="state_id" ref="state_12" />
@@ -4553,7 +4553,7 @@
   </record>
   <record id="city_0651" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">La Jagua del Pilar<</field>
+    <field name="name" type="char">La Jagua del Pilar</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">420</field>
     <field name="state_id" ref="state_14" />
@@ -4574,7 +4574,7 @@
   </record>
   <record id="city_0654" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Juan del Cesar<</field>
+    <field name="name" type="char">San Juan del Cesar</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">650</field>
     <field name="state_id" ref="state_14" />
@@ -4630,7 +4630,7 @@
   </record>
   <record id="city_0662" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Cerro de San Antonio<</field>
+    <field name="name" type="char">Cerro de San Antonio</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">161</field>
     <field name="state_id" ref="state_15" />
@@ -4707,7 +4707,7 @@
   </record>
   <record id="city_0673" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Pijiño del Carmen<</field>
+    <field name="name" type="char">Pijiño del Carmen</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">545</field>
     <field name="state_id" ref="state_15" />
@@ -4742,7 +4742,7 @@
   </record>
   <record id="city_0678" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Sabanas de San Ángel<</field>
+    <field name="name" type="char">Sabanas de San Ángel</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">660</field>
     <field name="state_id" ref="state_15" />
@@ -4756,7 +4756,7 @@
   </record>
   <record id="city_0680" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Sebastián de Buenavista<</field>
+    <field name="name" type="char">San Sebastián de Buenavista</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">692</field>
     <field name="state_id" ref="state_15" />
@@ -4777,7 +4777,7 @@
   </record>
   <record id="city_0683" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Bárbara de Pinto<</field>
+    <field name="name" type="char">Santa Bárbara de Pinto</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">720</field>
     <field name="state_id" ref="state_15" />
@@ -4826,7 +4826,7 @@
   </record>
   <record id="city_0690" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Barranca de Upía<</field>
+    <field name="name" type="char">Barranca de Upía</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">110</field>
     <field name="state_id" ref="state_16" />
@@ -4882,7 +4882,7 @@
   </record>
   <record id="city_0698" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Fuente de Oro<</field>
+    <field name="name" type="char">Fuente de Oro</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">287</field>
     <field name="state_id" ref="state_16" />
@@ -4980,14 +4980,14 @@
   </record>
   <record id="city_0712" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Carlos de Guaroa<</field>
+    <field name="name" type="char">San Carlos de Guaroa</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">680</field>
     <field name="state_id" ref="state_16" />
   </record>
   <record id="city_0713" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Juan de Arama<</field>
+    <field name="name" type="char">San Juan de Arama</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">683</field>
     <field name="state_id" ref="state_16" />
@@ -5148,7 +5148,7 @@
   </record>
   <record id="city_0736" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Tablón de Gómez<</field>
+    <field name="name" type="char">El Tablón de Gómez</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">258</field>
     <field name="state_id" ref="state_17" />
@@ -5400,7 +5400,7 @@
   </record>
   <record id="city_0772" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Pedro de Cartago<</field>
+    <field name="name" type="char">San Pedro de Cartago</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">694</field>
     <field name="state_id" ref="state_17" />
@@ -5442,7 +5442,7 @@
   </record>
   <record id="city_0778" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Andrés de Tumaco<</field>
+    <field name="name" type="char">San Andrés de Tumaco</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">835</field>
     <field name="state_id" ref="state_17" />
@@ -5736,7 +5736,7 @@
   </record>
   <record id="city_0820" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Villa del Rosario<</field>
+    <field name="name" type="char">Villa del Rosario</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">874</field>
     <field name="state_id" ref="state_18" />
@@ -5848,7 +5848,7 @@
   </record>
   <record id="city_0836" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Belén de Umbría<</field>
+    <field name="name" type="char">Belén de Umbría</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">088</field>
     <field name="state_id" ref="state_20" />
@@ -5911,7 +5911,7 @@
   </record>
   <record id="city_0845" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Rosa de Cabal<</field>
+    <field name="name" type="char">Santa Rosa de Cabal</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">682</field>
     <field name="state_id" ref="state_20" />
@@ -6100,7 +6100,7 @@
   </record>
   <record id="city_0872" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">El Carmen de Chucurí<</field>
+    <field name="name" type="char">El Carmen de Chucurí</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">235</field>
     <field name="state_id" ref="state_21" />
@@ -6331,7 +6331,7 @@
   </record>
   <record id="city_0905" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Palmas del Socorro<</field>
+    <field name="name" type="char">Palmas del Socorro</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">524</field>
     <field name="state_id" ref="state_21" />
@@ -6387,7 +6387,7 @@
   </record>
   <record id="city_0913" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Sabana de Torres<</field>
+    <field name="name" type="char">Sabana de Torres</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">655</field>
     <field name="state_id" ref="state_21" />
@@ -6422,7 +6422,7 @@
   </record>
   <record id="city_0918" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José de Miranda<</field>
+    <field name="name" type="char">San José de Miranda</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">684</field>
     <field name="state_id" ref="state_21" />
@@ -6436,7 +6436,7 @@
   </record>
   <record id="city_0920" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Vicente de Chucurí<</field>
+    <field name="name" type="char">San Vicente de Chucurí</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">689</field>
     <field name="state_id" ref="state_21" />
@@ -6450,7 +6450,7 @@
   </record>
   <record id="city_0922" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santa Helena del Opón<</field>
+    <field name="name" type="char">Santa Helena del Opón</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">720</field>
     <field name="state_id" ref="state_21" />
@@ -6499,7 +6499,7 @@
   </record>
   <record id="city_0929" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Valle de San José<</field>
+    <field name="name" type="char">Valle de San José</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">855</field>
     <field name="state_id" ref="state_21" />
@@ -6660,7 +6660,7 @@
   </record>
   <record id="city_0952" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Juan de Betulia<</field>
+    <field name="name" type="char">San Juan de Betulia</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">702</field>
     <field name="state_id" ref="state_22" />
@@ -6688,7 +6688,7 @@
   </record>
   <record id="city_0956" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Luis de Sincé<</field>
+    <field name="name" type="char">San Luis de Sincé</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">742</field>
     <field name="state_id" ref="state_22" />
@@ -6702,7 +6702,7 @@
   </record>
   <record id="city_0958" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Santiago de Tolú<</field>
+    <field name="name" type="char">Santiago de Tolú</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">820</field>
     <field name="state_id" ref="state_22" />
@@ -6772,7 +6772,7 @@
   </record>
   <record id="city_0968" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Carmen de Apicalá<</field>
+    <field name="name" type="char">Carmen de Apicalá</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">148</field>
     <field name="state_id" ref="state_23" />
@@ -6891,7 +6891,7 @@
   </record>
   <record id="city_0985" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Sebastián de Mariquita<</field>
+    <field name="name" type="char">San Sebastián de Mariquita</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">443</field>
     <field name="state_id" ref="state_23" />
@@ -7017,7 +7017,7 @@
   </record>
   <record id="city_1003" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Valle de San Juan<</field>
+    <field name="name" type="char">Valle de San Juan</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">854</field>
     <field name="state_id" ref="state_23" />
@@ -7094,7 +7094,7 @@
   </record>
   <record id="city_1014" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Guadalajara de Buga<</field>
+    <field name="name" type="char">Guadalajara de Buga</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">111</field>
     <field name="state_id" ref="state_24" />
@@ -7451,7 +7451,7 @@
   </record>
   <record id="city_1065" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Paz de Ariporo<</field>
+    <field name="name" type="char">Paz de Ariporo</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">250</field>
     <field name="state_id" ref="state_26" />
@@ -7486,7 +7486,7 @@
   </record>
   <record id="city_1070" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San Luis de Palenque<</field>
+    <field name="name" type="char">San Luis de Palenque</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">325</field>
     <field name="state_id" ref="state_26" />
@@ -7598,7 +7598,7 @@
   </record>
   <record id="city_1086" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">Valle del Guamuez<</field>
+    <field name="name" type="char">Valle del Guamuez</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">865</field>
     <field name="state_id" ref="state_27" />
@@ -7766,7 +7766,7 @@
   </record>
   <record id="city_1110" model="res.country.state.city">
     <field name="country_id" ref="base.co" />
-    <field name="name" type="char">San José del Guaviare<</field>
+    <field name="name" type="char">San José del Guaviare</field>
     <field name="phone_prefix" type="char" />
     <field name="statcode" type="char">001</field>
     <field name="state_id" ref="state_31" />
