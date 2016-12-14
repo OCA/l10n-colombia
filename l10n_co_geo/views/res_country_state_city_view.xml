@@ -17,15 +17,16 @@
     <field name="model">res.country.state.city</field>
     <field name="type">form</field>
     <field name="arch" type="xml">
-      <sheet string="City">
-        <group col="4">
-          <field name="name" />
-          <field name="state_id" />
-          <field name="phone_prefix" />
-          <field name="statcode" />
-          <field name="country_id" />
-        </group>
-      </sheet>
+      <form name="city" string="City">
+        <sheet string="City">
+          <group col="4">
+            <field name="name" />
+            <field name="state_id" context="{'default_country_id': country_id}" />
+            <field name="statcode" />
+            <field name="country_id" />
+          </group>
+        </sheet>
+      </form>
     </field>
   </record>
   <record id="action_city" model="ir.actions.act_window">
