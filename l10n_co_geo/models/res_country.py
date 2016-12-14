@@ -2,7 +2,7 @@
 # Copyright 2016 David Arnold, DevCO Colombia
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp import models, fields, api
+from openerp import models, fields, api, _
 
 
 class ResCountry(models.Model):
@@ -10,11 +10,19 @@ class ResCountry(models.Model):
 
     code_dian = fields.Char('Code Dian', size=3, translate=False)
 
+    _sql_constraints = [
+        ('state_uniq', 'unique(name, state_id, country_id)',
+         _('The city you are trying to create already exists.'))]
+
 
 class ResState(models.Model):
     _inherit = 'res.country.state'
 
     iso = fields.Char('iso', size=3, translate=False)
+
+    _sql_constraints = [
+        ('state_uniq', 'unique(name, country_id)',
+         _('The state you are trying to create already exists.'))]
 
 
 class ResCity(models.Model):
