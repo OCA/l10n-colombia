@@ -48,15 +48,29 @@ class ResPartner(models.Model):
     def _address_fields(self):
         return super(ResPartner, self)._address_fields() + ['city_id']
 
-    @api.model
-    def create(self, vals):
+    def _complete_address(self, vals):
+
+        def set_to_zero(vals, field):
+            return field in vals and not vals.get(field)
         if vals.get('city_id'):
             vals['state_id'] = self.env[
                 'res.country.state.city'
             ].browse(vals.get('city_id')).state_id.id
+        if set_to_zero(vals, 'state_id') and self.city_id:
+            vals['state_id'] = self.city_id.state_id.id
         if vals.get('state_id'):
             vals['country_id'] = self.env[
                 'res.country.state'
             ].browse(vals.get('state_id')).country_id.id
+        if set_to_zero(vals, 'country_id') and self.city_id or self.state_id:
+            country_rel = self.city_id or self.state_id
+            vals['country_id'] = country_rel.country_id.id
+        return vals
 
-        return super(ResPartner, self).create(vals)
+    @api.model
+    def create(self, vals):
+        return super(ResPartner, self).create(self._complete_address(vals))
+
+    @api.model
+    def write(self, vals):
+        return super(ResPartner, self).write(self._complete_address(vals))
