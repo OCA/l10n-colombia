@@ -22,5 +22,4 @@
         'views/res_company_view.xml',
         'views/res_country_state_city_view.xml',
     ],
-    'post_init_hook': '_fill_city_id',
 }
