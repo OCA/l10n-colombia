@@ -10,10 +10,6 @@ class ResCountry(models.Model):
 
     code_dian = fields.Char('Code Dian', size=3, translate=False)
 
-    _sql_constraints = [
-        ('state_uniq', 'unique(name, state_id, country_id)',
-         _('The city you are trying to create already exists.'))]
-
 
 class ResState(models.Model):
     _inherit = 'res.country.state'
@@ -35,6 +31,10 @@ class ResCity(models.Model):
         'DANE Code', size=5, translate=False,
         help='Code of the Colombian statistical department')
     country_id = fields.Many2one('res.country', 'Country', required=True)
+
+    _sql_constraints = [
+        ('state_uniq', 'unique(name, state_id, country_id)',
+         _('The city you are trying to create already exists.'))]
 
     def _enforce_address_domains(self):
         domain = dict(state_id=[])
