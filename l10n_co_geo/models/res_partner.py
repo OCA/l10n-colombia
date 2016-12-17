@@ -71,6 +71,6 @@ class ResPartner(models.Model):
     def create(self, vals):
         return super(ResPartner, self).create(self._complete_address(vals))
 
-    @api.model
+    @api.multi
     def write(self, vals):
         return super(ResPartner, self).write(self._complete_address(vals))
