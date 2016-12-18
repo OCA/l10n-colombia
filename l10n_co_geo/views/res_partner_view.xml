@@ -14,24 +14,24 @@
       </xpath>
       <field name="city" position="after">
         <field name="city_id" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"
-          options="{'no_open': True}" domain="['|', ('state_id', '=?', False),'&amp;', ('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          options="{'no_open': True}" domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
           context="{'default_country_id': country_id, 'default_state_id': state_id}"
         />
       </field>
       <xpath expr="//notebook/page[1]/field/form/sheet//field[@name='city']" position="after">
         <field name="city_id" placeholder="City" class="o_address_city"
-          options="{'no_open': True}" domain="['|', ('state_id', '=?', False),'&amp;', ('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          options="{'no_open': True}" domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
           context="{'default_country_id': country_id, 'default_state_id': state_id}"
         />
       </xpath>
       <field name="state_id" position="attributes">
         <attribute name="on_change" />
-        <attribute name="domain">[('country_id', '=', country_id or True)]</attribute>
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
         <attribute name="context">{'default_country_id': country_id}</attribute>
       </field>
       <xpath expr="//notebook/page[1]/field/form/sheet//field[@name='state_id']" position="attributes">
         <attribute name="on_change" />
-        <attribute name="domain">[('country_id', '=', country_id or True)]</attribute>
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
         <attribute name="context">{'default_country_id': country_id}</attribute>
       </xpath>
       <field name="child_ids" position="attributes">
@@ -64,12 +64,12 @@
       </field>
       <field name="city" position="after">
         <field name="city_id" placeholder="City" class="o_address_city" options="{'no_open': True}"
-          domain="['|', ('state_id', '=?', False),'&amp;', ('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
           context="{'default_country_id': country_id, 'default_state_id': state_id}"
         /></field>
       <field name="state_id" position="attributes">
         <attribute name="on_change" />
-        <attribute name="domain">[('country_id', '=', country_id or True)]</attribute>
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
         <attribute name="context">{'default_country_id': country_id}</attribute>
       </field>
     </field>
