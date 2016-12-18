@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="view_crm_case_form_view_leads_geo">
+    <field name="name">crm.lead.form.city</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <field name="city" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </field>
+      <field name="city" position="after">
+        <field name="city_id" placeholder="City" class="o_address_city" options="{'no_open': True}"
+          domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          context="{'default_country_id': country_id, 'default_state_id': state_id}"
+        /></field>
+      <field name="state_id" position="attributes">
+        <attribute name="on_change" />
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
+        <attribute name="context">{'default_country_id': country_id}</attribute>
+      </field>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_crm_case_form_view_oppor_geo">
+    <field name="name">crm.lead.form.oppor.city</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <field name="city" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </field>
+      <field name="city" position="after">
+        <field name="city_id" placeholder="City" class="o_address_city" options="{'no_open': True}"
+          domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          context="{'default_country_id': country_id, 'default_state_id': state_id}"
+        /></field>
+      <field name="state_id" position="attributes">
+        <attribute name="on_change" />
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
+        <attribute name="context">{'default_country_id': country_id}</attribute>
+      </field>
+    </field>
+  </record>
+</odoo>
+

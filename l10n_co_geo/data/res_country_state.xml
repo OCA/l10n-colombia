@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- until included in https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/res/res.country.state.csv -->
+  <record id="state_01" model="res.country.state">
+    <field name="code" type="char">05</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">ANT</field>
+    <field name="name" type="char">Antioquia</field>
+  </record>
+  <record id="state_02" model="res.country.state">
+    <field name="code" type="char">08</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">ATL</field>
+    <field name="name" type="char">Atlántico</field>
+  </record>
+  <record id="state_03" model="res.country.state">
+    <field name="code" type="char">11</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">DC</field>
+    <field name="name" type="char">D.C.</field>
+  </record>
+  <record id="state_04" model="res.country.state">
+    <field name="code" type="char">13</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">BOL</field>
+    <field name="name" type="char">Bolívar</field>
+  </record>
+  <record id="state_05" model="res.country.state">
+    <field name="code" type="char">15</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">BOY</field>
+    <field name="name" type="char">Boyacá</field>
+  </record>
+  <record id="state_06" model="res.country.state">
+    <field name="code" type="char">17</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CAL</field>
+    <field name="name" type="char">Caldas</field>
+  </record>
+  <record id="state_07" model="res.country.state">
+    <field name="code" type="char">18</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CAQ</field>
+    <field name="name" type="char">Caquetá</field>
+  </record>
+  <record id="state_08" model="res.country.state">
+    <field name="code" type="char">19</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CAU</field>
+    <field name="name" type="char">Cauca</field>
+  </record>
+  <record id="state_09" model="res.country.state">
+    <field name="code" type="char">20</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CES</field>
+    <field name="name" type="char">Cesar</field>
+  </record>
+  <record id="state_10" model="res.country.state">
+    <field name="code" type="char">23</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">COR</field>
+    <field name="name" type="char">Córdoba</field>
+  </record>
+  <record id="state_11" model="res.country.state">
+    <field name="code" type="char">25</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CUN</field>
+    <field name="name" type="char">Cundinamarca</field>
+  </record>
+  <record id="state_12" model="res.country.state">
+    <field name="code" type="char">27</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CHO</field>
+    <field name="name" type="char">Chocó</field>
+  </record>
+  <record id="state_13" model="res.country.state">
+    <field name="code" type="char">41</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">HUI</field>
+    <field name="name" type="char">Huila</field>
+  </record>
+  <record id="state_14" model="res.country.state">
+    <field name="code" type="char">44</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">LAG</field>
+    <field name="name" type="char">La Guajira</field>
+  </record>
+  <record id="state_15" model="res.country.state">
+    <field name="code" type="char">47</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">MAG</field>
+    <field name="name" type="char">Magdalena</field>
+  </record>
+  <record id="state_16" model="res.country.state">
+    <field name="code" type="char">50</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">MET</field>
+    <field name="name" type="char">Meta</field>
+  </record>
+  <record id="state_17" model="res.country.state">
+    <field name="code" type="char">52</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">NAR</field>
+    <field name="name" type="char">Nariño</field>
+  </record>
+  <record id="state_18" model="res.country.state">
+    <field name="code" type="char">54</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">NSA</field>
+    <field name="name" type="char">Norte de Santander</field>
+  </record>
+  <record id="state_19" model="res.country.state">
+    <field name="code" type="char">63</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">QUI</field>
+    <field name="name" type="char">Quindio</field>
+  </record>
+  <record id="state_20" model="res.country.state">
+    <field name="code" type="char">66</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">RIS</field>
+    <field name="name" type="char">Risaralda</field>
+  </record>
+  <record id="state_21" model="res.country.state">
+    <field name="code" type="char">68</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">SAN</field>
+    <field name="name" type="char">Santander</field>
+  </record>
+  <record id="state_22" model="res.country.state">
+    <field name="code" type="char">70</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">SUC</field>
+    <field name="name" type="char">Sucre</field>
+  </record>
+  <record id="state_23" model="res.country.state">
+    <field name="code" type="char">73</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">TOL</field>
+    <field name="name" type="char">Tolima</field>
+  </record>
+  <record id="state_24" model="res.country.state">
+    <field name="code" type="char">76</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">VAC</field>
+    <field name="name" type="char">Valle del Cauca</field>
+  </record>
+  <record id="state_25" model="res.country.state">
+    <field name="code" type="char">81</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">ARA</field>
+    <field name="name" type="char">Arauca</field>
+  </record>
+  <record id="state_26" model="res.country.state">
+    <field name="code" type="char">85</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">CAS</field>
+    <field name="name" type="char">Casanare</field>
+  </record>
+  <record id="state_27" model="res.country.state">
+    <field name="code" type="char">86</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">PUT</field>
+    <field name="name" type="char">Putumayo</field>
+  </record>
+  <record id="state_28" model="res.country.state">
+    <field name="code" type="char">88</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">SAP</field>
+    <field name="name" type="char">Archipiélago de San Andrés, Providencia y Santa Catalina</field>
+  </record>
+  <record id="state_29" model="res.country.state">
+    <field name="code" type="char">91</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">AMA</field>
+    <field name="name" type="char">Amazonas</field>
+  </record>
+  <record id="state_30" model="res.country.state">
+    <field name="code" type="char">94</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">GUA</field>
+    <field name="name" type="char">Guainía</field>
+  </record>
+  <record id="state_31" model="res.country.state">
+    <field name="code" type="char">95</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">GUV</field>
+    <field name="name" type="char">Guaviare</field>
+  </record>
+  <record id="state_32" model="res.country.state">
+    <field name="code" type="char">97</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">VAU</field>
+    <field name="name" type="char">Vaupés</field>
+  </record>
+  <record id="state_33" model="res.country.state">
+    <field name="code" type="char">99</field>
+    <field name="country_id" ref="base.co" />
+    <field name="iso" type="char">VID</field>
+    <field name="name" type="char">Vichada</field>
+  </record>
+</odoo>
+

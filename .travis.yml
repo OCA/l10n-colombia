@@ -27,7 +27,7 @@ addons:
 
 # set up an X server to run wkhtmltopdf.
 #before_install:
-#  - "export DISPLAY=:99.0"
+#  - "export DISPLAY=:910.0"
 #  - "sh -e /etc/init.d/xvfb start"
 
 env:

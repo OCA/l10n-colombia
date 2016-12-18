@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="view_partner_form_inherit_city">
+    <field name="name">partner.form.city</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form" />
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <field name="city" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </field>
+      <xpath expr="//notebook/page[1]/field/form/sheet//field[@name='city']" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </xpath>
+      <field name="city" position="after">
+        <field name="city_id" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"
+          options="{'no_open': True}" domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          context="{'default_country_id': country_id, 'default_state_id': state_id}"
+        />
+      </field>
+      <xpath expr="//notebook/page[1]/field/form/sheet//field[@name='city']" position="after">
+        <field name="city_id" placeholder="City" class="o_address_city"
+          options="{'no_open': True}" domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          context="{'default_country_id': country_id, 'default_state_id': state_id}"
+        />
+      </xpath>
+      <field name="state_id" position="attributes">
+        <attribute name="on_change" />
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
+        <attribute name="context">{'default_country_id': country_id}</attribute>
+      </field>
+      <xpath expr="//notebook/page[1]/field/form/sheet//field[@name='state_id']" position="attributes">
+        <attribute name="on_change" />
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
+        <attribute name="context">{'default_country_id': country_id}</attribute>
+      </xpath>
+      <field name="child_ids" position="attributes">
+        <attribute name="context">{'default_parent_id': active_id, 'default_street': street, 'default_street2':
+          street2, 'default_city': city, 'default_state_id': state_id,
+          'default_zip': zip, 'default_country_id': country_id, 'default_supplier':
+          supplier, 'default_customer': customer, 'default_lang': lang,
+          'default_city_id': city_id}</attribute>
+      </field>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_partner_filter_inherit_city">
+    <field name="name">res.partner.select.inherit.city</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter" />
+    <field name="arch" type="xml">
+      <xpath expr='(//group/filter)[last()]' position="after">
+        <filter string="State" context="{'group_by': 'state_id'}" />
+        <filter string="City" context="{'group_by': 'city_id'}" />
+      </xpath>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_partner_address_form_inherit_city">
+    <field name="name">res.partner.form.address.inherit.city</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_address_form" />
+    <field name="arch" type="xml">
+      <field name="city" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </field>
+      <field name="city" position="after">
+        <field name="city_id" placeholder="City" class="o_address_city" options="{'no_open': True}"
+          domain="[('state_id', '=?', state_id), ('country_id', '=?', country_id)]"
+          context="{'default_country_id': country_id, 'default_state_id': state_id}"
+        /></field>
+      <field name="state_id" position="attributes">
+        <attribute name="on_change" />
+        <attribute name="domain">[('country_id', '=?', country_id)]</attribute>
+        <attribute name="context">{'default_country_id': country_id}</attribute>
+      </field>
+    </field>
+  </record>
+</odoo>
+

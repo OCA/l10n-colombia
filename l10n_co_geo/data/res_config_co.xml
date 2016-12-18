@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- until included in https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/res/res.lang.csv -->
+  <!-- https://github.com/odoo/odoo/pull/14065 -->
+  <!-- Create link to the language with name "lang_co" in ir.model.data -->
+  <record id="l10n_co_geo_lang_co" model="ir.model.data">
+    <field name="name">lang_es_CO</field>
+    <field name="noupdate">FALSE</field>
+    <field name="module">base</field>
+    <field name="model">res.lang</field>
+    <field name="res_id" model="res.lang" search="[('code', '=', 'es_CO')]"
+    />
+  </record>
+  <record id="base.lang_es_CO" model="res.lang">
+    <field name="date_format">%d-%m-%Y</field>
+  </record>
+  <!-- until included in https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/res/res_country_data.xml -->
+  <!-- https://github.com/odoo/odoo/pull/14066 -->
+  <record id="base.co" model="res.country">
+    <field name="address_format" eval="'%(street)s\n%(street2)s\n%(city)s, %(state_name)s - %(zip)s\n%(country_name)s'"
+    />
+  </record>
+</odoo>
+
