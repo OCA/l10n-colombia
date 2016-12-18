@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 David Arnold, DevCO Colombia
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
-
 {
+    'version': '1.0',
     'name': 'Colombian Geodata',
-    'version': '10.0.1.0.0',
-    'author': 'DevCO Colombia SAS',
-    'maintainer': 'DevCO Colombia',
-    'website': 'http://devco.co',
-    'license': 'LGPL-3',
-    'category': 'Localization',
     'summary': 'Cities, departments and UI improvements.',
+    'category': 'Localization',
+
+    'author': 'DevCO',
+    'website': 'https://www.felicity.com.co',
+    'license': 'LGPL-3',
+
     'depends': ['base', 'sales_team'],
     'data': [
         'security/ir.model.access.csv',
@@ -20,6 +18,5 @@
         'data/res.country.csv',
         'views/res_partner_view.xml',
         'views/res_company_view.xml',
-        'views/res_country_state_city_view.xml',
-    ],
+        'views/res_country_state_city_view.xml'],
 }
