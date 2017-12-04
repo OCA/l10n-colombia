@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="aprgt_responsabilidad_21" model="aprgt.responsabilidad">
+            <field name="code">21</field>
+            <field name="name">Declarar ingreso o salida del país de divisas o moneda legal</field>
+        </record>
+        <record id="aprgt_responsabilidad_19" model="aprgt.responsabilidad">
+            <field name="code">19</field>
+            <field name="name">Productor de bienes y/o servicios exentos (incluye exportadores)</field>
+        </record>
+        <record id="aprgt_responsabilidad_07" model="aprgt.responsabilidad">
+            <field name="code">07</field>
+            <field name="name">Retención en la fuente a título de renta</field>
+        </record>
+        <record id="aprgt_responsabilidad_10" model="aprgt.responsabilidad">
+            <field name="code">10</field>
+            <field name="name">Usuario aduanero</field>
+        </record>
+        <record id="aprgt_responsabilidad_17" model="aprgt.responsabilidad">
+            <field name="code">17</field>
+            <field name="name">Profesionales de compra y venta de divisas</field>
+        </record>
+        <record id="aprgt_responsabilidad_23" model="aprgt.responsabilidad">
+            <field name="code">23</field>
+            <field name="name">Agente de retención en ventas</field>
+        </record>
+        <record id="aprgt_responsabilidad_16" model="aprgt.responsabilidad">
+            <field name="code">16</field>
+            <field name="name">Obligación a facturar por ingresos bienes y/o servicios</field>
+        </record>
+        <record id="aprgt_responsabilidad_12" model="aprgt.responsabilidad">
+            <field name="code">12</field>
+            <field name="name">Ventas régimen simplificado</field>
+        </record>
+        <record id="aprgt_responsabilidad_13" model="aprgt.responsabilidad">
+            <field name="code">13</field>
+            <field name="name">Gran contribuyente</field>
+        </record>
+        <record id="aprgt_responsabilidad_26" model="aprgt.responsabilidad">
+            <field name="code">26</field>
+            <field name="name">Declaracion individual precios de transferencia</field>
+        </record>
+        <record id="aprgt_responsabilidad_15" model="aprgt.responsabilidad">
+            <field name="code">15</field>
+            <field name="name">Autorretenedor</field>
+        </record>
+        <record id="aprgt_responsabilidad_11" model="aprgt.responsabilidad">
+            <field name="code">11</field>
+            <field name="name">Ventas régimen común</field>
+        </record>
+        <record id="aprgt_responsabilidad_22" model="aprgt.responsabilidad">
+            <field name="code">22</field>
+            <field name="name">Obligado a declarar a nombre de terceros</field>
+        </record>
+        <record id="aprgt_responsabilidad_20" model="aprgt.responsabilidad">
+            <field name="code">20</field>
+            <field name="name">Obtención NIT Decreto 3050 de 1997 (Art. 3o)</field>
+        </record>
+        <record id="aprgt_responsabilidad_09" model="aprgt.responsabilidad">
+            <field name="code">09</field>
+            <field name="name">Retención en la fuente en el impuesto sobre las ventas</field>
+        </record>
+        <record id="aprgt_responsabilidad_02" model="aprgt.responsabilidad">
+            <field name="code">02</field>
+            <field name="name">Gravamen a los movimientos financieros</field>
+        </record>
+        <record id="aprgt_responsabilidad_24" model="aprgt.responsabilidad">
+            <field name="code">24</field>
+            <field name="name">Declaración consolidada precios de transferencia</field>
+        </record>
+        <record id="aprgt_responsabilidad_06" model="aprgt.responsabilidad">
+            <field name="code">06</field>
+            <field name="name">Ingresos y patrimonio</field>
+        </record>
+        <record id="aprgt_responsabilidad_34" model="aprgt.responsabilidad">
+            <field name="code">34</field>
+            <field name="name">Régimen simplificado impuesto nacional consumo</field>
+        </record>
+        <record id="aprgt_responsabilidad_14" model="aprgt.responsabilidad">
+            <field name="code">14</field>
+            <field name="name">Informante de exógena</field>
+        </record>
+        <record id="aprgt_responsabilidad_18" model="aprgt.responsabilidad">
+            <field name="code">18</field>
+            <field name="name">Precios de transferencia</field>
+        </record>
+        <record id="aprgt_responsabilidad_35" model="aprgt.responsabilidad">
+            <field name="code">35</field>
+            <field name="name">Impuesto sobre la renta para la equidad - CREE</field>
+        </record>
+        <record id="aprgt_responsabilidad_08" model="aprgt.responsabilidad">
+            <field name="code">08</field>
+            <field name="name">Retención en la fuente a título de impuesto de timbre nacional</field>
+        </record>
+        <record id="aprgt_responsabilidad_01" model="aprgt.responsabilidad">
+            <field name="code">01</field>
+            <field name="name">Aporte especial para la administración de justicia</field>
+        </record>
+        <record id="aprgt_responsabilidad_03" model="aprgt.responsabilidad">
+            <field name="code">03</field>
+            <field name="name">Impuesto al patrimonio</field>
+        </record>
+        <record id="aprgt_responsabilidad_19" model="aprgt.responsabilidad">
+            <field name="code">19</field>
+            <field name="name">Productor de bienes y/o servicios exentos (incluye expo)</field>
+        </record>
+    </data>
+</odoo>

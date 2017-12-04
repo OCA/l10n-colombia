@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- RUT in Partner Form -->
+        <record id="aprgt_registro_unico_tributario_res_partner_form" model="ir.ui.view">
+            <field name="name">aprgt.registro.unico.tributario.res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//sheet/notebook/page[1]" position="before">
+                        <page string="RUT">
+                            <field name="aprgt_registro_unico_tributario_ids" context="{'default_partner_id': active_id}" nolabel="1" widget="one2many_list" mode="tree">
+                                <tree string="RUT">
+                                    <field name="numero_formulario"/>
+                                    <field name="concepto"/>
+                                    <field name="tipo_contribuyente"/>
+                                    <field name="numero_identificacion_tributaria"/>
+                                    <field name="digito_verificacion"/>
+                                    <field name="active"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

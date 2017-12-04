@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="aprgt_usuario_aduanero_01" model="aprgt.usuario.aduanero">
+            <field name="code">01</field>
+            <field name="name">Agente de Carga Internacional</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_02" model="aprgt.usuario.aduanero">
+            <field name="code">02</field>
+            <field name="name">Agente marítimo</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_03" model="aprgt.usuario.aduanero">
+            <field name="code">03</field>
+            <field name="name">Almacén General de Depósito</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_04" model="aprgt.usuario.aduanero">
+            <field name="code">04</field>
+            <field name="name">Comercializadora Internacional (C.I.)</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_05" model="aprgt.usuario.aduanero">
+            <field name="code">05</field>
+            <field name="name">Comerciante de la Zona Aduanera Especial de Inírida, Puerto Carreño y Primavera</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_06" model="aprgt.usuario.aduanero">
+            <field name="code">06</field>
+            <field name="name">Comerciantes de la zona de Régimen Audanero Especial de Leticia</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_07" model="aprgt.usuario.aduanero">
+            <field name="code">07</field>
+            <field name="name">Comerciantes de la Zona de Régimen Especial de Maicao, Uribia y Manaure</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_08" model="aprgt.usuario.aduanero">
+            <field name="code">08</field>
+            <field name="name">Comerciantes de la Zona de Régimen Aduanero Especial de Urabá, Tumaco y Guapí</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_09" model="aprgt.usuario.aduanero">
+            <field name="code">09</field>
+            <field name="name">Comerciantes del Puerto Libre de San Andrés, Providencia</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_10" model="aprgt.usuario.aduanero">
+            <field name="code">10</field>
+            <field name="name">Depósito Público de Apoyo Logístico Internacional</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_11" model="aprgt.usuario.aduanero">
+            <field name="code">11</field>
+            <field name="name">Depósito Privado para Procesamiento Industrial</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_12" model="aprgt.usuario.aduanero">
+            <field name="code">12</field>
+            <field name="name">Depósito Privado de Transformación o Ensamble</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_13" model="aprgt.usuario.aduanero">
+            <field name="code">13</field>
+            <field name="name">Depósito franco</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_14" model="aprgt.usuario.aduanero">
+            <field name="code">14</field>
+            <field name="name">Depósito Privado Aeronáutico</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_15" model="aprgt.usuario.aduanero">
+            <field name="code">15</field>
+            <field name="name">Depósito Privado para Distribución Internacional</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_16" model="aprgt.usuario.aduanero">
+            <field name="code">16</field>
+            <field name="name">Depósito privado de provisiones de abordo para consumo</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_17" model="aprgt.usuario.aduanero">
+            <field name="code">17</field>
+            <field name="name">Depósito privado para envíos urgentes</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_18" model="aprgt.usuario.aduanero">
+            <field name="code">18</field>
+            <field name="name">Depósito privado</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_19" model="aprgt.usuario.aduanero">
+            <field name="code">19</field>
+            <field name="name">Depósito Público</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_20" model="aprgt.usuario.aduanero">
+            <field name="code">20</field>
+            <field name="name">Depósito Público para Distribución Internacional</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_21" model="aprgt.usuario.aduanero">
+            <field name="code">21</field>
+            <field name="name">Exportador de café</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_22" model="aprgt.usuario.aduanero">
+            <field name="code">22</field>
+            <field name="name">Exportador</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_23" model="aprgt.usuario.aduanero">
+            <field name="code">23</field>
+            <field name="name">Importador</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_24" model="aprgt.usuario.aduanero">
+            <field name="code">24</field>
+            <field name="name">Intermediario de tráfico postal y envíos urgentes</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_25" model="aprgt.usuario.aduanero">
+            <field name="code">25</field>
+            <field name="name">Operador de transporte multimodal</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_26" model="aprgt.usuario.aduanero">
+            <field name="code">26</field>
+            <field name="name">Sociedad de intermediación aduanera</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_27" model="aprgt.usuario.aduanero">
+            <field name="code">27</field>
+            <field name="name">Titular de puertos y muelles de servicio público o privado</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_28" model="aprgt.usuario.aduanero">
+            <field name="code">28</field>
+            <field name="name">Transporte aéreo régimen de importación o exportación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_29" model="aprgt.usuario.aduanero">
+            <field name="code">29</field>
+            <field name="name">Transportista nacional operaciones de tránsito aduanero</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_30" model="aprgt.usuario.aduanero">
+            <field name="code">30</field>
+            <field name="name">Usuario comercial zona franca</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_32" model="aprgt.usuario.aduanero">
+            <field name="code">32</field>
+            <field name="name">Usuario industrial bienes zona franca</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_34" model="aprgt.usuario.aduanero">
+            <field name="code">34</field>
+            <field name="name">Usuario industrial servicios zona franca</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_36" model="aprgt.usuario.aduanero">
+            <field name="code">36</field>
+            <field name="name">Usuario operador de zona franca</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_37" model="aprgt.usuario.aduanero">
+            <field name="code">37</field>
+            <field name="name">Usuario aduanero permanente</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_38" model="aprgt.usuario.aduanero">
+            <field name="code">38</field>
+            <field name="name">Usuario altamente exportador</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_39" model="aprgt.usuario.aduanero">
+            <field name="code">39</field>
+            <field name="name">Usuario zonas económicas especiales de exportación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_40" model="aprgt.usuario.aduanero">
+            <field name="code">40</field>
+            <field name="name">Depósito privado de instalaciones industriales</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_41" model="aprgt.usuario.aduanero">
+            <field name="code">41</field>
+            <field name="name">Usuarios de programas especiales de exportación FEX</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_42" model="aprgt.usuario.aduanero">
+            <field name="code">42</field>
+            <field name="name">Depósito privado para mercancías en tránsito</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_43" model="aprgt.usuario.aduanero">
+            <field name="code">43</field>
+            <field name="name">Observadores de las operaciones de importación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_44" model="aprgt.usuario.aduanero">
+            <field name="code">44</field>
+            <field name="name">Usuarios sistemas especiales importación exportación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_45" model="aprgt.usuario.aduanero">
+            <field name="code">45</field>
+            <field name="name">Importador de textiles y calzado</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_46" model="aprgt.usuario.aduanero">
+            <field name="code">46</field>
+            <field name="name">Transportador marítimo régimen importación exportación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_47" model="aprgt.usuario.aduanero">
+            <field name="code">47</field>
+            <field name="name">Transportador terrestre régimen importación exportación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_48" model="aprgt.usuario.aduanero">
+            <field name="code">48</field>
+            <field name="name">Aeropuerto de servicio público o privado</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_49" model="aprgt.usuario.aduanero">
+            <field name="code">49</field>
+            <field name="name">Transportador fluvial régimen importación exportación</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_50" model="aprgt.usuario.aduanero">
+            <field name="code">50</field>
+            <field name="name">Usuario industrial zona franca especial</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_53" model="aprgt.usuario.aduanero">
+            <field name="code">53</field>
+            <field name="name">Agencias de Aduanas 1</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_54" model="aprgt.usuario.aduanero">
+            <field name="code">54</field>
+            <field name="name">Usuario operador zona franca especial</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_55" model="aprgt.usuario.aduanero">
+            <field name="code">55</field>
+            <field name="name">Agencias de aduanas 2</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_56" model="aprgt.usuario.aduanero">
+            <field name="code">56</field>
+            <field name="name">Agencias de aduanas 3</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_57" model="aprgt.usuario.aduanero">
+            <field name="code">57</field>
+            <field name="name">Agencias de aduanas 4</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_58" model="aprgt.usuario.aduanero">
+            <field name="code">58</field>
+            <field name="name">Transportador aéreo nacional</field>
+        </record>
+        <record id="aprgt_usuario_aduanero_59" model="aprgt.usuario.aduanero">
+            <field name="code">59</field>
+            <field name="name">Importador de bebidas alcohólicas</field>
+        </record>
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
