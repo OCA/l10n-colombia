@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <function model="res.country" name="update_dane_code">
+        </function>
+    </data>
+</odoo>

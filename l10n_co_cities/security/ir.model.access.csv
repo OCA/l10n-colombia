@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_co_cities_l10n_co_cities,l10n_co_cities.l10n_co_cities,model_l10n_co_cities_l10n_co_cities,,1,0,0,0

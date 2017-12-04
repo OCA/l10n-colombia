@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Country Tree -->
+        <record id="apdnc_base_view_country_tree" model="ir.ui.view">
+            <field name="name">apdnc.base.res.country.tree</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='code']" position="after">
+                    <field name="apdnc_dane_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Country Form -->
+        <record id="apdnc_base_view_country_form" model="ir.ui.view">
+            <field name="name">apdnc.base.res.country.form</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/group/group[1]/field[@name='code']" position="after">
+                    <field name="apdnc_dane_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- State Tree -->
+        <record id="apdnc_base_view_country_state_tree" model="ir.ui.view">
+            <field name="name">apdnc.base.res.country.state.tree</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='country_id']" position="after">
+                    <field name="apdnc_dane_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- State Form -->
+        <record id="apdnc_base_view_country_state_form" model="ir.ui.view">
+            <field name="name">apdnc.base.res.country.state.form</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/group/field[@name='country_id']" position="after">
+                    <field name="apdnc_dane_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- City Tree -->
+        <record id="apdnc_apcty_city_view_apcty_city_tree" model="ir.ui.view">
+            <field name="name">apdnc.apcty_base.res.state.city.tree</field>
+            <field name="model">apcty.city</field>
+            <field name="inherit_id" ref="apcty_city.view_apcty_city_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='state_id']" position="after">
+                    <field name="apdnc_dane_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- City Form -->
+        <record id="apdnc_apcty_city_view_apcty_city_form" model="ir.ui.view">
+            <field name="name">apdnc.apcty_base.res.state.city.form</field>
+            <field name="model">apcty.city</field>
+            <field name="inherit_id" ref="apcty_city.view_apcty_city_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/group/field[@name='state_id']" position="after">
+                    <field name="apdnc_dane_code"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

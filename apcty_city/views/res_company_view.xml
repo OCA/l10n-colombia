@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="apcty_base_view_company_form" model="ir.ui.view">
+            <field name="name">apcty.res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <field name="street" position="after">
+                    <field name="apcty_has_cities" invisible="1"/>
+                </field>
+                <field name="street2" position="after">
+                    <field name="apcty_city_id" class="o_address_city" placeholder="City"
+                           options='{"no_open": True}'
+                           attrs="{'invisible': [('apcty_has_cities', '=', False)]}">
+                    </field>
+                </field>
+                <field name="city" position="attributes">
+                    <attribute name="attrs">{'invisible': [('apcty_has_cities', '=', True)]}</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
