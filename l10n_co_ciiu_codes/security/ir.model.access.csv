@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_apciu_class_user,apciu.class,model_apciu_class,,1,0,0,0
+access_apciu_class_manager,apciu.class,model_apciu_class,base.group_partner_manager,1,1,1,1
+access_apciu_division_user,apciu.division,model_apciu_division,,1,0,0,0
+access_apciu_division_manager,apciu.division,model_apciu_division,base.group_partner_manager,1,1,1,1
+access_apciu_group_user,apciu.group,model_apciu_group,,1,0,0,0
+access_apciu_group_manager,apciu.group,model_apciu_group,base.group_partner_manager,1,1,1,1
+access_apciu_section_user,apciu.section,model_apciu_section,,1,0,0,0
+access_apciu_section_manager,apciu.section,model_apciu_section,base.group_partner_manager,1,1,1,1
