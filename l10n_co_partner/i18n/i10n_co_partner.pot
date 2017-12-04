@@ -1,0 +1,270 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_co_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-30 05:34+0000\n"
+"PO-Revision-Date: 2017-01-30 05:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "11 - Registro civil de nacimiento"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "12 - Tarjeta de identidad"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "13 - Cédula de ciudadanía"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "14 - Certificado de la Registraduría para sucesiones ilíquidas de personas naturales que no tienen ningún documento de identificación"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "15 - Tipo de documento que identifica una sucesión ilíquida, expedido por la notaría o por un juzgado"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "21 - Tarjeta de extranjería"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "22 - Cédula de extranjería"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "31 - NIT"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "33 - Identificación de extranjeros diferentes al NIT asignado por la DIAN"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "41 - Pasaporte"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "42 - Documento de identificación extranjero"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "43 - Sin identificación del exterior o para uso definido por la DIAN"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "44 - Documento de identificación extranjero Persona Jurídica"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_tipo_documento:0
+msgid "46 - Carné Diplomático"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:99
+#, python-format
+msgid "Duplicidad de Registros!"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_digito_verificacion
+msgid "Dígito de Verificación"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:122
+#, python-format
+msgid "Dígito de Verificación No Válido!"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:154
+#, python-format
+msgid "El dígito de verificación es requerido para el tipo de documento NIT y solo para él."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:123
+#, python-format
+msgid "El dígito de verificación ingresado no es válido."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:157
+#, python-format
+msgid "El dígito de verificación no es válido"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:148
+#, python-format
+msgid "El tercero %s tiene la misma identificación ingresada.\n"
+""
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:163
+#, python-format
+msgid "El tipo de documento no aplica para una persona jurídica."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:115
+#, python-format
+msgid "El tipo de documento seleccionado no aplica para una persona jurídica."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/exceptions.py:11
+#, python-format
+msgid "Error(s) with partner %d's name."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:138
+#, python-format
+msgid "Identificación Inválida.\n"
+"Si se selecciona un tipo de documento se debe ingresar un número de identificación y viceversa."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/account_invoice.py:24
+#, python-format
+msgid "Identificación de la Compañía!"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/account_invoice.py:18
+#, python-format
+msgid "Identificación del Tercero!"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model,name:l10n_co_partner.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_naturaleza:0
+msgid "Jurídica"
+msgstr ""
+
+#. module: l10n_co_partner
+#: selection:res.partner,appnr_naturaleza:0
+msgid "Natural"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_naturaleza
+msgid "Naturaleza"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/exceptions.py:8
+#, python-format
+msgid "No name is set."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/account_invoice.py:25
+#, python-format
+msgid "No se ha ingresado el número de identificación de la Compañía."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/account_invoice.py:19
+#: code:addons/l10n_co_partner/models/account_invoice.py:33
+#, python-format
+msgid "No se ha ingresado el número de identificación del tercero."
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_numero_identificacion
+msgid "Número de Identificación"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:131
+#, python-format
+msgid "Número de Identificación No Válido!"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_otros_nombres
+msgid "Otros Nombres"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:143
+#, python-format
+msgid "Para el tipo de documento seleccionado el número de identificación debe contener solo dígitos."
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:132
+#, python-format
+msgid "Para el tipo de documento seleccionado, el número de identificación debe contener solo dígitos."
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model,name:l10n_co_partner.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_primer_apellido
+msgid "Primer Apellido"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_primer_nombre
+msgid "Primer Nombre"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_segundo_apellido
+msgid "Segundo Apellido"
+msgstr ""
+
+#. module: l10n_co_partner
+#: model:ir.model.fields,field_description:l10n_co_partner.field_res_partner_appnr_tipo_documento
+msgid "Tipo de Documento"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:114
+#, python-format
+msgid "Tipo de Documento No Válido!"
+msgstr ""
+
+#. module: l10n_co_partner
+#: code:addons/l10n_co_partner/models/res_partner.py:100
+#, python-format
+msgid "Ya existe un tercero con el nombre ingresado."
+msgstr ""
+

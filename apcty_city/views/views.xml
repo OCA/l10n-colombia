@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- State Form -->
+        <record id="apcty_base_view_country_state_form" model="ir.ui.view">
+            <field name="name">apcty.res.country.state.form</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="model">res.country.state</field>
+            <field name="arch" type="xml">
+            <field name="country_id" position="after">
+                <field name="apcty_has_cities" />
+            </field>
+            </field>
+        </record>
+
+        <!-- City Tree -->
+        <record id="view_apcty_city_tree" model="ir.ui.view">
+            <field name="name">apcty.city.tree</field>
+            <field name="model">apcty.city</field>
+            <field name="arch" type="xml">
+                <tree string="City">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="country_id"/>
+                    <field name="state_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- City Form -->
+        <record id="view_apcty_city_form" model="ir.ui.view">
+            <field name="name">apcty.city.form</field>
+            <field name="model">apcty.city</field>
+            <field name="arch" type="xml">
+                <form string="State">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="country_id" options='{"no_open": True}'/>
+                        <field name="state_id" options='{"no_open": True}'
+                               attrs="{'invisible':[('country_id', '=', False)]}"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_apcty_city" model="ir.actions.act_window">
+            <field name="name">Cities</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">apcty.city</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_apcty_city_tree"/>
+            <field name="help">Help</field>
+        </record>
+
+        <menuitem action="action_apcty_city"
+                  id="menu_apcty_city_partner"
+                  parent="sales_team.menu_localisation"
+                  sequence="4"
+                  groups="base.group_no_one"/>
+
+    </data>
+</odoo>

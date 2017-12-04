@@ -1,0 +1,193 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* apcty_city
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-30 04:47+0000\n"
+"PO-Revision-Date: 2017-01-30 04:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: apcty_city
+#: model:ir.model.fields,help:apcty_city.field_apcty_city_name
+msgid "Administrative divisions of a state."
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_bank
+msgid "Bank"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.actions.act_window,name:apcty_city.action_apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_res_country_apcty_city_ids
+#: model:ir.model.fields,field_description:apcty_city.field_res_country_state_apcty_city_ids
+#: model:ir.ui.menu,name:apcty_city.menu_apcty_city_partner
+msgid "Cities"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_res_bank_apcty_city_id
+#: model:ir.model.fields,field_description:apcty_city.field_res_company_apcty_city_id
+#: model:ir.model.fields,field_description:apcty_city.field_res_partner_apcty_city_id
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_company_form
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_partner_address_form
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_partner_form
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_res_bank_form
+#: model:ir.ui.view,arch_db:apcty_city.view_apcty_city_tree
+msgid "City"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_code
+msgid "City Code"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_name
+msgid "City Name"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_country
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_country_id
+msgid "Country"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_country_state
+msgid "Country state"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:63
+#: code:addons/apcty_city/models/res_company.py:63
+#: code:addons/apcty_city/models/res_partner.py:60
+#, python-format
+msgid "Error ! Please enter street value."
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:82
+#: code:addons/apcty_city/models/res_bank.py:84
+#: code:addons/apcty_city/models/res_company.py:82
+#: code:addons/apcty_city/models/res_company.py:84
+#: code:addons/apcty_city/models/res_partner.py:82
+#: code:addons/apcty_city/models/res_partner.py:85
+#, python-format
+msgid "Error ! Please enter the city."
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:80
+#: code:addons/apcty_city/models/res_company.py:80
+#: code:addons/apcty_city/models/res_partner.py:79
+#, python-format
+msgid "Error ! Please select the city."
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:48
+#, python-format
+msgid "Error ! Please select the country."
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:71
+#: code:addons/apcty_city/models/res_company.py:71
+#: code:addons/apcty_city/models/res_partner.py:68
+#, python-format
+msgid "Error ! Please select the state."
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:56
+#: code:addons/apcty_city/models/res_company.py:56
+#: code:addons/apcty_city/models/res_partner.py:53
+#, python-format
+msgid "Error ! The city does not belong to the selected state."
+msgstr ""
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:46
+#, python-format
+msgid "Error ! The state does not belong to the selected country."
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_res_bank_apcty_has_cities
+#: model:ir.model.fields,field_description:apcty_city.field_res_company_apcty_has_cities
+#: model:ir.model.fields,field_description:apcty_city.field_res_country_state_apcty_has_cities
+#: model:ir.model.fields,field_description:apcty_city.field_res_partner_apcty_has_cities
+msgid "Has Cities"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.actions.act_window,help:apcty_city.action_apcty_city
+msgid "Help"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_id
+msgid "ID"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_state_id
+#: model:ir.ui.view,arch_db:apcty_city.view_apcty_city_form
+msgid "State"
+msgstr ""
+
+#. module: apcty_city
+#: model:ir.model.fields,help:apcty_city.field_apcty_city_code
+msgid "The city code."
+msgstr ""
+

@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* apcty_city
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-06 15:39-0500\n"
+"PO-Revision-Date: 2017-02-06 15:47-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Language: es_CO\n"
+
+#. module: apcty_city
+#: model:ir.model.fields,help:apcty_city.field_apcty_city_name
+msgid "Administrative divisions of a state."
+msgstr "Divisiones administrativas de un departamento."
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_bank
+msgid "Bank"
+msgstr "Banco"
+
+#. module: apcty_city
+#: model:ir.actions.act_window,name:apcty_city.action_apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_res_country_apcty_city_ids
+#: model:ir.model.fields,field_description:apcty_city.field_res_country_state_apcty_city_ids
+#: model:ir.ui.menu,name:apcty_city.menu_apcty_city_partner
+msgid "Cities"
+msgstr "Ciudades"
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_res_bank_apcty_city_id
+#: model:ir.model.fields,field_description:apcty_city.field_res_company_apcty_city_id
+#: model:ir.model.fields,field_description:apcty_city.field_res_partner_apcty_city_id
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_company_form
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_partner_address_form
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_partner_form
+#: model:ir.ui.view,arch_db:apcty_city.apcty_base_view_res_bank_form
+#: model:ir.ui.view,arch_db:apcty_city.view_apcty_city_tree
+msgid "City"
+msgstr "Ciudad"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_code
+msgid "City Code"
+msgstr "Código de la Ciudad"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_name
+msgid "City Name"
+msgstr "Nombre de la Ciudad"
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_country
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_country_id
+msgid "Country"
+msgstr "País"
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_country_state
+msgid "Country state"
+msgstr "Departamento"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:63
+#: code:addons/apcty_city/models/res_company.py:63
+#: code:addons/apcty_city/models/res_partner.py:60
+#, python-format
+msgid "Error ! Please enter street value."
+msgstr "Error ! Por favor ingrese el valor de la primera línea de la dirección."
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:82
+#: code:addons/apcty_city/models/res_bank.py:84
+#: code:addons/apcty_city/models/res_company.py:82
+#: code:addons/apcty_city/models/res_company.py:84
+#: code:addons/apcty_city/models/res_partner.py:82
+#: code:addons/apcty_city/models/res_partner.py:85
+#, python-format
+msgid "Error ! Please enter the city."
+msgstr "Error ! Por favor ingrese la ciudad."
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:80
+#: code:addons/apcty_city/models/res_company.py:80
+#: code:addons/apcty_city/models/res_partner.py:79
+#, python-format
+msgid "Error ! Please select the city."
+msgstr "Error ! Por favor seleccione la ciudad."
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:48
+#, python-format
+msgid "Error ! Please select the country."
+msgstr "Error ! Por favor seleccione el país."
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:71
+#: code:addons/apcty_city/models/res_company.py:71
+#: code:addons/apcty_city/models/res_partner.py:68
+#, python-format
+msgid "Error ! Please select the state."
+msgstr "Error ! Por favor seleccione el departamento."
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:56
+#: code:addons/apcty_city/models/res_company.py:56
+#: code:addons/apcty_city/models/res_partner.py:53
+#, python-format
+msgid "Error ! The city does not belong to the selected state."
+msgstr "Error ! La ciudad no pertenece al departamento seleccionado."
+
+#. module: apcty_city
+#: code:addons/apcty_city/models/res_bank.py:46
+#, python-format
+msgid "Error ! The state does not belong to the selected country."
+msgstr "Error ! El departamento no pertenece al país seleccionado."
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_res_bank_apcty_has_cities
+#: model:ir.model.fields,field_description:apcty_city.field_res_company_apcty_has_cities
+#: model:ir.model.fields,field_description:apcty_city.field_res_country_state_apcty_has_cities
+#: model:ir.model.fields,field_description:apcty_city.field_res_partner_apcty_has_cities
+msgid "Has Cities"
+msgstr "Tiene Ciudades"
+
+#. module: apcty_city
+#: model:ir.actions.act_window,help:apcty_city.action_apcty_city
+msgid "Help"
+msgstr "Ayuda"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_id
+msgid "ID"
+msgstr "ID"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city___last_update
+msgid "Last Modified on"
+msgstr "Última Modificación en"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_write_date
+msgid "Last Updated on"
+msgstr "Última Actualización en"
+
+#. module: apcty_city
+#: model:ir.model,name:apcty_city.model_res_partner
+msgid "Partner"
+msgstr "Tercero"
+
+#. module: apcty_city
+#: model:ir.model.fields,field_description:apcty_city.field_apcty_city_state_id
+#: model:ir.ui.view,arch_db:apcty_city.view_apcty_city_form
+msgid "State"
+msgstr "Departamento"
+
+#. module: apcty_city
+#: model:ir.model.fields,help:apcty_city.field_apcty_city_code
+msgid "The city code."
+msgstr "El código de la ciudad."

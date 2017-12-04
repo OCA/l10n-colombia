@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_aprgt_rut_clasificacion_all,aprgt.rut.clasificacion,model_aprgt_rut_clasificacion,,1,0,0,0
+access_aprgt_rut_clasificacion_manager,aprgt.rut.clasificacion,model_aprgt_rut_clasificacion,base.group_partner_manager,1,1,1,1
+access_aprgt_responsabilidad_all,aprgt.responsabilidad,model_aprgt_responsabilidad,,1,0,0,0
+access_aprgt_responsabilidad_manager,aprgt.responsabilidad,model_aprgt_responsabilidad,base.group_partner_manager,1,1,1,1
+access_aprgt_usuario_aduanero_all,aprgt.usuario.aduanero,model_aprgt_usuario_aduanero,,1,0,0,0
+access_aprgt_usuario_aduanero_manager,aprgt.usuario.aduanero,model_aprgt_usuario_aduanero,base.group_partner_manager,1,1,1,1
+access_aprgt_rut_exportador_all,aprgt.rut.exportador,model_aprgt_rut_exportador,,1,0,0,0
+access_aprgt_rut_exportador_manager,aprgt.rut.exportador,model_aprgt_rut_exportador,base.group_partner_manager,1,1,1,1
+access_aprgt_registro_unico_tributario_all,aprgt.registro.unico.tributario,model_aprgt_registro_unico_tributario,,1,0,0,0
+access_aprgt_registro_unico_tributario_manager,aprgt.registro.unico.tributario,model_aprgt_registro_unico_tributario,base.group_partner_manager,1,1,1,1
+access_aprgt_direccion_seccional_all,aprgt.direccion.seccional,model_aprgt_direccion_seccional,,1,0,0,0
+access_aprgt_direccion_seccional_manager,aprgt.direccion.seccional,model_aprgt_direccion_seccional,base.group_partner_manager,1,1,1,1

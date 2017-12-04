@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="base.state_co_18" model="res.country.state">
+            <field name="code">18</field>
+            <field name="name">Caquetá</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">18</field>
+        </record>
+        <record id="base.state_co_81" model="res.country.state">
+            <field name="code">81</field>
+            <field name="name">Arauca</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">81</field>
+        </record>
+        <record id="base.state_co_70" model="res.country.state">
+            <field name="code">70</field>
+            <field name="name">Sucre</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">70</field>
+        </record>
+        <record id="base.state_co_97" model="res.country.state">
+            <field name="code">97</field>
+            <field name="name">Vaupés</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">97</field>
+        </record>
+        <record id="base.state_co_76" model="res.country.state">
+            <field name="code">76</field>
+            <field name="name">Valle del Cauca</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">76</field>
+        </record>
+        <record id="base.state_co_52" model="res.country.state">
+            <field name="code">52</field>
+            <field name="name">Nariño</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">52</field>
+        </record>
+        <record id="base.state_co_15" model="res.country.state">
+            <field name="code">15</field>
+            <field name="name">Boyacá</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">15</field>
+        </record>
+        <record id="base.state_co_19" model="res.country.state">
+            <field name="code">19</field>
+            <field name="name">Cauca</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">19</field>
+        </record>
+        <record id="base.state_co_88" model="res.country.state">
+            <field name="code">88</field>
+            <field name="name">San Andrés</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">88</field>
+        </record>
+        <record id="base.state_co_27" model="res.country.state">
+            <field name="code">27</field>
+            <field name="name">Chocó</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">27</field>
+        </record>
+        <record id="base.state_co_94" model="res.country.state">
+            <field name="code">94</field>
+            <field name="name">Guainía</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">94</field>
+        </record>
+        <record id="base.state_co_68" model="res.country.state">
+            <field name="code">68</field>
+            <field name="name">Santander</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">68</field>
+        </record>
+        <record id="base.state_co_50" model="res.country.state">
+            <field name="code">50</field>
+            <field name="name">Meta</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">50</field>
+        </record>
+        <record id="base.state_co_73" model="res.country.state">
+            <field name="code">73</field>
+            <field name="name">Tolima</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">73</field>
+        </record>
+        <record id="base.state_co_41" model="res.country.state">
+            <field name="code">41</field>
+            <field name="name">Huila</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">41</field>
+        </record>
+        <record id="base.state_co_86" model="res.country.state">
+            <field name="code">86</field>
+            <field name="name">Putumayo</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">86</field>
+        </record>
+        <record id="base.state_co_63" model="res.country.state">
+            <field name="code">63</field>
+            <field name="name">Quindío</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">63</field>
+        </record>
+        <record id="base.state_co_85" model="res.country.state">
+            <field name="code">85</field>
+            <field name="name">Casanare</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">85</field>
+        </record>
+        <record id="base.state_co_20" model="res.country.state">
+            <field name="code">20</field>
+            <field name="name">Cesar</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">20</field>
+        </record>
+        <record id="base.state_co_05" model="res.country.state">
+            <field name="code">05</field>
+            <field name="name">Antioquia</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">05</field>
+        </record>
+        <record id="base.state_co_23" model="res.country.state">
+            <field name="code">23</field>
+            <field name="name">Córdoba</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">23</field>
+        </record>
+        <record id="base.state_co_91" model="res.country.state">
+            <field name="code">91</field>
+            <field name="name">Amazonas</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">91</field>
+        </record>
+        <record id="base.state_co_54" model="res.country.state">
+            <field name="code">54</field>
+            <field name="name">Norte de Santander</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">54</field>
+        </record>
+        <record id="base.state_co_08" model="res.country.state">
+            <field name="code">08</field>
+            <field name="name">Atlántico</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">08</field>
+        </record>
+        <record id="base.state_co_11" model="res.country.state">
+            <field name="code">11</field>
+            <field name="name">Bogotá D.C.</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">11</field>
+        </record>
+        <record id="base.state_co_99" model="res.country.state">
+            <field name="code">99</field>
+            <field name="name">Vichada</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">99</field>
+        </record>
+        <record id="base.state_co_13" model="res.country.state">
+            <field name="code">13</field>
+            <field name="name">Bolívar</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">13</field>
+        </record>
+        <record id="base.state_co_44" model="res.country.state">
+            <field name="code">44</field>
+            <field name="name">La Guajira</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">44</field>
+        </record>
+        <record id="base.state_co_95" model="res.country.state">
+            <field name="code">95</field>
+            <field name="name">Guaviare</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">95</field>
+        </record>
+        <record id="base.state_co_66" model="res.country.state">
+            <field name="code">66</field>
+            <field name="name">Risaralda</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">66</field>
+        </record>
+        <record id="base.state_co_17" model="res.country.state">
+            <field name="code">17</field>
+            <field name="name">Caldas</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">17</field>
+        </record>
+        <record id="base.state_co_25" model="res.country.state">
+            <field name="code">25</field>
+            <field name="name">Cundinamarca</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">25</field>
+        </record>
+        <record id="base.state_co_47" model="res.country.state">
+            <field name="code">47</field>
+            <field name="name">Magdalena</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="apcty_has_cities">True</field>
+            <field name="apdnc_dane_code">47</field>
+        </record>
+    </data>
+</odoo>

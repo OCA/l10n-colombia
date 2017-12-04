@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record id="apbnk_view_partner_bank_form" model="ir.ui.view">
+            <field name="name">apbnk.res.partner.bank.form</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="/form/group/field[last()]" position="after">
+                            <field name="apbnk_tipo_cuenta" attrs="{'required': True}"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+        <record id="apbnk_view_partner_bank_tree" model="ir.ui.view">
+            <field name="name">apbnk.res.partner.bank.tree</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="/tree/field[last()]" position="after">
+                        <field name="apbnk_tipo_cuenta"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

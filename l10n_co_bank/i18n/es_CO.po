@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_bank
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-06 15:58-0500\n"
+"PO-Revision-Date: 2017-02-06 15:58-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Language: es_CO\n"
+
+#. module: l10n_co_bank
+#: selection:res.partner.bank,apbnk_tipo_cuenta:0
+msgid "Ahorro"
+msgstr "Ahorro"
+
+#. module: l10n_co_bank
+#: model:ir.model,name:l10n_co_bank.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+#. module: l10n_co_bank
+#: selection:res.partner.bank,apbnk_tipo_cuenta:0
+msgid "Corriente"
+msgstr "Corriente"
+
+#. module: l10n_co_bank
+#: model:ir.model.fields,field_description:l10n_co_bank.field_res_partner_bank_apbnk_tipo_cuenta
+msgid "Tipo de Cuenta"
+msgstr "Tipo de Cuenta"
