@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -22,7 +21,7 @@
 
 import logging
 
-from odoo import fields, models, api
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -32,11 +31,19 @@ class Postal(models.Model):
     _description = "Postal"
 
     name = fields.Char(string="Postal code", required=True)
-    postal_zone = fields.Char(string='Postal zone', required=True)
-    municipality_id = fields.Many2one(comodel_name='l10n_co_edi_jorels.postal_municipality', string='Municipality',
-                                      required=True, index=True)
-    department_id = fields.Many2one(comodel_name='l10n_co_edi_jorels.postal_department', string='Department',
-                                    required=True, index=True)
-    type = fields.Char(string='Type', required=True)
-    neighborhood = fields.Char(string='Neighborhood', required=True)
-    sidewalk = fields.Char(string='Sidewalk', required=True)
+    postal_zone = fields.Char(string="Postal zone", required=True)
+    municipality_id = fields.Many2one(
+        comodel_name="l10n_co_edi_jorels.postal_municipality",
+        string="Municipality",
+        required=True,
+        index=True,
+    )
+    department_id = fields.Many2one(
+        comodel_name="l10n_co_edi_jorels.postal_department",
+        string="Department",
+        required=True,
+        index=True,
+    )
+    type = fields.Char(string="Type", required=True)
+    neighborhood = fields.Char(string="Neighborhood", required=True)
+    sidewalk = fields.Char(string="Sidewalk", required=True)

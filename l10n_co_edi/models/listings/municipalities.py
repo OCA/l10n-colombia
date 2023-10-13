@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -33,5 +32,11 @@ class Municipalities(models.Model):
     _description = "Municipalities"
     _order = "name"
 
-    department_id = fields.Many2one(comodel_name='l10n_co_edi_jorels.departments', string="Department", required=True,
-                                    readonly=True, index=True, ondelete='RESTRICT')
+    department_id = fields.Many2one(
+        comodel_name="l10n_co_edi_jorels.departments",
+        string="Department",
+        required=True,
+        readonly=True,
+        index=True,
+        ondelete="RESTRICT",
+    )

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -26,5 +25,8 @@ from odoo import fields, models
 class ProductUom(models.Model):
     _inherit = "uom.uom"
 
-    edi_unit_measure_id = fields.Many2one(comodel_name='l10n_co_edi_jorels.unit_measures',
-                                          string="Unit of measure (DIAN)", ondelete='RESTRICT')
+    edi_unit_measure_id = fields.Many2one(
+        comodel_name="l10n_co_edi_jorels.unit_measures",
+        string="Unit of measure (DIAN)",
+        ondelete="RESTRICT",
+    )

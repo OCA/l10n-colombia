@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -20,18 +19,20 @@
 # email: info@jorels.com
 #
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class AccountMoveReversal(models.TransientModel):
-    _inherit = 'account.move.reversal'
+    _inherit = "account.move.reversal"
 
     # Required field for credit and debit notes in DIAN
-    ei_correction_concept_credit_id = fields.Many2one(comodel_name='l10n_co_edi_jorels.correction_concepts',
-                                                      string="Correction concept",
-                                                      domain=[('type_document_id', '=', '5')])
+    ei_correction_concept_credit_id = fields.Many2one(
+        comodel_name="l10n_co_edi_jorels.correction_concepts",
+        string="Correction concept",
+        domain=[("type_document_id", "=", "5")],
+    )
 
-    @api.onchange('ei_correction_concept_credit_id')
+    @api.onchange("ei_correction_concept_credit_id")
     def _onchange_ei_correction_concept_credit_id(self):
         if self.ei_correction_concept_credit_id:
             self.reason = self.ei_correction_concept_credit_id.name
@@ -41,13 +42,14 @@ class AccountMoveReversal(models.TransientModel):
         values = super(AccountMoveReversal, self)._prepare_default_reversal(move)
 
         if self.reason:
-            ei_correction_concept_search = self.env['l10n_co_edi_jorels.correction_concepts'].search([
-                ('name', '=', self.reason),
-                ('type_document_id', '=', 5)
-            ])
+            ei_correction_concept_search = self.env[
+                "l10n_co_edi_jorels.correction_concepts"
+            ].search([("name", "=", self.reason), ("type_document_id", "=", 5)])
             if ei_correction_concept_search:
-                values['ei_correction_concept_credit_id'] = ei_correction_concept_search[0].id
+                values[
+                    "ei_correction_concept_credit_id"
+                ] = ei_correction_concept_search[0].id
 
-        values['is_out_country'] = move.is_out_country
+        values["is_out_country"] = move.is_out_country
 
         return values

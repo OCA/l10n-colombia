@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #

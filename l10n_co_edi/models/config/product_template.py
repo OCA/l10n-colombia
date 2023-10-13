@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -26,5 +25,5 @@ from odoo import fields, models
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    brand_name = fields.Char('Brand')
-    model_name = fields.Char('Model')
+    brand_name = fields.Char("Brand")
+    model_name = fields.Char("Model")

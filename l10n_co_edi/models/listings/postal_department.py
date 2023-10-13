@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -32,4 +31,4 @@ class PostalDepartment(models.Model):
     _inherit = "l10n_co_edi_jorels.languages"
     _description = "Postal department"
 
-    department_code = fields.Char(string='Department code', required=True)
+    department_code = fields.Char(string="Department code", required=True)

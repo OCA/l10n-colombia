@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Jorels S.A.S. - Copyright (2019-2022)
 #
@@ -23,43 +22,53 @@
 import logging
 import re
 
-from odoo import api, models
+from odoo import models
 
 _logger = logging.getLogger(__name__)
 
 
 class Message(models.Model):
-    _inherit = 'mail.message'
-    _description = 'Message'
+    _inherit = "mail.message"
+    _description = "Message"
 
     def search_invoice_events(self):
         for rec in self:
-            email_from_search = re.search('<(.*)>', rec.email_from)
+            email_from_search = re.search("<(.*)>", rec.email_from)
             if email_from_search:
                 email_from = email_from_search.group(1)
             elif rec.email_from:
                 email_from = rec.email_from
             else:
-                email_from = ''
+                email_from = ""
 
             if email_from:
-                partner_rec = self.env['res.partner'].search([('email', '=', email_from)])
+                partner_rec = self.env["res.partner"].search(
+                    [("email", "=", email_from)]
+                )
                 if partner_rec:
                     cs = partner_rec.customer_software_id
                     move_id = cs.get_move_id(rec)
                     if move_id:
                         rec.res_id = move_id
-                        rec.model = 'account.move'
-                        invoice_rec = self.env[rec.model].search([('id', '=', rec.res_id)])[0]
-                        if invoice_rec.event != 'acceptance':
-                            invoice_rec.write({
-                                'event': cs.get_invoice_event(rec)
-                            })
+                        rec.model = "account.move"
+                        invoice_rec = self.env[rec.model].search(
+                            [("id", "=", rec.res_id)]
+                        )[0]
+                        if invoice_rec.event != "acceptance":
+                            invoice_rec.write({"event": cs.get_invoice_event(rec)})
                         else:
-                            _logger.debug("The event status of the invoice cannot be changed")
+                            _logger.debug(
+                                "The event status of the invoice cannot be changed"
+                            )
                     else:
-                        _logger.debug("Invoice ID does not exist in message ID: %s" % rec.message_id)
+                        _logger.debug(
+                            "Invoice ID does not exist in message ID: %s"
+                            % rec.message_id
+                        )
                 else:
-                    _logger.debug("It does not match the email of the contacts in the message ID: %s" % rec.message_id)
+                    _logger.debug(
+                        "It does not match the email of the contacts in the message ID: %s"
+                        % rec.message_id
+                    )
             else:
                 _logger.debug("Not email from in message")
