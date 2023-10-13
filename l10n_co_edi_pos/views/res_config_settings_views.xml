@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jorels S.A.S. - Copyright (C) 2019-2023-->
+
+<!--This file is part of l10n_co_edi_jorels_pos.-->
+
+<!--This program is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--This program is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with this program. If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="res_config_settings_view_form_l10n_co_edi_jorels_pos" model="ir.ui.view">
+            <field name="name">res.config.settings.form.view.l10n_co_edi_jorels_pos.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='pos_accounting_section']" position="inside">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Default DIAN POS Journals</span>
+                            <div class="text-muted">
+                                Default DIAN POS journals for electronic invoices
+                            </div>
+                            <div class="content-group mt16">
+                                <div class="row">
+                                    <label string="Electronic invoices" for="pos_electronic_invoice_journal_id"
+                                           class="col-lg-3 o_light_label"/>
+                                    <field name="pos_electronic_invoice_journal_id"
+                                           domain="[('company_id', '=', company_id), ('type', '=', 'sale')]"
+                                           attrs="{'required': [('pos_company_has_template', '=', True)]}"
+                                           context="{'default_company_id': company_id, 'default_type': 'sale'}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
