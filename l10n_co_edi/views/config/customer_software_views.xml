@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <!-- Form -->
+    <record id="view_form_customer_software" model="ir.ui.view">
+        <field name="name">Customer software Form</field>
+        <field name="model">l10n_co_edi_jorels.customer_software</field>
+        <field name="arch" type="xml">
+            <form string="Customer software">
+                <sheet>
+                    <group name="group_general">
+                        <field name="name"/>
+                        <group name="group_number" string="Number">
+                            <field name="number_field"/>
+                            <field name="number_before"/>
+                            <field name="number_after"/>
+                        </group>
+                    </group>
+                    <notebook colspan="2">
+                        <page name="page_receipt" string="Receipt">
+                            <group name="group_receipt">
+                                <span class="o_form_label">Configure the mail receipt criteria here</span>
+                                <group name="group_receipt_event" string="Event">
+                                    <field name="receipt_event_field"/>
+                                    <field name="receipt_event_find"/>
+                                    <field name="receipt_event_startswith"/>
+                                    <field name="receipt_event_endswith"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page_rejection" string="Rejection">
+                            <group name="group_rejection">
+                                <span class="o_form_label">Configure the mail rejection criteria here</span>
+                                <group name="group_rejection_event" string="Event">
+                                    <field name="rejection_event_field"/>
+                                    <field name="rejection_event_find"/>
+                                    <field name="rejection_event_startswith"/>
+                                    <field name="rejection_event_endswith"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page_acceptance" string="Acceptance">
+                            <group name="group_acceptance">
+                                <span class="o_form_label">Configure the mail acceptance criteria here</span>
+                                <group name="group_acceptance_event" string="Event">
+                                    <field name="acceptance_event_field"/>
+                                    <field name="acceptance_event_find"/>
+                                    <field name="acceptance_event_startswith"/>
+                                    <field name="acceptance_event_endswith"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
+

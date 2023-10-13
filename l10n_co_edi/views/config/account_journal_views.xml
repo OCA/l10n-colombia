@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data>
+        <record id="view_account_journal_form_inherit_l10n_co_edi_jorels" model="ir.ui.view">
+            <field name="name">account.journal.form.l10n_co_edi_jorels</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='group_alias_edit']" position="after">
+                    <group string="Electronic invoicing" attrs="{'invisible': [('type', 'not in', ('sale','purchase','general'))]}">
+                        <field name="resolution_invoice_id" domain="[('company_id','=',company_id)]"/>
+                        <field name="resolution_credit_note_id" domain="[('company_id','=',company_id)]"/>
+                        <field name="resolution_debit_note_id" domain="[('company_id','=',company_id)]"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="is_out_country" attrs="{'invisible': [('type', 'not in', ['sale', 'purchase'])]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

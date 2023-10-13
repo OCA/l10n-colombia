@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data noupdate="1">
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.languages']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.correction_concepts']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.countries']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.departments']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.discounts']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.municipalities']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.payment_forms']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.payment_methods']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.reference_prices']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.tax_details']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.taxes']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_currencies']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_document_identifications']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_documents']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_environments']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_item_identifications']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_liabilities']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_operations']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_organizations']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_regimes']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.unit_measures']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_coverages']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_users']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.events']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_workers']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.subtype_workers']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_contracts']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_incapacities']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.organization_provenances']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.payroll_periods']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.rejection_concepts']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_deliveries']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_document_references']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_endorsement_events']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_event_payments']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_item_sector_identifications']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_mandate_times']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_nature_mandates']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_operation_events']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_payroll_notes']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_principals']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_scope_mandates']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.type_times']"
+        />
+
+        <!-- Postal tables -->
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.postal_department']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.postal_municipality']"
+        />
+        <function
+                model="res.company"
+                name="init_csv_data"
+                eval="[0,'l10n_co_edi_jorels.l10n_co_edi_jorels.postal']"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <!-- Form -->
+    <record id="view_form_resolution" model="ir.ui.view">
+        <field name="name">Resolution Form</field>
+        <field name="model">l10n_co_edi_jorels.resolution</field>
+        <field name="arch" type="xml">
+            <form string="resolution">
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="resolution_api_sync" attrs="{'readonly': [('id','!=',False)]}"/>
+                            <field name="resolution_type_document_id"/>
+                            <field name="resolution_prefix"/>
+                            <field name="resolution_resolution"/>
+                            <field name="resolution_resolution_date"/>
+                            <field name="resolution_technical_key"/>
+                            <field name="resolution_from"/>
+                            <field name="resolution_to"/>
+                            <field name="resolution_date_from"/>
+                            <field name="resolution_date_to"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="resolution_id"/>
+                            <field name="resolution_number" invisible="1"/>
+                            <field name="resolution_next_consecutive" invisible="1"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            <field name="resolution_message"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record id="view_tree_resolution" model="ir.ui.view">
+        <field name="name">Resolution List</field>
+        <field name="model">l10n_co_edi_jorels.resolution</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="resolution_type_document_id" invisible="1"/>
+                <field name="name"/>
+                <field name="resolution_prefix"/>
+                <field name="resolution_resolution"/>
+                <field name="resolution_resolution_date"/>
+                <field name="resolution_from"/>
+                <field name="resolution_to"/>
+                <field name="resolution_date_from"/>
+                <field name="resolution_date_to"/>
+                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
+

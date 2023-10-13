@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data>
+        <template id="report_invoice_document_custom" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@class='row']" position="attributes">
+                <attribute name="t-if" add="not o.company_id.ei_enable" separator=" and "/>
+            </xpath>
+            <xpath expr="//div[@class='row']" position="after">
+                <div t-if="o.company_id.ei_enable" class="row mt32 mb32" name="ei_header">
+                    <div t-if="o.ei_is_valid and o.ei_qr_data" class="col-2 mb-2" name="ei_qr">
+                        <!-- With OCA -->
+                        <!-- <img t-att-src="'/report/qr/?value=%s&amp;error_correction=%s' % (o.ei_qr_data, 1)" style="width:100;height:100"/>-->
+
+                        <!-- With Odoo-->
+                        <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.ei_qr_data, 128, 128)"/>
+
+                        <!-- With image -->
+                        <!-- <span t-field="o.ei_qr_image" t-options="{'widget':'image'}"/>-->
+                    </div>
+                    <div class="col-auto mw-100 mb-2" name="ei_company_info">
+                        <div class="mt16">
+                            <strong>NIT:</strong>
+                            <span t-field="o.company_id.vat"/>
+                            <br/>
+                            <strong>Organization type:</strong>
+                            <span t-field="o.company_id.type_organization_id"/>
+                            <br/>
+                            <strong>Regime type:</strong>
+                            <span t-field="o.company_id.type_regime_id"/>
+                            <br/>
+                            <strong>Liability type:</strong>
+                            <span t-field="o.company_id.type_liability_id"/>
+                            <br/>
+                            <strong>Operation type:</strong>
+                            <span t-field="o.ei_operation"/>
+                            <br/>
+                            <span t-field="o.company_id.report_custom_text"/>
+                        </div>
+                    </div>
+                    <div class="col-auto mw-100 mb-2" name="ei_address">
+                        <h2>
+                            <span t-if="o.move_type == 'out_invoice' or o.move_type == 'out_refund'">Customer</span>
+                            <span t-if="o.move_type == 'in_invoice' or o.move_type == 'in_refund'">Supplier</span>
+                        </h2>
+                        <div t-if="o.partner_id.vat" class="mt16">
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'civil_registration'">
+                                R.C.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'id_card'">
+                                T.I.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'id_document'">
+                                C.C.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'national_citizen_id'">
+                                C.C.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'residence_document'">
+                                T.E.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'foreign_id_card'">
+                                C.E.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'rut'">
+                                NIT:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'passport'">
+                                PAS:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'external_id'">
+                                D.I.E.:
+                            </span>
+                            <span t-if="o.partner_id.l10n_latam_identification_type_id.l10n_co_document_code == 'diplomatic_card'">
+                                Tax ID:
+                            </span>
+                            <span t-field="o.partner_id.vat"/>
+                        </div>
+                        <address t-field="o.partner_id"
+                                 t-options='{"widget": "contact", "fields": ["address", "name", "phone", "email"], "no_marker": True}'/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//div[@class='page']/h2[1]" position="replace">
+                <h2>
+                    <span t-if="o.company_id.ei_enable and o.ei_is_valid and o.move_type == 'out_invoice' and o.state == 'posted'">
+                        Electronic Sale Invoice
+                    </span>
+                    <span t-elif="o.company_id.ei_enable and not o.ei_is_valid and o.move_type == 'out_invoice' and o.state == 'posted'">
+                        Sale Invoice
+                    </span>
+                    <span t-elif="not o.company_id.ei_enable and o.move_type == 'out_invoice' and o.state == 'posted'">
+                        Invoice
+                    </span>
+                    <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                    <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                    <span t-if="o.company_id.ei_enable and o.move_type == 'out_refund'">Electronic Credit Note</span>
+                    <span t-elif="not o.company_id.ei_enable and o.move_type == 'out_refund'">Credit Note</span>
+                    <strong t-if="o.company_id.ei_enable and o.move_type == 'in_refund' and o.resolution_id and o.resolution_id.resolution_type_document_id.id == 13">
+                        Credit note of electronic support document in acquisitions made to those not obliged to invoice
+                    </strong>
+                    <strong t-elif="o.company_id.ei_enable and o.move_type == 'in_refund'">
+                        Vendor Electronic Credit Note
+                    </strong>
+                    <span t-elif="not o.company_id.ei_enable and o.move_type == 'in_refund'">
+                        Vendor Credit Note
+                    </span>
+                    <strong t-if="o.company_id.ei_enable and o.move_type == 'in_invoice' and o.resolution_id and o.resolution_id.resolution_type_document_id.id == 12">
+                        Electronic support document in acquisitions made to those not obliged to invoice
+                    </strong>
+                    <strong t-elif="o.company_id.ei_enable and o.move_type == 'in_invoice'">
+                        Vendor Electronic Bill
+                    </strong>
+                    <span t-elif="not o.company_id.ei_enable and o.move_type == 'in_invoice'">
+                        Vendor Bill
+                    </span>
+                    <span t-if="o.name != '/'" t-field="o.name"/>
+                </h2>
+            </xpath>
+            <xpath expr="//div[@id='informations']" position="inside">
+                <div name="invoicing_period" class="col-auto mw-100 mb-2" t-if="o.date_start and o.date_end">
+                    <strong>Invoicing period:</strong>
+                    <p class="m-0">
+                        <span t-field="o.date_start"/>
+                        <span>to</span>
+                        <span t-field="o.date_end"/>
+                    </p>
+                </div>
+                <div name="order_ref" class="col-auto mw-100 mb-2"
+                     t-if="o.company_id.ei_enable and o.order_ref_number">
+                    <strong>Order reference:</strong>
+                    <p class="m-0">
+                        <span t-field="o.order_ref_number"/>
+                        <span t-if="o.order_ref_date">/</span>
+                        <span t-field="o.order_ref_date"/>
+                    </p>
+                </div>
+                <div name="payment_form" class="col-auto mw-100 mb-2"
+                     t-if="o.company_id.ei_enable and o.payment_form_id">
+                    <strong>Payment form:</strong>
+                    <p class="m-0" t-field="o.payment_form_id"/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@name='invoice_date']" position="attributes">
+                <attribute name="t-if" add="not o.company_id.ei_enable" separator=" and "/>
+            </xpath>
+            <xpath expr="//div[@name='invoice_date']" position="after">
+                <div class="col-auto col-3 mw-100 mb-2"
+                     t-if="o.invoice_date and o.company_id.ei_enable and o.move_type in ('out_invoice', 'out_refund')"
+                     name="ei_issue_datetime">
+                    <t>
+                        <strong>Issue Date:</strong>
+                    </t>
+                    <p t-if="o.ei_issue_datetime" class="m-0" t-field="o.ei_issue_datetime"/>
+                    <p t-else="" class="m-0" t-field="o.invoice_date"/>
+                </div>
+                <div class="col-auto col-3 mw-100 mb-2"
+                     t-if="o.company_id.ei_enable and o.ei_expedition_date and o.move_type in ('out_invoice', 'out_refund')"
+                     name="expedition_date">
+                    <t>
+                        <strong>Expedition date:</strong>
+                    </t>
+                    <p class="m-0" t-field="o.ei_expedition_date"/>
+                </div>
+            </xpath>
+            <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[1]" position="before">
+                <th name="th_num_item" class="text-center">
+                    <span>#</span>
+                    <!-- <t t-set="colspan" t-value="colspan + 1"/> -->
+                    <t t-set="num_item" t-value="0"/>
+                </th>
+            </xpath>
+            <xpath expr="//t[@name='account_invoice_line_accountable']/td[1]" position="before">
+                <td class="text-center">
+                    <t t-set="num_item" t-value="num_item + 1"/>
+                    <span t-esc="num_item"/>
+                </td>
+            </xpath>
+            <xpath expr="//div[@id='total']/div[1]" position="before">
+                <div t-attf-class="#{'col-7' if report_type != 'html' else 'col-sm-12 col-md-12'}">
+                    <div t-if="o.company_id.ei_enable and o.payment_method_id.id" name="payment_method">
+                        <strong>Payment method:</strong>
+                        <span t-field="o.payment_method_id"/>
+                    </div>
+                    <br/>
+                    <div t-if="o.company_id.ei_enable" name="withholdings_note">
+                        <strong>The withholdings are for informational purposes only.</strong>
+                    </div>
+                    <br/>
+                    <div t-if="o.value_letters">
+                        <strong>Value in letters:</strong>
+                        <span t-field="o.value_letters"/>
+                    </div>
+                    <br/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@id='total']/div[2]" position="attributes">
+                <attribute name="t-attf-class">#{'col-5' if report_type != 'html' else 'col-sm-7 col-md-5'}
+                </attribute>
+            </xpath>
+            <xpath expr="//t[@t-set='tax_totals']" position="before">
+                <t>
+                    <tr class="border-black o_total">
+                        <td>
+                            <strong>Currency</strong>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="o.currency_id"/>
+                        </td>
+                    </tr>
+                </t>
+            </xpath>
+            <xpath expr="//t[@t-call='account.document_tax_totals']" position="before">
+                <t>
+                    <tr class="border-black o_total" t-if="o.company_id.ei_enable">
+                        <td>
+                            <strong>Total without withholdings</strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.ei_amount_total_no_withholding"/>
+                        </td>
+                    </tr>
+                </t>
+            </xpath>
+            <xpath expr="//div[@class='page']" position="inside">
+                <div t-if="o.company_id.ei_enable" class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mt16 text-center">
+                                <div t-if="o.company_id.footer_custom_text">
+                                    <span t-field="o.company_id.footer_custom_text" name="footer_custom_text"/>
+                                </div>
+                                <div t-if="o.resolution_id and o.ei_uuid">
+                                    <strong t-field="o.resolution_id.resolution_type_document_id.type"/>:
+                                    <small t-field="o.ei_uuid"/>
+                                </div>
+                                <div t-if="o.ei_signature">
+                                    <strong>Signature:</strong>
+                                    <small t-field="o.ei_signature"/>
+                                </div>
+                                <strong t-if="o.resolution_id.resolution_resolution">Invoicing authorization number:
+                                </strong>
+                                <span t-field="o.resolution_id.resolution_resolution"/>
+                                <strong t-if="o.resolution_id.resolution_resolution_date">Date:</strong>
+                                <span t-field="o.resolution_id.resolution_resolution_date"/>
+                                <br/>
+                                <strong t-if="o.resolution_id.resolution_from">Authorized range from:</strong>
+                                <span t-field="o.resolution_id.resolution_prefix"/>
+                                <span t-field="o.resolution_id.resolution_from"/>
+                                <strong t-if="o.resolution_id.resolution_to">to</strong>
+                                <span t-field="o.resolution_id.resolution_prefix"/>
+                                <span t-field="o.resolution_id.resolution_to"/>
+                                <strong t-if="o.resolution_id.resolution_date_from">Valid from:</strong>
+                                <span t-field="o.resolution_id.resolution_date_from"/>
+                                <strong t-if="o.resolution_id.resolution_date_to">to</strong>
+                                <span t-field="o.resolution_id.resolution_date_to"/>
+                                <br/>
+                                <strong t-if="o.ei_is_valid">Graphic representation of electronic invoicing printed by
+                                    computer with own software by
+                                </strong>
+                                <strong t-if="o.ei_is_valid" t-field="o.company_id.business_name"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

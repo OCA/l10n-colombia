@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data noupdate="1">
+        <record id="radian_030_customer" model="ir.sequence">
+            <field name="name">Radian 030 - Customer</field>
+            <field name="code">radian_030_customer</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">C030</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_031_customer" model="ir.sequence">
+            <field name="name">Radian 031 - Customer</field>
+            <field name="code">radian_031_customer</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">C031</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_032_customer" model="ir.sequence">
+            <field name="name">Radian 032 - Customer</field>
+            <field name="code">radian_032_customer</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">C032</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_033_customer" model="ir.sequence">
+            <field name="name">Radian 033 - Customer</field>
+            <field name="code">radian_033_customer</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">C033</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_034_customer" model="ir.sequence">
+            <field name="name">Radian 034 - Customer</field>
+            <field name="code">radian_034_customer</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">E034</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_030_supplier" model="ir.sequence">
+            <field name="name">Radian 030 - Supplier</field>
+            <field name="code">radian_030_supplier</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">E030</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_031_supplier" model="ir.sequence">
+            <field name="name">Radian 031 - Supplier</field>
+            <field name="code">radian_031_supplier</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">E031</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_032_supplier" model="ir.sequence">
+            <field name="name">Radian 032 - Supplier</field>
+            <field name="code">radian_032_supplier</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">E032</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_033_supplier" model="ir.sequence">
+            <field name="name">Radian 033 - Supplier</field>
+            <field name="code">radian_033_supplier</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">E033</field>
+            <field name="padding">1</field>
+        </record>
+        <record id="radian_034_supplier" model="ir.sequence">
+            <field name="name">Radian 034 - Supplier</field>
+            <field name="code">radian_034_supplier</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">S034</field>
+            <field name="padding">1</field>
+        </record>
+    </data>
+</odoo>

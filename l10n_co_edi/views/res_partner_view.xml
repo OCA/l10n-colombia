@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data>
+        <record id="res_partner_form_view_inherit_l10n_co_edi_jorels" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.l10n_co_edi_jorels</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name' and @id='individual']" position="after">
+                    <br/>
+                    <field name="trade_name" placeholder="Trade name"/>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="merchant_registration" placeholder="Merchant registration"/>
+                </xpath>
+                <xpath expr="//page[@name='accounting']" position="after">
+                    <page string="Electronic invoicing" name="electronic_invoicing"
+                          attrs="{'invisible': [('is_company','=',False),('parent_id','!=',False)]}"
+                          groups="account.group_account_invoice">
+                        <group>
+                            <field name="type_regime_id"/>
+                            <field name="type_liability_id"/>
+                            <field name="municipality_id"/>
+                            <field name="tax_resident_co"/>
+                            <field name="email_edi"/>
+                            <field name="customer_software_id"/>
+                        </group>
+                    </page>
+                    <page string="Electronic invoicing" name="electronic_invoicing_disabled"
+                          attrs="{'invisible': ['|',('is_company','=',True),('parent_id','=',False)]}"
+                          groups="account.group_account_invoice">
+                        <div>
+                            <p>The configuration related to electronic invoicing is managed in
+                                <button name="open_commercial_entity" type="object" string="the parent company"
+                                        class="oe_link"/>
+                            </p>
+                        </div>
+                    </page>
+                    <page string="Postal info" name="postal">
+                        <group>
+                            <field name="postal_id"/>
+                            <field name="postal_department_id"/>
+                            <field name="postal_municipality_id"/>
+                            <field name="type_document_identification_id" invisible="1"/>
+                            <field name="first_name"/>
+                            <field name="other_names" attrs="{'invisible': [('is_company','=',True)]}"/>
+                            <field name="surname" attrs="{'invisible': [('is_company','=',True)]}"/>
+                            <field name="second_surname" attrs="{'invisible': [('is_company','=',True)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data>
+        <record id="account_move_view_form_inherit_l10n_co_edi_jorels" model="ir.ui.view">
+            <field name="name">account.move.view.form.inherit.l10n_co_edi_jorels</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="dian_preview" type="object" class="oe_stat_button" icon="fa-globe icon"
+                            attrs="{'invisible': [('ei_uuid', '=', False)]}">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">DIAN</span>
+                            <span class="o_stat_text">Web View</span>
+                        </div>
+                    </button>
+                    <button name="dian_pdf_view" type="object" class="oe_stat_button" icon="fa-file-pdf-o icon"
+                            attrs="{'invisible': [('ei_uuid', '=', False)]}">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">DIAN</span>
+                            <span class="o_stat_text">Pdf View</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='ref']" position="after">
+                    <field name="payment_form_id"/>
+                    <field name="payment_method_id"/>
+                    <field name="ei_operation"
+                           attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                    <field name="ei_is_correction_without_reference"
+                           attrs="{'invisible': ['&amp;','|',('move_type','not in',('out_invoice', 'in_invoice')),('debit_origin_id','!=',False),'|',('move_type','not in',('out_refund', 'in_refund')),('reversed_entry_id','!=',False)]}"/>
+                    <field name="ei_correction_concept_credit_id"
+                           attrs="{'invisible': ['|',('move_type','not in',('out_refund', 'in_refund')),'&amp;',('reversed_entry_id','=',False), ('ei_is_correction_without_reference','=',False)]}"/>
+                    <field name="ei_correction_concept_debit_id"
+                           attrs="{'invisible': ['|',('move_type','not in',('out_invoice', 'in_invoice')),'&amp;',('debit_origin_id','=',False), ('ei_is_correction_without_reference','=',False)]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_post']" position="after">
+                    <button name="validate_dian" type="object" string="Validate DIAN"
+                            class="oe_highlight o_invoice_validate"
+                            attrs="{'invisible': ['|', '|', '|', ('ei_is_valid','=',True),('ei_is_not_test','=',False),('state','=','draft'),('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                    <button name="skip_validate_dian" type="object" string="Skip DIAN validation"
+                            class="oe_highlight o_invoice_validate" groups="base.group_no_one"
+                            attrs="{'invisible': ['|','|',('ei_is_not_test','=',True),('state','!=','validate'),('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                    <button name="skip_validate_dian_production" type="object" string="Skip DIAN validation"
+                            class="o_invoice_validate" groups="base.group_no_one"
+                            attrs="{'invisible': ['|','|',('ei_is_not_test','=',False),('state','!=','validate'),('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                    <button name="validate_dian_test" type="object" string="Validate DIAN Test"
+                            class="oe_highlight o_invoice_validate" groups="base.group_no_one"
+                            attrs="{'invisible': ['|', '|', '|', ('ei_is_valid','=',True),('ei_is_not_test','=',True),('state','=','draft'),('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                    <button name="status_document" type="object" string="Consult DIAN" groups="base.group_no_one"
+                            attrs="{'invisible': ['|',('state','=','draft'),('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_date']" position="after">
+                    <field name="date_start" groups="l10n_co_edi_jorels.group_invoice_period_enable"/>
+                    <field name="date_end" groups="l10n_co_edi_jorels.group_invoice_period_enable"/>
+                    <field name="order_ref_number"/>
+                    <field name="order_ref_date"/>
+                </xpath>
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page string="DIAN response" name="info_Dian"
+                          attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}">
+                        <group name="dian_response">
+                            <field name="ei_sync"/>
+                            <field name="ei_is_not_test"/>
+                            <field name="ei_is_valid"/>
+                            <field name="ei_is_restored"/>
+                            <field name="ei_algorithm"/>
+                            <field name="ei_class"/>
+                            <field name="ei_number"/>
+                            <field name="ei_uuid" class="text-break"/>
+                            <field name="ei_issue_date"/>
+                            <field name="ei_issue_datetime"/>
+                            <field name="ei_expedition_date"/>
+                            <field name="ei_zip_key" attrs="{'invisible':[('ei_is_not_test','=',True)]}"
+                                   class="text-break"/>
+                            <field name="ei_status_code"/>
+                            <field name="ei_status_description" class="text-break"/>
+                            <field name="ei_status_message" class="text-break"/>
+                            <field name="ei_errors_messages" class="text-break"/>
+                            <field name="ei_xml_name" invisible="1"/>
+                            <field name="ei_zip_name" invisible="1"/>
+                            <field name="ei_signature" class="text-break"/>
+                            <field name="ei_qr_code" class="text-break"/>
+                            <field name="ei_qr_data" class="text-break"/>
+                            <field name="ei_qr_link" widget="url" class="text-break"/>
+                            <field name="ei_pdf_download_link" widget="url" class="text-break"/>
+                            <field name="ei_xml_base64_bytes" filename="ei_xml_name"/>
+                            <field name="ei_application_response_base64_bytes"/>
+                            <field name="ei_attached_document_base64_bytes"/>
+                            <field name="ei_pdf_base64_bytes"/>
+                            <field name="ei_zip_base64_bytes" filename="ei_zip_name"/>
+                            <field name="ei_type_environment"/>
+                            <field name="ei_attached_zip_base64_bytes"/>
+                            <field name="ei_payload" groups="base.group_no_one" class="text-break"/>
+                            <field name="ei_qr_image" widget="image"/>
+                            <field name="event"/>
+                        </group>
+                    </page>
+                    <page name="dian_events" string="Dian Events"
+                          attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}">
+                        <field name="radian_ids"
+                               context="{'type': move_type in ('out_invoice','out_refund') and 'customer' or 'supplier', 'default_move_id': id}"
+                               options="{'always_reload': True}">
+                            <form string="Radian events">
+                                <header>
+                                    <button string="Validate" name="action_post" type="object" states="draft"
+                                            class="oe_highlight"/>
+                                    <button name="status_zip" type="object" string="Consult DIAN"
+                                            groups="base.group_no_one" attrs="{'invisible': [('state','=','draft')]}"/>
+                                    <button string="Set to Draft" name="action_draft" type="object" states="cancel"/>
+                                    <button string="Cancel" name="action_cancel" type="object" states="draft,posted"/>
+                                    <button string="Send by email" name="action_send_email" type="object"
+                                            states="posted"/>
+                                    <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+                                </header>
+                                <sheet>
+                                    <h1 class="mt0">
+                                        <div attrs="{'invisible': [('name','=',False)]}">
+                                            <field name="name" class="oe_inline"/>
+                                        </div>
+                                        <field name="type" invisible="1"/>
+                                        <div attrs="{'invisible': [('type','!=','customer')]}">
+                                            <span>Customer Event</span>
+                                        </div>
+                                        <div attrs="{'invisible': [('type','!=','supplier')]}">
+                                            <span>Supplier Event</span>
+                                        </div>
+                                    </h1>
+                                    <group>
+                                        <group name="group-left">
+                                            <field name="type" invisible="1"/>
+                                            <field name="move_id" invisible="1"/>
+                                            <field name="event_id"/>
+                                            <field name="rejection_concept_id"
+                                                   attrs="{'invisible':[('event_id','!=',4)]}"/>
+                                        </group>
+                                        <group name="group-right">
+                                            <field name="date"/>
+                                            <field name="user_id"/>
+                                            <field name="company_id" groups="base.group_multi_company"/>
+                                            <field name="note"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='tax_totals']" position="before">
+                    <field name="ei_amount_tax_no_withholding"/>
+                    <field name="ei_amount_total_no_withholding" class="oe_subtotal_footer_separator"/>
+                    <field name="ei_amount_tax_withholding"/>
+                </xpath>
+                <!-- Invoice lines -->
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='name']" position="after">
+                    <field name="ei_notes"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='name']" position="after">
+                    <field name="ei_notes" invisible="1"/>
+                </xpath>
+                <xpath expr="//div[@name='journal_div']" position="after">
+                    <field name="is_out_country"
+                           attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                    <field name="resolution_id"
+                           attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund'))]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Search view -->
+        <record id="view_account_invoice_filter_inherit_l10n_co_edi_jorels" model="ir.ui.view">
+            <field name="name">account.invoice.select.inherit.l10n_co_edi_jorels</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='myinvoices']" position="after">
+                    <separator/>
+                    <filter name="not_valid_dian"
+                            string="Not valid in DIAN"
+                            domain="[('ei_is_valid','=',False)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_is_attached_document_matched" model="ir.actions.server">
+            <field name="name">Review attached document</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="state">code</field>
+            <field name="code">records._is_attached_document_matched()</field>
+        </record>
+
+        <record id="action_status_document_log" model="ir.actions.server">
+            <field name="name">Replace with log DIAN</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="state">code</field>
+            <field name="code">records.status_document_log()</field>
+        </record>
+
+        <record id="action_send_edi_by_email" model="ir.actions.server">
+            <field name="name">Send Edi by Email</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="state">code</field>
+            <field name="code">records._send_edi_email()</field>
+        </record>
+
+        <record id="action_create_radian_default_events" model="ir.actions.server">
+            <field name="name">Create radian default events</field>
+            <field name="model_id" ref="l10n_co_edi_jorels.model_account_move"/>
+            <field name="binding_model_id" ref="l10n_co_edi_jorels.model_account_move"/>
+            <field name="state">code</field>
+            <field name="code">records.create_radian_default_events()</field>
+        </record>
+
+        <record id="action_invoice_validate_dian" model="ir.actions.server">
+            <field name="name">Validate DIAN</field>
+            <field name="model_id" ref="l10n_co_edi_jorels.model_account_move"/>
+            <field name="binding_model_id" ref="l10n_co_edi_jorels.model_account_move"/>
+            <field name="state">code</field>
+            <field name="code">records.validate_dian()</field>
+        </record>
+    </data>
+</odoo>

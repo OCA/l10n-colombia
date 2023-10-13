@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels.-->
+
+<!--l10n_co_edi_jorels is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<odoo>
+    <data>
+        <record id="res_company_form_view_inherit_l10n_co_edi_jorels" model="ir.ui.view">
+            <field name="name">res.company.form.inherit.l10n_co_edi_jorels</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_title']" position="inside">
+                    <label for="trade_name" attrs="{'invisible': ['|', ('trade_name', '=', False), ('trade_name', '=', '')]}"/>
+                    <h2>
+                        <field name="trade_name" placeholder="Trade name"/>
+                    </h2>
+                </xpath>
+                <xpath expr="//page[last()]" position="after">
+                    <page string="Electronic invoicing">
+                        <group>
+                            <field name="business_name"/>
+                            <field name="type_document_identification_id" domain="[('scope','=',False)]"/>
+                            <field name="type_organization_id"/>
+                            <field name="type_regime_id"/>
+                            <field name="type_liability_id"/>
+                            <field name="ei_operation"/>
+                            <field name="merchant_registration"/>
+                            <field name="municipality_id"/>
+                            <field name="email_edi"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
