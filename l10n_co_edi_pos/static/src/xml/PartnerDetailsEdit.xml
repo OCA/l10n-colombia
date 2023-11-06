@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels_pos.-->
+
+<!--l10n_co_edi_jorels_pos is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels_pos is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels_pos.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<templates id="template" xml:space="preserve">
+    <t t-name="PartnerDetailsEdit" t-inherit="point_of_sale.PartnerDetailsEdit" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='partner-details-left']" position="inside">
+            <div class='partner-detail'>
+                <span class='label'>Regimen</span>
+                <select class='detail partner-edi-type_regime needsclick' name='type_regime_id'
+                        t-on-change="captureChange">
+                    <t t-foreach='env.pos.type_regimes' t-as='type_regime_id' t-key="type_regime_id.id">
+                        <option t-att-value="type_regime_id.id"
+                                t-att-selected="props.partner.type_regime_id ? ((type_regime_id.id === props.partner.type_regime_id[0]) ? true : undefined) : undefined">
+                            <t t-esc="type_regime_id.name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class='partner-detail'>
+                <span class='label'>Responsab.</span>
+                <select class='detail partner-edi-type_liability needsclick' name='type_liability_id'
+                        t-on-change="captureChange">
+                    <t t-foreach='env.pos.type_liabilities' t-as='type_liability_id' t-key="type_liability_id.id">
+                        <option t-att-value='type_liability_id.id'
+                                t-att-selected="props.partner.type_liability_id ? ((type_liability_id.id === props.partner.type_liability_id[0]) ? true : undefined) : undefined">
+                            <t t-esc='type_liability_id.name'/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class='partner-detail'>
+                <span class='label'>Municipali.</span>
+                <select class='detail partner-edi-municipality needsclick' name='municipality_id'
+                        t-on-change="captureChange">
+                    <option value=''>None</option>
+                    <t t-foreach='env.pos.municipalities' t-as='municipality_id' t-key="municipality_id.id">
+                        <option t-att-value='municipality_id.id'
+                                t-att-selected="props.partner.municipality_id ? ((municipality_id.id === props.partner.municipality_id[0]) ? true : undefined) : undefined">
+                            <t t-esc='municipality_id.name'/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='partner-details-right']" position="inside">
+            <div class='partner-detail'>
+                <span class='label'>Tipo doc.</span>
+                <select class='detail partner-edi-l10n_latam_identification_type needsclick' name='l10n_latam_identification_type_id'
+                        t-on-change="captureChange">
+                    <t t-foreach='env.pos.l10n_latam_identification_types' t-as='l10n_latam_identification_type_id' t-key="l10n_latam_identification_type_id.id">
+                        <option t-att-value='l10n_latam_identification_type_id.id'
+                                t-att-selected="props.partner.l10n_latam_identification_type_id ? ((l10n_latam_identification_type_id.id === props.partner.l10n_latam_identification_type_id[0]) ? true : undefined) : undefined">
+                            <t t-esc='l10n_latam_identification_type_id.name'/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class='partner-detail'>
+                <span class='label'>Tipo per.</span>
+                <select class='detail partner-edi-company_type needsclick' name='company_type'
+                        t-on-change="captureChange">
+                    <option value='person'
+                            t-att-selected="props.partner.company_type ? (('person' === props.partner.company_type) ? true : undefined) : undefined">Persona Natural</option>
+                    <option value='company'
+                            t-att-selected="props.partner.company_type ? (('company' === props.partner.company_type) ? true : undefined) : undefined">Persona Jurídica</option>
+                </select>
+            </div>
+            <div class='partner-detail'>
+                <span class='label'>Email fact.</span>
+                <input class='detail partner-edi-email' name='email_edi' type='email' t-on-change="captureChange"
+                       t-att-value='props.partner.email_edi || ""' placeholder="fe@example.com"/>
+            </div>
+        </xpath>
+    </t>
+</templates>
