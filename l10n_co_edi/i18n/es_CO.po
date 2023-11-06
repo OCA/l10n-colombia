@@ -1,0 +1,3467 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_edi_jorels
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-27 02:32+0000\n"
+"PO-Revision-Date: 2023-01-26 21:34-0500\n"
+"Last-Translator: \n"
+"Language-Team: Jorels SAS\n"
+"Language: es_CO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/res_company.py:0
+#, python-format
+msgid " - Electronic invoicing"
+msgstr " - Facturación electrónica"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"<br/>\n"
+"                            <strong>Liability type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tipo de responsabilidad:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"<br/>\n"
+"                            <strong>Operation type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tipo de operación:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"<br/>\n"
+"                            <strong>Organization type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tipo de organización:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"<br/>\n"
+"                            <strong>Regime type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tipo de regimen:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "<br/>When changing the environment, this is automatic"
+msgstr "<br/>Cuando cambia el entorno, esto es automatico"
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,body_html:l10n_co_edi_jorels.email_template_radian
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;"
+"\">\n"
+"                        Dear\n"
+"                        <t t-if=\"object.move_id and object.move_id."
+"partner_id and object.move_id.partner_id.parent_id\">\n"
+"                            <t t-out=\"object.move_id.partner_id.name or "
+"''\">Brandon Freeman</t> (<t t-out=\"object.move_id.partner_id.parent_id."
+"name or ''\">Azure Interior</t>),\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            <t t-if=\"object.move_id and object.move_id."
+"partner_id\">\n"
+"                                <t t-out=\"object.move_id.partner_id.name "
+"or ''\">Brandon Freeman</t>,\n"
+"                            </t>\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        Here is your\n"
+"                        <t t-if=\"object.event_id and object.event_id."
+"name\">\n"
+"                            Radian event <strong t-out=\"object.event_id."
+"name or ''\">Acuse de recibido</strong>\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            Radian event\n"
+"                        </t>\n"
+"                        <t t-if=\"object.edi_number\">\n"
+"                            with number <strong t-out=\"object.edi_number "
+"or ''\">E0310</strong>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.move_id and object.move_id."
+"number_formatted\">\n"
+"                            (with invoice: <t t-out=\"object.move_id."
+"number_formatted or ''\">INV0</t>)\n"
+"                        </t>\n"
+"                        <t t-if=\"object.company_id.business_name\">\n"
+"                            from <t t-out=\"object.company_id.business_name "
+"or ''\">YourCompany</t>.\n"
+"                        </t>\n"
+"                        <t t-else=\"object.company_id.name\">\n"
+"                            from <t t-out=\"object.company_id.name or "
+"''\">YourCompany</t>.\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        Do not hesitate to contact us if you have any "
+"questions.\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;"
+"\">\n"
+"                        Querido\n"
+"                        <t t-if=\"object.move_id and object.move_id."
+"partner_id and object.move_id.partner_id.parent_id\">\n"
+"                            <t t-out=\"object.move_id.partner_id.name or "
+"''\">Brandon Freeman</t> (<t t-out=\"object.move_id.partner_id.parent_id."
+"name or ''\">Azure Interior</t>),\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            <t t-if=\"object.move_id and object.move_id."
+"partner_id\">\n"
+"                                <t t-out=\"object.move_id.partner_id.name "
+"or ''\">Brandon Freeman</t>,\n"
+"                            </t>\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        Aquí está su\n"
+"                        <t t-if=\"object.event_id and object.event_id."
+"name\">\n"
+"                            Evento del Radian <strong t-out=\"object."
+"event_id.name or ''\">Acuse de recibido</strong>\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            Evento del Radian\n"
+"                        </t>\n"
+"                        <t t-if=\"object.edi_number\">\n"
+"                            con número <strong t-out=\"object.edi_number or "
+"''\">E0310</strong>\n"
+"                        </t>\n"
+"                        <t t-if=\"object.move_id and object.move_id."
+"number_formatted\">\n"
+"                            (con factura: <t t-out=\"object.move_id."
+"number_formatted or ''\">INV0</t>)\n"
+"                        </t>\n"
+"                        <t t-if=\"object.company_id.business_name\">\n"
+"                            de <t t-out=\"object.company_id.business_name "
+"or ''\">YourCompany</t>.\n"
+"                        </t>\n"
+"                        <t t-else=\"object.company_id.name\">\n"
+"                            de <t t-out=\"object.company_id.name or "
+"''\">YourCompany</t>.\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        No dude en contactarnos si tiene alguna inquietud.\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,body_html:l10n_co_edi_jorels.email_template_edi
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;"
+"\">\n"
+"                        Dear\n"
+"                        <t t-if=\"object.partner_id.parent_id\">\n"
+"                            <t t-out=\"object.partner_id.name or "
+"''\">Brandon Freeman</t> (<t t-out=\"object.partner_id.parent_id.name or "
+"''\">Azure Interior</t>),\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            <t t-out=\"object.partner_id.name or "
+"''\">Brandon Freeman</t>,\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        Here is your\n"
+"                        <t t-if=\"object.name\">\n"
+"                            invoice <strong t-out=\"object.name or "
+"''\">INV/2021/05/0005</strong>\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            invoice\n"
+"                        </t>\n"
+"                        <t t-if=\"object.invoice_origin\">\n"
+"                            (with reference: <t t-out=\"object."
+"invoice_origin or ''\">SUB003</t>)\n"
+"                        </t>\n"
+"                        amounting in <strong t-out=\"format_amount(object."
+"amount_total, object.currency_id) or ''\">$ 143,750.00</strong>\n"
+"                        from <t t-out=\"object.company_id.name or "
+"''\">YourCompany</t>.\n"
+"                        <t t-if=\"object.payment_state in ('paid', "
+"'in_payment')\">\n"
+"                            This invoice is already paid.\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            Please remit payment at your earliest "
+"convenience.\n"
+"                            <t t-if=\"object.payment_reference\">\n"
+"                                <br/><br/>\n"
+"                                Please use the following communication for "
+"your payment: <strong t-out=\"object.payment_reference or "
+"''\">INV/2021/05/0005</strong>.\n"
+"                            </t>\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        Do not hesitate to contact us if you have any "
+"questions.\n"
+"                        <t t-if=\"object.invoice_user_id.signature\">\n"
+"                            <br/>\n"
+"                            <t t-out=\"object.invoice_user_id.signature or "
+"''\">--<br/>Mitchell Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;"
+"\">\n"
+"                        Querido\n"
+"                        <t t-if=\"object.partner_id.parent_id\">\n"
+"                            <t t-out=\"object.partner_id.name or "
+"''\">Brandon Freeman</t> (<t t-out=\"object.partner_id.parent_id.name or "
+"''\">Azure Interior</t>),\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            <t t-out=\"object.partner_id.name or "
+"''\">Brandon Freeman</t>,\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        Aquí está su\n"
+"                        <t t-if=\"object.name\">\n"
+"                            factura <strong t-out=\"object.name or "
+"''\">INV/2021/05/0005</strong>\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            factura\n"
+"                        </t>\n"
+"                        <t t-if=\"object.invoice_origin\">\n"
+"                            (con referencia: <t t-out=\"object."
+"invoice_origin or ''\">SUB003</t>)\n"
+"                        </t>\n"
+"                        por un valor de <strong t-"
+"out=\"format_amount(object.amount_total, object.currency_id) or ''\">$ "
+"143,750.00</strong>\n"
+"                        de <t t-out=\"object.company_id.name or "
+"''\">YourCompany</t>.\n"
+"                        <t t-if=\"object.payment_state in ('paid', "
+"'in_payment')\">\n"
+"                            Esta factura ya se encuentra pagada.\n"
+"                        </t>\n"
+"                        <t t-else=\"\">\n"
+"                            Por favor remita su pago tan pronto como le sea "
+"posible.\n"
+"                            <t t-if=\"object.payment_reference\">\n"
+"                                <br/><br/>\n"
+"                                Por favor use la siguiente referencia al "
+"realizar su pago: <strong t-out=\"object.payment_reference or "
+"''\">INV/2021/05/0005</strong>.\n"
+"                            </t>\n"
+"                        </t>\n"
+"                        <br/><br/>\n"
+"                        No dude en contactarnos si tiene alguna inquietud.\n"
+"                        <t t-if=\"object.invoice_user_id.signature\">\n"
+"                            <br/>\n"
+"                            <t t-out=\"object.invoice_user_id.signature or "
+"''\">--<br/>Mitchell Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Bottom invoice note</span>"
+msgstr "<span class=\"o_form_label\">Nota inferior de la factura</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid ""
+"<span class=\"o_form_label\">Configure the mail acceptance criteria here</"
+"span>"
+msgstr ""
+"<span class=\"o_form_label\">Configure aquí los criterios de aceptación de "
+"correo</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid ""
+"<span class=\"o_form_label\">Configure the mail receipt criteria here</span>"
+msgstr ""
+"<span class=\"o_form_label\">Configure aquí los criterios de recibo de "
+"correo</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid ""
+"<span class=\"o_form_label\">Configure the mail rejection criteria here</"
+"span>"
+msgstr ""
+"<span class=\"o_form_label\">Configure aquí los criterios de rechazo de "
+"correo</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Put here your API Key</span>"
+msgstr "<span class=\"o_form_label\">Ponga aquí su API Key</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">TestSetID</span>"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Top invoice note</span>"
+msgstr "<span class=\"o_form_label\">Nota superior de la factura</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid ""
+"<span class=\"o_stat_text\">DIAN</span>\n"
+"                                <span class=\"o_stat_text\">Web view</span>"
+msgstr ""
+"<span class=\"o_stat_text\">DIAN</span>\n"
+"                                <span class=\"o_stat_text\">Vista Web</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+msgid ""
+"<span class=\"o_stat_text\">DIAN</span>\n"
+"                            <span class=\"o_stat_text\">Pdf View</span>"
+msgstr ""
+"<span class=\"o_stat_text\">DIAN</span>\n"
+"                            <span class=\"o_stat_text\">Vista Pdf</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+msgid ""
+"<span class=\"o_stat_text\">DIAN</span>\n"
+"                            <span class=\"o_stat_text\">Web View</span>"
+msgstr ""
+"<span class=\"o_stat_text\">DIAN</span>\n"
+"                            <span class=\"o_stat_text\">Vista Web</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<span>#</span>"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "<span>Customer Event</span>"
+msgstr "<span>Evento de cliente</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "<span>Supplier Event</span>"
+msgstr "<span>Evento de proveedor</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<span>to</span>"
+msgstr "<span>a</span>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Currency</strong>"
+msgstr "<strong>Moneda</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Expedition date:</strong>"
+msgstr "<strong>Fecha de expedición:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Invoicing period:</strong>"
+msgstr "<strong>Periodo de facturación:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Issue Date:</strong>"
+msgstr "<strong>Fecha de emisión:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>NIT:</strong>"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Order reference:</strong>"
+msgstr "<strong>Ref. de la orden:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Payment form:</strong>"
+msgstr "<strong>Forma de pago:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Payment method:</strong>"
+msgstr "<strong>Método de pago:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Signature:</strong>"
+msgstr "<strong>Firma:</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>The withholdings are for informational purposes only.</strong>"
+msgstr "<strong>Las retenciones son solo a nivel informativo.</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Total without withholdings</strong>"
+msgstr "<strong>Total sin retenciones</strong>"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "<strong>Value in letters:</strong>"
+msgstr "<strong>Valor en letras:</strong>"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "A Zip key or UUID is required to check the status of the document."
+msgstr ""
+"Se requiere una clave Zip o UUID para verificar el estado del documento."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "A currency type in Odoo does not correspond to any DIAN currency type"
+msgstr "Un tipo de moneda en Odoo no corresponde a algún tipo de moneda DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "A valid UUID was not obtained. Try again."
+msgstr "No fue obtenido un UUID valido. Intente nuevamente."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "A valid Zip key or UUID was not obtained. Try again."
+msgstr "No se obtuvo una llave zip o UUID válido. Intente otra vez."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "A valid Zip key was not obtained. Try again."
+msgstr "No se obtuvo una llave Zip válida. Intente otra vez."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "A waypoint doesn't have an associated id number"
+msgstr "Una remesa no tiene un número de identificación asociado"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "A zip key or UUID is required to check the status of the document."
+msgstr ""
+"Se requiere una llave Zip o UUID para verificar el estado del documento."
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__ei_operation__aiu
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__res_company__ei_operation__aiu
+msgid "AIU"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/resolution.py:0
+#, python-format
+msgid "API connection error!"
+msgstr "¡Error de conexión con la API!"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid "Acceptance"
+msgstr "Aceptación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__access_warning
+msgid "Access warning"
+msgstr "Alerta de acceso"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr "Revocación de movimiento en cuenta"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__event__receipt
+msgid "Acknowledgment of receipt"
+msgstr "Acuse de recibo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_account_debit_note
+msgid "Add Debit Note wizard"
+msgstr "Asistente para agregar nota débito"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Advanced submission and testing options"
+msgstr "Opciones avanzadas de envío y pruebas"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__number_after
+msgid "After"
+msgstr "Después de"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__code_agency
+msgid "Agency code"
+msgstr "Código de agencia"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_algorithm
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_algorithm
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_algorithm
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_algorithm
+msgid "Algorithm"
+msgstr "Algoritmo"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "All products must be assigned a unit of measure (DIAN)"
+msgstr "Todos los productos deben tener asignada una unidad de medida DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "All products must have an internal reference assigned"
+msgstr "Todos los productos deben tener asignada una referencia interna"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "All taxes must be assigned a tax type (DIAN)."
+msgstr "Todos los impuestos deben tener asignado un tipo de impuesto (DIAN)."
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__ei_always_validate
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__ei_always_validate
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Always validate invoices"
+msgstr "Siempre validar facturas"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_id
+msgid "Api ID"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__api_key
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__api_key
+msgid "Api key"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_application_response_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_application_response_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_application_response_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_application_response_base64
+msgid "Application response"
+msgstr "Respuesta de la aplicación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_attached_document_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_attached_document_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_attached_document_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_attached_document_base64
+msgid "Attached document"
+msgstr "Documento adjunto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_attached_zip_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_attached_zip_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_attached_zip_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_attached_zip_base64
+msgid "Attached zip"
+msgstr "Zip adjunto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "Authentication error with the API"
+msgstr "Error de autenticación con la API"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Authorized range from:"
+msgstr "Rango autorizado desde:"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__enable_mass_send_print
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__enable_mass_send_print
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Automatic invoice email when validating (In production)"
+msgstr "Email de la factura automático al validar (En producción)"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__number_before
+msgid "Before"
+msgstr "Antes de"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__acceptance_event_field__body
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__number_field__body
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__receipt_event_field__body
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__rejection_event_field__body
+msgid "Body"
+msgstr "Contenido"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_product_product__brand_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_product_template__brand_name
+msgid "Brand"
+msgstr "Marca"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "C.C.:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "C.E.:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__cufe_algorithm
+msgid "CUFE algorithm"
+msgstr "Algoritmo CUFE"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_radian__state__cancel
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Cancelled Invoice"
+msgstr "Factura cancelada"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_class
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_class
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_class
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_class
+msgid "Class"
+msgstr "Clase"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__code
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__company_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__business_name
+msgid "Company name to invoice"
+msgstr "Nombre de la compañía para facturar"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Consult DIAN"
+msgstr "Consultar DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__acceptance_event_find
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__receipt_event_find
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__rejection_event_find
+msgid "Contains"
+msgstr "Contiene"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_contracts
+msgid "Contract types"
+msgstr "Tipos de contrato"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__is_attached_document_matched
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__is_attached_document_matched
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__is_attached_document_matched
+msgid "Correct number in attached document?"
+msgstr "¿Número correcto en documento adjunto?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_correction_concepts
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_correction_concept_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_correction_concept_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move_reversal__ei_correction_concept_credit_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_correction_concept_id
+msgid "Correction concept"
+msgstr "Concepto de corrección"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/resolution.py:0
+#, python-format
+msgid "Could not delete record in API"
+msgstr "No se puede borrar el registro en la API"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/resolution.py:0
+#, python-format
+msgid "Could not save record to API"
+msgstr "No se puede guardar el registro en la API"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/resolution.py:0
+#, python-format
+msgid "Could not update record in API"
+msgstr "No se puede actualizar el registro en la API"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_countries
+msgid "Countries"
+msgstr "Países"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_coverages
+msgid "Coverage types"
+msgstr "Tipos de cobertura"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Create resolutions in API"
+msgstr "Crear resoluciones en la API"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.actions.act_window,help:l10n_co_edi_jorels.action_l10n_co_edi_jorels_radian_customer
+#: model_terms:ir.actions.act_window,help:l10n_co_edi_jorels.action_l10n_co_edi_jorels_radian_supplier
+msgid "Create your first Radian event!"
+msgstr "¡Crea tu primer evento del Radian!"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.actions.act_window,help:l10n_co_edi_jorels.action_l10n_co_edi_jorels_customer_software
+msgid "Create your first customer software!"
+msgstr "¡Cree su primer software de cliente!"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.actions.act_window,help:l10n_co_edi_jorels.action_l10n_co_edi_jorels_config_resolutions
+msgid "Create your first resolution!"
+msgstr "¡Cree su primera resolución!"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__create_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__create_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Credit Note"
+msgstr "Nota Crédito"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_correction_concept_credit_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_correction_concept_credit_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_correction_concept_credit_id
+msgid "Credit correction concept"
+msgstr "Concepto de corrección crédito"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"Credit note of electronic support document in acquisitions made to those "
+"not obliged to invoice"
+msgstr ""
+"Nota crédito de documento soporte electrónico en adquisiciones realizadas a "
+"no obligados a facturar"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_journal__resolution_credit_note_id
+msgid "Credit note resolution"
+msgstr "Resolución de nota crédito"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_currencies
+msgid "Currency types"
+msgstr "Tipos de moneda"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_radian__type__customer
+msgid "Customer Event"
+msgstr "Evento de cliente"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__access_url
+msgid "Customer Portal URL"
+msgstr "URL Portal de Cliente"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.act_window,name:l10n_co_edi_jorels.action_l10n_co_edi_jorels_customer_software
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_customer_software
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__customer_software_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__customer_software_id
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_customer_software
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid "Customer software"
+msgstr "Software del cliente"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Customize the bottom text of the invoice"
+msgstr "Personalice el texto inferior de la factura"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Customize the upper text of the invoice"
+msgstr "Personalice el texto superior de la factura"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "D.I.E.:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "DIAN Electronic invoicing: Failed to process the request: %s"
+msgstr "Facturación electrónica DIAN: Fallo al procesar la solicitud: %s"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_tree
+msgid "DIAN Events"
+msgstr "Eventos DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "DIAN TESTSETID"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_dian_response_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_dian_response_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_dian_response_base64_bytes
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+msgid "DIAN response"
+msgstr "Respuesta DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_issue_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_date_from
+msgid "Date from"
+msgstr "Fecha desde"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_date_to
+msgid "Date to"
+msgstr "Fecha hasta"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_correction_concept_debit_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_correction_concept_debit_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_correction_concept_debit_id
+msgid "Debit correction concept"
+msgstr "Concepto de corrección débito"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_journal__resolution_debit_note_id
+msgid "Debit note resolution"
+msgstr "Resolución de nota débito"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__department_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__department_id
+msgid "Department"
+msgstr "Departamento"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__department_code
+msgid "Department code"
+msgstr "Código de departamento"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_departments
+msgid "Departments"
+msgstr "Departamentos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+msgid "Dian Events"
+msgstr "Eventos DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_discounts
+msgid "Discounts"
+msgstr "Descuentos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__display_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__event__rejection
+msgid "Document Rejection"
+msgstr "Rechazo de documento"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_type_document_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_type_document_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_type_document_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__type_document_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_type_document_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__type
+msgid "Document type"
+msgstr "Tipo de documento"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_documents
+msgid "Document types"
+msgstr "Tipos de documento"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_radian__state__draft
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Draft Invoice"
+msgstr "Factura borrador"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__ei_operation__iva_free_day
+msgid "Día Sin IVA"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Edi Response"
+msgstr "Respuesta Edi"
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,name:l10n_co_edi_jorels.email_template_edi
+msgid "Edi: Send by email"
+msgstr "Edi: Enviar por email"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Electronic Credit Note"
+msgstr "Nota crédito electrónica"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Electronic Sale Invoice"
+msgstr "Factura Electrónica de Venta"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_resolution
+msgid "Electronic invoice resolution"
+msgstr "Resolución de factura electrónica"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.act_window,name:l10n_co_edi_jorels.action_l10n_co_edi_jorels_config
+#: model:ir.model,name:l10n_co_edi_jorels.model_account_move
+#: model:ir.module.category,name:l10n_co_edi_jorels.module_l10n_co_edi_jorels_category
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_root
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_company_form_view_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_partner_form_view_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_account_journal_form_inherit_l10n_co_edi_jorels
+msgid "Electronic invoicing"
+msgstr "Facturación electrónica"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "Electronic invoicing does not yet support mandates"
+msgstr "La facturación electrónica aún no admite mandatos"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "Electronic invoicing is not yet compatible with this tax type."
+msgstr ""
+"La facturación electrónica no es compatible con este tipo de impuesto."
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"Electronic support document in acquisitions made to those not obliged to "
+"invoice"
+msgstr ""
+"Documento soporte electrónico en adquisiciones realizadas a no obligados a "
+"facturar"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_mail_template
+msgid "Email Templates"
+msgstr "Plantillas de correo electrónico"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__email_edi
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__email_edi
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__email_edi
+msgid "Email for invoicing"
+msgstr "Email para facturación"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Email personalization"
+msgstr "Personalización del email"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__ei_enable
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__ei_enable
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Enable electronic invoicing for this company"
+msgstr "Habilitar facturación electrónica para esta compañía"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__enable_validate_state
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__enable_validate_state
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Enable intermediate 'DIAN Validation' state"
+msgstr "Habilitar estado intermedio 'Validación DIAN'"
+
+#. module: l10n_co_edi_jorels
+#: model:res.groups,name:l10n_co_edi_jorels.group_invoice_period_enable
+msgid "Enable invoicing period"
+msgstr "Habilitar periodo de facturación"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Enable production environment"
+msgstr "Habilitar entorno de producción"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Enable/disable electronic invoicing"
+msgstr "Habilitar/deshabilitar facturación electrónica"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__date_end
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__date_end
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__date_end
+msgid "End date"
+msgstr "Fecha final"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__acceptance_event_endswith
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__receipt_event_endswith
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__rejection_event_endswith
+msgid "Ends with"
+msgstr "Termina con"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_environments
+msgid "Environment types"
+msgstr "Tipos de entorno"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_errors_messages
+msgid "Error messages"
+msgstr "Mensajes de error"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__event
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__event
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__event
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__event_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__event_id
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "Event"
+msgstr "Evento"
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,subject:l10n_co_edi_jorels.email_template_radian
+msgid ""
+"Evento;{{object.move_id.number_formatted or ''}};{{object.company_id."
+"vat_formatted or ''}};{{object.company_id.business_name or object."
+"company_id.name or ''}};{{object.edi_number or ''}};{{object.event_id.code "
+"or ''}}"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_events
+msgid "Events"
+msgstr "Eventos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__ei_operation__exchange
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__res_company__ei_operation__exchange
+msgid "Exchange"
+msgstr "Cambiario"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_amount_excluded
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_amount_excluded
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_amount_excluded
+msgid "Excluded"
+msgstr "Excluido"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_expedition_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_expedition_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_expedition_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_expedition_date
+msgid "Expedition date"
+msgstr "Fecha de expedición"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__event__acceptance
+msgid "Express acceptance of document"
+msgstr "Aceptación expresa de documento"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "Failed to process the request: %s"
+msgstr "Fallo al procesar la solicitud: %s"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__acceptance_event_field
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__number_field
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__receipt_event_field
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__rejection_event_field
+msgid "Field"
+msgstr "Campo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__footer_custom_text
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__footer_custom_text
+msgid "Footer text"
+msgstr "Texto inferior"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_res_company__email_edi_formatted
+msgid "Format email edi address \"Name <email_edi@domain>\""
+msgstr "Formatear dirección de email edi \"Nombre <email_edi@domain>\""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__email_edi_formatted
+msgid "Formatted Email Edi"
+msgstr "Email Edi Formateado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__vat_formatted
+msgid "Formatted Tax ID"
+msgstr "NIF formateado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_from
+msgid "From"
+msgstr "Desde"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_config
+msgid "General configuration"
+msgstr "Configuración general"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid ""
+"Graphic representation of electronic invoicing printed by\n"
+"                                    computer with own software by"
+msgstr ""
+"Representación gráfica de facturación electrónica impresa por\n"
+"                                    computador con software propio por"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__report_custom_text
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__report_custom_text
+msgid "Header text"
+msgstr "Texto de encabezado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__type_document_identification_id
+msgid "Identification document type"
+msgstr "Tipo de documento de identificación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_document_identifications
+msgid "Identification document types"
+msgstr "Tipos de documento de identificación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_has_error
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid ""
+"If there is no edi email, the contact's email is used as edi\n"
+"                                        email"
+msgstr ""
+"Si no hay edi email, el email del contacto es usado como edi\n"
+"                                        email"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "If you don't have one, write to"
+msgstr "Si no tiene una, escriba a"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__ei_ignore_edi_email_check
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__ei_ignore_edi_email_check
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Ignore edi email check"
+msgstr "Ignorar la verificación del edi email"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_is_not_test
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_is_not_test
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_is_not_test
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_is_not_test
+msgid "In production"
+msgstr "En producción"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__ei_include_pdf_attachment
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__ei_include_pdf_attachment
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Include PDF attachment on electronic invoice email"
+msgstr "Incluir PDF adjunto en el correo de factura electrónica"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__move_id
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_journal__resolution_invoice_id
+msgid "Invoice resolution"
+msgstr "Resolución de facturación"
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,report_name:l10n_co_edi_jorels.email_template_edi
+msgid ""
+"Invoice_{{ (object.name or '').replace('/','_') }}{{ object.state == "
+"'draft' and '_draft' or '' }}"
+msgstr ""
+"Factura_{{ (object.name or '').replace('/','_') }}{{ object.state == "
+"'draft' and '_borrador' or '' }}"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Invoicing authorization number:"
+msgstr "Número de autorización de facturación:"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__is_edi_mail_sent
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__is_edi_mail_sent
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__is_edi_mail_sent
+msgid "Is Edi Mail Sent"
+msgstr "Ha sido enviado el correo EDI"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_is_correction_without_reference
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_is_correction_without_reference
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_is_correction_without_reference
+msgid "Is it a correction without reference?"
+msgstr "¿Es una corrección sin referencia?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__is_out_country
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_journal__is_out_country
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__is_out_country
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__is_out_country
+msgid "Is it for out of the country?"
+msgstr "¿Es para fuera del país?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_is_restored
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_is_restored
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_is_restored
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_is_restored
+msgid "Is restored?"
+msgstr "¿Ha sido restaurado?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_is_valid
+msgid "Is valid?"
+msgstr "¿Es válido?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_issue_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_issue_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_issue_date
+msgid "Issue date"
+msgstr "Fecha de emisión"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_issue_datetime
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_issue_datetime
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_issue_datetime
+msgid "Issue datetime"
+msgstr "Fecha y hora de emisión"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_account_bank_statement_line__is_edi_mail_sent
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_account_move__is_edi_mail_sent
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_account_payment__is_edi_mail_sent
+msgid "It indicates that the edi document has been sent."
+msgstr "Esto indica que el documento edi ha sido enviado."
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_languages
+msgid "Languages"
+msgstr "Idiomas"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers____last_update
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__write_uid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__write_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__type_liability_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__type_liability_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__type_liability_id
+msgid "Liability type"
+msgstr "Tipo de responsabilidad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_liabilities
+msgid "Liability types"
+msgstr "Tipos de responsabilidad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: l10n_co_edi_jorels
+#: model:res.groups,name:l10n_co_edi_jorels.l10n_co_edi_jorels_group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__ei_operation__mandates
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__res_company__ei_operation__mandates
+msgid "Mandates"
+msgstr "Mandatos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_unit_measures
+msgid "Measurement units"
+msgstr "Unidades de medida"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__merchant_registration
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__merchant_registration
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__merchant_registration
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_partner_form_view_inherit_l10n_co_edi_jorels
+msgid "Merchant registration"
+msgstr "Registro mercantil"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_mail_message
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_errors_messages
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_errors_messages
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_errors_messages
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_message
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_product_product__model_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_product_template__model_name
+msgid "Model"
+msgstr "Modelo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_municipalities
+msgid "Municipalities"
+msgstr "Municipios"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__municipality_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__municipality_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__municipality_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__municipality_id
+msgid "Municipality"
+msgstr "Municipio"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de actividad"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "My Events"
+msgstr "Mis Eventos"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "NIT:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_correction_concepts__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_countries__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_departments__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_discounts__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_events__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_languages__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_municipalities__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_organization_provenances__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_forms__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payroll_periods__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_department__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal_municipality__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_reference_prices__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_rejection_concepts__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_subtype_workers__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_tax_details__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_taxes__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_contracts__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_currencies__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_deliveries__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_endorsement_events__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_event_payments__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_incapacities__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_identifications__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_liabilities__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_mandate_times__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_nature_mandates__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operation_events__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_organizations__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_payroll_notes__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_principals__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_regimes__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_scope_mandates__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_workers__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_unit_measures__name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__first_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__first_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__neighborhood
+msgid "Neighborhood"
+msgstr "Barrio"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_next_consecutive
+msgid "Next consecutive"
+msgstr "Siguiente consecutivo"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "No logical response was obtained from the API"
+msgstr "No fue obtenida una respuesta lógica desde la API"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "No logical response was obtained from the API."
+msgstr "No se obtuvo ninguna respuesta lógica de la API."
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__event__none
+msgid "None"
+msgstr "Ninguno"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_account_invoice_filter_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "Not valid in DIAN"
+msgstr "No válido en la DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move_line__ei_notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_number
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid "Number"
+msgstr "Número"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__number_formatted
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__number_formatted
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__number_formatted
+msgid "Number formatted"
+msgstr "Número formateado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Once enabled in DIAN"
+msgstr "Una vez habilitado en la DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_tree
+msgid "Open form"
+msgstr "Abrir formulario"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_operation
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_operation
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_operation
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__ei_operation
+msgid "Operation type"
+msgstr "Tipo de operación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__order_ref_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__order_ref_date
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__order_ref_date
+msgid "Order date"
+msgstr "Fecha de la orden"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__order_ref_number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__order_ref_number
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__order_ref_number
+msgid "Order reference"
+msgstr "Ref. de la orden"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_organization_provenances
+msgid "Organization provenances"
+msgstr "Procedencias de la organización"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__type_organization_id
+msgid "Organization type"
+msgstr "Tipo de organización"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__other_names
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__other_names
+msgid "Other names"
+msgstr "Otros nombres"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "PAS:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_pdf_base64
+msgid "PDF"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_pdf_download_link
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_pdf_download_link
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_pdf_download_link
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_pdf_download_link
+msgid "PDF link"
+msgstr "Enlace PDF"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_payload
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_payload
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_payload
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_payload
+msgid "Payload"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__payment_form_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__payment_form_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__payment_form_id
+msgid "Payment form"
+msgstr "Forma de pago"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_payment_forms
+msgid "Payment forms"
+msgstr "Formas de pago"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__payment_method_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__payment_method_id
+msgid "Payment method"
+msgstr "Método de pago"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_payment_methods
+msgid "Payment methods"
+msgstr "Métodos de pago"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_payroll_periods
+msgid "Payroll periods"
+msgstr "Periodos de nómina"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_pdf_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_pdf_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_pdf_base64_bytes
+msgid "Pdf document"
+msgstr "Documento PDF"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_times__percentage
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "Please check your invoice again. Are you really billing something?"
+msgstr ""
+"Por favor revise su factura nuevamente. ¿Está facturando algo realmente?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__access_url
+msgid "Portal Access URL"
+msgstr "URL de acceso al portal"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_postal
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__postal_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__postal_id
+msgid "Postal"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__name
+msgid "Postal code"
+msgstr "Código postal"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_postal_department
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__postal_department_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__postal_department_id
+msgid "Postal department"
+msgstr "Departamento postal"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_partner_form_view_inherit_l10n_co_edi_jorels
+msgid "Postal info"
+msgstr "Información postal"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_postal_municipality
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__postal_municipality_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__postal_municipality_id
+msgid "Postal municipality"
+msgstr "Municipalidad postal"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__postal_zone
+msgid "Postal zone"
+msgstr "Zona postal"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_radian__state__posted
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_search
+msgid "Posted"
+msgstr "Publicado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__prefix
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_prefix
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_documents__prefix
+msgid "Prefix"
+msgstr "Prefijo"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Print customization"
+msgstr "Personalización de la impresión"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Unidad de Medida del Producto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__is_not_test
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__is_not_test
+msgid "Production environment"
+msgstr "Entorno de producción"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "Products on export invoices must have a brand name"
+msgstr "Los productos en las facturas de exportación deben tener una marca"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "Products on export invoices must have a model name"
+msgstr ""
+"Los productos en las facturas de exportación deben tener un nombre de modelo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_qr_code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_qr_code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_qr_code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_qr_code
+msgid "QR code"
+msgstr "Código QR"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_environments__url_qr
+msgid "QR code url"
+msgstr "Url código QR"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_qr_data
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_qr_data
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_qr_data
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_qr_data
+msgid "QR data"
+msgstr "Datos QR"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_qr_image
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_qr_image
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_qr_image
+msgid "QR image"
+msgstr "Imagen QR"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_qr_link
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_qr_link
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_qr_link
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_qr_link
+msgid "QR link"
+msgstr "Enlace QR"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "R.C.:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__radian_ids
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__radian_ids
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__radian_ids
+msgid "Radian"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,name:l10n_co_edi_jorels.email_template_radian
+msgid "Radian event: Send by email"
+msgstr "Evento del Radian: Enviar por email"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#: model:ir.actions.act_window,name:l10n_co_edi_jorels.action_l10n_co_edi_jorels_radian_customer
+#: model:ir.actions.act_window,name:l10n_co_edi_jorels.action_l10n_co_edi_jorels_radian_supplier
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_radian
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_radian_customer
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_radian_tree
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+#, python-format
+msgid "Radian events"
+msgstr "Eventos del Radian"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid "Receipt"
+msgstr "Recibo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_reference_prices
+msgid "Reference prices"
+msgstr "Precios de referencia"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__type_regime_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__type_regime_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__type_regime_id
+msgid "Regime type"
+msgstr "Tipo de regimen"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_regimes
+msgid "Regimen types"
+msgstr "Tipos de régimen"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_customer_software
+msgid "Rejection"
+msgstr "Rechazo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__rejection_concept_id
+msgid "Rejection concept"
+msgstr "Concepto de rechazo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_rejection_concepts
+msgid "Rejection concepts"
+msgstr "Conceptos de rechazo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.server,name:l10n_co_edi_jorels.action_status_document_log
+msgid "Replace with log DIAN"
+msgstr "Reemplazar con log DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Requires the module: Account Invoice Mass Sending"
+msgstr "Requiere el módulo: Account Invoice Mass Sending"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__resolution_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__resolution_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__resolution_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_resolution
+msgid "Resolution"
+msgstr "Resolución"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_resolution_date
+msgid "Resolution date"
+msgstr "Fecha de resolución"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/res_config_settings.py:0
+#: model:ir.actions.act_window,name:l10n_co_edi_jorels.action_l10n_co_edi_jorels_config_resolutions
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_config_resolutions
+#, python-format
+msgid "Resolutions"
+msgstr "Resoluciones"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.server,name:l10n_co_edi_jorels.action_is_attached_document_matched
+msgid "Review attached document"
+msgstr "Revisar documento adjunto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de envío SMS"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Sale Invoice"
+msgstr "Factura de Venta"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__user_id
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__edi_sanitize_vat
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__edi_sanitize_vat
+msgid "Sanitized vat"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_payment_methods__scope
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_coverages__scope
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_identifications__scope
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_document_references__scope
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_item_sector_identifications__scope
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_operations__scope
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_type_users__scope
+msgid "Scope"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.server,name:l10n_co_edi_jorels.action_status_search_invoice_events
+msgid "Search invoice events"
+msgstr "Buscar eventos de factura"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__second_surname
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__second_surname
+msgid "Second surname"
+msgstr "Segundo apellido"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__access_token
+msgid "Security Token"
+msgstr "Token de seguridad"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.server,name:l10n_co_edi_jorels.action_send_edi_by_email
+msgid "Send Edi by Email"
+msgstr "Enviar Edi por Email"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "Send Radian Event by Email"
+msgstr "Enviar Evento del Radian por Email"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.server,name:l10n_co_edi_jorels.action_send_radian_by_email
+msgid "Send Radian event By Email"
+msgstr "Enviar evento del Radian por Email"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Send by email"
+msgstr "Enviar por email"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Set to Draft"
+msgstr "Cambiar a borrador"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__sidewalk
+msgid "Sidewalk"
+msgstr "Vereda"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_signature
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_signature
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_signature
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_signature
+msgid "Signature"
+msgstr "Firma"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+msgid "Skip DIAN validation"
+msgstr "Saltar validación DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__ei_operation__standard
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__res_company__ei_operation__standard
+msgid "Standard"
+msgstr "Estandar"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__date_start
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__date_start
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__date_start
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__acceptance_event_startswith
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__receipt_event_startswith
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_customer_software__rejection_event_startswith
+msgid "Starts with"
+msgstr "Inicia con"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__state
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__state
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__state
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_status_code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_status_code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_status_code
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_status_code
+msgid "Status code"
+msgstr "Código de estado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_status_description
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_status_description
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_status_description
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_status_description
+msgid "Status description"
+msgstr "Descripción de estado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_status_message
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_status_message
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_status_message
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_status_message
+msgid "Status message"
+msgstr "Mensaje de estado"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__acceptance_event_field__subject
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__number_field__subject
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__receipt_event_field__subject
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_customer_software__rejection_event_field__subject
+msgid "Subject"
+msgstr "Asunto"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__l10n_co_edi_jorels_radian__type__supplier
+msgid "Supplier Event"
+msgstr "Evento de proveedor"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__surname
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__surname
+msgid "Surname"
+msgstr "Apellido"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_sync
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_sync
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_sync
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_sync
+msgid "Sync"
+msgstr "Sincrono"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.actions.server,name:l10n_co_edi_jorels.action_l10n_co_edi_jorels_update_resolutions
+#: model:ir.ui.menu,name:l10n_co_edi_jorels.menu_l10n_co_edi_jorels_update_resolutions
+msgid "Sync resolutions"
+msgstr "Sincronizar resoluciones"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_api_sync
+msgid "Synchronize with API?"
+msgstr "¿Sincronizar con la API?"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "T.E.:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "T.I.:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Tax ID:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_tax_details
+msgid "Tax details"
+msgstr "Detalles de impuesto"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__tax_resident_co
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__tax_resident_co
+msgid "Tax resident in Colombia?"
+msgstr "¿Residente fiscal en Colombia?"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_tax__edi_tax_id
+msgid "Tax type (DIAN)"
+msgstr "Tipo de impuesto DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_taxes
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_amount_tax_no_withholding
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_amount_tax_no_withholding
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_amount_tax_no_withholding
+msgid "Taxes without withholdings"
+msgstr "Impuestos sin retenciones"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_technical_key
+msgid "Technical key"
+msgstr "Llave técnica"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "Test Environment"
+msgstr "Entorno de prueba"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__test_set_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_config_settings__test_set_id
+msgid "TestSetId"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The DIAN event sequence is wrong."
+msgstr "La secuencia de Eventos Dian está mal."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The client does not have an associated identification document type."
+msgstr "El cliente no tiene asociado un tipo de documento de identificación."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The client does not have an identification document number."
+msgstr ""
+"El cliente no tiene asociado un número de documento de identificación."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The client must have an email where to send the invoice."
+msgstr "El cliente debe tener un email donde enviar la factura."
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_partner_form_view_inherit_l10n_co_edi_jorels
+msgid "The configuration related to electronic invoicing is managed in"
+msgstr ""
+"La configuración relacionada con la factura electrónica es manejada en"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid ""
+"The credit note for document support cannot be a correction without "
+"reference"
+msgstr ""
+"La nota crédito para documento soporte no puede ser una corrección sin "
+"referencia"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The debit notes module has not been installed."
+msgstr "El modulo de notas débito no ha sido instalado."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid ""
+"The discount must always be greater than or equal to 0 and less than 100."
+msgstr "El descuento debe ser siempre mayor o igual a cero y menor que 100."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The document could not be validated in DIAN."
+msgstr "No se pudo validar el documento ante la DIAN."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The document number (VAT) for user is required for DIAN events."
+msgstr ""
+"El número de documento (NIF) para el usuario es obligatorio para Eventos "
+"DIAN."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The document type for user is required for DIAN events."
+msgstr ""
+"El tipo de documento para el usuario es obligatorio para Eventos DIAN."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The invoice UUID (CUFE) is required for DIAN events."
+msgstr "El UUID (CUFE) de la factura es obligatorio para Eventos DIAN."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The invoice must be a purchase invoice"
+msgstr "La factura debe ser una factura de compra"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The invoice must be a sales invoice"
+msgstr "La factura debe ser una factura de venta"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice must first be validated in Odoo, before being sent to the DIAN."
+msgstr ""
+"La factura debe ser primero validada en Odoo, antes de ser enviada a la "
+"DIAN."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The number and prefix are required for DIAN events"
+msgstr "El número y prefijo son obligatorios para Eventos DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The reference invoice has not yet been validated before the DIAN"
+msgstr "La factura de referencia no ha sido validada en la DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The rejection concept is required for the DIAN claim event."
+msgstr "El concepto de rechazo es obligatorio para eventos DIAN de Rechazo."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid ""
+"The support document does not support test submissions, only production."
+msgstr "El documento soporte no soporta envíos de prueba, solo producción."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The user and his/her job title (function) is required for DIAN events"
+msgstr ""
+"El usuario y el titulo de su trabajo (cargo) es obligatorio para Eventos "
+"DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The user first name is required for DIAN events"
+msgstr "El primer nombre del usuario es obligatorio para eventos DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "The user surname is required for DIAN events"
+msgstr "El apellido del usuario es obligatorio para eventos DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The waypoint %s doesn't have an total"
+msgstr "La remesa %s no tiene un total"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "The waypoint %s doesn't have an weight"
+msgstr "La remesa %s no tiene un peso"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "There is not debit note for electronic document support"
+msgstr "No hay nota débito para documento soporte electrónico"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "This is an export invoice but the client's country is Colombia"
+msgstr ""
+"Esta es una factura de exportación pero el país del cliente es Colombia"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "This type of document does not have a DIAN resolution assigned"
+msgstr "El tipo de documento no tiene asignada una resolución DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "This type of document does not need to be sent to DIAN"
+msgstr "Este tipo de documento no necesita ser enviado a la DIAN"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "This type of document does not need to be sent to the DIAN"
+msgstr "Este tipo de documento no necesita ser enviado a la DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_resolution__resolution_to
+msgid "To"
+msgstr "Hasta"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_amount_total_no_withholding
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_amount_total_no_withholding
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_amount_total_no_withholding
+msgid "Total without withholdings"
+msgstr "Total sin retenciones"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_company__trade_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__trade_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__trade_name
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_company_form_view_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_partner_form_view_inherit_l10n_co_edi_jorels
+msgid "Trade name"
+msgstr "Nombre comercial"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__ei_operation__transport
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__res_company__ei_operation__transport
+msgid "Transport"
+msgstr "Transporte"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid ""
+"Transport compatibility is only available with Jorels SAS Freight Transport "
+"Module"
+msgstr ""
+"La compatibilidad de transporte solo está disponible con el módulo de "
+"transporte de carga Jorels SAS"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_postal__type
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_deliveries
+msgid "Type deliveries"
+msgstr "Tipo de entregas"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_partner__type_document_identification_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_res_users__type_document_identification_id
+msgid "Type document identification"
+msgstr "Tipo de documento de identificación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_document_references
+msgid "Type document references"
+msgstr "Tipo de referencias de documentos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_endorsement_events
+msgid "Type endorsement events"
+msgstr "Tipo de eventos de respaldo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_type_environment
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_type_environment
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_type_environment
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_type_environment
+msgid "Type environment"
+msgstr "Tipo de entorno"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_event_payments
+msgid "Type event payments"
+msgstr "Tipo pagos de eventos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_incapacities
+msgid "Type incapacities"
+msgstr "Tipo de incapacidades"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_item_sector_identifications
+msgid "Type item sector identifications"
+msgstr "Tipo de identificaciones de sector de item"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_mandate_times
+msgid "Type mandate times"
+msgstr "Tipo de tiempos de mandato"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_nature_mandates
+msgid "Type nature mandates"
+msgstr "Tipo de naturaleza de mandato"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_operation_events
+msgid "Type operation events"
+msgstr "Tipo de operaciones de eventos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_payroll_notes
+msgid "Type payroll notes"
+msgstr "Tipo de notas de nómina"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_principals
+msgid "Type principals"
+msgstr "Tipo de principales"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_scope_mandates
+msgid "Type scope mandates"
+msgstr "Tipo de scope de mandatos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_times
+msgid "Type times"
+msgstr "Tipo de tiempos"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_item_identifications
+msgid "Types of item identifications"
+msgstr "Tipos de identificación de los items"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_operations
+msgid "Types of operations"
+msgstr "Tipos de operación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_organizations
+msgid "Types of organizations"
+msgstr "Tipos de organización"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_url_acceptance
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_url_acceptance
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_url_acceptance
+msgid "URL acceptance"
+msgstr "URL de aceptación"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_url_rejection
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_url_rejection
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_url_rejection
+msgid "URL rejection"
+msgstr "URL de rechazo"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_uuid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_uuid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_uuid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_uuid
+msgid "UUID"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/res_config_settings.py:0
+#: code:addons/l10n_co_edi_jorels/models/config/resolution.py:0
+#, python-format
+msgid ""
+"Unable to authenticate with the API. Please check your API key and try "
+"again."
+msgstr ""
+"No puede autenticar con la API. Por favor revise su API key e intente "
+"nuevamente."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/config/resolution.py:0
+#, python-format
+msgid "Unable to communicate with the API"
+msgstr "No puede comunicar con la API"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_uom_uom__edi_unit_measure_id
+msgid "Unit of measure (DIAN)"
+msgstr "Unidad de medida (DIAN)"
+
+#. module: l10n_co_edi_jorels
+#: model:res.groups,name:l10n_co_edi_jorels.l10n_co_edi_jorels_group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_users
+msgid "User types"
+msgstr "Tipos de usuario"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_is_valid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_is_valid
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_is_valid
+msgid "Valid"
+msgstr "Válido"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Valid from:"
+msgstr "Válido desde:"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_l10n_co_edi_jorels_radian_form
+msgid "Validate DIAN"
+msgstr "Validar DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.account_move_view_form_inherit_l10n_co_edi_jorels
+msgid "Validate DIAN Test"
+msgstr "Test de validación DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields.selection,name:l10n_co_edi_jorels.selection__account_move__state__validate
+msgid "Validating DIAN"
+msgstr "Validando DIAN"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__value_letters
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__value_letters
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__value_letters
+msgid "Value in letters"
+msgstr "Valor en letras"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Vendor Bill"
+msgstr "Factura de proveedor"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Vendor Credit Note"
+msgstr "Nota Crédito de Proveedor"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Vendor Electronic Bill"
+msgstr "Factura electrónica de proveedor"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "Vendor Electronic Credit Note"
+msgstr "Nota Crédito Electrónica de Proveedor"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,help:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "When an error occurs in the DIAN, always validate invoices"
+msgstr "Cuando un error ocurre en la DIAN, siempre validar las facturas"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_amount_tax_withholding
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_amount_tax_withholding
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_amount_tax_withholding
+msgid "Withholdings"
+msgstr "Retenciones"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_subtype_workers
+msgid "Worker subtypes"
+msgstr "Subtipos de trabajador"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model,name:l10n_co_edi_jorels.model_l10n_co_edi_jorels_type_workers
+msgid "Worker types"
+msgstr "Tipos de trabajador"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_xml_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_xml_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_xml_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_xml_base64
+msgid "XML"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_xml_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_xml_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_xml_bytes
+msgid "XML Bytes"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_xml_name
+msgid "XML name"
+msgstr "Nombre XML"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_xml_file_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_xml_file_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_xml_file_name
+msgid "Xml file name"
+msgstr "Nombre de archivo XML"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_xml_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_xml_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_xml_name
+msgid "Xml name"
+msgstr "Nombre XML"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid ""
+"You cannot delete an event after it has been posted (and received a "
+"number). You can set it back to \"Draft\" state and modify its content, "
+"then re-confirm it."
+msgstr ""
+"No puede eliminar un evento después de que se haya publicado (y recibido un "
+"número). Puede volver a establecerlo en el estado \"Borrador\" y modificar "
+"su contenido, luego volver a confirmarlo."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "You cannot delete an event which is not draft or cancelled."
+msgstr "No puede eliminar un evento que no esté borrador o cancelado."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "You have not configured a 'TestSetId'."
+msgstr "No tiene configurado un 'TestSetId'."
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "You must assign the client a country"
+msgstr "Debe asignar al cliente un país"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "You must assign the client a municipality"
+msgstr "Debe asignar al cliente una municipalidad"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "You must assign the client a type of regimen"
+msgstr "Debe asignar al cliente un tipo de regimen"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "You must assign the client a valid country"
+msgstr "Debe asignar al cliente un país válido"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "You must assign the customer a type of liability"
+msgstr "Debe asignar al cliente un tipo de responsabilidad"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#: code:addons/l10n_co_edi_jorels/models/radian.py:0
+#, python-format
+msgid "You must configure a token"
+msgstr "Debe configurar un token"
+
+#. module: l10n_co_edi_jorels
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels/models/account_move.py:0
+#, python-format
+msgid "You need to select a correction code first"
+msgstr "Necesita seleccionar primero un concepto de corrección"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_zip_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_zip_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_zip_base64_bytes
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_zip_base64
+msgid "Zip document"
+msgstr "Documento Zip"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_zip_key
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_zip_key
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_zip_key
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_zip_key
+msgid "Zip key"
+msgstr "Llave Zip"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_zip_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_zip_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_zip_name
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_l10n_co_edi_jorels_radian__edi_zip_name
+msgid "Zip name"
+msgstr "Nombre del Zip"
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_customer
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_customer
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_customer
+msgid "customer json"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_config_settings_view_form
+msgid "info@jorels.com"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_invoice_lines
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_invoice_lines
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_invoice_lines
+msgid "invoice_lines json"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_bank_statement_line__ei_legal_monetary_totals
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_move__ei_legal_monetary_totals
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels.field_account_payment__ei_legal_monetary_totals
+msgid "legal_monetary_totals json"
+msgstr ""
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.view_form_resolution
+msgid "resolution"
+msgstr "resolución"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.res_partner_form_view_inherit_l10n_co_edi_jorels
+msgid "the parent company"
+msgstr "la compañía principal"
+
+#. module: l10n_co_edi_jorels
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels.report_invoice_document_custom
+msgid "to"
+msgstr "a"
+
+#. module: l10n_co_edi_jorels
+#: model:mail.template,subject:l10n_co_edi_jorels.email_template_edi
+msgid ""
+"{{object.company_id.vat_formatted or ''}};{{object.company_id.business_name "
+"or object.company_id.name or ''}};{{object.number_formatted or ''}};"
+"{{object.ei_type_document_id.code or ''}};{{object.company_id.trade_name or "
+"object.company_id.business_name or object.company_id.name or ''}};"
+msgstr ""

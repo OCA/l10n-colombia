@@ -1,0 +1,8 @@
+﻿"id","name","code"
+"1","Mandante Facturador Electrónico","Mandante-FE"
+"2","Mandante Legitimo Tenedor","Mandante-LT"
+"3","Mandante Avalista","Mandante-AV"
+"4","Mandante Adquirente/Deudor","Mandante-AD"
+"5","Mandatario Sistema de Negociación Electrónica","M-SN-e"
+"6","Mandatario Factor","M-Factor"
+"7","Mandatario Proveedor Tecnológico","M-PT"
