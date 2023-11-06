@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    l10n_co_hr_payroll
+    Copyright (C) 2022  Jorels SAS
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    email: info@jorels.com
+ -->
+<odoo>
+    <record id="hr_payslip_view_form_l10n_co_hr_payroll" model="ir.ui.view">
+        <field name="name">hr.payslip.form.l10n_co_hr_payroll.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="priority">20</field>
+        <field name="inherit_id" ref="hr_payroll_community.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="dian_preview" type="object" class="oe_stat_button" icon="fa-globe icon"
+                            attrs="{'invisible': [('edi_uuid', '=', False)]}">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">DIAN</span>
+                            <span class="o_stat_text">Web View</span>
+                        </div>
+                    </button>
+                    <button name="dian_pdf_view" type="object" class="oe_stat_button" icon="fa-file-pdf-o icon"
+                            attrs="{'invisible': [('edi_uuid', '=', False)]}">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_text">DIAN</span>
+                            <span class="o_stat_text">Pdf View</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//button[@name='action_payslip_done']" position="after">
+                    <button name="validate_dian" type="object" string="Validate DIAN"
+                            class="oe_highlight o_payslip_validate"
+                            attrs="{'invisible': ['|', ('edi_is_valid','=',True),('state','=','draft')]}"/>
+                    <button name="status_zip" type="object" string="Consult DIAN" groups="base.group_no_one"
+                            attrs="{'invisible': [('state','=','draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='number']" position="before">
+                    <field name="date"/>
+                    <field name="payment_date"/>
+                    <field name="payment_form_id"/>
+                    <field name="payment_method_id"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']" position="after">
+                    <group>
+                        <field name="accrued_total_amount" widget="monetary" readonly="True"/>
+                        <field name="deductions_total_amount" widget="monetary" readonly="True"/>
+                        <field name="total_amount" widget="monetary" readonly="True"/>
+                        <field name="others_total_amount" widget="monetary" readonly="True" invisible="1"/>
+                        <field name="currency_id" invisible="1"/>
+                    </group>
+                    <group>
+                        <field name="worked_days_total" readonly="True"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='input_line_ids']" position="after">
+                    <separator string="Earn Details"/>
+                    <field name="earn_ids">
+                        <tree string="Earn Details" editable="bottom">
+                            <field name="rule_input_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="category" invisible="1"/>
+                            <field name="code" invisible="1"/>
+                            <field name="name"/>
+                            <field name="amount"
+                                   attrs="{'invisible': ['|',
+                                   ('category','=','suspension_or_unpaid_leaves'),
+                                   ('category','=','legal_strikes')
+                                   ]}"/>
+                            <field name="quantity"
+                                   attrs="{'readonly': [
+                                   ('category','!=','vacation_compensated'),
+                                   ('category','!=','primas')
+                                   ]}"/>
+                            <field name="total"
+                                   attrs="{'invisible': ['|',
+                                   ('category','=','suspension_or_unpaid_leaves'),
+                                   ('category','=','legal_strikes')
+                                   ]}"/>
+                            <field name="sequence" invisible="True"/>
+                            <field name="date_start"
+                                   attrs="{'invisible': [
+                                   ('category','!=','vacation_common'),
+                                   ('category','!=','licensings_maternity_or_paternity_leaves'),
+                                   ('category','!=','licensings_permit_or_paid_licenses'),
+                                   ('category','!=','licensings_suspension_or_unpaid_leaves'),
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours'),
+                                   ('category','!=','incapacities_common'),
+                                   ('category','!=','incapacities_professional'),
+                                   ('category','!=','incapacities_working'),
+                                   ('category','!=','legal_strikes')
+                                   ]}"/>
+                            <field name="time_start"
+                                   attrs="{'invisible': [
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours')
+                                   ]}" widget="float_time"/>
+                            <field name="date_end"
+                                   attrs="{'invisible': [
+                                   ('category','!=','vacation_common'),
+                                   ('category','!=','licensings_maternity_or_paternity_leaves'),
+                                   ('category','!=','licensings_permit_or_paid_licenses'),
+                                   ('category','!=','licensings_suspension_or_unpaid_leaves'),
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours'),
+                                   ('category','!=','incapacities_common'),
+                                   ('category','!=','incapacities_professional'),
+                                   ('category','!=','incapacities_working'),
+                                   ('category','!=','legal_strikes')
+                                   ]}"/>
+                            <field name="time_end"
+                                   attrs="{'invisible': [
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours')
+                                   ]}" widget="float_time"/>
+                        </tree>
+                        <form string="Earn Details">
+                            <group>
+                                <field name="rule_input_id" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="category" invisible="1"/>
+                                <field name="code" invisible="1"/>
+                                <field name="name"/>
+                                <field name="amount"
+                                       attrs="{'invisible': ['|',
+                                   ('category','=','suspension_or_unpaid_leaves'),
+                                   ('category','=','legal_strikes')
+                                   ]}"/>
+                                <field name="quantity"
+                                       attrs="{'readonly': [
+                                   ('category','!=','vacation_compensated'),
+                                   ('category','!=','primas')
+                                   ]}"/>
+                                <field name="total"
+                                       attrs="{'invisible': ['|',
+                                   ('category','=','suspension_or_unpaid_leaves'),
+                                   ('category','=','legal_strikes')
+                                   ]}"/>
+                                <field name="sequence"/>
+                                <field name="date_start"
+                                       attrs="{'invisible': [
+                                   ('category','!=','vacation_common'),
+                                   ('category','!=','licensings_maternity_or_paternity_leaves'),
+                                   ('category','!=','licensings_permit_or_paid_licenses'),
+                                   ('category','!=','licensings_suspension_or_unpaid_leaves'),
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours'),
+                                   ('category','!=','incapacities_common'),
+                                   ('category','!=','incapacities_professional'),
+                                   ('category','!=','incapacities_working'),
+                                   ('category','!=','legal_strikes')
+                                   ]}"/>
+                                <field name="time_start"
+                                       attrs="{'invisible': [
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours')
+                                   ]}" widget="float_time"/>
+                                <field name="date_end"
+                                       attrs="{'invisible': [
+                                   ('category','!=','vacation_common'),
+                                   ('category','!=','licensings_maternity_or_paternity_leaves'),
+                                   ('category','!=','licensings_permit_or_paid_licenses'),
+                                   ('category','!=','licensings_suspension_or_unpaid_leaves'),
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours'),
+                                   ('category','!=','incapacities_common'),
+                                   ('category','!=','incapacities_professional'),
+                                   ('category','!=','incapacities_working'),
+                                   ('category','!=','legal_strikes')
+                                   ]}"/>
+                                <field name="time_end"
+                                       attrs="{'invisible': [
+                                   ('category','!=','daily_overtime'),
+                                   ('category','!=','overtime_night_hours'),
+                                   ('category','!=','hours_night_surcharge'),
+                                   ('category','!=','sunday_holiday_daily_overtime'),
+                                   ('category','!=','daily_surcharge_hours_sundays_holidays'),
+                                   ('category','!=','sunday_night_overtime_holidays'),
+                                   ('category','!=','sunday_holidays_night_surcharge_hours')
+                                   ]}" widget="float_time"/>
+                            </group>
+                        </form>
+                    </field>
+                    <separator string="Deduction Details"/>
+                    <field name="deduction_ids">
+                        <tree string="Deduction Details" editable="bottom">
+                            <field name="rule_input_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="category" invisible="1"/>
+                            <field name="code" invisible="1"/>
+                            <field name="name"/>
+                            <field name="amount"/>
+                            <field name="sequence" invisible="True"/>
+                        </tree>
+                        <form string="Deduction Details">
+                            <group>
+                                <field name="rule_input_id" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="category" invisible="1"/>
+                                <field name="code" invisible="1"/>
+                                <field name="name"/>
+                                <field name="amount"/>
+                                <field name="sequence"/>
+                            </group>
+                        </form>
+                    </field>
+                </xpath>
+                <xpath expr="//page[last()]" position="after">
+                    <page name="edi_response" string="Edi Response">
+                        <group>
+                            <field name="payslip_edi_ids" readonly="True"/>
+                            <field name="edi_sync"/>
+                            <field name="edi_is_not_test"/>
+                            <field name="edi_is_valid"/>
+                            <field name="edi_is_restored"/>
+                            <field name="edi_algorithm"/>
+                            <field name="edi_class"/>
+                            <field name="edi_number"/>
+                            <field name="edi_uuid" class="text-break"/>
+                            <field name="edi_issue_date"/>
+                            <field name="edi_issue_datetime"/>
+                            <field name="edi_expedition_date"/>
+                            <field name="edi_zip_key" attrs="{'invisible':[('edi_is_not_test','=',True)]}" class="text-break"/>
+                            <field name="edi_status_code"/>
+                            <field name="edi_status_description" class="text-break"/>
+                            <field name="edi_status_message" class="text-break"/>
+                            <field name="edi_errors_messages" class="text-break"/>
+                            <field name="edi_xml_name" invisible="1"/>
+                            <field name="edi_zip_name" invisible="1"/>
+                            <field name="edi_signature" class="text-break"/>
+                            <field name="edi_qr_code" class="text-break"/>
+                            <field name="edi_qr_data" class="text-break"/>
+                            <field name="edi_qr_link" widget="url" class="text-break"/>
+                            <field name="edi_pdf_download_link" widget="url" class="text-break"/>
+                            <field name="edi_xml_base64" filename="edi_xml_name"/>
+                            <field name="edi_application_response_base64"/>
+                            <field name="edi_attached_document_base64"/>
+                            <field name="edi_pdf_base64"/>
+                            <field name="edi_zip_base64" filename="edi_zip_name"/>
+                            <field name="edi_type_environment"/>
+                        </group>
+                    </page>
+                    <page string="Edi Payload">
+                        <group>
+                            <field name="edi_payload_html" readonly="True"/>
+                            <field name="edi_payload" groups="base.group_no_one" class="text-break"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='credit_note']" position="after">
+                    <field name="origin_payslip_id" attrs="{'invisible':[('credit_note','=',False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']//tree//field[@name='rate']" position="after">
+                    <field name="edi_quantity"/>
+                    <field name="edi_rate"/>
+                </xpath>
+                <xpath expr="//sheet" position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </xpath>
+            </data>
+        </field>
+    </record>
+    <record id="hr_payslip_tree_l10n_co_payroll" model="ir.ui.view">
+        <field name="name">hr.payslip.tree.l10n.co.payroll</field>
+        <field name="model">hr.payslip</field>
+        <field name="priority">20</field>
+        <field name="inherit_id" ref="hr_payroll_community.view_hr_payslip_tree"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='state']" position="before">
+                    <field name="worked_days_total"/>
+                    <field name="accrued_total_amount"/>
+                    <field name="deductions_total_amount"/>
+                    <field name="total_amount"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="action_status_document_log" model="ir.actions.server">
+        <field name="name">Replace with log DIAN</field>
+        <field name="model_id" ref="hr_payroll_community.model_hr_payslip"/>
+        <field name="binding_model_id" ref="hr_payroll_community.model_hr_payslip"/>
+        <field name="state">code</field>
+        <field name="code">records.status_document_log()</field>
+    </record>
+</odoo>
