@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Jorels S.A.S. - Copyright (2019-2022)-->
+
+<!--This file is part of l10n_co_edi_jorels_pos.-->
+
+<!--l10n_co_edi_jorels_pos is free software: you can redistribute it and/or modify-->
+<!--it under the terms of the GNU Lesser General Public License as published by-->
+<!--the Free Software Foundation, either version 3 of the License, or-->
+<!--(at your option) any later version.-->
+
+<!--l10n_co_edi_jorels_pos is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU Lesser General Public License for more details.-->
+
+<!--You should have received a copy of the GNU Lesser General Public License-->
+<!--along with l10n_co_edi_jorels_pos.  If not, see <https://www.gnu.org/licenses/>.-->
+
+<!--email: info@jorels.com-->
+
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='receipt.cashier']" position="after">
+            <div t-if="receipt.client and receipt.client.name">Customer: <t t-esc="receipt.client.name"/></div>
+            <div t-if="receipt.client and receipt.client.vat">VAT: <t t-esc="receipt.client.vat"/></div>
+            <br/>
+            <div t-if="receipt.invoice">
+                <div t-esc="receipt.invoice.ei_qr_data" id="ei_qr_data" class="hidden"/>
+                <div id="qr_data" align="center"/>
+                <br/>
+                <script type="text/javascript">
+                    var ei_qr_data = document.getElementById('ei_qr_data').innerText;
+                    if(ei_qr_data &amp;&amp; ei_qr_data != 'false'){
+                        var qrcode = new QRCode(document.getElementById('qr_data') , {
+                            text: String(ei_qr_data),
+                        });
+                    }
+                </script>
+                <div t-if="receipt.invoice.ei_is_valid">
+                    <span>Factura electrónica de venta: </span>
+                    <t t-esc="receipt.invoice.number"/>
+                    <br/>
+                    <div style="word-wrap: break-word;">
+                        <t t-esc="'CUFE:' + receipt.invoice.ei_uuid"/>
+                    </div>
+                    <br/>
+                    <span>Resolución: </span>
+                    <t t-esc="receipt.invoice.resolution_resolution"/>
+                    <span>De: </span>
+                    <t t-esc="receipt.invoice.resolution_resolution_date"/>
+                    <br/>
+                    <span>Numeración desde: </span>
+                    <t t-esc="receipt.invoice.resolution_prefix"/>
+                    <t t-esc="receipt.invoice.resolution_from"/>
+                    <span> Hasta: </span>
+                    <t t-esc="receipt.invoice.resolution_prefix"/>
+                    <t t-esc="receipt.invoice.resolution_to"/>
+                    <br/>
+                    <span>Fecha desde: </span>
+                    <t t-esc="receipt.invoice.resolution_date_from"/>
+                    <span> Hasta: </span>
+                    <t t-esc="receipt.invoice.resolution_date_to"/>
+                </div>
+                <div t-else="">
+                    <span>Factura de venta: </span>
+                    <t t-esc="receipt.invoice.number"/>
+                    <br/>
+                    <span t-if="receipt.invoice.resolution_resolution">Resolución: </span>
+                    <t t-if="receipt.invoice.resolution_resolution" t-esc="receipt.invoice.resolution_resolution"/>
+                    <span t-if="receipt.invoice.resolution_resolution_date"> De: </span>
+                    <t t-if="receipt.invoice.resolution_resolution_date"
+                       t-esc="receipt.invoice.resolution_resolution_date"/>
+                    <br/>
+                    <span t-if="receipt.invoice.resolution_prefix and receipt.invoice.resolution_from">Numeración desde: </span>
+                    <t t-if="receipt.invoice.resolution_prefix and receipt.invoice.resolution_from"
+                       t-esc="receipt.invoice.resolution_prefix"/>
+                    <t t-if="receipt.invoice.resolution_prefix and receipt.invoice.resolution_from"
+                       t-esc="receipt.invoice.resolution_from"/>
+                    <span t-if="receipt.invoice.resolution_prefix and receipt.invoice.resolution_to"> Hasta: </span>
+                    <t t-if="receipt.invoice.resolution_prefix and receipt.invoice.resolution_to"
+                       t-esc="receipt.invoice.resolution_prefix"/>
+                    <t t-if="receipt.invoice.resolution_prefix and receipt.invoice.resolution_to"
+                       t-esc="receipt.invoice.resolution_to"/>
+                    <br/>
+                    <span t-if="receipt.invoice.resolution_date_from">Fecha desde: </span>
+                    <t t-if="receipt.invoice.resolution_date_from" t-esc="receipt.invoice.resolution_date_from"/>
+                    <span t-if="receipt.invoice.resolution_date_to"> Hasta: </span>
+                    <t t-if="receipt.invoice.resolution_date_to" t-esc="receipt.invoice.resolution_date_to"/>
+                </div>
+            </div>
+        </xpath>
+    </t>
+    <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="before">
+            <div>
+                <span class="pos-receipt-left-align">Descripción</span>
+                <span class="pos-receipt-right-align">Vr. Total</span>
+            </div>
+            <div>
+                <span class="pos-receipt-left-align">----------------</span>
+                <span class="pos-receipt-right-align">-----------</span>
+            </div>
+        </xpath>
+    </t>
+</templates>

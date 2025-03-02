@@ -1,0 +1,251 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_edi_jorels_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-18 02:38+0000\n"
+"PO-Revision-Date: 2023-03-17 21:45-0500\n"
+"Last-Translator: \n"
+"Language-Team: Jorels SAS\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: l10n_co_edi_jorels_pos
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels_pos.res_config_settings_view_form_l10n_co_edi_jorels_pos
+msgid "<span class=\"o_form_label\">Default DIAN POS Journals</span>"
+msgstr "<span class=\"o_form_label\">Diarios POS DIAN por defecto</span>"
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model.fields,help:l10n_co_edi_jorels_pos.field_pos_config__electronic_invoice_journal_id
+#: model:ir.model.fields,help:l10n_co_edi_jorels_pos.field_res_config_settings__pos_electronic_invoice_journal_id
+msgid "Accounting journal used to create electronic invoices."
+msgstr "Diario contable usado para crear facturación electrónica."
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model,name:l10n_co_edi_jorels_pos.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Customer:"
+msgstr "Cliente:"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "De:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels_pos.res_config_settings_view_form_l10n_co_edi_jorels_pos
+msgid "Default DIAN POS journals for electronic invoices"
+msgstr "Diarios POS DIAN por defecto para facturas electrónicas"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Descripción"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PaymentScreen.xml:0
+#, python-format
+msgid "Electronic Invoice"
+msgstr "Factura electrónica"
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels_pos.field_pos_config__electronic_invoice_journal_id
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels_pos.field_res_config_settings__pos_electronic_invoice_journal_id
+msgid "Electronic Invoice Journal"
+msgstr "Diario de facturación electrónica"
+
+#. module: l10n_co_edi_jorels_pos
+#: model_terms:ir.ui.view,arch_db:l10n_co_edi_jorels_pos.res_config_settings_view_form_l10n_co_edi_jorels_pos
+msgid "Electronic invoices"
+msgstr "Facturas electrónicas"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Email fact."
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Factura de venta:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Factura electrónica de venta:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Fecha desde:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Hasta:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels_pos.field_pos_order__ei_is_dian_document
+msgid "Is it a DIAN electronic document?"
+msgstr "¿Es un documento electrónico DIAN?"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Municipali."
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "None"
+msgstr "Ninguno"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Numeración desde:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Persona Jurídica"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Persona Natural"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model,name:l10n_co_edi_jorels_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del Punto de Venta"
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model,name:l10n_co_edi_jorels_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Órdenes del Punto de Venta"
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model,name:l10n_co_edi_jorels_pos.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesión del Punto de Venta"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Regimen"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Resolución:"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Responsab."
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"The electronic invoice journal and the point of sale %s must belong to its "
+"company."
+msgstr ""
+"El diario de factura electrónica y el punto de venta %s deben pertenecer a "
+"su compañía."
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-python
+#: code:addons/l10n_co_edi_jorels_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"The electronic invoice journal must be in the same currency as the Sales "
+"Journal or the company currency if that is not set."
+msgstr ""
+"El diario de facturas electrónicas debe estar en la misma moneda que el "
+"Diario de ventas o la moneda de la empresa si no está configurada."
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Tipo doc."
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "Tipo per."
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#: model:ir.model.fields,field_description:l10n_co_edi_jorels_pos.field_pos_order__to_electronic_invoice
+msgid "To electronic invoice"
+msgstr "Para facturar electrónicamente"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "VAT:"
+msgstr "NIF:"
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Vr. Total"
+msgstr ""
+
+#. module: l10n_co_edi_jorels_pos
+#. odoo-javascript
+#: code:addons/l10n_co_edi_jorels_pos/static/src/xml/PartnerDetailsEdit.xml:0
+#, python-format
+msgid "fe@example.com"
+msgstr ""
