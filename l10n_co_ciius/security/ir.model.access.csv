@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_co_ciius_ciiu,access_l10n_co_ciius_ciiu,model_l10n_co_ciius_ciiu,base.group_user,1,1,1,1
+access_l10n_co_ciius_ciiu_division,access_l10n_co_ciius_ciiu_division,model_l10n_co_ciius_ciiu_division,base.group_user,1,0,0,0
+access_l10n_co_ciius_ciiu_section,access_l10n_co_ciius_ciiu_section,model_l10n_co_ciius_ciiu_section,base.group_user,1,0,0,0
+access_l10n_co_ciius_ciiu_subdivision,access_l10n_co_ciius_ciiu_subdivision,model_l10n_co_ciius_ciiu_subdivision,base.group_user,1,0,0,0
