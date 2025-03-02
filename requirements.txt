@@ -1,0 +1,5 @@
+# generated from manifests external_dependencies
+num2words
+pathlib
+qrcode
+requests

@@ -1,0 +1,5 @@
+﻿"id","name","scope","code"
+"1","Servicio adicional","transport","0"
+"2","Remesa de transporte registrada en el RNDC","transport","1"
+"3","B/S ingreso propio","mandate","0"
+"4","B/S Ingresos Recibidos para Terceros","mandate","1"

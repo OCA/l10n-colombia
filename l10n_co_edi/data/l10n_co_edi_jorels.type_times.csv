@@ -1,0 +1,8 @@
+﻿"id","name","code","percentage"
+"1","Hora Extra Diurna","1","25.00"
+"2","Hora Extra Nocturna","2","75.00"
+"3","Hora Recargo Nocturno","3","35.00"
+"4","Hora Extra Diurna Dominical y Festivos","4","100.00"
+"5","Hora Recargo Diurno Dominical y Festivos","5","75.00"
+"6","Hora Extra Nocturna Dominical y Festivos","6","150.00"
+"7","Hora Recargo Nocturno Dominical y Festivos","7","110.00"
