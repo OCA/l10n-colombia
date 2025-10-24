@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="res_currency_rate_provider_sfc" model="res.currency.rate.provider">
+        <field name="service">SFC</field>
+        <field name="active">True</field>
+        <field name="interval_type">days</field>
+        <field name="interval_number">1</field>
+        <field
+            name="currency_ids"
+            eval="[Command.set([
+                ref('base.USD'),
+            ])]"
+        />
+    </record>
+</odoo>
