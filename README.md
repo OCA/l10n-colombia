@@ -17,7 +17,11 @@ l10n-colombia
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[l10n_co_currency_rate_update](l10n_co_currency_rate_update/) | 18.0.1.0.0 |  | Tasa de cambio de Superfinanciera para Colombia
 
 [//]: # (end addons)
 
