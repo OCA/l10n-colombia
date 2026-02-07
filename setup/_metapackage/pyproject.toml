@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-l10n-colombia"
+version = "19.0.20260207.0"
+dependencies = [
+    "odoo-addon-l10n_co_withholding_advance==19.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 19.0",
+]
