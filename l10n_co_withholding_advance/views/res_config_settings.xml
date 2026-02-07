@@ -1,0 +1,75 @@
+<!--
+    Copyright (C) 2026 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.account</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40" />
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//block[@name='default_taxes_setting_container']"
+                position="after"
+            >
+                <block
+                    title="Autorenta"
+                    name="default_l10n_co_withholding_advance_setting_container"
+                >
+                    <setting id="enable_l10n_co_withholding_advance">
+                        <field name="l10n_co_withholding_advance_enabled" />
+                    </setting>
+                    <setting>
+                        <div class="content-group">
+                            <div
+                                class="row"
+                                invisible="not l10n_co_withholding_advance_enabled"
+                            >
+                                <div class="col-lg-6">
+                                    <label
+                                        for="l10n_co_withholding_advance_rate"
+                                        class="o_light_label"
+                                    />
+                                </div>
+                                <field name="l10n_co_withholding_advance_rate" />
+                            </div>
+                        </div>
+                    </setting>
+                    <setting>
+                        <div class="content-group">
+                            <div
+                                class="row mb-4"
+                                invisible="not l10n_co_withholding_advance_enabled"
+                            >
+                                <label
+                                    for="l10n_co_withholding_advance_debit_id"
+                                    class="col-lg-8 o_light_label"
+                                />
+                                <field
+                                    name="l10n_co_withholding_advance_debit_id"
+                                    required="l10n_co_withholding_advance_enabled"
+                                    options="{'no_create': True}"
+                                />
+                            </div>
+                            <div
+                                class="row"
+                                invisible="not l10n_co_withholding_advance_enabled"
+                            >
+                                <label
+                                    for="l10n_co_withholding_advance_credit_id"
+                                    class="col-lg-8 o_light_label"
+                                />
+                                <field
+                                    name="l10n_co_withholding_advance_credit_id"
+                                    required="l10n_co_withholding_advance_enabled"
+                                    options="{'no_create': True}"
+                                />
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
