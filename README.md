@@ -17,7 +17,11 @@ l10n-colombia
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[l10n_co_withholding_advance](l10n_co_withholding_advance/) | 19.0.1.0.0 |  | Soporte para retenciones anticipadas en la contabilidad colombiana.
 
 [//]: # (end addons)
 
