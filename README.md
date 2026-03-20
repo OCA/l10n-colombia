@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [l10n_co_currency_rate_update](l10n_co_currency_rate_update/) | 18.0.1.0.0 |  | Tasa de cambio de Superfinanciera para Colombia
+[l10n_co_withholding_advance](l10n_co_withholding_advance/) | 18.0.1.0.0 |  | Soporte para retenciones anticipadas en la contabilidad colombiana.
 
 [//]: # (end addons)
 
