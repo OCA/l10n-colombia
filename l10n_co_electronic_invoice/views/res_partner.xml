@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">view_partner_form_inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='property_account_position_id']"
+                position='after'
+            >
+                <field
+                    name="l10n_co_regimen_fiscal"
+                    required="company_type == 'company' and country_id == %(base.co)d"
+                    invisible="parent_id or country_id != %(base.co)d"
+                />
+                <field
+                    name="l10n_co_responsibility_ids"
+                    widget="many2many_tags"
+                    options="{'no_create_edit': True}"
+                    required="company_type == 'company' and country_id == %(base.co)d"
+                    invisible="parent_id or country_id != %(base.co)d"
+                />
+                <field
+                    name="l10n_co_ciiu_id"
+                    options="{'no_create':True,'no_open': True}"
+                    required="company_type == 'company' and country_id == %(base.co)d"
+                    invisible="parent_id or country_id != %(base.co)d"
+                />
+                <field
+                    name="l10n_co_ciiu_ids"
+                    options="{'no_create':True,'no_open': True}"
+                    widget="many2many_tags"
+                    context="{'l10n_co_ciiu_shortname': '1'}"
+                    invisible="parent_id or country_id != %(base.co)d"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

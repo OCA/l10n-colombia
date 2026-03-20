@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_move_form_inherit" model="ir.ui.view">
+        <field name="name">view_move_form_inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="l10n_latam_invoice_document.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='l10n_latam_document_type_id']"
+                position="before"
+            >
+                <field
+                    name="l10n_co_payment_term"
+                    invisible="not l10n_latam_use_documents or not l10n_latam_document_type_id"
+                    readonly="posted_before"
+                    required="partner_id and l10n_latam_use_documents and l10n_latam_document_type_id"
+                />
+                <field
+                    name="l10n_co_payment_method_id"
+                    invisible="not l10n_latam_use_documents or not l10n_latam_document_type_id"
+                    readonly="posted_before"
+                    required="partner_id and l10n_latam_use_documents and l10n_latam_document_type_id"
+                    options="{'no_create_edit' : True, 'no_open': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

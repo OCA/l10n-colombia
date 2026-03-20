@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_company_form_inherit" model="ir.ui.view">
+        <field name="name">view_company_form_inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position='inside'>
+                <page
+                    name="l10n_co_accounting"
+                    string="Información Fiscal"
+                    invisible="country_id != %(base.co)d"
+                >
+                    <group>
+                        <group>
+                            <field
+                                name="l10n_co_regimen_fiscal"
+                                required="country_id == %(base.co)d"
+                            />
+                            <field
+                                name="l10n_co_responsibility_ids"
+                                widget="many2many_tags"
+                                options="{'no_create_edit': True}"
+                                required="country_id == %(base.co)d"
+                            />
+                        </group>
+                        <group>
+                            <field name="l10n_co_autoretenedor" />
+                            <field
+                                name="l10n_co_ciiu_id"
+                                options="{'no_create':True,'no_open': True}"
+                                required="country_id == %(base.co)d"
+                            />
+                            <field
+                                name="l10n_co_ciiu_ids"
+                                options="{'no_create':True,'no_open': True}"
+                                widget="many2many_tags"
+                                context="{'actividad_economica_shortname': '1'}"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

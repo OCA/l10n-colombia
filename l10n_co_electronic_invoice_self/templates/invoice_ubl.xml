@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Template principal para factura UBL -->
+    <template id="dian_invoice_ubl_content" name="DIAN Invoice UBL Content">
+        <t t-set="invoice" t-value="record" />
+        <t t-set="company" t-value="invoice.company_id" />
+        <t t-set="partner" t-value="invoice.partner_id" />
+
+        <Invoice
+            xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+        >
+            <!-- Versión UBL -->
+            <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+
+            <!-- ID del documento -->
+            <cbc:ID>
+                <t t-esc="invoice.name" />
+            </cbc:ID>
+
+            <!-- Fecha de emisión -->
+            <cbc:IssueDate>
+                <t t-esc="invoice.invoice_date" />
+            </cbc:IssueDate>
+
+            <!-- Tipo de documento -->
+            <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+
+            <!-- Moneda del documento -->
+            <cbc:DocumentCurrencyCode>
+                <t t-esc="invoice.currency_id.name" />
+            </cbc:DocumentCurrencyCode>
+
+            <!-- Proveedor (Empresa emisora) -->
+            <cac:AccountingSupplierParty>
+                <cac:Party>
+                    <cac:PartyName>
+                        <cbc:Name>
+                            <t t-esc="company.name" />
+                        </cbc:Name>
+                    </cac:PartyName>
+                    <cac:PartyTaxScheme>
+                        <cbc:RegistrationName>
+                            <t t-esc="company.name" />
+                        </cbc:RegistrationName>
+                        <cbc:CompanyID>
+                            <t t-esc="company.vat" />
+                        </cbc:CompanyID>
+                        <cac:TaxScheme>
+                            <cbc:ID>01</cbc:ID>
+                            <cbc:Name>IVA</cbc:Name>
+                        </cac:TaxScheme>
+                    </cac:PartyTaxScheme>
+                </cac:Party>
+            </cac:AccountingSupplierParty>
+
+            <!-- Cliente -->
+            <cac:AccountingCustomerParty>
+                <cac:Party>
+                    <cac:PartyName>
+                        <cbc:Name>
+                            <t t-esc="partner.name" />
+                        </cbc:Name>
+                    </cac:PartyName>
+                    <cac:PartyTaxScheme>
+                        <cbc:RegistrationName>
+                            <t t-esc="partner.name" />
+                        </cbc:RegistrationName>
+                        <cbc:CompanyID>
+                            <t t-esc="partner.vat" />
+                        </cbc:CompanyID>
+                        <cac:TaxScheme>
+                            <cbc:ID>01</cbc:ID>
+                            <cbc:Name>IVA</cbc:Name>
+                        </cac:TaxScheme>
+                    </cac:PartyTaxScheme>
+                </cac:Party>
+            </cac:AccountingCustomerParty>
+
+            <!-- Líneas de la factura -->
+            <t
+                t-foreach="invoice.invoice_line_ids.filtered(lambda l: l.display_type == 'product')"
+                t-as="line"
+            >
+                <cac:InvoiceLine>
+                    <cbc:ID>
+                        <t t-esc="line_index + 1" />
+                    </cbc:ID>
+                    <cbc:InvoicedQuantity
+                        t-att-unitCode="line.product_uom_id.unece_code_id.code or 'NIU'"
+                    >
+                        <t t-esc="line.quantity" />
+                    </cbc:InvoicedQuantity>
+                    <cbc:LineExtensionAmount
+                        t-att-currencyID="invoice.currency_id.name"
+                    >
+                        <t t-esc="line.price_subtotal" />
+                    </cbc:LineExtensionAmount>
+
+                    <!-- Producto/Servicio -->
+                    <cac:Item>
+                        <cbc:Description>
+                            <t t-esc="line.name" />
+                        </cbc:Description>
+                        <cac:SellersItemIdentification>
+                            <cbc:ID>
+                                <t
+                                    t-esc="line.product_id.default_code or line.product_id.id"
+                                />
+                            </cbc:ID>
+                        </cac:SellersItemIdentification>
+                    </cac:Item>
+
+                    <!-- Precio -->
+                    <cac:Price>
+                        <cbc:PriceAmount t-att-currencyID="invoice.currency_id.name">
+                            <t t-esc="line.price_unit" />
+                        </cbc:PriceAmount>
+                        <cbc:BaseQuantity
+                            t-att-unitCode="line.product_uom_id.unece_code_id.code or 'NIU'"
+                        >1</cbc:BaseQuantity>
+                    </cac:Price>
+                </cac:InvoiceLine>
+            </t>
+
+            <!-- Totales -->
+            <cac:LegalMonetaryTotal>
+                <cbc:LineExtensionAmount t-att-currencyID="invoice.currency_id.name">
+                    <t t-esc="invoice.amount_untaxed" />
+                </cbc:LineExtensionAmount>
+                <cbc:TaxExclusiveAmount t-att-currencyID="invoice.currency_id.name">
+                    <t t-esc="invoice.amount_untaxed" />
+                </cbc:TaxExclusiveAmount>
+                <cbc:TaxInclusiveAmount t-att-currencyID="invoice.currency_id.name">
+                    <t t-esc="invoice.amount_total" />
+                </cbc:TaxInclusiveAmount>
+                <cbc:PayableAmount t-att-currencyID="invoice.currency_id.name">
+                    <t t-esc="invoice.amount_total" />
+                </cbc:PayableAmount>
+            </cac:LegalMonetaryTotal>
+        </Invoice>
+    </template>
+</odoo>

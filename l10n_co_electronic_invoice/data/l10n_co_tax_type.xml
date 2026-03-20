@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record id="type_tax_01" model="l10n_co.tax.type">
+        <field name="name">IVA</field>
+        <field name="code">01</field>
+    </record>
+
+    <record id="type_tax_02" model="l10n_co.tax.type">
+        <field name="name">IC</field>
+        <field name="code">02</field>
+    </record>
+
+    <record id="type_tax_03" model="l10n_co.tax.type">
+        <field name="name">ICA</field>
+        <field name="code">03</field>
+    </record>
+
+    <record id="type_tax_04" model="l10n_co.tax.type">
+        <field name="name">INC</field>
+        <field name="code">04</field>
+    </record>
+
+    <record id="type_tax_05" model="l10n_co.tax.type">
+        <field name="name">ReteIVA</field>
+        <field name="code">05</field>
+        <field name="is_withholding_tax" eval="True" />
+    </record>
+
+    <record id="type_tax_06" model="l10n_co.tax.type">
+        <field name="name">ReteFuente</field>
+        <field name="code">06</field>
+        <field name="is_withholding_tax" eval="True" />
+    </record>
+
+    <record id="type_tax_07" model="l10n_co.tax.type">
+        <field name="name">ReteICA</field>
+        <field name="code">07</field>
+        <field name="is_withholding_tax" eval="True" />
+    </record>
+
+    <record id="type_tax_08" model="l10n_co.tax.type">
+        <field name="name">ReteCREE</field>
+        <field name="code">08</field>
+        <field name="is_withholding_tax" eval="True" />
+    </record>
+
+    <record id="type_tax_20" model="l10n_co.tax.type">
+        <field name="name">FtoHorticultura</field>
+        <field name="code">20</field>
+    </record>
+
+    <record id="type_tax_21" model="l10n_co.tax.type">
+        <field name="name">Timbre</field>
+        <field name="code">21</field>
+    </record>
+
+    <record id="type_tax_22" model="l10n_co.tax.type">
+        <field name="name">Bolsas</field>
+        <field name="code">22</field>
+    </record>
+
+    <record id="type_tax_23" model="l10n_co.tax.type">
+        <field name="name">INCarbono</field>
+        <field name="code">23</field>
+    </record>
+
+    <record id="type_tax_24" model="l10n_co.tax.type">
+        <field name="name">INCombustibles</field>
+        <field name="code">24</field>
+    </record>
+
+    <record id="type_tax_25" model="l10n_co.tax.type">
+        <field name="name">Sobretasa Combustibles</field>
+        <field name="code">25</field>
+    </record>
+
+    <record id="type_tax_26" model="l10n_co.tax.type">
+        <field name="name">Sordicom</field>
+        <field name="code">26</field>
+    </record>
+
+    <record id="type_tax_32" model="l10n_co.tax.type">
+        <field
+            name="name"
+        >Impuesto al consumo de licores, vinos, aperitivos y similares</field>
+        <field name="code">32</field>
+    </record>
+
+    <record id="type_tax_34" model="l10n_co.tax.type">
+        <field
+            name="name"
+        >Impuesto al consumo de cervezas, sifones, refajos y mezclas</field>
+        <field name="code">34</field>
+    </record>
+
+    <record id="type_tax_ZA" model="l10n_co.tax.type">
+        <field name="name">IVA Excluido</field>
+        <field name="code">ZA</field>
+    </record>
+
+    <record id="type_tax_ZY" model="l10n_co.tax.type">
+        <field name="name">No Aplica</field>
+        <field name="code">ZY</field>
+    </record>
+
+    <record id="type_tax_ZZ" model="l10n_co.tax.type">
+        <field name="name">Nombre de la figura tributaria</field>
+        <field name="code">ZZ</field>
+    </record>
+</odoo>
