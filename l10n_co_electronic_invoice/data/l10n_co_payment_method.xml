@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record id="l10n_co_payment_method_1" model="l10n_co.payment.method">
+        <field name="name">Instrumento no definido</field>
+        <field name="code">1</field>
+    </record>
+
+    <record id="l10n_co_payment_method_2" model="l10n_co.payment.method">
+        <field name="name">Crédito ACH</field>
+        <field name="code">2</field>
+    </record>
+
+    <record id="l10n_co_payment_method_3" model="l10n_co.payment.method">
+        <field name="name">Débito ACH</field>
+        <field name="code">3</field>
+    </record>
+
+    <record id="l10n_co_payment_method_4" model="l10n_co.payment.method">
+        <field name="name">Reversión débito de demanda ACH</field>
+        <field name="code">4</field>
+    </record>
+
+    <record id="l10n_co_payment_method_5" model="l10n_co.payment.method">
+        <field name="name">Reversión crédito de demanda ACH </field>
+        <field name="code">5</field>
+    </record>
+
+    <record id="l10n_co_payment_method_6" model="l10n_co.payment.method">
+        <field name="name">Crédito de demanda ACH</field>
+        <field name="code">6</field>
+    </record>
+
+    <record id="l10n_co_payment_method_7" model="l10n_co.payment.method">
+        <field name="name">Débito de demanda ACH</field>
+        <field name="code">7</field>
+    </record>
+
+    <record id="l10n_co_payment_method_8" model="l10n_co.payment.method">
+        <field name="name">Mantener</field>
+        <field name="code">8</field>
+    </record>
+
+    <record id="l10n_co_payment_method_9" model="l10n_co.payment.method">
+        <field name="name">Clearing Nacional o Regional</field>
+        <field name="code">9</field>
+    </record>
+
+    <record id="l10n_co_payment_method_10" model="l10n_co.payment.method">
+        <field name="name">Efectivo</field>
+        <field name="code">10</field>
+    </record>
+
+    <record id="l10n_co_payment_method_11" model="l10n_co.payment.method">
+        <field name="name">Reversión Crédito Ahorro</field>
+        <field name="code">11</field>
+    </record>
+
+    <record id="l10n_co_payment_method_12" model="l10n_co.payment.method">
+        <field name="name">Reversión Débito Ahorro</field>
+        <field name="code">12</field>
+    </record>
+
+    <record id="l10n_co_payment_method_13" model="l10n_co.payment.method">
+        <field name="name">Crédito Ahorro</field>
+        <field name="code">13</field>
+    </record>
+
+    <record id="l10n_co_payment_method_14" model="l10n_co.payment.method">
+        <field name="name">Débito Ahorro</field>
+        <field name="code">14</field>
+    </record>
+
+    <record id="l10n_co_payment_method_15" model="l10n_co.payment.method">
+        <field name="name">Bookentry Crédito</field>
+        <field name="code">15</field>
+    </record>
+
+    <record id="l10n_co_payment_method_16" model="l10n_co.payment.method">
+        <field name="name">Bookentry Débito</field>
+        <field name="code">16</field>
+    </record>
+
+    <record id="l10n_co_payment_method_17" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración de la demanda en efectivo /Desembolso Crédito (CCD)</field>
+        <field name="code">17</field>
+    </record>
+
+    <record id="l10n_co_payment_method_18" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración de la demanda en efectivo / Desembolso (CCD) débito</field>
+        <field name="code">18</field>
+    </record>
+
+    <record id="l10n_co_payment_method_19" model="l10n_co.payment.method">
+        <field name="name">Crédito Pago negocio corporativo (CTP)</field>
+        <field name="code">19</field>
+    </record>
+
+    <record id="l10n_co_payment_method_20" model="l10n_co.payment.method">
+        <field name="name">Cheque</field>
+        <field name="code">20</field>
+    </record>
+
+    <record id="l10n_co_payment_method_21" model="l10n_co.payment.method">
+        <field name="name">Poyecto bancario</field>
+        <field name="code">21</field>
+    </record>
+
+    <record id="l10n_co_payment_method_22" model="l10n_co.payment.method">
+        <field name="name">Proyecto bancario certificado</field>
+        <field name="code">22</field>
+    </record>
+
+    <record id="l10n_co_payment_method_23" model="l10n_co.payment.method">
+        <field name="name">Cheque bancario</field>
+        <field name="code">23</field>
+    </record>
+
+    <record id="l10n_co_payment_method_24" model="l10n_co.payment.method">
+        <field name="name">Nota cambiaria esperando aceptación</field>
+        <field name="code">24</field>
+    </record>
+
+    <record id="l10n_co_payment_method_25" model="l10n_co.payment.method">
+        <field name="name">Cheque certificado</field>
+        <field name="code">25</field>
+    </record>
+
+    <record id="l10n_co_payment_method_26" model="l10n_co.payment.method">
+        <field name="name">Cheque Local</field>
+        <field name="code">26</field>
+    </record>
+
+    <record id="l10n_co_payment_method_27" model="l10n_co.payment.method">
+        <field name="name">Débito Pago Neogcio Corporativo (CTP)</field>
+        <field name="code">27</field>
+    </record>
+
+    <record id="l10n_co_payment_method_28" model="l10n_co.payment.method">
+        <field name="name">Crédito Negocio Intercambio Corporativo (CTX)</field>
+        <field name="code">28</field>
+    </record>
+
+    <record id="l10n_co_payment_method_29" model="l10n_co.payment.method">
+        <field name="name">Débito Negocio Intercambio Corporativo (CTX)</field>
+        <field name="code">29</field>
+    </record>
+
+    <record id="l10n_co_payment_method_30" model="l10n_co.payment.method">
+        <field name="name">Transferecia Crédito</field>
+        <field name="code">30</field>
+    </record>
+
+    <record id="l10n_co_payment_method_31" model="l10n_co.payment.method">
+        <field name="name">Transferencia Débito</field>
+        <field name="code">31</field>
+    </record>
+
+    <record id="l10n_co_payment_method_32" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración Efectivo / Desembolso Crédito plus (CCD+)</field>
+        <field name="code">32</field>
+    </record>
+
+    <record id="l10n_co_payment_method_33" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración Efectivo / Desembolso Débito plus (CCD+)</field>
+        <field name="code">33</field>
+    </record>
+
+    <record id="l10n_co_payment_method_34" model="l10n_co.payment.method">
+        <field name="name">Pago y depósito pre acordado (PPD)</field>
+        <field name="code">34</field>
+    </record>
+
+    <record id="l10n_co_payment_method_35" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración efectivo ahorros / Desembolso Crédito (CCD)</field>
+        <field name="code">35</field>
+    </record>
+
+    <record id="l10n_co_payment_method_36" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración efectivo ahorros / Desembolso Drédito (CCD)</field>
+        <field name="code">36</field>
+    </record>
+
+    <record id="l10n_co_payment_method_37" model="l10n_co.payment.method">
+        <field name="name">Pago Negocio Corporativo Ahorros Crédito (CTP)</field>
+        <field name="code">37</field>
+    </record>
+
+    <record id="l10n_co_payment_method_38" model="l10n_co.payment.method">
+        <field name="name">Pago Neogcio Corporativo Ahorros Débito (CTP)</field>
+        <field name="code">38</field>
+    </record>
+
+    <record id="l10n_co_payment_method_39" model="l10n_co.payment.method">
+        <field name="name">Crédito Negocio Intercambio Corporativo (CTX)</field>
+        <field name="code">39</field>
+    </record>
+
+    <record id="l10n_co_payment_method_40" model="l10n_co.payment.method">
+        <field name="name">Débito Negocio Intercambio Corporativo (CTX)</field>
+        <field name="code">40</field>
+    </record>
+
+    <record id="l10n_co_payment_method_41" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración efectivo/Desembolso Crédito plus (CCD+) </field>
+        <field name="code">41</field>
+    </record>
+
+    <record id="l10n_co_payment_method_42" model="l10n_co.payment.method">
+        <field name="name">Consiganción bancaria</field>
+        <field name="code">42</field>
+    </record>
+
+    <record id="l10n_co_payment_method_43" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Concentración efectivo / Desembolso Débito plus (CCD+)</field>
+        <field name="code">43</field>
+    </record>
+
+    <record id="l10n_co_payment_method_44" model="l10n_co.payment.method">
+        <field name="name">Nota cambiaria</field>
+        <field name="code">44</field>
+    </record>
+
+    <record id="l10n_co_payment_method_45" model="l10n_co.payment.method">
+        <field name="name">Transferencia Crédito Bancario</field>
+        <field name="code">45</field>
+    </record>
+
+    <record id="l10n_co_payment_method_46" model="l10n_co.payment.method">
+        <field name="name">Transferencia Débito Interbancario</field>
+        <field name="code">46</field>
+    </record>
+
+    <record id="l10n_co_payment_method_47" model="l10n_co.payment.method">
+        <field name="name">Transferencia Débito Bancaria</field>
+        <field name="code">47</field>
+    </record>
+
+    <record id="l10n_co_payment_method_48" model="l10n_co.payment.method">
+        <field name="name">Tarjeta Crédito</field>
+        <field name="code">48</field>
+    </record>
+
+    <record id="l10n_co_payment_method_49" model="l10n_co.payment.method">
+        <field name="name">Tarjeta Débito</field>
+        <field name="code">49</field>
+    </record>
+
+    <record id="l10n_co_payment_method_50" model="l10n_co.payment.method">
+        <field name="name">Postgiro</field>
+        <field name="code">50</field>
+    </record>
+
+    <record id="l10n_co_payment_method_51" model="l10n_co.payment.method">
+        <field name="name">Telex estándar bancario francés</field>
+        <field name="code">51</field>
+    </record>
+
+    <record id="l10n_co_payment_method_52" model="l10n_co.payment.method">
+        <field name="name">Pago comercial urgente</field>
+        <field name="code">52</field>
+    </record>
+
+    <record id="l10n_co_payment_method_53" model="l10n_co.payment.method">
+        <field name="name">Pago Tesorería Urgente</field>
+        <field name="code">53</field>
+    </record>
+
+    <record id="l10n_co_payment_method_60" model="l10n_co.payment.method">
+        <field name="name">Nota promisoria</field>
+        <field name="code">60</field>
+    </record>
+
+    <record id="l10n_co_payment_method_61" model="l10n_co.payment.method">
+        <field name="name">Nota promisoria firmada por el acreedor</field>
+        <field name="code">61</field>
+    </record>
+
+    <record id="l10n_co_payment_method_62" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Nota promisoria firmada por el acreedor, avalada por el banco</field>
+        <field name="code">62</field>
+    </record>
+
+    <record id="l10n_co_payment_method_63" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Nota promisoria firmada por el acreedor, avalada por un tercero</field>
+        <field name="code">63</field>
+    </record>
+
+    <record id="l10n_co_payment_method_64" model="l10n_co.payment.method">
+        <field name="name">Nota promisoria firmada pro el banco</field>
+        <field name="code">64</field>
+    </record>
+
+    <record id="l10n_co_payment_method_65" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Nota promisoria firmada por un banco avalada por otro banco</field>
+        <field name="code">65</field>
+    </record>
+
+    <record id="l10n_co_payment_method_66" model="l10n_co.payment.method">
+        <field name="name">Nota promisoria firmada </field>
+        <field name="code">66</field>
+    </record>
+
+    <record id="l10n_co_payment_method_67" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Nota promisoria firmada por un tercero avalada por un banco</field>
+        <field name="code">67</field>
+    </record>
+
+    <record id="l10n_co_payment_method_70" model="l10n_co.payment.method">
+        <field name="name">Retiro de nota por el por el acreedor</field>
+        <field name="code">70</field>
+    </record>
+
+    <record id="l10n_co_payment_method_74" model="l10n_co.payment.method">
+        <field name="name">Retiro de nota por el por el acreedor sobre un banco</field>
+        <field name="code">74</field>
+    </record>
+
+    <record id="l10n_co_payment_method_75" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Retiro de nota por el acreedor, avalada por otro banco</field>
+        <field name="code">75</field>
+    </record>
+
+    <record id="l10n_co_payment_method_76" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Retiro de nota por el acreedor, sobre un banco avalada por un tercero</field>
+        <field name="code">76</field>
+    </record>
+
+    <record id="l10n_co_payment_method_77" model="l10n_co.payment.method">
+        <field name="name">Retiro de una nota por el acreedor sobre un tercero</field>
+        <field name="code">77</field>
+    </record>
+
+    <record id="l10n_co_payment_method_78" model="l10n_co.payment.method">
+        <field
+            name="name"
+        >Retiro de una nota por el acreedor sobre un tercero avalada por un banco</field>
+        <field name="code">78</field>
+    </record>
+
+    <record id="l10n_co_payment_method_91" model="l10n_co.payment.method">
+        <field name="name">Nota bancaria tranferible</field>
+        <field name="code">91</field>
+    </record>
+
+    <record id="l10n_co_payment_method_92" model="l10n_co.payment.method">
+        <field name="name">Cheque local traferible</field>
+        <field name="code">92</field>
+    </record>
+
+    <record id="l10n_co_payment_method_93" model="l10n_co.payment.method">
+        <field name="name">Giro referenciado</field>
+        <field name="code">93</field>
+    </record>
+
+    <record id="l10n_co_payment_method_94" model="l10n_co.payment.method">
+        <field name="name">Giro urgente</field>
+        <field name="code">94</field>
+    </record>
+
+    <record id="l10n_co_payment_method_95" model="l10n_co.payment.method">
+        <field name="name">Giro formato abierto</field>
+        <field name="code">95</field>
+    </record>
+
+    <record id="l10n_co_payment_method_96" model="l10n_co.payment.method">
+        <field name="name">Método de pago solicitado no usuado</field>
+        <field name="code">96</field>
+    </record>
+
+    <record id="l10n_co_payment_method_97" model="l10n_co.payment.method">
+        <field name="name">Clearing entre partners</field>
+        <field name="code">97</field>
+    </record>
+
+    <record id="l10n_co_payment_method_ZZZ" model="l10n_co.payment.method">
+        <field name="name">Acuerdo mutuo</field>
+        <field name="code">ZZZ</field>
+    </record>
+</odoo>

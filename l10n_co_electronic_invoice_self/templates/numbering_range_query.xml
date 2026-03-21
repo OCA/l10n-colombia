@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <template
+        id="dian_numbering_range_query_content"
+        name="Consulta de Rango de Numeración para la DIAN"
+    >
+        <wcf:GetNumberingRange xmlns:wcf="http://wcf.dian.colombia">
+            <wcf:accountCode>
+                <t t-esc="record.company_id.vat.replace('.', '').split('-')[0]" />
+            </wcf:accountCode>
+            <wcf:accountCodeT>
+                <t t-esc="record.company_id.vat.replace('.', '').split('-')[0]" />
+            </wcf:accountCodeT>
+            <wcf:softwareCode>
+                <t t-esc="record.l10n_co_dian_software_identification" />
+            </wcf:softwareCode>
+        </wcf:GetNumberingRange>
+    </template>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Unidades de Medida -->
+    <record id="view_unece_uom_code_form" model="ir.ui.view">
+        <field name="name">view_unece_uom_code_form</field>
+        <field name="model">unece.uom.code</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code" />
+                            <field name="name" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_unece_uom_code_list">
+        <field name="name">view_unece_uom_code_list</field>
+        <field name="model">unece.uom.code</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="code" />
+                <field name="name" />
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="unece_uom_code_action_window">
+        <field name="name">Códigos UNCEFACT</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">unece.uom.code</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Sin UNCEFACT UOM Code definidos
+            </p>
+        </field>
+    </record>
+</odoo>

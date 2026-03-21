@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <menuitem
+        id="menu_l10n_co_electronic_invoice"
+        name="Localización Colombia"
+        parent="account.menu_finance_configuration"
+        sequence="2"
+    >
+        <menuitem
+            id="menu_l10n_co_electronic_invoice_tax_type"
+            name="Tipo de impuesto"
+            action="l10n_co_electronic_invoice.l10n_co_tax_type_action_window"
+        />
+
+        <menuitem
+            id="menu_l10n_co_electronic_invoice_payment_method"
+            name="Método de pago"
+            action="l10n_co_electronic_invoice.l10n_co_payment_method_action_window"
+        />
+
+        <menuitem
+            id="menu_l10n_co_electronic_invoice_responsibility_type"
+            name="Responsabilidad fiscal"
+            action="l10n_co_electronic_invoice.l10n_co_responsibility_type_action_window"
+        />
+    </menuitem>
+
+    <menuitem
+        id="menu_l10n_co_electronic_invoice_product_unspsc"
+        name="Productos UNSPSC"
+        parent="l10n_co_electronic_invoice.menu_l10n_co_electronic_invoice"
+        action="l10n_co_electronic_invoice.product_unspsc_action_window"
+    />
+
+    <menuitem
+        id="menu_l10n_co_electronic_invoice_unece_uom_code"
+        name="Códigos UNCEFACT"
+        parent="l10n_co_electronic_invoice.menu_l10n_co_electronic_invoice"
+        action="l10n_co_electronic_invoice.unece_uom_code_action_window"
+    />
+
+    <menuitem
+        id="menu_l10n_co_electronic_invoice_ciiu"
+        name="Clasificación de Actividades Económicas CIIU"
+        parent="contacts.menu_localisation"
+        action="l10n_co_electronic_invoice.l10n_co_ciiu_action_window"
+    />
+</odoo>

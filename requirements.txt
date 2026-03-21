@@ -1,0 +1,7 @@
+# generated from manifests external_dependencies
+cryptography
+lxml
+qrcode
+requests
+xmlsig
+xmltodict

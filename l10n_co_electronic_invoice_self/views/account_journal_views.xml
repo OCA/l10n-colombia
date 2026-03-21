@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_account_journal_form_inherit" model="ir.ui.view">
+        <field name="name">account.journal.form.electronic.invoice</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page
+                    name="dian_operation_mode"
+                    string="DIAN - Modo de Operación"
+                    invisible="type not in ['sale', 'purchase'] or not l10n_latam_use_documents"
+                >
+                    <group
+                        name="dian_electronic_invoicing"
+                        string="Facturación Electrónica"
+                    >
+                        <group>
+                            <field name="l10n_co_dian_operation_mode" />
+                        </group>
+                    </group>
+                    <group
+                        name="dian_software_information"
+                        string="Información del software"
+                    >
+                        <group>
+                            <field name="l10n_co_dian_software_identification" />
+                            <field name="l10n_co_dian_software_pin" />
+                        </group>
+                    </group>
+                    <group
+                        name="dian_number_range"
+                        string="Rango de numeración (Producción)"
+                        invisible="l10n_co_dian_operation_mode != 'production'"
+                    >
+                        <group>
+                            <field
+                                name="l10n_co_dian_resolution_type"
+                                required="l10n_co_dian_operation_mode == 'production' and l10n_latam_use_documents"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_resolution"
+                                required="l10n_co_dian_operation_mode == 'production' and l10n_latam_use_documents"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_start_resolution_date"
+                                readonly="1"
+                                invisible="not l10n_co_electronic_document_start_resolution_date"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_end_resolution_date"
+                                readonly="1"
+                                invisible="not l10n_co_electronic_document_end_resolution_date"
+                            />
+                        </group>
+                        <group>
+                            <field name="l10n_co_electronic_document_prefix" />
+                            <field
+                                name="l10n_co_electronic_document_start_number"
+                                readonly="1"
+                                invisible="not l10n_co_electronic_document_start_number"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_end_number"
+                                readonly="1"
+                                invisible="not l10n_co_electronic_document_end_number"
+                            />
+                            <field
+                                name="l10n_co_dian_software_technical_key"
+                                password="1"
+                                readonly="1"
+                                invisible="not l10n_co_dian_software_technical_key"
+                            />
+                        </group>
+                        <div invisible="l10n_co_dian_operation_mode != 'production'">
+                            <button
+                                name="action_query_numbering_range"
+                                string="Obtener resolución DIAN"
+                                type="object"
+                                class="btn-link btn-sm ps-0"
+                                icon="fa-download"
+                            />
+                        </div>
+                        <field
+                            name="l10n_co_electronic_document_message"
+                            placeholder="Mensaje de Resolución en documentos impresos"
+                            class="no-label"
+                        />
+                    </group>
+                    <group
+                        name="dian_demo_info"
+                        string="Modo Demostración"
+                        invisible="l10n_co_dian_operation_mode != 'demo'"
+                    >
+                        <div colspan="2" class="alert alert-info" role="alert">
+                            Modo demostración: se genera y firma el XML con un
+                            certificado de prueba incluido en el módulo. No se
+                            envía nada a la DIAN. Las respuestas se simulan
+                            localmente. Ideal para verificar el flujo completo
+                            antes de conectar al ambiente de habilitación.
+                        </div>
+                    </group>
+                    <group
+                        name="dian_number_range_test"
+                        string="Rango de numeración (Habilitación)"
+                        invisible="l10n_co_dian_operation_mode not in ('test', 'demo')"
+                    >
+                        <group>
+                            <field
+                                name="l10n_co_dian_resolution_type_test"
+                                required="l10n_co_dian_operation_mode == 'test' and l10n_latam_use_documents"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_resolution_test"
+                                required="l10n_co_dian_operation_mode == 'test' and l10n_latam_use_documents"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_start_resolution_date_test"
+                            />
+                            <field
+                                name="l10n_co_electronic_document_end_resolution_date_test"
+                            />
+                        </group>
+                        <group>
+                            <field name="l10n_co_electronic_document_prefix_test" />
+                            <field
+                                name="l10n_co_electronic_document_start_number_test"
+                            />
+                            <field name="l10n_co_electronic_document_end_number_test" />
+                            <field name="l10n_co_dian_software_technical_key_test" />
+                            <field
+                                name="l10n_co_dian_test_set_id"
+                                required="l10n_co_dian_operation_mode == 'test'"
+                            />
+                        </group>
+                        <field
+                            name="l10n_co_electronic_document_message_test"
+                            placeholder="Mensaje de Resolución en documentos impresos"
+                            class="no-label"
+                        />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

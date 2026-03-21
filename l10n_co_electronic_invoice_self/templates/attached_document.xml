@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <template
+        id="dian_attached_document"
+        name="Contenedor Electrónico AttachedDocument UBL 2.1"
+    >
+        <AttachedDocument
+            xmlns="urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2"
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+            xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+            xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"
+            xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#"
+        >
+            <ext:UBLExtensions>
+                <ext:UBLExtension>
+                    <ext:ExtensionContent>
+                        <CustomFieldExtension>
+                            <CustomField Name="ID" Value="0" />
+                        </CustomFieldExtension>
+                    </ext:ExtensionContent>
+                </ext:UBLExtension>
+                <ext:UBLExtension>
+                    <ext:ExtensionContent />
+                </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+            <cbc:CustomizationID>Documentos adjuntos</cbc:CustomizationID>
+            <cbc:ProfileID>DIAN 2.1</cbc:ProfileID>
+            <cbc:ProfileExecutionID t-out="profile_execution_id" />
+            <cbc:ID t-out="document_id" />
+            <cbc:IssueDate t-out="issue_date" />
+            <cbc:IssueTime t-out="issue_time" />
+            <cbc:DocumentType t-out="document_type" />
+            <cbc:ParentDocumentID t-out="document_id" />
+            <cac:SenderParty>
+                <cac:PartyTaxScheme>
+                    <cbc:RegistrationName t-out="sender_name" />
+                    <cbc:CompanyID
+                        schemeAgencyID="195"
+                        t-att-schemeID="sender_scheme_id"
+                        t-att-schemeName="sender_scheme_name"
+                        t-out="sender_vat"
+                    />
+                    <cbc:TaxLevelCode
+                        listName="No aplica"
+                        t-out="sender_tax_level_code"
+                    />
+                    <cac:TaxScheme>
+                        <cbc:ID t-out="sender_tax_scheme_id" />
+                        <cbc:Name t-out="sender_tax_scheme_name" />
+                    </cac:TaxScheme>
+                </cac:PartyTaxScheme>
+            </cac:SenderParty>
+            <cac:ReceiverParty>
+                <cac:PartyTaxScheme>
+                    <cbc:RegistrationName t-out="receiver_name" />
+                    <cbc:CompanyID
+                        schemeAgencyID="195"
+                        t-att-schemeID="receiver_scheme_id"
+                        t-att-schemeName="receiver_scheme_name"
+                        t-out="receiver_vat"
+                    />
+                    <cbc:TaxLevelCode
+                        listName="No aplica"
+                        t-out="receiver_tax_level_code"
+                    />
+                    <cac:TaxScheme>
+                        <cbc:ID t-out="receiver_tax_scheme_id" />
+                        <cbc:Name t-out="receiver_tax_scheme_name" />
+                    </cac:TaxScheme>
+                </cac:PartyTaxScheme>
+            </cac:ReceiverParty>
+            <cac:Attachment>
+                <cac:ExternalReference>
+                    <cbc:MimeCode>text/xml</cbc:MimeCode>
+                    <cbc:EncodingCode>UTF-8</cbc:EncodingCode>
+                    <cbc:Description t-out="signed_xml_cdata" />
+                </cac:ExternalReference>
+            </cac:Attachment>
+            <cac:ParentDocumentLineReference>
+                <cbc:LineID>1</cbc:LineID>
+                <cac:DocumentReference>
+                    <cbc:ID t-out="document_id" />
+                    <cbc:UUID t-att-schemeName="cufe_scheme_name" t-out="cufe_cude" />
+                    <cbc:IssueDate t-out="invoice_issue_date" />
+                    <cbc:DocumentType>ApplicationResponse</cbc:DocumentType>
+                    <cac:Attachment>
+                        <cac:ExternalReference>
+                            <cbc:MimeCode>text/xml</cbc:MimeCode>
+                            <cbc:EncodingCode>UTF-8</cbc:EncodingCode>
+                            <cbc:Description t-out="application_response_cdata" />
+                        </cac:ExternalReference>
+                    </cac:Attachment>
+                    <cac:ResultOfVerification>
+                        <cbc:ValidatorID
+                        >Unidad Especial Dirección de Impuestos y Aduanas Nacionales</cbc:ValidatorID>
+                        <cbc:ValidationResultCode t-out="validation_result_code" />
+                        <cbc:ValidationDate t-out="validation_date" />
+                        <cbc:ValidationTime t-out="validation_time" />
+                    </cac:ResultOfVerification>
+                </cac:DocumentReference>
+            </cac:ParentDocumentLineReference>
+        </AttachedDocument>
+    </template>
+</odoo>

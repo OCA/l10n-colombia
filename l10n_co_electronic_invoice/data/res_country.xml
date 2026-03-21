@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record forcecreate="True" id="base.co" model="res.country">
+        <field name="enforce_cities">True</field>
+        <field name="state_required">True</field>
+        <field
+            name="address_format"
+            eval="'%(street)s\n%(street2)s\n%(city)s, %(state_name)s %(zip)s %(country_name)s'"
+        />
+    </record>
+</odoo>
