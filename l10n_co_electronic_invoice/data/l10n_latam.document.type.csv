@@ -1,0 +1,8 @@
+id,sequence,code,name,report_name,internal_type,doc_code_prefix,country_id/id,active
+l10n_co_dte_inv,1,01,Factura electrónica de Venta,Factura electrónica de Venta,invoice,FE,base.co,True
+l10n_co_dte_inv_exp,2,02,Factura electrónica de Venta - Exportación,Factura electrónica de Venta - Exportación,invoice,FEE,base.co,True
+l10n_co_dte_inv_trans,3,03,Transcripción de la factura de talonario o papel,Transcripción de la factura de talonario ó papel,invoice,TFE,base.co,True
+l10n_co_dte_cn,5,91,Nota Crédito Electrónica,Nota Crédito Electrónica,credit_note,NC,base.co,True
+l10n_co_dte_dn,6,92,Nota Débito Electrónica,Nota Débito Electrónica,debit_note,ND,base.co,True
+l10n_co_dte_ds,7,05,Documento Soporte en adquisiciones a no obligados a facturar,Documento Soporte,invoice,DS,base.co,True
+l10n_co_dte_ds_cn,8,95,Nota de Ajuste al Documento Soporte,Nota de Ajuste al Documento Soporte,credit_note,DSA,base.co,True

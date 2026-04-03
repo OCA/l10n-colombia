@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record id="type_responsibility_O_06" model="l10n_co.responsibility.type">
+        <field name="name">Ingresos y patrimonio</field>
+        <field name="code">O-06</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_07" model="l10n_co.responsibility.type">
+        <field name="name">Retención en la fuente a título de renta</field>
+        <field name="code">O-07</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_08" model="l10n_co.responsibility.type">
+        <field name="name">Retención timbre nacional</field>
+        <field name="code">O-08</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_09" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Retención en la fuente en el impuesto sobre las ventas</field>
+        <field name="code">O-09</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_11" model="l10n_co.responsibility.type">
+        <field name="name">Ventas régimen común</field>
+        <field name="code">O-11</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_12" model="l10n_co.responsibility.type">
+        <field name="name">Ventas régimen simplificado</field>
+        <field name="code">O-12</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_13" model="l10n_co.responsibility.type">
+        <field name="name">Gran contribuyente</field>
+        <field name="code">O-13</field>
+        <field name="active">1</field>
+    </record>
+
+    <record id="type_responsibility_O_14" model="l10n_co.responsibility.type">
+        <field name="name">Informante de exógena</field>
+        <field name="code">O-14</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_15" model="l10n_co.responsibility.type">
+        <field name="name">Autorretenedor</field>
+        <field name="code">O-15</field>
+        <field name="active">1</field>
+    </record>
+
+    <record id="type_responsibility_O_16" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Obligación de facturar por ingresos de bienes y/o servicios excluidos</field>
+        <field name="code">O-16</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_17" model="l10n_co.responsibility.type">
+        <field name="name">Profesionales de compra y venta de divisas</field>
+        <field name="code">O-17</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_19" model="l10n_co.responsibility.type">
+        <field name="name">Productor y/o exportador de bienes exentos</field>
+        <field name="code">O-19</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_22" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Obligado a cumplir deberes formales a nombre de terceros</field>
+        <field name="code">O-22</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_23" model="l10n_co.responsibility.type">
+        <field name="name">Agente de retención en el impuesto sobre las ventas</field>
+        <field name="code">O-23</field>
+        <field name="active">1</field>
+    </record>
+
+    <record id="type_responsibility_O_32" model="l10n_co.responsibility.type">
+        <field name="name">Impuesto Nacional a la Gasolina y al ACPM</field>
+        <field name="code">O-32</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_33" model="l10n_co.responsibility.type">
+        <field name="name">Impuesto Nacional al consumo</field>
+        <field name="code">O-33</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_34" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Régimen simplificado impuesto nacional consumo rest y bares</field>
+        <field name="code">O-34</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_36" model="l10n_co.responsibility.type">
+        <field name="name">Establecimiento Permanente</field>
+        <field name="code">O-36</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_37" model="l10n_co.responsibility.type">
+        <field name="name">Obligado a Facturar Electrónicamente Modelo 2242</field>
+        <field name="code">O-37</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_38" model="l10n_co.responsibility.type">
+        <field name="name">Facturación Electrónica Voluntaria Modelo 2242</field>
+        <field name="code">O-38</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_39" model="l10n_co.responsibility.type">
+        <field name="name">Proveedor de Servicios Tecnológicos PST Modelo 2242</field>
+        <field name="code">O-39</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_O_47" model="l10n_co.responsibility.type">
+        <field name="name">Régimen simple de tributación</field>
+        <field name="code">O-47</field>
+        <field name="active">1</field>
+    </record>
+
+    <record id="type_responsibility_O_99" model="l10n_co.responsibility.type">
+        <field name="name">Otro tipo de obligado</field>
+        <field name="code">O-99</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_12_PN" model="l10n_co.responsibility.type">
+        <field name="name">Factor PN</field>
+        <field name="code">R-12-PN</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_16_PN" model="l10n_co.responsibility.type">
+        <field name="name">Mandatario PN</field>
+        <field name="code">R-16-PN</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_25_PN" model="l10n_co.responsibility.type">
+        <field name="name">Agente Interventor PN</field>
+        <field name="code">R-25-PN</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_99_PN" model="l10n_co.responsibility.type">
+        <field name="name">No aplica – Otros *</field>
+        <field name="code">R-99-PN</field>
+        <field name="active">1</field>
+    </record>
+
+    <record id="type_responsibility_R_06_PJ" model="l10n_co.responsibility.type">
+        <field name="name">Apoderado especial PJ</field>
+        <field name="code">R-06-PJ</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_07_PJ" model="l10n_co.responsibility.type">
+        <field name="name">Apoderado general PJ</field>
+        <field name="code">R-07-PJ</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_12_PJ" model="l10n_co.responsibility.type">
+        <field name="name">Factor PJ</field>
+        <field name="code">R-12-PJ</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_16_PJ" model="l10n_co.responsibility.type">
+        <field name="name">Mandatario PJ</field>
+        <field name="code">R-16-PJ</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_R_99_PJ" model="l10n_co.responsibility.type">
+        <field name="name">Otro tipo de responsable PJ</field>
+        <field name="code">R-99-PJ</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_01" model="l10n_co.responsibility.type">
+        <field name="name">Agente de carga internacional</field>
+        <field name="code">A-01</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_02" model="l10n_co.responsibility.type">
+        <field name="name">Agente marítimo</field>
+        <field name="code">A-02</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_03" model="l10n_co.responsibility.type">
+        <field name="name">Almacén general de depósito</field>
+        <field name="code">A-03</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_04" model="l10n_co.responsibility.type">
+        <field name="name">Comercializadora internacional (C.I.)</field>
+        <field name="code">A-04</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_05" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Comerciante de la zona aduanera especial de Inírida, Puerto Carreño, Cumaribo y Primavera</field>
+        <field name="code">A-05</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_06" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Comerciantes de la zona de régimen aduanero especial de Leticia</field>
+        <field name="code">A-06</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_07" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Comerciantes de la zona de régimen aduanero especial de Maicao, Uribia y Manaure</field>
+        <field name="code">A-07</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_08" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Comerciantes de la zona de régimen aduanero especial de Urabá, Tumaco y Guapí</field>
+        <field name="code">A-08</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_09" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Comerciantes del puerto libre de San Andrés, Providencia y Santa Catalina</field>
+        <field name="code">A-09</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_10" model="l10n_co.responsibility.type">
+        <field name="name">Depósito público de apoyo logístico internacional</field>
+        <field name="code">A-10</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_11" model="l10n_co.responsibility.type">
+        <field name="name">Depósito privado para procesamiento industrial</field>
+        <field name="code">A-11</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_12" model="l10n_co.responsibility.type">
+        <field name="name">Depósito privado de transformación o ensamble</field>
+        <field name="code">A-12</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_13" model="l10n_co.responsibility.type">
+        <field name="name">Depósito franco</field>
+        <field name="code">A-13</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_14" model="l10n_co.responsibility.type">
+        <field name="name">Depósito privado aeronáutico</field>
+        <field name="code">A-14</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_15" model="l10n_co.responsibility.type">
+        <field name="name">Depósito privado para distribución internacional</field>
+        <field name="code">A-15</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_16" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Depósito privado de provisiones de a bordo para consumo y para llevar</field>
+        <field name="code">A-16</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_17" model="l10n_co.responsibility.type">
+        <field name="name">Depósito privado para envíos urgentes</field>
+        <field name="code">A-17</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_18" model="l10n_co.responsibility.type">
+        <field name="name">Depósito privado</field>
+        <field name="code">A-18</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_19" model="l10n_co.responsibility.type">
+        <field name="name">Depósito público</field>
+        <field name="code">A-19</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_20" model="l10n_co.responsibility.type">
+        <field name="name">Depósito público para distribución internacional</field>
+        <field name="code">A-20</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_21" model="l10n_co.responsibility.type">
+        <field name="name">Exportador de café</field>
+        <field name="code">A-21</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_22" model="l10n_co.responsibility.type">
+        <field name="name">Exportador</field>
+        <field name="code">A-22</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_23" model="l10n_co.responsibility.type">
+        <field name="name">Importador</field>
+        <field name="code">A-23</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_24" model="l10n_co.responsibility.type">
+        <field name="name">Intermediario de tráfico postal y envíos urgentes</field>
+        <field name="code">A-24</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_25" model="l10n_co.responsibility.type">
+        <field name="name">Operador de transporte multimodal</field>
+        <field name="code">A-25</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_26" model="l10n_co.responsibility.type">
+        <field name="name">Sociedad de intermediación aduanera</field>
+        <field name="code">A-26</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_27" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Titular de puertos y muelles de servicio público o privado</field>
+        <field name="code">A-27</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_28" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Transportador nfor régimen de importación y/o exportación</field>
+        <field name="code">A-28</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_29" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Transportista nacional para operaciones del régimen de tránsito aduanero</field>
+        <field name="code">A-29</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_30" model="l10n_co.responsibility.type">
+        <field name="name">Usuario comercial zona franca</field>
+        <field name="code">A-30</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_32" model="l10n_co.responsibility.type">
+        <field name="name">Usuario industrial de bienes zona franca</field>
+        <field name="code">A-32</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_34" model="l10n_co.responsibility.type">
+        <field name="name">Usuario industrial de servicios zona franca</field>
+        <field name="code">A-34</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_36" model="l10n_co.responsibility.type">
+        <field name="name">Usuario operador de zona franca</field>
+        <field name="code">A-36</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_37" model="l10n_co.responsibility.type">
+        <field name="name">Usuario aduanero permanente</field>
+        <field name="code">A-37</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_38" model="l10n_co.responsibility.type">
+        <field name="name">Usuario altamente exportador</field>
+        <field name="code">A-38</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_39" model="l10n_co.responsibility.type">
+        <field name="name">Usuario de zonas económicas especiales de exportación</field>
+        <field name="code">A-39</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_40" model="l10n_co.responsibility.type">
+        <field name="name">Deposito privado de instalaciones industriales</field>
+        <field name="code">A-40</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_41" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Beneficiarios de programas especiales de exportación PEX</field>
+        <field name="code">A-41</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_42" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Depósitos privados para mercancías en tránsito San Andrés</field>
+        <field name="code">A-42</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_43" model="l10n_co.responsibility.type">
+        <field name="name">Observadores de las operaciones de importación</field>
+        <field name="code">A-43</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_44" model="l10n_co.responsibility.type">
+        <field name="name">Usuarios sistemas especiales Importación exportación</field>
+        <field name="code">A-44</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_46" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Transportador nformac régimen de importación y/o exportación</field>
+        <field name="code">A-46</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_47" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Transportador terrestre régimen de importación y/o exportación</field>
+        <field name="code">A-47</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_48" model="l10n_co.responsibility.type">
+        <field name="name">Aeropuerto de servicio publico o privado</field>
+        <field name="code">A-48</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_49" model="l10n_co.responsibility.type">
+        <field name="name">Transportador fluvial régimen de importación</field>
+        <field name="code">A-49</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_50" model="l10n_co.responsibility.type">
+        <field name="name">Usuario industrial zona franca especial</field>
+        <field name="code">A-50</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_53" model="l10n_co.responsibility.type">
+        <field name="name">Agencias de aduanas 1</field>
+        <field name="code">A-53</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_54" model="l10n_co.responsibility.type">
+        <field name="name">Usuario Operador Zona Franca Especial</field>
+        <field name="code">A-54</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_55" model="l10n_co.responsibility.type">
+        <field name="name">Agencias de aduanas 2</field>
+        <field name="code">A-55</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_56" model="l10n_co.responsibility.type">
+        <field name="name">Agencias de aduanas 3</field>
+        <field name="code">A-56</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_57" model="l10n_co.responsibility.type">
+        <field name="name">Agencias de aduanas 4</field>
+        <field name="code">A-57</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_58" model="l10n_co.responsibility.type">
+        <field name="name">Transportador aéreo nacional</field>
+        <field name="code">A-58</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_60" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Transportador aéreo, marítimo o fluvial modalidad Cabotaje</field>
+        <field name="code">A-60</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_61" model="l10n_co.responsibility.type">
+        <field name="name">Importador de alimentos de consumo humano y animal</field>
+        <field name="code">A-61</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_62" model="l10n_co.responsibility.type">
+        <field name="name">Importador Ocasional</field>
+        <field name="code">A-62</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_63" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Importador de maquinaría y sus partes Decreto 2261 de 2012</field>
+        <field name="code">A-63</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_64" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Beneficiario Programa de Fomento Industria Automotriz-PROFIA</field>
+        <field name="code">A-64</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_A_99" model="l10n_co.responsibility.type">
+        <field name="name">Otro tipo de agente aduanero</field>
+        <field name="code">A-99</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_01" model="l10n_co.responsibility.type">
+        <field name="name">Agencia</field>
+        <field name="code">E-01</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_02" model="l10n_co.responsibility.type">
+        <field name="name">Establecimiento de comercio</field>
+        <field name="code">E-02</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_03" model="l10n_co.responsibility.type">
+        <field name="name">Centro de explotación agrícola</field>
+        <field name="code">E-03</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_04" model="l10n_co.responsibility.type">
+        <field name="name">Centro de explotación animal</field>
+        <field name="code">E-04</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_05" model="l10n_co.responsibility.type">
+        <field name="name">Centro de explotación minera</field>
+        <field name="code">E-05</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_06" model="l10n_co.responsibility.type">
+        <field name="name">Centro de explotación de transformación</field>
+        <field name="code">E-06</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_07" model="l10n_co.responsibility.type">
+        <field name="name">Centro de explotación de servicios</field>
+        <field name="code">E-07</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_08" model="l10n_co.responsibility.type">
+        <field name="name">Oficina</field>
+        <field name="code">E-08</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_09" model="l10n_co.responsibility.type">
+        <field name="name">Sede</field>
+        <field name="code">E-09</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_10" model="l10n_co.responsibility.type">
+        <field name="name">Sucursal</field>
+        <field name="code">E-10</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_11" model="l10n_co.responsibility.type">
+        <field name="name">Consultorio</field>
+        <field name="code">E-11</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_12" model="l10n_co.responsibility.type">
+        <field name="name">Administraciones</field>
+        <field name="code">E-12</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_13" model="l10n_co.responsibility.type">
+        <field name="name">Seccionales</field>
+        <field name="code">E-13</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_14" model="l10n_co.responsibility.type">
+        <field name="name">Regionales</field>
+        <field name="code">E-14</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_15" model="l10n_co.responsibility.type">
+        <field name="name">Intendencias</field>
+        <field name="code">E-15</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_16" model="l10n_co.responsibility.type">
+        <field name="name">Local o negocio</field>
+        <field name="code">E-16</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_17" model="l10n_co.responsibility.type">
+        <field name="name">Punto de venta</field>
+        <field name="code">E-17</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_18" model="l10n_co.responsibility.type">
+        <field name="name">Fábrica</field>
+        <field name="code">E-18</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_19" model="l10n_co.responsibility.type">
+        <field name="name">Taller</field>
+        <field name="code">E-19</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_20" model="l10n_co.responsibility.type">
+        <field name="name">Cantera</field>
+        <field name="code">E-20</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_21" model="l10n_co.responsibility.type">
+        <field name="name">Pozo de Petróleo y Gas</field>
+        <field name="code">E-21</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_22" model="l10n_co.responsibility.type">
+        <field
+            name="name"
+        >Otro lug de tipo de extrac explotación de recursos naturales</field>
+        <field name="code">E-22</field>
+        <field name="active">0</field>
+    </record>
+
+    <record id="type_responsibility_E_99" model="l10n_co.responsibility.type">
+        <field name="name">Otro tipo de establecimiento</field>
+        <field name="code">E-99</field>
+        <field name="active">0</field>
+    </record>
+</odoo>

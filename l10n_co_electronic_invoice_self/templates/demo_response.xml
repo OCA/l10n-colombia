@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Respuesta simulada para SendBillSync en modo demostración -->
+    <template
+        id="dian_demo_send_bill_sync_response"
+        name="DIAN Demo SendBillSync Response"
+    >
+        <s:Envelope
+            xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+            xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+            xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        >
+            <s:Header>
+                <o:Security>
+                    <u:Timestamp>
+                        <u:Created t-out="created" />
+                    </u:Timestamp>
+                </o:Security>
+            </s:Header>
+            <s:Body>
+                <SendBillSyncResponse xmlns="http://wcf.dian.colombia">
+                    <SendBillSyncResult
+                        xmlns:b="http://schemas.datacontract.org/2004/07/UploadDocumentResponse"
+                    >
+                        <b:StatusCode>00</b:StatusCode>
+                        <b:StatusDescription
+                        >[DEMO] Documento validado (simulación)</b:StatusDescription>
+                        <b:StatusMessage
+                        >Documento procesado en modo demostración</b:StatusMessage>
+                        <b:XmlDocumentKey t-out="xml_document_key" />
+                    </SendBillSyncResult>
+                </SendBillSyncResponse>
+            </s:Body>
+        </s:Envelope>
+    </template>
+
+    <!-- Respuesta simulada para SendTestSetAsync en modo habilitación -->
+    <template
+        id="dian_demo_send_test_set_async_response"
+        name="DIAN Demo SendTestSetAsync Response"
+    >
+        <s:Envelope
+            xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+            xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+            xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        >
+            <s:Header>
+                <o:Security>
+                    <u:Timestamp>
+                        <u:Created t-out="created" />
+                    </u:Timestamp>
+                </o:Security>
+            </s:Header>
+            <s:Body>
+                <SendTestSetAsyncResponse xmlns="http://wcf.dian.colombia">
+                    <SendTestSetAsyncResponseResult
+                        xmlns:b="http://schemas.datacontract.org/2004/07/UploadDocumentResponse"
+                    >
+                        <b:ErrorMessageList />
+                        <b:ZipKey t-out="zip_key" />
+                    </SendTestSetAsyncResponseResult>
+                </SendTestSetAsyncResponse>
+            </s:Body>
+        </s:Envelope>
+    </template>
+
+    <!-- Respuesta simulada para GetNumberingRange en modo demostración -->
+    <template
+        id="dian_demo_numbering_range_response"
+        name="DIAN Demo GetNumberingRange Response"
+    >
+        <s:Envelope
+            xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+            xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+            xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        >
+            <s:Header>
+                <o:Security>
+                    <u:Timestamp>
+                        <u:Created t-out="created" />
+                    </u:Timestamp>
+                </o:Security>
+            </s:Header>
+            <s:Body>
+                <GetNumberingRangeResponse xmlns="http://wcf.dian.colombia">
+                    <GetNumberingRangeResult
+                        xmlns:b="http://schemas.datacontract.org/2004/07/NumberRangeResponse"
+                    >
+                        <b:OperationCode>100</b:OperationCode>
+                        <b:OperationDescription
+                        >[DEMO] Consulta simulada</b:OperationDescription>
+                        <b:ResponseList />
+                    </GetNumberingRangeResult>
+                </GetNumberingRangeResponse>
+            </s:Body>
+        </s:Envelope>
+    </template>
+
+    <!-- ApplicationResponse simulado para modo demostración (embebido en AttachedDocument) -->
+    <template id="dian_demo_application_response" name="DIAN Demo ApplicationResponse">
+        <ApplicationResponse
+            xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1"
+            xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+        >
+            <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+            <cbc:CustomizationID>1</cbc:CustomizationID>
+            <cbc:ProfileID>DIAN 2.1</cbc:ProfileID>
+            <cbc:ProfileExecutionID t-out="profile_execution_id" />
+            <cbc:ID t-out="response_id" />
+            <cbc:UUID t-att-schemeName="cude_scheme_name" t-out="cude" />
+            <cbc:IssueDate t-out="issue_date" />
+            <cbc:IssueTime t-out="issue_time" />
+            <cac:SenderParty>
+                <cac:PartyTaxScheme>
+                    <cbc:RegistrationName
+                    >Unidad Especial Dirección de Impuestos y Aduanas Nacionales</cbc:RegistrationName>
+                    <cbc:CompanyID
+                        schemeID="4"
+                        schemeName="31"
+                    >800197268</cbc:CompanyID>
+                    <cac:TaxScheme>
+                        <cbc:ID>01</cbc:ID>
+                        <cbc:Name>IVA</cbc:Name>
+                    </cac:TaxScheme>
+                </cac:PartyTaxScheme>
+            </cac:SenderParty>
+            <cac:ReceiverParty>
+                <cac:PartyTaxScheme>
+                    <cbc:RegistrationName t-out="receiver_name" />
+                    <cbc:CompanyID
+                        t-att-schemeID="receiver_scheme_id"
+                        t-att-schemeName="receiver_scheme_name"
+                        t-out="receiver_vat"
+                    />
+                    <cac:TaxScheme>
+                        <cbc:ID>01</cbc:ID>
+                        <cbc:Name>IVA</cbc:Name>
+                    </cac:TaxScheme>
+                </cac:PartyTaxScheme>
+            </cac:ReceiverParty>
+            <cac:DocumentResponse>
+                <cac:Response>
+                    <cbc:ResponseCode>02</cbc:ResponseCode>
+                    <cbc:Description>Documento validado por la DIAN</cbc:Description>
+                </cac:Response>
+                <cac:DocumentReference>
+                    <cbc:ID t-out="document_id" />
+                    <cbc:UUID t-att-schemeName="cufe_scheme_name" t-out="cufe" />
+                </cac:DocumentReference>
+                <cac:LineResponse>
+                    <cac:LineReference>
+                        <cbc:LineID>1</cbc:LineID>
+                    </cac:LineReference>
+                    <cac:Response>
+                        <cbc:ResponseCode>0000</cbc:ResponseCode>
+                        <cbc:Description>0</cbc:Description>
+                    </cac:Response>
+                </cac:LineResponse>
+            </cac:DocumentResponse>
+        </ApplicationResponse>
+    </template>
+</odoo>

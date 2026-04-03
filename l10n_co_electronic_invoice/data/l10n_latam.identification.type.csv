@@ -1,0 +1,16 @@
+id,name,l10n_co_document_code,l10n_co_document_iso_code,country_id/id,active
+l10n_co.rut,NIT,31,NIT,base.co,1
+l10n_co.national_citizen_id,Cédula de ciudadanía,13,CC,base.co,1
+l10n_co.foreign_resident_card,Cédula de extranjería,22,CE,base.co,1
+l10n_co.foreign_colombian_card,Tarjeta de extranjería,,,base.co,0
+l10n_co_electronic_invoice.passport,Pasaporte,41,,base.co,1
+l10n_co.id_card,Tarjeta de Identidad,12,TI,base.co,1
+l10n_co.civil_registration,Registro Civil,11,RC,base.co,1
+l10n_co_electronic_invoice.diplomatic_card,Carné Diplomatico,,,base.co,0
+l10n_co.residence_document,PEP (Permiso Especial de Permanencia),,,base.co,0
+l10n_co.48,"PPT(Permiso Protección Temporal)","48","PPT","base.co",1
+l10n_co_electronic_invoice.id_document,Cédula,,CC,,0
+l10n_co_electronic_invoice.it_fid,ID Extranjera,42,,base.co,1
+l10n_co.niup_id,"NIUP *",91,NIUP,"base.co",1
+l10n_co.external_id,NIT de otro país,50,,base.co,1
+l10n_co_electronic_invoice.foreign_card,Tarjeta de extranjería,21,,base.co,1

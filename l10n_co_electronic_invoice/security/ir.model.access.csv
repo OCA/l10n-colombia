@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_co_payment_method,l10n_co_electronic_invoice.l10n_co_payment_method,model_l10n_co_payment_method,account.group_account_invoice,1,1,1,1
+access_l10n_co_responsibility_type,l10n_co_electronic_invoice.l10n_co_responsibility_type,model_l10n_co_responsibility_type,account.group_account_invoice,1,1,1,1
+access_l10n_co_tax_type,l10n_co_electronic_invoice.l10n_co_tax_type,model_l10n_co_tax_type,account.group_account_invoice,1,1,1,1
+access_product_unspsc,l10n_co_electronic_invoice.product_unspsc,model_product_unspsc,base.group_user,1,1,1,1
+access_unece_uom_code,l10n_co_electronic_invoice.unece_uom_code,model_unece_uom_code,base.group_user,1,1,1,1
+access_l10n_co_ciiu,l10n_co_electronic_invoice.l10n_co_ciiu,model_l10n_co_ciiu,base.group_user,1,1,1,1

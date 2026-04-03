@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_tax_form_inherit" model="ir.ui.view">
+        <field name="name">view_tax_form_inherit</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_group_id']" position='after'>
+                <field name="l10n_co_tax_type_id" required="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

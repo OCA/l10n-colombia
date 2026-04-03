@@ -1,0 +1,1153 @@
+id,name,code
+unece_uom_code_1,Spray Pequeño,04
+unece_uom_code_2,Levantar,05
+unece_uom_code_3,Lote Calor,08
+unece_uom_code_4,Grupo,10
+unece_uom_code_5,Equipar,11
+unece_uom_code_6,Ración,13
+unece_uom_code_7,Disparo,14
+unece_uom_code_8,Palo,15
+unece_uom_code_9,Tambor De Ciento Quince Kg,16
+unece_uom_code_10,Tambor De Cien Libras,17
+unece_uom_code_11,Tambor De Cincuenta Y Cinco Galones (Us),18
+unece_uom_code_12,Camión Cisterna,19
+unece_uom_code_13,Contenedor De Veinte Pies,20
+unece_uom_code_14,Contenedor De Cuarenta Pies,21
+unece_uom_code_15,Decilitro Por Gramo,22
+unece_uom_code_16,Gramo Por Centímetro Cúbico,23
+unece_uom_code_17,Libra Teórica,24
+unece_uom_code_18,Gramo Por Centímetro Cuadrado,25
+unece_uom_code_19,Tonelada Real,26
+unece_uom_code_20,Tonelada Teórica,27
+unece_uom_code_21,Kilogramo Por Metro Cuadrado,28
+unece_uom_code_22,Libra Por Mil Pies Cuadrados,29
+unece_uom_code_24,Coger Peso,31
+unece_uom_code_25,Kilogramo Por Aire Seco Tonelada Métrica,32
+unece_uom_code_26,Kilopascales Metros Cuadrados Por Gramo,33
+unece_uom_code_27,Kilopascales Por Milímetro,34
+unece_uom_code_28,Mililitros Por Centímetro Cuadrado Segundo,35
+unece_uom_code_29,Pies Cúbicos Por Minuto Por Pie Cuadrado,36
+unece_uom_code_30,Onza Por Pie Cuadrado,37
+unece_uom_code_31,"Onzas Por Pie Cuadrado Por 0,01 Pulgadas",38
+unece_uom_code_32,Mililitro Por Segundo,40
+unece_uom_code_33,Mililitro Por Minuto,41
+unece_uom_code_34,Bolsa Súper A Granel,43
+unece_uom_code_35,Bolsa A Granel De Quinientos Kg,44
+unece_uom_code_36,Bolsa A Granel De Trescientos Kg,45
+unece_uom_code_37,Bolsa A Granel De Cincuenta Libras,46
+unece_uom_code_38,Bolsa De Cincuenta Libras,47
+unece_uom_code_39,Carga De Automóviles A Granel,48
+unece_uom_code_40,Kilogramos Teóricos,53
+unece_uom_code_23,Día De Potencia Del Caballo Por Tonelada Métrica Seca Al Aire.,30
+unece_uom_code_41,Tonelada Teórica,54
+unece_uom_code_42,Sitas,56
+unece_uom_code_43,Malla,57
+unece_uom_code_44,Kilogramo Neto,58
+unece_uom_code_45,Parte Por Millón,59
+unece_uom_code_46,Porcentaje De Peso,60
+unece_uom_code_47,Parte Por Billón (Us),61
+unece_uom_code_48,Porcentaje Por 1000 Horas,62
+unece_uom_code_49,Tasa De Fracaso En El Tiempo,63
+unece_uom_code_50,"Libra Por Pulgada Cuadrada, Calibre",64
+unece_uom_code_51,Oersted,66
+unece_uom_code_52,Prueba De Escala Específica,69
+unece_uom_code_53,Voltio Amperio Por Libra,71
+unece_uom_code_54,Vatio Por Libra,72
+unece_uom_code_55,Amperio Tum Por Centímetro,73
+unece_uom_code_56,Milipascal,74
+unece_uom_code_57,Gauss,76
+unece_uom_code_58,Mili Pulgadas,77
+unece_uom_code_59,Kilogauss,78
+unece_uom_code_60,Libras Por Pulgada Cuadrada Absoluta,80
+unece_uom_code_61,Enrique,81
+unece_uom_code_62,Kilopound Por Pulgada Cuadrada,84
+unece_uom_code_63,Fuerza Libra Pie,85
+unece_uom_code_64,Libra Por Pie Cúbico,87
+unece_uom_code_65,Equilibrio,89
+unece_uom_code_66,Saybold Segundo Universal,90
+unece_uom_code_67,Alimenta,91
+unece_uom_code_68,Calorías Por Centímetro Cúbico,92
+unece_uom_code_69,Calorías Por Gramo,93
+unece_uom_code_70,Unidad,94
+unece_uom_code_71,Veinte Mil Galones (Us) De Carros,95
+unece_uom_code_72,Diez Mil Galones (Us) De Carros,96
+unece_uom_code_73,Tambor De Diez Kg,97
+unece_uom_code_74,Tambor De Quince Kg,98
+unece_uom_code_75,Milla De Coche,1ª
+unece_uom_code_76,Recuento De Coches,1B
+unece_uom_code_77,Recuento De Locomotoras,1C
+unece_uom_code_78,Recuento De Cabos,1D
+unece_uom_code_79,Carro Vacio,1E
+unece_uom_code_80,Millas De Tren,1F
+unece_uom_code_81,Uso De Combustible Galón (Us),1G
+unece_uom_code_82,Milla Del Caboose,1H
+unece_uom_code_83,Tipo De Interés Fijo,1I
+unece_uom_code_84,Tonelada Milla,1J
+unece_uom_code_85,Milla Locomotora,1K
+unece_uom_code_86,Recuento Total De Coches,1L
+unece_uom_code_87,Milla De Coche Total,1M
+unece_uom_code_88,Cuarto De Milla,1X
+unece_uom_code_89,Radianes Por Segundo,2ª
+unece_uom_code_90,Radianes Por Segundo Al Cuadrado,2B
+unece_uom_code_91,Röntgen,2C
+unece_uom_code_92,Unidad Térmica Británica Por Hora.,2I
+unece_uom_code_93,Centímetro Cúbico Por Segundo,2J
+unece_uom_code_94,Pie Cúbico Por Hora,2K
+unece_uom_code_95,Pie Cúbico Por Minuto,2L
+unece_uom_code_96,Centímetro Por Segundo,2M
+unece_uom_code_97,Decibel,2N
+unece_uom_code_98,Kilobyte,2P
+unece_uom_code_99,Kilobecquerel,2Q
+unece_uom_code_100,Kilocurie,2R
+unece_uom_code_101,Megagramo,2U
+unece_uom_code_102,Megagramo Por Hora,2V
+unece_uom_code_103,Compartimiento,2W
+unece_uom_code_104,Metro Por Minuto,2X
+unece_uom_code_105,Milliröntgen,2Y
+unece_uom_code_106,Milivoltios,2Z
+unece_uom_code_107,Megajulio,3B
+unece_uom_code_108,Manmonth,3C
+unece_uom_code_109,Libra Por Libra De Producto,3E
+unece_uom_code_110,Libra Por Pieza De Producto,3G
+unece_uom_code_111,Kilogramo Por Kilogramo De Producto,3H
+unece_uom_code_112,Kilogramo Por Pieza De Producto,3I
+unece_uom_code_113,Bobina,4ª
+unece_uom_code_114,Gorra,4B
+unece_uom_code_115,Centistokes,4C
+unece_uom_code_116,Paquete De Veinte,4E
+unece_uom_code_117,Microlitro,4G
+unece_uom_code_118,Micrometro,4H
+unece_uom_code_119,Miliamperio,4K
+unece_uom_code_120,Megabyte,4L
+unece_uom_code_121,Miligramo Por Hora,4M
+unece_uom_code_122,Megabecquerel,4N
+unece_uom_code_123,Microfarad,4º
+unece_uom_code_124,Newton Por Metro,4P
+unece_uom_code_125,Onza Pulgada,4Q
+unece_uom_code_126,Pie Onza,4R
+unece_uom_code_127,Picofarad,4T
+unece_uom_code_128,Libra Por Hora,4U
+unece_uom_code_129,Tonelada (Us) Por Hora,4W
+unece_uom_code_130,Kilolitro Por Hora,4X
+unece_uom_code_131,Unidad Térmica Británica,BTU
+unece_uom_code_132,Bushel (Ee. Uu.),BUA
+unece_uom_code_133,Bushel (Reino Unido),BUI
+unece_uom_code_134,Peso Base,BW
+unece_uom_code_135,Bx,caja
+unece_uom_code_136,Millones De Btus,BZ
+unece_uom_code_137,Llamada,C0
+unece_uom_code_138,Producto Compuesto Libra (Peso Total),C1
+unece_uom_code_139,Millifarad,C10
+unece_uom_code_140,Miligal,C11
+unece_uom_code_141,Miligramo Por Metro,C12
+unece_uom_code_142,Miligray,C13
+unece_uom_code_143,Milihenry,C14
+unece_uom_code_144,Milijoule,C15
+unece_uom_code_145,Milímetro Por Segundo,C16
+unece_uom_code_146,Milímetro Cuadrado Por Segundo,C17
+unece_uom_code_147,Milimol,C18
+unece_uom_code_148,Mol Por Kilogramo,C19
+unece_uom_code_149,Carset,C2
+unece_uom_code_150,Millinewton,C20
+unece_uom_code_151,Millinewton Por Metro,C22
+unece_uom_code_152,Medidor De Miliohm,C23
+unece_uom_code_153,Segundo Milipascal,C24
+unece_uom_code_154,Miliradian,C25
+unece_uom_code_155,Milisegundo,C26
+unece_uom_code_156,Milisiemens,C27
+unece_uom_code_157,Milisievert,C28
+unece_uom_code_158,Millitesla,C29
+unece_uom_code_159,Microvoltios Por Metro,C3
+unece_uom_code_160,Pulgada Cuadrada,INK
+unece_uom_code_161,Pulgada En Cubos,INQ
+unece_uom_code_162,Póliza De Seguros,IP
+unece_uom_code_163,Conteo Por Centímetro,IT
+unece_uom_code_164,Pulgada Por Segundo (Velocidad Lineal),IU
+unece_uom_code_165,Pulgada Por Segundo Al Cuadrado (Aceleración),IV
+unece_uom_code_166,Julios Por Kilogramo,J2
+unece_uom_code_167,Jumbo,JB
+unece_uom_code_168,Joule Por Kelvin,JE
+unece_uom_code_169,Jarra,JG
+unece_uom_code_170,Megajulio Por Kilogramo,JK
+unece_uom_code_171,Megajulio Por Metro Cúbico,JM
+unece_uom_code_172,Articulación,JO
+unece_uom_code_173,Joule,JOU
+unece_uom_code_174,Tarro,JR
+unece_uom_code_175,Demanda De Kilovatios,K1
+unece_uom_code_176,Kilovoltios Amperios Reactivos De Demanda,K2
+unece_uom_code_177,Kilovoltio Amperio Hora Reactiva,K3
+unece_uom_code_178,Amperios Kilovoltios (Reactivos),K5
+unece_uom_code_179,Kilolitro,K6
+unece_uom_code_180,Pastel,KA
+unece_uom_code_181,Kilocharacter,KB
+unece_uom_code_182,Kilobar,KBA
+unece_uom_code_183,Kilogramo Decimal,KD
+unece_uom_code_184,Kelvin,KEL
+unece_uom_code_185,Kilopacket,KF
+unece_uom_code_186,Barrilete,KG
+unece_uom_code_187,Kilogramo,KGM
+unece_uom_code_188,Kilogramo Por Segundo,KGS
+unece_uom_code_189,Kilohercio,KHZ
+unece_uom_code_190,Barril Por Minuto,5ª
+unece_uom_code_191,5B,lote
+unece_uom_code_192,Galón (Us) Por Mil,5C
+unece_uom_code_193,Mmscf / Día,5E
+unece_uom_code_194,Libras Por Mil,5F
+unece_uom_code_195,Bomba,5G
+unece_uom_code_196,Escenario,5H
+unece_uom_code_197,Pie Cúbico Estándar,5I
+unece_uom_code_198,Potencia Hidráulica De Caballos,5J
+unece_uom_code_199,Contar Por Minuto,5K
+unece_uom_code_200,Nivel Sismico,5P
+unece_uom_code_201,260Nfor Sismica,5Q
+unece_uom_code_202,15 Calorías C,A1
+unece_uom_code_203,Amperio Metro Cuadrado Por Joule Segundo,A10
+unece_uom_code_204,Ã ¥ Ngström,A11
+unece_uom_code_205,Unidad Astronómica,A12
+unece_uom_code_206,Attojoule,A13
+unece_uom_code_207,Granero,A14
+unece_uom_code_208,Granero Por Electrón Voltio,A15
+unece_uom_code_209,"Granero Por Voltio De Electrones Esteradiano,",A16
+unece_uom_code_210,Granero Por Sterdian,A17
+unece_uom_code_211,Becquerel Por Kilogramo,A18
+unece_uom_code_212,Becquerel Por Metro Cúbico,A19
+unece_uom_code_213,Amperio Por Centímetro,A2
+unece_uom_code_214,Unidad Térmica Británica Por Segundo Pie Cuadrado Grado Rankin,A20
+unece_uom_code_215,Unidad Térmica Británica Por Libra Grado Rankin,A21
+unece_uom_code_216,Unidad Térmica Británica Por Segundo Pie Grado Rankin,A22
+unece_uom_code_217,Unidad Térmica Británica Por Hora Pie Cuadrado Grado Rankin,A23
+unece_uom_code_218,Candela Por Metro Cuadrado,A24
+unece_uom_code_219,Cheval Vapeur,A25
+unece_uom_code_220,Medidor De Culombio,A26
+unece_uom_code_221,Medidor De Culombio Al Cuadrado Por Voltio,A27
+unece_uom_code_222,Coulomb Por Centímetro Cúbico,A28
+unece_uom_code_223,Coulomb Por Metro Cúbico,A29
+unece_uom_code_224,Amperio Por Milímetro,A3
+unece_uom_code_225,Coulomb Por Milímetro Cúbico,A30
+unece_uom_code_226,Coulomb Por Kilogramo Segundo,A31
+unece_uom_code_227,Coulomb Por Mol,A32
+unece_uom_code_228,Coulomb Por Centímetro Cuadrado,A33
+unece_uom_code_229,Coulomb Por Metro Cuadrado,A34
+unece_uom_code_230,Coulomb Por Milímetro Cuadrado,A35
+unece_uom_code_231,Centímetro Cúbico Por Mol,A36
+unece_uom_code_232,261Nformaci Cúbico Por Mol,A37
+unece_uom_code_233,Metro Cúbico Por Coulomb,A38
+unece_uom_code_234,Metro Cúbico Por Kilogramo,A39
+unece_uom_code_235,Amperio Por Centímetro Cuadrado,A4
+unece_uom_code_236,Metro Cúbico Por Mol,A40
+unece_uom_code_237,Amperio Por Metro Cuadrado,A41
+unece_uom_code_238,Curie Por Kilogramo,A42
+unece_uom_code_239,Tonelaje De Peso Muerto,A43
+unece_uom_code_240,Decalitro,A44
+unece_uom_code_241,Decámetro,A45
+unece_uom_code_242,Decitex,A47
+unece_uom_code_243,Grado Rankin,A48
+unece_uom_code_244,Negador,A49
+unece_uom_code_245,Amperio Metro Cuadrado,A5
+unece_uom_code_246,Dyn Segundo Por Centímetro Cúbico,A50
+unece_uom_code_247,Dina Segundo Por Centímetro,A51
+unece_uom_code_248,Dina Segundo Por Centímetro Al Quinto,A52
+unece_uom_code_249,Electronvolt,A53
+unece_uom_code_250,Electronvoltio Por Metro,A54
+unece_uom_code_251,Metro Electronvolt Cuadrado,A55
+unece_uom_code_252,Electronvoltio De Metro Cuadrado Por Kilogramo,A56
+unece_uom_code_253,Ergio,A57
+unece_uom_code_254,Erg Por Centímetro,A58
+unece_uom_code_255,Amperio Por Metro Cuadrado Kelvin Al Cuadrado,A6
+unece_uom_code_256,Erg Por Centímetro Cúbico,A60
+unece_uom_code_257,Erg Por Gramo,A61
+unece_uom_code_258,Erg Por Gramo De Segundo,A62
+unece_uom_code_259,Erg Por Segundo,A63
+unece_uom_code_260,Erg Por Segundo Centímetro Cuadrado,A64
+unece_uom_code_261,Erg Por Centímetro Cuadrado Segundo,A65
+unece_uom_code_262,Erg Centímetro Cuadrado,A66
+unece_uom_code_263,Ergímetro Cuadrado Por Gramo,A67
+unece_uom_code_264,Exajulio,A68
+unece_uom_code_265,Faradio Por Metro,A69
+unece_uom_code_266,Amperio Por Milímetro Cuadrado,A7
+unece_uom_code_267,Femtojoule,A70
+unece_uom_code_268,Femtometro,A71
+unece_uom_code_269,Pie Por Segundo Al Cuadrado,A73
+unece_uom_code_270,Pie-Fuerza De La Libra Por Segundo,A74
+unece_uom_code_271,Tonelada De Carga,A75
+unece_uom_code_272,Galón,A76
+unece_uom_code_273,Unidad De Desplazamiento Cgs Gaussiana,A77
+unece_uom_code_274,Unidad Gaussiana Cgs De Corriente Eléctrica.,A78
+unece_uom_code_275,Unidad Gaussian Cgs De Carga Eléctrica.,A79
+unece_uom_code_276,Amperio Segundo,A8
+unece_uom_code_277,Unidad Gaussian Cgs De Intensidad De Campo Eléctrico.,A80
+unece_uom_code_278,Unidad Gaussian Cgs De Polarización Eléctrica.,A81
+unece_uom_code_279,Unidad Gaussian Cgs De Potencial Eléctrico.,A82
+unece_uom_code_280,Unidad Gaussiana Cgs De Magnetización.,A83
+unece_uom_code_281,Gigacoulomb Por Metro Cúbico,A84
+unece_uom_code_282,Gigaelectronvolt,A85
+unece_uom_code_283,Gigahercios,A86
+unece_uom_code_284,Gigaohm,A87
+unece_uom_code_285,Medidor De Gigaohm,A88
+unece_uom_code_286,Gigapascal,A89
+unece_uom_code_287,Tarifa,A9
+unece_uom_code_288,Gigavatios,A90
+unece_uom_code_289,A91,gon
+unece_uom_code_290,Gramo Por Metro Cúbico,A93
+unece_uom_code_291,Gramo Por Mol,A94
+unece_uom_code_292,A95,gris
+unece_uom_code_293,Gris Por Segundo,A96
+unece_uom_code_294,Hectopascal,A97
+unece_uom_code_295,Henry Por Metro,A98
+unece_uom_code_296,Aa,bola
+unece_uom_code_297,Paquete A Granel,AB
+unece_uom_code_298,Acr,acre
+unece_uom_code_299,Ad,byte
+unece_uom_code_300,Amperio Por Metro,AE
+unece_uom_code_301,Minuto Adicional,AH
+unece_uom_code_302,Minuto Promedio Por Llamada,AI
+unece_uom_code_303,Policía,AJ
+unece_uom_code_304,Braza,AK
+unece_uom_code_305,263Nfor De Acceso,AL
+unece_uom_code_306,Ampolla,AM
+unece_uom_code_307,Hora Amperio,AMH
+unece_uom_code_308,Amperio,AMP
+unece_uom_code_309,Ana,año
+unece_uom_code_310,Solo Libra De Aluminio,AP
+unece_uom_code_311,Onza Troy O Onza De Boticarios,APZ
+unece_uom_code_312,Unidad De Factor Antihemofílico (Ahf),AQ
+unece_uom_code_313,Supositorio,AR
+unece_uom_code_314,Son,son
+unece_uom_code_315,Surtido,COMO
+unece_uom_code_316,Fuerza Alcohólica En Masa,ASM
+unece_uom_code_317,Fuerza Alcohólica Por Volumen,ASU
+unece_uom_code_318,Ambiente Estándar,ATM
+unece_uom_code_319,Ambiente Técnico,ATT
+unece_uom_code_320,Cápsula,AV
+unece_uom_code_321,Vial Lleno De Polvo,AW
+unece_uom_code_322,Montaje,SÍ
+unece_uom_code_323,Unidad Térmica Británica Por Libra,AZ
+unece_uom_code_324,Btu Por Pie Cúbico,B0
+unece_uom_code_325,Barril (Us) Por Día,B1
+unece_uom_code_326,Julios Por Kilogramo Kelvin,B11
+unece_uom_code_327,Julios Por Metro,B12
+unece_uom_code_328,Julios Por Metro Cuadrado,B13
+unece_uom_code_329,Julios Por Metro A La Cuarta Potencia,B14
+unece_uom_code_330,Julios Por Mol,B15
+unece_uom_code_331,Julios Por Mol Kelvin,B16
+unece_uom_code_332,Joule Segundo,B18
+unece_uom_code_333,Litera,B2
+unece_uom_code_334,Joule Metro Cuadrado Por Kilogramo,B20
+unece_uom_code_335,Kelvin Por Vatio,B21
+unece_uom_code_336,Kiloampere,B22
+unece_uom_code_337,Kiloampere Por Metro Cuadrado,B23
+unece_uom_code_338,Kiloampere Por Metro,B24
+unece_uom_code_339,Kilobecquerel Por Kilogramo,B25
+unece_uom_code_340,Kilocoulomb,B26
+unece_uom_code_341,Kilocoulomb Por Metro Cúbico,B27
+unece_uom_code_342,Kilocoulomb Por Metro Cuadrado,B28
+unece_uom_code_343,Kiloelectronvolt,B29
+unece_uom_code_344,Libra De Bateo,B3
+unece_uom_code_345,Kilogramo Metro Por Segundo,B31
+unece_uom_code_346,Kilogramo Metro Cuadrado,B32
+unece_uom_code_347,Kilogramo Metro Cuadrado Por Segundo,B33
+unece_uom_code_348,Kilogramo Por Decímetro Cúbico,B34
+unece_uom_code_349,Kilogramo Por Litro,B35
+unece_uom_code_350,Caloría Termoquímica Por Gramo,B36
+unece_uom_code_351,Kilogramo De Fuerza,B37
+unece_uom_code_352,Metro De Fuerza De Kilogramo,B38
+unece_uom_code_353,Metro De Fuerza De Kilogramo Por Segundo,B39
+unece_uom_code_354,"Barril, Imperial",B4
+unece_uom_code_355,Kilogramo De Fuerza Por Metro Cuadrado,B40
+unece_uom_code_356,Kilojoule Per Kelvin,B41
+unece_uom_code_357,Kilojoule Por Kilogramo,B42
+unece_uom_code_358,Kilojoule Por Kilogramo Kelvin,B43
+unece_uom_code_359,Kilojoule Por Mol,B44
+unece_uom_code_360,Kilomol,B45
+unece_uom_code_361,Kilomol Por Metro Cúbico,B46
+unece_uom_code_362,Kilonewton,B47
+unece_uom_code_363,Medidor De Kilonewton,B48
+unece_uom_code_364,Kiloohm,B49
+unece_uom_code_365,Palanquilla,B5
+unece_uom_code_366,Medidor De Kiloohm,B50
+unece_uom_code_367,Kilopond,B51
+unece_uom_code_368,Kilosegundo,B52
+unece_uom_code_369,Kilosiemens,B53
+unece_uom_code_370,Kilosiemens Por Metro,B54
+unece_uom_code_371,Kilovoltios Por Metro,B55
+unece_uom_code_372,Kiloveber Por Metro,B56
+unece_uom_code_373,Año Luz,B57
+unece_uom_code_374,Litro Por Mol,B58
+unece_uom_code_375,Hora Lumen,B59
+unece_uom_code_376,Bollo,B6
+unece_uom_code_377,Lumen Por Metro Cuadrado,B60
+unece_uom_code_378,Lumen Por Vatio,B61
+unece_uom_code_379,Lumen Segundo,B62
+unece_uom_code_380,Hora De Lux,B63
+unece_uom_code_381,Lux Segundo,B64
+unece_uom_code_382,Maxwell,B65
+unece_uom_code_383,Megaamperios Por Metro Cuadrado,B66
+unece_uom_code_384,Megabecquerel Por Kilogramo,B67
+unece_uom_code_385,Megacoulomb Por Metro Cúbico,B69
+unece_uom_code_386,Ciclo,B7
+unece_uom_code_387,Megacoulomb Por Metro Cuadrado,B70
+unece_uom_code_388,Megaelectronvolt,B71
+unece_uom_code_389,Megagramo Por Metro Cúbico,B72
+unece_uom_code_390,Meganewton,B73
+unece_uom_code_391,Medidor De Meganewton,B74
+unece_uom_code_392,Megaohm,B75
+unece_uom_code_393,Metro Megaohm,B76
+unece_uom_code_394,Megasiemens Por Metro,B77
+unece_uom_code_395,Megavoltio,B78
+unece_uom_code_396,Megavolt Por Metro,B79
+unece_uom_code_397,Julios Por Metro Cúbico,B8
+unece_uom_code_398,Metro Recíproco Cuadrado Recíproco Segundo,B81
+unece_uom_code_399,Metro A La Cuarta Potencia,B83
+unece_uom_code_400,Microamperios,B84
+unece_uom_code_401,Microbar,B85
+unece_uom_code_402,Microcoulomb,B86
+unece_uom_code_403,Microcoulomb Por Metro Cúbico,B87
+unece_uom_code_404,Microcoulomb Por Metro Cuadrado,B88
+unece_uom_code_405,Microfarada Por Metro,B89
+unece_uom_code_406,B9,batt
+unece_uom_code_407,Microhenry,B90
+unece_uom_code_408,Microhenry Por Metro,B91
+unece_uom_code_409,Micronewton,B92
+unece_uom_code_410,Medidor De Micronewton,B93
+unece_uom_code_411,Microohm,B94
+unece_uom_code_412,Medidor De Microohmios,B95
+unece_uom_code_413,Micropascal,B96
+unece_uom_code_414,Microradiano,B97
+unece_uom_code_415,Microsegundo,B98
+unece_uom_code_416,Microsiemens,B99
+unece_uom_code_417,Bar,bar
+unece_uom_code_418,Caja Base,BB
+unece_uom_code_419,Tablero,BD
+unece_uom_code_420,Ser,haz
+unece_uom_code_421,Pie De Tabla,BFT
+unece_uom_code_422,Bolso,BG
+unece_uom_code_423,Cepillo,BH
+unece_uom_code_424,Potencia Al Freno,BHP
+unece_uom_code_425,Trillón De Dólares,BIL
+unece_uom_code_426,Cangilón,BJ
+unece_uom_code_427,Cesta,BK
+unece_uom_code_428,Bl,bala
+unece_uom_code_429,Barril Seco,BLD
+unece_uom_code_430,"Barril (Ee. Uu.) (Petróleo, Etc.)",BLL
+unece_uom_code_431,Botella,BO
+unece_uom_code_432,Cien Pies De Tabla,BP
+unece_uom_code_433,Becquerel,BQL
+unece_uom_code_434,Br,bar
+unece_uom_code_435,Tornillo,BT
+unece_uom_code_436,Unidad Térmica Británica,BTU
+unece_uom_code_437,Bushel (Ee. Uu.),BUA
+unece_uom_code_438,Bushel (Reino Unido),BUI
+unece_uom_code_439,Peso Base,BW
+unece_uom_code_440,Bx,caja
+unece_uom_code_441,Millones De Btus,BZ
+unece_uom_code_442,Llamada,C0
+unece_uom_code_443,Producto Compuesto Libra (Peso Total),C1
+unece_uom_code_444,Millifarad,C10
+unece_uom_code_445,Miligal,C11
+unece_uom_code_446,Miligramo Por Metro,C12
+unece_uom_code_447,Miligray,C13
+unece_uom_code_448,Milihenry,C14
+unece_uom_code_449,Milijoule,C15
+unece_uom_code_450,Milímetro Por Segundo,C16
+unece_uom_code_451,Milímetro Cuadrado Por Segundo,C17
+unece_uom_code_452,Milimol,C18
+unece_uom_code_453,Mol Por Kilogramo,C19
+unece_uom_code_454,Carset,C2
+unece_uom_code_455,Millinewton,C20
+unece_uom_code_456,Millinewton Por Metro,C22
+unece_uom_code_457,Medidor De Miliohm,C23
+unece_uom_code_458,Segundo Milipascal,C24
+unece_uom_code_459,Miliradian,C25
+unece_uom_code_460,Milisegundo,C26
+unece_uom_code_461,Milisiemens,C27
+unece_uom_code_462,Milisievert,C28
+unece_uom_code_463,Millitesla,C29
+unece_uom_code_464,Microvoltios Por Metro,C3
+unece_uom_code_465,Milivoltios Por Metro,C30
+unece_uom_code_466,Milivatios,C31
+unece_uom_code_467,Milivatios Por Metro Cuadrado,C32
+unece_uom_code_468,Milliweber,C33
+unece_uom_code_469,C34,Topo
+unece_uom_code_470,Mol Por Decímetro Cúbico,C35
+unece_uom_code_471,Mol Por Metro Cúbico,C36
+unece_uom_code_472,Mol Por Litro,C38
+unece_uom_code_473,Nanoampere,C39
+unece_uom_code_474,Partido De Carga,C4
+unece_uom_code_475,Nanocoulomb,C40
+unece_uom_code_476,Nanofarad,C41
+unece_uom_code_477,Nanofarad Por Metro,C42
+unece_uom_code_478,Nanohenry,C43
+unece_uom_code_479,Nanohenry Por Metro,C44
+unece_uom_code_480,Nanometro,C45
+unece_uom_code_481,Medidor De Nanoohm,C46
+unece_uom_code_482,Nanosegundo,C47
+unece_uom_code_483,Nanotesla,C48
+unece_uom_code_484,Nanovatio,C49
+unece_uom_code_485,Costo,C5
+unece_uom_code_486,Neper,C50
+unece_uom_code_487,Neper Por Segundo,C51
+unece_uom_code_488,Picometro,C52
+unece_uom_code_489,Metro De Newton Segundo,C53
+unece_uom_code_490,Newton Metro Cuadrado Kilogramo Cuadrado,C54
+unece_uom_code_491,Newton Por Metro Cuadrado,C55
+unece_uom_code_492,Newton Por Milímetro Cuadrado,C56
+unece_uom_code_493,Newton Segundo,C57
+unece_uom_code_494,Newton Segundo Por Metro,C58
+unece_uom_code_495,Octava,C59
+unece_uom_code_496,Célula,C6
+unece_uom_code_497,Ohm Centímetro,C60
+unece_uom_code_498,Ohm Metro,C61
+unece_uom_code_499,C62,uno
+unece_uom_code_500,Parsec,C63
+unece_uom_code_501,Pascal Por Kelvin,C64
+unece_uom_code_502,Segundo Pascal,C65
+unece_uom_code_503,Segundo Pascal Por Metro Cúbico,C66
+unece_uom_code_504,Segundo Pascal Por Metro,C67
+unece_uom_code_505,Petajoule,C68
+unece_uom_code_506,Telefono,C69
+unece_uom_code_507,Centipoise,C7
+unece_uom_code_508,Picoampere,C70
+unece_uom_code_509,Picocoulomb,C71
+unece_uom_code_510,Picofarad Por Metro,C72
+unece_uom_code_511,Picohenry,C73
+unece_uom_code_512,Picowatt,C75
+unece_uom_code_513,Picowatt Por Metro Cuadrado,C76
+unece_uom_code_514,Medidor De Libras,C77
+unece_uom_code_515,Fuerza De Libra,C78
+unece_uom_code_516,Millicoulomb Por Kilogramo,C8
+unece_uom_code_517,C80,rad
+unece_uom_code_518,Radián,C81
+unece_uom_code_519,Medidor De Radianes Al Cuadrado Por Mol,C82
+unece_uom_code_520,Medidor De Radianes Al Cuadrado Por Kilogramo,C83
+unece_uom_code_521,Radian Por Metro,C84
+unece_uom_code_522,Â € Ngstr Recíproco “M,C85
+unece_uom_code_523,Metro Cúbico Recíproco,C86
+unece_uom_code_524,Metro Cúbico Recíproco Por Segundo,C87
+unece_uom_code_525,Voltios De Electrones Recíprocos Por Metro Cúbico,C88
+unece_uom_code_526,Henry Recíproco,C89
+unece_uom_code_527,Grupo De Bobina,C9
+unece_uom_code_528,Joule Recíproco Por Metro Cúbico,C90
+unece_uom_code_529,Kelvin Recíproco O Kelvin Al Poder Menos Uno,C91
+unece_uom_code_530,Medidor Recíproco,C92
+unece_uom_code_531,Metro Cuadrado Recíproco,C93
+unece_uom_code_532,Minuto Recíproco,C94
+unece_uom_code_533,Mole Recíproco,C95
+unece_uom_code_534,Pascal Recíproco O Pascal A La Potencia Menos Uno.,C96
+unece_uom_code_535,Segundo Recíproco,C97
+unece_uom_code_536,Segundo Recíproco Por Metro Cúbico,C98
+unece_uom_code_537,Segundo Recíproco Por Metro Cuadrado,C99
+unece_uom_code_538,Ca,Caja
+unece_uom_code_539,Capacidad De Carga En Toneladas Métricas.,CCT
+unece_uom_code_540,Candela,CDL
+unece_uom_code_541,Grado Celsius,CEL
+unece_uom_code_542,Cen,cien
+unece_uom_code_543,Tarjeta,CG
+unece_uom_code_544,Centigramo,CGM
+unece_uom_code_545,Envase,CH
+unece_uom_code_546,Cj,cono
+unece_uom_code_547,Conector,CK
+unece_uom_code_548,Coulomb Por Kilogramo,CKG
+unece_uom_code_549,Bobina,CL
+unece_uom_code_550,Cientos De Licencia,CLF
+unece_uom_code_551,Centilitro,CLT
+unece_uom_code_552,Centímetro Cuadrado,CMK
+unece_uom_code_553,Centímetro Cúbico,CMQ
+unece_uom_code_554,Centímetro,CMT
+unece_uom_code_555,Paquete De Cien,CNP
+unece_uom_code_556,Cental (Reino Unido),CNT
+unece_uom_code_557,Garrafón,CO
+unece_uom_code_558,Culombio,COU
+unece_uom_code_559,Cartucho,CQ
+unece_uom_code_560,Cr,caja
+unece_uom_code_561,Cs,caso
+unece_uom_code_562,Caja De Cartón,CT
+unece_uom_code_563,Quilate Métrico,CTM
+unece_uom_code_564,Cu,vaso
+unece_uom_code_565,Curie,CUR
+unece_uom_code_566,Cubrir,CV
+unece_uom_code_567,Cien Libras (Quintales) / Cien Pesos (Us),CWA
+unece_uom_code_568,Cien Pesos (Reino Unido),CWI
+unece_uom_code_569,Cilindro,CY
+unece_uom_code_570,Combo,CZ
+unece_uom_code_571,Segundo Recíproco Por Esteradiano,D1
+unece_uom_code_572,Siemens Por Metro,D10
+unece_uom_code_573,Siemens Metro Cuadrado Por Mol,D12
+unece_uom_code_574,Sievert,D13
+unece_uom_code_575,Mil Yardas Lineales,D14
+unece_uom_code_576,D15,sone
+unece_uom_code_577,Centímetro Cuadrado Por Ergio,D16
+unece_uom_code_578,Centímetro Cuadrado Por Erg Esterlina,D17
+unece_uom_code_579,Metro Kelvin,D18
+unece_uom_code_580,Kelvin Metro Cuadrado Por Vatio,D19
+unece_uom_code_581,Segundo Recíproco Por Metros Cuadrados Esteradianos,D2
+unece_uom_code_582,Metro Cuadrado Por Julio,D20
+unece_uom_code_583,Metro Cuadrado Por Kilogramo,D21
+unece_uom_code_584,Metro Cuadrado Por Mol,D22
+unece_uom_code_585,Pluma Gramo (Proteína),D23
+unece_uom_code_586,Metro Cuadrado Por Esterilizador,D24
+unece_uom_code_587,Metro Cuadrado Por Julios Esteradianos,D25
+unece_uom_code_588,Metro Cuadrado Por Voltio Segundo,D26
+unece_uom_code_589,Esteradiano,D27
+unece_uom_code_590,Sifón,D28
+unece_uom_code_591,Terahercios,D29
+unece_uom_code_592,Terajulio,D30
+unece_uom_code_593,Teravatio,D31
+unece_uom_code_594,Hora De Teravatio,D32
+unece_uom_code_595,Tesla,D33
+unece_uom_code_596,Texas,D34
+unece_uom_code_597,Caloría Termoquímica,D35
+unece_uom_code_598,Caloría Termoquímica Por Gramo Kelvin,D37
+unece_uom_code_599,Calorías Termoquímicas Por Segundo Centímetro Kelvin,D38
+unece_uom_code_600,Calorías Termoquímicas Por Segundo Centímetro Cuadrado Kelvin,D39
+unece_uom_code_601,Mil Litros,D40
+unece_uom_code_602,Tonelada Por Metro Cúbico,D41
+unece_uom_code_603,Año Tropical,D42
+unece_uom_code_604,Unidad De Masa Atómica Unificada,D43
+unece_uom_code_605,D44,var
+unece_uom_code_606,Voltios Al Cuadrado Por Kelvin Al Cuadrado,D45
+unece_uom_code_607,Voltio – Amperio,D46
+unece_uom_code_608,Voltio Por Centímetro,D47
+unece_uom_code_609,Voltio Por Kelvin,D48
+unece_uom_code_610,Milivoltios Por Kelvin,D49
+unece_uom_code_611,Kilogramo Por Centímetro Cuadrado,D5
+unece_uom_code_612,Voltios Por Metro,D50
+unece_uom_code_613,Voltios Por Milímetro,D51
+unece_uom_code_614,Vatios Por Kelvin,D52
+unece_uom_code_615,Vatios Por Metro Kelvin,D53
+unece_uom_code_616,Vatios Por Metro Cuadrado,D54
+unece_uom_code_617,Vatios Por Metro Cuadrado Kelvin,D55
+unece_uom_code_618,Vatios Por Metro Cuadrado De Kelvin A La Cuarta Potencia,D56
+unece_uom_code_619,Vatios Por Steradian,D57
+unece_uom_code_620,Vatios Por Metro Cuadrado Esterlino,D58
+unece_uom_code_621,Weber Por Metro,D59
+unece_uom_code_622,Röntgen Por Segundo,D6
+unece_uom_code_623,Weber Por Milímetro,D60
+unece_uom_code_624,Minuto,D61
+unece_uom_code_625,Segundo,D62
+unece_uom_code_626,Libro,D63
+unece_uom_code_627,Bloquear,D64
+unece_uom_code_628,Redondo,D65
+unece_uom_code_629,Casete,D66
+unece_uom_code_630,Dólar Por Hora,D67
+unece_uom_code_631,Pulgada A La Cuarta Potencia,D69
+unece_uom_code_632,Sandwich,D7
+unece_uom_code_633,Tabla Internacional (It) Caloría,D70
+unece_uom_code_634,Tabla Internacional (It) Calorías Por Segundo Centímetro Kelvin,D71
+unece_uom_code_635,Tabla Internacional (It) Calorías Por Segundo Centímetro Cuadrado Kelvin,D72
+unece_uom_code_636,Joule Metro Cuadrado,D73
+unece_uom_code_637,Kilogramo Por Mol,D74
+unece_uom_code_638,Tabla Internacional (It) Calorías Por Gramo,D75
+unece_uom_code_639,Tabla Internacional (It) Calorías Por Gramo Kelvin,D76
+unece_uom_code_640,Megacoulomb,D77
+unece_uom_code_641,D79,haz
+unece_uom_code_642,Puntaje De Drenaje,D8
+unece_uom_code_643,Microwatt,D80
+unece_uom_code_644,Microtesla,D81
+unece_uom_code_645,Microvoltio,D82
+unece_uom_code_646,Medidor De Millinewton,D83
+unece_uom_code_647,Microwatt Por Metro Cuadrado,D85
+unece_uom_code_648,Millicoulomb,D86
+unece_uom_code_649,Milimol Por Kilogramo,D87
+unece_uom_code_650,Millicoulomb Por Metro Cúbico,D88
+unece_uom_code_651,Millicoulomb Por Metro Cuadrado,D89
+unece_uom_code_652,Dina Por Centímetro Cuadrado,D9
+unece_uom_code_653,Metro Cúbico (Neto),D90
+unece_uom_code_654,Movimiento Rápido Del Ojo,D91
+unece_uom_code_655,Banda,D92
+unece_uom_code_656,Segundo Por Metro Cúbico,D93
+unece_uom_code_657,Segundo Por Metro Cúbico Radianes,D94
+unece_uom_code_658,Julios Por Gramo,D95
+unece_uom_code_659,Libra Bruta,D96
+unece_uom_code_660,Carga De Palet / Unidad,D97
+unece_uom_code_661,Libra De Masa,D98
+unece_uom_code_662,Manga,D99
+unece_uom_code_663,Despreciar,DAA
+unece_uom_code_664,Diez Dias,DAD
+unece_uom_code_665,Day,día
+unece_uom_code_666,Libra Seca,DB
+unece_uom_code_667,Disco,DC
+unece_uom_code_668,La Licenciatura,DD
+unece_uom_code_669,Acuerdo,DE
+unece_uom_code_670,Década,DEC
+unece_uom_code_671,Decigramo,DG
+unece_uom_code_672,Dispensador,DI
+unece_uom_code_673,Decagramo,DJ
+unece_uom_code_674,Decilitro,DLT
+unece_uom_code_675,263Nformaci Cuadrado,DMK
+unece_uom_code_676,Decímetro Cúbico,DMQ
+unece_uom_code_677,Decímetro,DMT
+unece_uom_code_678,Medidor De Decinewton,DN
+unece_uom_code_679,Docena Pieza,DPC
+unece_uom_code_680,Docena Par,DPR
+unece_uom_code_681,Tonelaje De Desplazamiento,DPT
+unece_uom_code_682,Registro De Datos,DQ
+unece_uom_code_683,Tambor,DR
+unece_uom_code_684,Dram (Us),DRA
+unece_uom_code_685,Dram (Reino Unido),DRI
+unece_uom_code_686,Docena Rollo,DRL
+unece_uom_code_687,Dracma (Reino Unido),DRM
+unece_uom_code_688,Monitor,DS
+unece_uom_code_689,Tonelada Seca,DT
+unece_uom_code_690,Decitonne,DTN
+unece_uom_code_691,Du,dina
+unece_uom_code_692,Pennyweight,DWT
+unece_uom_code_693,Dina Por Centímetro,DX
+unece_uom_code_694,Libro De Directorio,DY
+unece_uom_code_695,Docena,DZN
+unece_uom_code_696,Paquete De Doce,DZP
+unece_uom_code_697,Cinturón,E2
+unece_uom_code_698,Remolque,E3
+unece_uom_code_699,Kilogramo Bruto,E4
+unece_uom_code_700,Tonelada Métrica Larga,E5
+unece_uom_code_701,Ea,cada
+unece_uom_code_702,Casilla De Correo Electrónico,EB
+unece_uom_code_703,Cada Uno Por Mes,CE
+unece_uom_code_704,Paquete De Once,EP
+unece_uom_code_705,Galón Equivalente,EQ
+unece_uom_code_706,Sobre,EV
+unece_uom_code_707,Mil Pies Cúbicos Por Día,F1
+unece_uom_code_708,Fibra Por Centímetro Cúbico De Aire,F9
+unece_uom_code_709,Grado Fahrenheit,FAH
+unece_uom_code_710,Faradio,FAR
+unece_uom_code_711,Campo,FB
+unece_uom_code_712,Mil Pies Cúbicos,FC
+unece_uom_code_713,Millón De Partículas Por Pie Cúbico,FD
+unece_uom_code_714,Pie De Pista,FE
+unece_uom_code_715,Cien Metros Cúbicos,FF
+unece_uom_code_716,Parche Transdérmico,FG
+unece_uom_code_717,Micromol,FH
+unece_uom_code_718,Tonelada En Escamas,FL
+unece_uom_code_719,Millones De Pies Cúbicos,FM
+unece_uom_code_720,Fot,pie
+unece_uom_code_721,Libra Por Pie Cuadrado,FP
+unece_uom_code_722,Pie Por Minuto,FR
+unece_uom_code_723,Pie Por Segundo,FS
+unece_uom_code_724,Pie Cuadrado,FTK
+unece_uom_code_725,Pie Cubico,FTQ
+unece_uom_code_726,Us Galones Por Minuto,G2
+unece_uom_code_727,Galon Imperial Por Minuto,G3
+unece_uom_code_728,Hoja De Microficha,G7
+unece_uom_code_729,Galón (Us) Por Día,GB
+unece_uom_code_730,Gigabecquerel,GBQ
+unece_uom_code_731,Gramo Por 100 Gramo,GC
+unece_uom_code_732,Barril Bruto,GD
+unece_uom_code_733,Libra Por Galón (Us),GE
+unece_uom_code_734,Gramo Por Metro (Gramo Por 100 Centímetros),GF
+unece_uom_code_735,Gramo De Isótopo Fisionable,GFI
+unece_uom_code_736,Gramo,GGR
+unece_uom_code_737,Medio Galón (Ee. Uu.),GH
+unece_uom_code_738,Branquias,GIA
+unece_uom_code_739,Gill (Reino Unido),GII
+unece_uom_code_740,Gramo Por Mililitro,GJ
+unece_uom_code_741,Gramo Por Kilogramo,G K
+unece_uom_code_742,Gramo Por Litro,GL
+unece_uom_code_743,Galón Seco (Ee. Uu.),GLD
+unece_uom_code_744,Galón (Reino Unido),GLI
+unece_uom_code_745,Galón,GLL
+unece_uom_code_746,Gramo Por Metro Cuadrado,GM
+unece_uom_code_747,Galón Bruto,GN
+unece_uom_code_748,Miligramos Por Metro Cuadrado,GO
+unece_uom_code_749,Miligramo Por Metro Cúbico,GP
+unece_uom_code_750,Microgramos Por Metro Cúbico,GQ
+unece_uom_code_751,Gramo,GRM
+unece_uom_code_752,Grano,GRN
+unece_uom_code_753,Bruto,GRO
+unece_uom_code_754,Tonelada De Registro Bruto,GRT
+unece_uom_code_755,Tonelada Bruta,GT
+unece_uom_code_756,Gigajoule,GV
+unece_uom_code_757,Galón Por Mil Pies Cúbicos,GW
+unece_uom_code_758,Hora De Gigavatios,GWH
+unece_uom_code_759,Patio Bruto,GY
+unece_uom_code_760,Sistema De Medición,GZ
+unece_uom_code_761,Media Página – Electrónica,H1
+unece_uom_code_762,Medio Litro,H2
+unece_uom_code_763,Madeja,HA
+unece_uom_code_764,Hectárea,HAR
+unece_uom_code_765,Hectobar,HBA
+unece_uom_code_766,Cien Cajas,HBX
+unece_uom_code_767,Cien Cuentas,HC
+unece_uom_code_768,Media Docena,HD
+unece_uom_code_769,Centésima De Quilate,ÉL
+unece_uom_code_770,Cien Pies,HF
+unece_uom_code_771,Hectogramo,HGM
+unece_uom_code_772,Cien Pies Cúbicos,HH
+unece_uom_code_773,Cien Hojas,HI
+unece_uom_code_774,Cien Unidades Internacionales,HIU
+unece_uom_code_775,Caballo Métrico,HJ
+unece_uom_code_776,Cien Kilogramos,HK
+unece_uom_code_777,Cien Pies (Lineales),HL
+unece_uom_code_778,Hectolitro,HLT
+unece_uom_code_779,Milla Por Hora,HM
+unece_uom_code_780,Millones De Metros Cúbicos,HMQ
+unece_uom_code_781,Hectómetro,HMT
+unece_uom_code_782,Milímetro Convencional De Mercurio,HN
+unece_uom_code_783,Cien Onzas Troy,HO
+unece_uom_code_784,Milímetro Convencional De Agua,HP
+unece_uom_code_785,Hectolitro De Alcohol Puro,HPA
+unece_uom_code_786,Cien Pies Cuadrados,HS
+unece_uom_code_787,Media Hora,HT
+unece_uom_code_788,Hertz,HTZ
+unece_uom_code_789,Hora,HUR
+unece_uom_code_790,Cien Yardas,HY
+unece_uom_code_791,Pulgada Libra,IA
+unece_uom_code_792,Contar Por Pulgada,IC
+unece_uom_code_793,Persona,IE
+unece_uom_code_794,Pulgadas De Agua,IF
+unece_uom_code_795,Columna Pulgada,II
+unece_uom_code_796,Pulgada Por Minuto,IL
+unece_uom_code_797,Impresión,IM
+unece_uom_code_798,Pulgada,INH
+unece_uom_code_799,Pulgada Cuadrada,INK
+unece_uom_code_800,Pulgada En Cubos,INQ
+unece_uom_code_801,Póliza De Seguros,IP
+unece_uom_code_802,Conteo Por Centímetro,IT
+unece_uom_code_803,Pulgada Por Segundo (Velocidad Lineal),IU
+unece_uom_code_804,Pulgada Por Segundo Al Cuadrado (Aceleración),IV
+unece_uom_code_805,Julios Por Kilogramo,J2
+unece_uom_code_806,Jumbo,JB
+unece_uom_code_807,Joule Por Kelvin,JE
+unece_uom_code_808,Jarra,JG
+unece_uom_code_809,Megajulio Por Kilogramo,JK
+unece_uom_code_810,Megajulio Por Metro Cúbico,JM
+unece_uom_code_811,Articulación,JO
+unece_uom_code_812,Joule,JOU
+unece_uom_code_813,Tarro,JR
+unece_uom_code_814,Demanda De Kilovatios,K1
+unece_uom_code_815,Kilovoltios Amperios Reactivos De Demanda,K2
+unece_uom_code_816,Kilovoltio Amperio Hora Reactiva,K3
+unece_uom_code_817,Amperios Kilovoltios (Reactivos),K5
+unece_uom_code_818,Kilolitro,K6
+unece_uom_code_819,Pastel,KA
+unece_uom_code_820,Kilocharacter,KB
+unece_uom_code_821,Kilobar,KBA
+unece_uom_code_822,Kilogramo Decimal,KD
+unece_uom_code_823,Kelvin,KEL
+unece_uom_code_824,Kilopacket,KF
+unece_uom_code_825,Barrilete,KG
+unece_uom_code_826,Kilogramo,KGM
+unece_uom_code_827,Kilogramo Por Segundo,KGS
+unece_uom_code_828,Kilohercio,KHZ
+unece_uom_code_829,Kilogramo Por Milímetro De Ancho,KI
+unece_uom_code_830,Kilosegmento,KJ
+unece_uom_code_831,Kilojoule,KJO
+unece_uom_code_832,Kilogramo Por Metro,KL
+unece_uom_code_833,Kilómetro Por Hora,KMH
+unece_uom_code_834,Kilometro Cuadrado,KMK
+unece_uom_code_835,Kilogramo Por Metro Cúbico,KMQ
+unece_uom_code_836,Kilogramo De Nitrógeno,KNI
+unece_uom_code_837,Kilogramo De Sustancia Nombrada,KNS
+unece_uom_code_838,Knt,nudo
+unece_uom_code_839,Milliequivalencia De Potasa Cáustica Por Gramo De Producto.,KO
+unece_uom_code_840,Kilopascal,KPA
+unece_uom_code_841,Kilogramo De Hidróxido De Potasio (Potasa Cáustica),KPH
+unece_uom_code_842,Kilogramo De Óxido De Potasio,KPO
+unece_uom_code_843,Kilogramo De Pentóxido De Fósforo (Anhídrido Fosfórico),KPP
+unece_uom_code_844,Kilorã¶Ntgen,KR
+unece_uom_code_845,Mil Libras Por Pulgada Cuadrada,KS
+unece_uom_code_846,Kilogramo De Sustancia 90% Seca,KSD
+unece_uom_code_847,Kilogramo De Hidróxido De Sodio (Soda Cáustica),KSH
+unece_uom_code_848,Equipo,KT
+unece_uom_code_849,Kilómetro,KTM
+unece_uom_code_850,Kilotonne,KTN
+unece_uom_code_851,Kilogramo De Uranio,KUR
+unece_uom_code_852,Kilovoltio – Ampere,KVA
+unece_uom_code_853,Kilovar,KVR
+unece_uom_code_854,Kilovoltio,KVT
+unece_uom_code_855,Kilogramos Por Milímetro,KW
+unece_uom_code_856,Kilovatios Hora,KWH
+unece_uom_code_857,Kilovatio,KWT
+unece_uom_code_858,Mililitro Por Kilogramo,KX
+unece_uom_code_859,Litro Por Minuto,L2
+unece_uom_code_860,Libra Por Pulgada Cúbica,LA
+unece_uom_code_861,Libra,LBR
+unece_uom_code_862,Libra Troy,LBT
+unece_uom_code_863,Centímetro Lineal,LC
+unece_uom_code_864,Litro Por Día,LD
+unece_uom_code_865,Le,lite
+unece_uom_code_866,Lef,hoja
+unece_uom_code_867,Pie Lineal,LF
+unece_uom_code_868,Hora De Trabajo,LH
+unece_uom_code_869,Pulgada Lineal,LI
+unece_uom_code_870,Spray Grande,LJ
+unece_uom_code_871,Enlazar,LK
+unece_uom_code_872,Metro Lineal,LM
+unece_uom_code_873,Longitud,LN
+unece_uom_code_874,Mucho,LO
+unece_uom_code_875,Libra Liquida,LP
+unece_uom_code_876,Litro De Alcohol Puro,LPA
+unece_uom_code_877,Lr,capa
+unece_uom_code_878,Suma Global,LS
+unece_uom_code_879,Ton (Reino Unido) O Longton (Ee. Uu.),LTN
+unece_uom_code_880,Litro,LTR
+unece_uom_code_881,Lumen,LUM
+unece_uom_code_882,Lux,lux
+unece_uom_code_883,Yarda Lineal Por Libra,LX
+unece_uom_code_884,Yarda Lineal,LY
+unece_uom_code_885,Cinta Magnética,M0
+unece_uom_code_886,Miligramos Por Litro,M1
+unece_uom_code_887,Valor Monetario,M4
+unece_uom_code_888,Microcurie,M5
+unece_uom_code_889,Micropulgada,M7
+unece_uom_code_890,Millones De Btu Por 1000 Pies Cúbicos,M9
+unece_uom_code_891,Máquina Por Unidad,MA
+unece_uom_code_892,Mega Litro,MAL
+unece_uom_code_893,Megametro,MAM
+unece_uom_code_894,Megavatio,MAW
+unece_uom_code_895,Mil Equivalentes De Ladrillo Estándar,MBE
+unece_uom_code_896,Mil Pies De Tabla,MBF
+unece_uom_code_897,Milibar,MBR
+unece_uom_code_898,Microgramo,MC
+unece_uom_code_899,Milicurie,MCU
+unece_uom_code_900,Aire Seco Tonelada Métrica,MD
+unece_uom_code_901,Miligramo Por Pie Cuadrado Por Lado,MF
+unece_uom_code_902,Miligramo,MGM
+unece_uom_code_903,Megahercio,MGM
+unece_uom_code_904,Milla Cuadrada,MIK
+unece_uom_code_905,Mil,mil
+unece_uom_code_906,Minuto,MIN
+unece_uom_code_907,Millón,MIO
+unece_uom_code_908,Millones De Unidades Internacionales,MIU
+unece_uom_code_909,Miligramo Por Pulgada Cuadrada,MK
+unece_uom_code_910,Mil Millones,MLD
+unece_uom_code_911,Mililitro,MLT
+unece_uom_code_912,Milímetro Cuadrado,MMK
+unece_uom_code_913,Milímetro Cúbico,MMQ
+unece_uom_code_914,Milímetro,MMT
+unece_uom_code_915,Lun,mes
+unece_uom_code_916,Megapascal,MPA
+unece_uom_code_917,Mil Metros,MQ
+unece_uom_code_918,Metro Cúbico Por Hora,MQH
+unece_uom_code_919,Metro Cúbico Por Segundo,MQS
+unece_uom_code_920,Metro Por Segundo Al Cuadrado,MSK
+unece_uom_code_921,Estera,MT
+unece_uom_code_922,Metro Cuadrado,MTK
+unece_uom_code_923,Metro Cúbico,MTQ
+unece_uom_code_924,Metro,MTR
+unece_uom_code_925,Metro Por Segundo,MTS
+unece_uom_code_926,Numero De Mults,MV
+unece_uom_code_927,Megavolt – Ampere,MVA
+unece_uom_code_928,Megavatios Hora (1000 Kw.H),MWH
+unece_uom_code_929,Calorías De La Pluma,N1
+unece_uom_code_930,Número De Líneas,N2
+unece_uom_code_931,Punto De Impresión,N3
+unece_uom_code_932,Miligramo Por Kilogramo,NA
+unece_uom_code_933,Número De Artículos,NAR
+unece_uom_code_934,Barcaza,NB
+unece_uom_code_935,Número De Bobinas,NBB
+unece_uom_code_936,Coche,NC
+unece_uom_code_937,Número De Celdas,NCL
+unece_uom_code_938,Barril Neto,ND
+unece_uom_code_939,Litro Neto,NE
+unece_uom_code_940,Newton,NEW
+unece_uom_code_941,Mensaje,NF
+unece_uom_code_942,Galón Neto (Nosotros),NG
+unece_uom_code_943,Hora Del Mensaje,NH
+unece_uom_code_944,Galón Imperial Neto,NI
+unece_uom_code_945,Número De Unidades Internacionales,NIU
+unece_uom_code_946,Número De Pantallas,NJ
+unece_uom_code_947,Carga,NL
+unece_uom_code_948,Milla Nautica,MNI
+unece_uom_code_949,Número De Paquetes,NMP
+unece_uom_code_950,Entrenar,NN
+unece_uom_code_951,Número De Parcelas,NPL
+unece_uom_code_952,Numero De Pares,NPR
+unece_uom_code_953,Numero De Partes,TNP
+unece_uom_code_954,Nq,mho
+unece_uom_code_955,Micromho,NR
+unece_uom_code_956,Número De Rollos,NRL
+unece_uom_code_957,Tonelada Neta,NT
+unece_uom_code_958,Registro Neto De Toneladas,NTT
+unece_uom_code_959,Medidor De Newton,NU
+unece_uom_code_960,Vehículo,NV
+unece_uom_code_961,Parte Por Mil,NX
+unece_uom_code_962,Libra Por Aire Seco Tonelada Métrica,NY
+unece_uom_code_963,Panel,OA
+unece_uom_code_964,Ohm,ohm
+unece_uom_code_965,Onza Por Yarda Cuadrada,EN
+unece_uom_code_966,Onz,onza
+unece_uom_code_967,Dos Paquetes,OP
+unece_uom_code_968,Hora Extra,OT
+unece_uom_code_969,Onza Av,ONZ
+unece_uom_code_970,Onza Líquida (Us),OZA
+unece_uom_code_971,Onza Líquida (Reino Unido),OZI
+unece_uom_code_972,Pagina – Electronica,P0
+unece_uom_code_973,Por Ciento,P1
+unece_uom_code_974,Libra Por Pie,P2
+unece_uom_code_975,Paquete De Tres,P3
+unece_uom_code_976,Paquete De Cuatro,P4
+unece_uom_code_977,Paquete De Cinco,P5
+unece_uom_code_978,Paquete De Seis,P6
+unece_uom_code_979,Paquete De Siete,P7
+unece_uom_code_980,Paquete De Ocho,P8
+unece_uom_code_981,Paquete De Nueve,P9
+unece_uom_code_982,Paquete,PA
+unece_uom_code_983,Pascal,PAL
+unece_uom_code_984,Par De Pulgadas,PB
+unece_uom_code_985,Almohadilla,PD
+unece_uom_code_986,Equivalente En Libras,PE
+unece_uom_code_987,Palet (Ascensor),PF
+unece_uom_code_988,Plato,PG
+unece_uom_code_989,Galón De Prueba,PGL
+unece_uom_code_990,Pi,tono
+unece_uom_code_991,Paquete,PK
+unece_uom_code_992,Pl,cubo
+unece_uom_code_993,Porcentaje De Libra,PM
+unece_uom_code_994,Libra Neta,PN
+unece_uom_code_995,Libra Por Pulgada De Longitud,PO
+unece_uom_code_996,Página Por Pulgada,PQ
+unece_uom_code_997,Pr,par
+unece_uom_code_998,Fuerza De Libra Por Pulgada Cuadrada,PD
+unece_uom_code_999,Pinta,PT
+unece_uom_code_1000,Pinta Seca,PTD
+unece_uom_code_1001,Pinta (Reino Unido),PTI
+unece_uom_code_1002,Pinta Liquida (Us),PTL
+unece_uom_code_1003,Bandeja / Paquete De Bandeja,PU
+unece_uom_code_1004,Media Pinta (Us),PV
+unece_uom_code_1005,Libra Por Pulgada De Ancho,PW
+unece_uom_code_1006,Peck Dry (Us),PY
+unece_uom_code_1007,Peck Dry (Reino Unido),PZ
+unece_uom_code_1008,Comida,Q3
+unece_uom_code_1009,Página – Facsímil,QA
+unece_uom_code_1010,Cuarto (De Un Año),QAN
+unece_uom_code_1011,Página – Copia Impresa,QB
+unece_uom_code_1012,Cuarto De Docena,QD
+unece_uom_code_1013,Un Cuarto De Hora,QH
+unece_uom_code_1014,Cuarto De Kilogramo,QK
+unece_uom_code_1015,Mano De Papel,QR
+unece_uom_code_1016,Cuarto De Galón (Us),QT
+unece_uom_code_1017,Cuarto Seco (Ee. Uu.),QTD
+unece_uom_code_1018,Cuarto De Galón (Reino Unido),QTI
+unece_uom_code_1019,Cuarto Líquido (Us),QTL
+unece_uom_code_1020,Cuarto (Uk),QTR
+unece_uom_code_1021,R1,pica
+unece_uom_code_1022,Caloría,R4
+unece_uom_code_1023,Mil Metros Cúbicos,R9
+unece_uom_code_1024,Estante,RA
+unece_uom_code_1025,Barra,RD
+unece_uom_code_1026,Anillo,RG
+unece_uom_code_1027,Hora De Funcionamiento O De Funcionamiento,RH
+unece_uom_code_1028,Medida Métrica Rollo,RK
+unece_uom_code_1029,Carrete,RL
+unece_uom_code_1030,Resma,RM
+unece_uom_code_1031,Medida Métrica De Resma,RN
+unece_uom_code_1032,Rodar,RO
+unece_uom_code_1033,Libra Por Resma,RP
+unece_uom_code_1034,Revoluciones Por Minuto,RPM
+unece_uom_code_1035,Revoluciones Por Segundo,RPS
+unece_uom_code_1036,Reiniciar,RS
+unece_uom_code_1037,Ingreso Tonelada Milla,RT
+unece_uom_code_1038,Correr,RU
+unece_uom_code_1039,Pie Cuadrado Por Segundo,S3
+unece_uom_code_1040,Metro Cuadrado Por Segundo,S4
+unece_uom_code_1041,Sesenta Cuartos De Pulgada,S5
+unece_uom_code_1042,Sesión,S6
+unece_uom_code_1043,Unidad De Almacenamiento,S7
+unece_uom_code_1044,Unidad De Publicidad Estándar,S8
+unece_uom_code_1045,Sa,saco
+unece_uom_code_1046,Medio Año (6 Meses),SAN
+unece_uom_code_1047,Puntuación,OCS
+unece_uom_code_1048,Escrúpulo,SCR
+unece_uom_code_1049,Libra Solida,SD
+unece_uom_code_1050,Sección,SE
+unece_uom_code_1051,Segundo,SEC
+unece_uom_code_1052,Conjunto,SET
+unece_uom_code_1053,Segmento,SG
+unece_uom_code_1054,Tonelada De Envío,SHT
+unece_uom_code_1055,Siemens,SIE
+unece_uom_code_1056,Camión Cisterna Dividido,SK
+unece_uom_code_1057,Hoja De Deslizamiento,SL
+unece_uom_code_1058,Milla (Milla Estatutaria),SMI
+unece_uom_code_1059,Varilla Cuadrada,SN
+unece_uom_code_1060,Carrete,SO
+unece_uom_code_1061,Paquete De Estante,SP
+unece_uom_code_1062,Cuadrado,SQ
+unece_uom_code_1063,Sr,tira
+unece_uom_code_1064,Hoja Métrica Medida,SS
+unece_uom_code_1065,Corto Estándar (7200 Partidos),SST
+unece_uom_code_1066,St,hoja
+unece_uom_code_1067,Piedra (Reino Unido),ITS
+unece_uom_code_1068,Tonelada (Us) O Tonelada Corta (Uk / Us),STN
+unece_uom_code_1069,Patinar,SV
+unece_uom_code_1070,Madeja,SO
+unece_uom_code_1071,Envío,SX
+unece_uom_code_1072,Línea De Telecomunicaciones En Servicio.,T0
+unece_uom_code_1073,Mil Libras Brutas,T1
+unece_uom_code_1074,Mil Piezas,T3
+unece_uom_code_1075,Bolsa De Mil,T4
+unece_uom_code_1076,Caja De Mil,T5
+unece_uom_code_1077,Mil Galones (Us),T6
+unece_uom_code_1078,Mil Impresiones,T7
+unece_uom_code_1079,Mil Pulgadas Lineales,T8
+unece_uom_code_1080,Décimo Pie Cúbico,TA
+unece_uom_code_1081,Kiloampere Hora (Mil Amperios Hora),TAH
+unece_uom_code_1082,Camion,TC
+unece_uom_code_1083,Termia,TD
+unece_uom_code_1084,Totalizador,TE
+unece_uom_code_1085,Diez Metros Cuadrados,TF
+unece_uom_code_1086,Mil Pulgadas Cuadradas,TI
+unece_uom_code_1087,Mil Centímetros Cuadrados,TJ
+unece_uom_code_1088,"Tanque, Rectangular",TK
+unece_uom_code_1089,Mil Pies (Lineales),TL
+unece_uom_code_1090,Estaño,TN
+unece_uom_code_1091,Tonelada (Tonelada Métrica),TNE
+unece_uom_code_1092,Paquete De Diez,TP
+unece_uom_code_1093,Diez Pares,TPR
+unece_uom_code_1094,Mil Pies,TQ
+unece_uom_code_1095,Mil Metros Cúbicos Por Día,TQD
+unece_uom_code_1096,Diez Pies Cuadrados,TR
+unece_uom_code_1097,Trillón (Eur),TRL
+unece_uom_code_1098,Mil Pies Cuadrados,TS
+unece_uom_code_1099,Tonelada De Sustancia 90% Seca,TSD
+unece_uom_code_1100,Tonelada De Vapor Por Hora,TSH
+unece_uom_code_1101,Mil Metros Lineales,TT
+unece_uom_code_1102,Tu,tubo
+unece_uom_code_1103,Mil Kilogramos,TV
+unece_uom_code_1104,Mil Hojas,TW
+unece_uom_code_1105,"Tanque, Cilíndrico",TY
+unece_uom_code_1106,Tratamiento,U1
+unece_uom_code_1107,Tableta,U2
+unece_uom_code_1108,Ua,torr
+unece_uom_code_1109,Línea De Telecomunicaciones En Servicio Promedio.,UB
+unece_uom_code_1110,Puerto De Telecomunicaciones,UC
+unece_uom_code_1111,Décimo Minuto,UD
+unece_uom_code_1112,Décima Hora,UE
+unece_uom_code_1113,Uso Por Línea De Telecomunicación Promedio,UF
+unece_uom_code_1114,Diez Mil Yardas,UH
+unece_uom_code_1115,Millones De Unidades,UM
+unece_uom_code_1116,Voltio Amperio Por Kilogramo,VA
+unece_uom_code_1117,Frasco,VI
+unece_uom_code_1118,Voltio,VLT
+unece_uom_code_1119,Abultar,VQ
+unece_uom_code_1120,Visitar,VS
+unece_uom_code_1121,Kilo Mojado,W2
+unece_uom_code_1122,Dos Semanas,W4
+unece_uom_code_1123,Vatio Por Kilogramo,WA
+unece_uom_code_1124,Libra Mojada,WB
+unece_uom_code_1125,Cable,WCD
+unece_uom_code_1126,Tonelada Mojada,WE
+unece_uom_code_1127,Weber,WEB
+unece_uom_code_1128,Semana,WEE
+unece_uom_code_1129,Galon De Vino,WG
+unece_uom_code_1130,Rueda,WH
+unece_uom_code_1131,Vatios Hora,WHR
+unece_uom_code_1132,Peso Por Pulgada Cuadrada,WI
+unece_uom_code_1133,Mes De Trabajo,WM
+unece_uom_code_1134,Envolver,WR
+unece_uom_code_1135,Estándar,WSD
+unece_uom_code_1136,Vatio,WTT
+unece_uom_code_1137,Mililitro De Agua,WW
+unece_uom_code_1138,Cadena,X1
+unece_uom_code_1139,Yarda Cuadrada,YDK
+unece_uom_code_1140,Yarda Cúbica,YDQ
+unece_uom_code_1141,Cien Yardas Lineales,YL
+unece_uom_code_1142,Yarda,YRD
+unece_uom_code_1143,Diez Yardas,YT
+unece_uom_code_1144,Van De Elevación,Z1
+unece_uom_code_1145,Pecho,Z2
+unece_uom_code_1146,Barril,Z3
+unece_uom_code_1147,Z4,pipa
+unece_uom_code_1148,Arrastrar,Z5
+unece_uom_code_1149,Punto De Conferencia,Z6
+unece_uom_code_1150,Línea De Noticias De Ágata,Z8
+unece_uom_code_1151,Página,ZP
+unece_uom_code_1152,Mutuamente Definido,ZZ

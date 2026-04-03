@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <template
+        id="dian_soap_envelope"
+        name="Envoltura XML para peticiones SOAP hacia la DIAN"
+    >
+        <soap:Envelope
+            xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:wcf="http://wcf.dian.colombia"
+        >
+            <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+                <wsse:Security
+                    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                >
+                    <wsu:Timestamp t-att="{'wsu:Id': timestamp_id}">
+                        <wsu:Created t-out="created" />
+                        <wsu:Expires t-out="expires" />
+                    </wsu:Timestamp>
+                    <wsse:BinarySecurityToken
+                        EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+                        ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                    />
+                </wsse:Security>
+                <wsa:Action t-out="action" />
+                <wsa:To
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    t-att="{'wsu:Id': to_id}"
+                    t-out="to"
+                />
+            </soap:Header>
+            <soap:Body t-raw="body" />
+        </soap:Envelope>
+    </template>
+</odoo>

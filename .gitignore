@@ -53,15 +53,15 @@ coverage.xml
 # Translations
 *.mo
 
-# Pycharm
+# Editor
 .idea
+.vscode
+.claude
+.cursor
+.vs/
 
 # Eclipse
 .settings
-
-# Visual Studio cache/options directory
-.vs/
-.vscode
 
 # OSX Files
 .DS_Store

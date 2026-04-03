@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="1">
+    <record id="buyer_not_identified" model="res.partner">
+        <field name="name">Consumidor Final</field>
+        <field name="vat">222222222222</field>
+        <field name="country_id" ref="base.co" />
+        <field
+            name="l10n_latam_identification_type_id"
+            ref="l10n_co.national_citizen_id"
+        />
+        <field name="l10n_co_regimen_fiscal">49</field>
+        <field
+            name="l10n_co_responsibility_ids"
+            eval="[(4, ref('l10n_co_electronic_invoice.type_responsibility_R_99_PN'))]"
+        />
+    </record>
+</odoo>
