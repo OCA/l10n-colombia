@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+    Colombian DIAN electronic invoice PDF - Representación Gráfica
+    Extends the standard Odoo invoice report with DIAN-required elements.
+-->
+<odoo>
+    <!-- Override document title with DIAN denomination -->
+    <template
+        id="report_invoice_document_dian_title"
+        inherit_id="account.report_invoice_document"
+        priority="99"
+    >
+        <xpath expr="//t[@t-set='layout_document_title']" position="replace">
+            <t t-set="layout_document_title">
+                <t
+                    t-if="o.company_id.account_fiscal_country_id.code == 'CO'
+                         and o.l10n_latam_document_type_id"
+                >
+                    <span t-out="o._l10n_co_get_dian_document_name()" />
+                    <span t-if="o.name and o.name != '/'" t-field="o.name">FE1</span>
+                </t>
+                <t t-else="">
+                    <span t-if="not proforma" />
+                    <span t-else="">PROFORMA</span>
+                    <span
+                        t-if="o.move_type == 'out_invoice' and o.state == 'posted'"
+                    >Invoice</span>
+                    <span
+                        t-elif="o.move_type == 'out_invoice' and o.state == 'draft'"
+                    >Draft Invoice</span>
+                    <span
+                        t-elif="o.move_type == 'out_invoice' and o.state == 'cancel'"
+                    >Cancelled Invoice</span>
+                    <span
+                        t-elif="o.move_type == 'out_refund' and o.state == 'posted'"
+                    >Credit Note</span>
+                    <span
+                        t-elif="o.move_type == 'out_refund' and o.state == 'draft'"
+                    >Draft Credit Note</span>
+                    <span
+                        t-elif="o.move_type == 'out_refund' and o.state == 'cancel'"
+                    >Cancelled Credit Note</span>
+                    <span t-elif="o.move_type == 'in_refund'">Vendor Credit Note</span>
+                    <span t-elif="o.move_type == 'in_invoice'">Vendor Bill</span>
+                    <span
+                        t-if="o.name and o.name != '/'"
+                        t-field="o.name"
+                    >INV/2023/0001</span>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Extend company address in header with DIAN fiscal info -->
+    <template
+        id="report_layout_dian_company_info"
+        inherit_id="web.external_layout_standard"
+    >
+        <xpath expr="//ul[@name='company_address_list']" position="inside">
+            <t
+                t-if="company._name == 'res.company' and company.account_fiscal_country_id.code == 'CO'"
+            >
+                <li t-if="company.partner_id.l10n_co_regimen_fiscal">
+                    <strong>Régimen: </strong>
+                    <span
+                        t-out="dict(company.partner_id._fields['l10n_co_regimen_fiscal'].selection).get(company.partner_id.l10n_co_regimen_fiscal, '')"
+                    />
+                </li>
+                <li t-if="company.partner_id.l10n_co_responsibility_ids">
+                    <strong>Resp: </strong>
+                    <span
+                        t-out="', '.join(company.partner_id.l10n_co_responsibility_ids.mapped('name'))"
+                    />
+                </li>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Extend customer address blocks with DIAN fiscal info -->
+    <template
+        id="report_invoice_document_dian_fiscal_info"
+        inherit_id="account.report_invoice_document"
+    >
+        <!-- Case: different shipping address -->
+        <xpath
+            expr="//div[@id='partner_vat_address_not_same_as_shipping']"
+            position="after"
+        >
+            <t t-call="l10n_co_electronic_invoice_self.dian_partner_fiscal_info" />
+        </xpath>
+        <!-- Case: same as shipping -->
+        <xpath
+            expr="//div[@id='partner_vat_address_same_as_shipping']"
+            position="after"
+        >
+            <t t-call="l10n_co_electronic_invoice_self.dian_partner_fiscal_info" />
+        </xpath>
+        <!-- Case: no shipping -->
+        <xpath expr="//div[@id='partner_vat_no_shipping']" position="after">
+            <t t-call="l10n_co_electronic_invoice_self.dian_partner_fiscal_info" />
+        </xpath>
+    </template>
+
+    <!-- Reusable snippet: DIAN fiscal info for customer/partner -->
+    <template id="dian_partner_fiscal_info">
+        <t
+            t-if="o.company_id.account_fiscal_country_id.code == 'CO'
+                  and o.l10n_latam_document_type_id"
+        >
+            <t t-set="cp" t-value="o.partner_id.commercial_partner_id" />
+            <div
+                t-if="cp.country_id.code == 'CO' and cp.l10n_co_regimen_fiscal"
+                style="font-size: 0.9em;"
+            >
+                <strong>Régimen: </strong>
+                <span
+                    t-out="dict(cp._fields['l10n_co_regimen_fiscal'].selection).get(cp.l10n_co_regimen_fiscal, '')"
+                />
+            </div>
+            <div
+                t-if="cp.country_id.code == 'CO' and cp.l10n_co_responsibility_ids"
+                style="font-size: 0.9em;"
+            >
+                <strong>Resp: </strong>
+                <span t-out="', '.join(cp.l10n_co_responsibility_ids.mapped('name'))" />
+            </div>
+            <div t-if="cp.country_id.code != 'CO'" style="font-size: 0.9em;">
+                <strong>País: </strong>
+                <span t-out="cp.country_id.name" />
+            </div>
+        </t>
+    </template>
+
+    <!-- Add payment method info after informations block -->
+    <template
+        id="report_invoice_document_dian_payment"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath expr="//div[@id='informations']" position="after">
+            <t
+                t-if="o.company_id.account_fiscal_country_id.code == 'CO'
+                      and o.l10n_latam_document_type_id"
+            >
+                <div class="row mb-2" style="font-size: 0.85em;">
+                    <div class="col" t-if="o.l10n_co_payment_term">
+                        <strong>Forma de Pago:</strong>
+                        <span
+                            t-out="dict(o._fields['l10n_co_payment_term'].selection).get(o.l10n_co_payment_term, '')"
+                        />
+                    </div>
+                    <div class="col" t-if="o.l10n_co_payment_method_id">
+                        <strong>Medio de Pago:</strong>
+                        <span t-field="o.l10n_co_payment_method_id.name" />
+                    </div>
+                    <div class="col" t-if="o.l10n_co_dian_generation_date">
+                        <strong>Fecha/Hora Generación:</strong>
+                        <span
+                            t-field="o.l10n_co_dian_generation_date"
+                            t-options='{"widget": "datetime", "format": "yyyy-MM-dd HH:mm:ss"}'
+                        />
+                    </div>
+                </div>
+
+                <!-- NC/ND: Referencia a factura original -->
+                <t
+                    t-set="ref_invoice"
+                    t-value="o.reversed_entry_id or o.debit_origin_id"
+                />
+                <div t-if="ref_invoice" class="row mb-2" style="font-size: 0.85em;">
+                    <div class="col">
+                        <strong>Documento Referenciado:</strong>
+                        <span t-out="ref_invoice.name" />
+                        <t t-if="ref_invoice.l10n_co_edi_cufe_cude_ref">
+                            <br />
+                            <strong>CUFE/CUDE Ref:</strong>
+                            <span
+                                style="font-size: 0.75em; word-break: break-all;"
+                                t-out="ref_invoice.l10n_co_edi_cufe_cude_ref"
+                            />
+                        </t>
+                        <t t-if="ref_invoice.invoice_date">
+                            <br />
+                            <strong>Fecha Ref:</strong>
+                            <span t-field="ref_invoice.invoice_date" />
+                        </t>
+                    </div>
+                    <div class="col" t-if="o.l10n_co_discrepancy_response_code">
+                        <strong>Concepto de Corrección:</strong>
+                        <span
+                            t-out="dict(o._fields['l10n_co_discrepancy_response_code'].selection).get(o.l10n_co_discrepancy_response_code, '')"
+                        />
+                    </div>
+                </div>
+                <!-- NC/ND sin referencia: solo concepto -->
+                <div
+                    t-elif="(o.move_type in ('out_refund', 'in_refund') or o.debit_origin_id) and o.l10n_co_discrepancy_response_code"
+                    class="row mb-2"
+                    style="font-size: 0.85em;"
+                >
+                    <div class="col">
+                        <strong>Concepto de Corrección:</strong>
+                        <span
+                            t-out="dict(o._fields['l10n_co_discrepancy_response_code'].selection).get(o.l10n_co_discrepancy_response_code, '')"
+                        />
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Replace QR code section and add DIAN footer -->
+    <template
+        id="report_invoice_document_dian_footer"
+        inherit_id="account.report_invoice_document"
+        priority="99"
+    >
+        <xpath expr="//div[@name='qr_code_placeholder']" position="replace">
+            <div
+                name="qr_code_placeholder"
+                id="oe_structure_l10n_co_qr_placeholder"
+                class="oe_structure"
+            />
+        </xpath>
+        <xpath expr="//div[@id='qrcode']" position="replace">
+            <t
+                t-if="o.company_id.account_fiscal_country_id.code == 'CO'
+                      and o.l10n_latam_document_type_id
+                      and o.l10n_co_edi_cufe_cude_ref"
+            >
+                <!-- DIAN CUFE/CUDE + QR + Leyenda (50% width, left side) -->
+                <table
+                    class="mb-3 table table-sm table-borderless"
+                    style="font-size: 0.8em; width: 50%;"
+                    cellpadding="6"
+                >
+                    <colgroup>
+                        <col style="width: 110px;" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <!-- QR Code (fixed width cell) -->
+                        <td style="vertical-align: top; text-align: center;">
+                            <t
+                                t-set="qr_img"
+                                t-value="o._l10n_co_get_dian_qr_image()"
+                            />
+                            <img
+                                t-if="qr_img"
+                                t-att-src="'data:image/png;base64,' + qr_img"
+                                style="max-width: 100px;"
+                                alt="QR DIAN"
+                            />
+                        </td>
+                        <!-- CUFE + Info DIAN -->
+                        <td style="vertical-align: top; overflow-wrap: break-word;">
+                            <strong>CUFE/CUDE:</strong>
+                            <div
+                                style="font-size: 0.75em; word-break: break-all; font-family: monospace; margin-top: 2px;"
+                            >
+                                <span t-out="o.l10n_co_edi_cufe_cude_ref" />
+                            </div>
+                            <t
+                                t-set="res_message"
+                                t-value="o._l10n_co_get_resolution_message()"
+                            />
+                            <div
+                                t-if="res_message"
+                                class="mt-1"
+                                style="font-size: 0.9em;"
+                            >
+                                <span t-out="res_message" />
+                            </div>
+                            <div
+                                class="mt-1 text-muted fst-italic"
+                                style="font-size: 0.85em;"
+                            >
+                                <t
+                                t-set="doc_name"
+                                t-value="o._l10n_co_get_dian_document_name()"
+                            />
+                                Esta <t t-out="doc_name" /> se expide conforme
+                                al Decreto 2242 de 2015 y la Resolución DIAN
+                                No. 000042 de 2020.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+            <!-- Fallback: standard Odoo QR for non-CO invoices -->
+            <t t-else="">
+                <t
+                    t-set="show_qr"
+                    t-value="o.display_qr_code and o.amount_residual > 0"
+                />
+                <div
+                    id="qrcode"
+                    class="d-flex mb-3 avoid-page-break-inside"
+                    t-if="show_qr"
+                >
+                    <div class="qrcode me-3" id="qrcode_image">
+                        <t
+                            t-set="qr_code_url"
+                            t-value="o._generate_qr_code(silent_errors=True)"
+                        />
+                        <p t-if="qr_code_url" class="position-relative mb-0">
+                            <img t-att-src="qr_code_url" />
+                        </p>
+                    </div>
+                    <div
+                        class="d-inline text-muted lh-sm fst-italic"
+                        id="qrcode_info"
+                        t-if="qr_code_url"
+                    >
+                        <p>Scan this QR Code with<br />your banking application</p>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

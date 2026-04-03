@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_move_form_radian_button" model="ir.ui.view">
+        <field name="name">account.move.form.radian.button</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button
+                    name="action_open_radian_wizard"
+                    string="Evento RADIAN"
+                    type="object"
+                    class="btn-secondary"
+                    invisible="move_type != 'in_invoice' or state != 'posted' or country_code != 'CO' or not l10n_co_edi_cufe_cude_ref or l10n_co_is_support_document or l10n_co_radian_status in ('accepted', 'rejected')"
+                />
+                <button
+                    name="action_query_dian_status"
+                    string="Consultar Estado DIAN"
+                    type="object"
+                    class="btn-secondary"
+                    invisible="country_code != 'CO' or l10n_co_dian_status not in ('sent', 'error') or (not l10n_co_dian_zip_key and not l10n_co_edi_cufe_cude_ref)"
+                />
+            </xpath>
+            <xpath expr="//group[@id='header_left_group']" position="inside">
+                <field name="l10n_co_radian_events_sent" invisible="1" />
+                <field name="l10n_co_dian_zip_key" invisible="1" />
+                <field
+                    name="l10n_co_dian_status"
+                    widget="badge"
+                    invisible="country_code != 'CO' or not l10n_co_dian_status"
+                    decoration-success="l10n_co_dian_status == 'accepted'"
+                    decoration-warning="l10n_co_dian_status == 'sent'"
+                    decoration-danger="l10n_co_dian_status in ('rejected', 'error')"
+                    decoration-info="l10n_co_dian_status == 'not_sent'"
+                />
+                <field
+                    name="l10n_co_radian_status"
+                    readonly="1"
+                    invisible="country_code != 'CO' or not l10n_co_radian_status"
+                />
+            </xpath>
+            <xpath
+                expr="//page[@name='other_info']//group[@name='accounting_info_group']"
+                position="after"
+            >
+                <group
+                    string="Estado RADIAN"
+                    name="radian_info_group"
+                    invisible="move_type not in ('in_invoice') or country_code != 'CO' or not l10n_co_radian_status"
+                >
+                    <field
+                        name="l10n_co_radian_events_sent"
+                        readonly="1"
+                        invisible="move_type != 'in_invoice'"
+                    />
+                </group>
+            </xpath>
+            <xpath expr="//group[@id='header_left_group']" position="inside">
+                <field
+                    name="l10n_co_discrepancy_response_code"
+                    invisible="move_type not in ('out_refund', 'in_refund') and not debit_origin_id"
+                    readonly="state == 'posted'"
+                />
+                <field
+                    name="l10n_co_invoice_period_start"
+                    invisible="move_type not in ('out_refund', 'in_refund') or reversed_entry_id"
+                    readonly="state == 'posted'"
+                    required="move_type in ('out_refund', 'in_refund') and not reversed_entry_id and country_code == 'CO'"
+                />
+                <field
+                    name="l10n_co_invoice_period_end"
+                    invisible="move_type not in ('out_refund', 'in_refund') or reversed_entry_id"
+                    readonly="state == 'posted'"
+                    required="move_type in ('out_refund', 'in_refund') and not reversed_entry_id and country_code == 'CO'"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_invoice_tree_dian_status" model="ir.ui.view">
+        <field name="name">account.move.tree.dian.status</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='status_in_payment']" position="before">
+                <field
+                    name="l10n_co_dian_status"
+                    widget="badge"
+                    optional="show"
+                    invisible="country_code != 'CO'"
+                    decoration-success="l10n_co_dian_status == 'accepted'"
+                    decoration-warning="l10n_co_dian_status == 'sent'"
+                    decoration-danger="l10n_co_dian_status in ('rejected', 'error')"
+                    decoration-info="l10n_co_dian_status == 'not_sent'"
+                />
+                <field
+                    name="l10n_co_radian_status"
+                    widget="badge"
+                    optional="show"
+                    invisible="country_code != 'CO' or not l10n_co_radian_status"
+                    decoration-success="l10n_co_radian_status == 'accepted'"
+                    decoration-warning="l10n_co_radian_status in ('receipt_sent', 'goods_received')"
+                    decoration-danger="l10n_co_radian_status == 'rejected'"
+                    decoration-info="l10n_co_radian_status == 'pending'"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

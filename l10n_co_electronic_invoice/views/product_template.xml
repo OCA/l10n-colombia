@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2025 IKU Solutions - Yan Chirino <yan.chirino@iku.solutions>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="product_template_only_form_view_inherit" model="ir.ui.view">
+        <field name="name">product_template_only_form_view_inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position='after'>
+                <field name="product_brand" />
+                <field name="product_model" />
+                <field name="product_unspsc_id" />
+                <field name="l10n_co_edi_ref_nominal_tax" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
