@@ -21,6 +21,8 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[l10n_co_electronic_invoice](l10n_co_electronic_invoice/) | 19.0.1.0.0 |  | Campos y datos de pre-configuración para la Factura Electrónica en Colombia
+[l10n_co_electronic_invoice_self](l10n_co_electronic_invoice_self/) | 19.0.2.0.0 |  | Integración con la DIAN Colombia para la emisión de Facturas Electrónicas en modo de operación software propio
 [l10n_co_withholding_advance](l10n_co_withholding_advance/) | 19.0.1.0.0 |  | Soporte para retenciones anticipadas en la contabilidad colombiana.
 
 [//]: # (end addons)
