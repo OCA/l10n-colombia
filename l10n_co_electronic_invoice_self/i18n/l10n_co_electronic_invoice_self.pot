@@ -1,0 +1,981 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_electronic_invoice_self
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_send_bill_sync_response
+msgid "00"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+msgid "0000"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_credit_note_ubl_content
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_debit_note_ubl_content
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_invoice_ubl_content
+msgid "01"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+msgid "02"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_numbering_range_response
+msgid "100"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+msgid "800197268"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid ""
+"<br/>\n"
+"                            <strong>CUFE/CUDE Ref:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid ""
+"<br/>\n"
+"                            <strong>Fecha Ref:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_footer
+msgid "<strong>CUFE/CUDE:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid "<strong>Concepto de Corrección:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid "<strong>Documento Referenciado:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid "<strong>Fecha/Hora Generación:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid "<strong>Forma de Pago:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
+msgid "<strong>Medio de Pago:</strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_partner_fiscal_info
+msgid "<strong>País: </strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_partner_fiscal_info
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_layout_dian_company_info
+msgid "<strong>Resp: </strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_partner_fiscal_info
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_layout_dian_company_info
+msgid "<strong>Régimen: </strong>"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_account_move_send
+msgid "Account Move Send"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__l10n_co_dian_radian_event_wizard__event_type__033
+msgid "Aceptación expresa"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_move__l10n_co_radian_status__accepted
+msgid "Aceptada"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__l10n_co_dian_radian_event_wizard__event_type__030
+msgid "Acuse de recibo de Factura Electrónica de Venta"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_move__l10n_co_radian_status__receipt_sent
+msgid "Acuse enviado"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+msgid "ApplicationResponse"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_ir_attachment
+msgid "Attachment"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_move__l10n_co_radian_status__goods_received
+msgid "Bienes/Servicios recibidos"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.l10n_co_radian_event_wizard_form
+msgid "Cancelar"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Cancelled Credit Note"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Cancelled Invoice"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_software_technical_key_test
+msgid "Clave Técnica (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_software_technical_key
+msgid "Clave técnica (Producción)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid "Cliente (%(name)s): Falta configurar: %(fields)s."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_move_form_radian_button
+msgid "Consultar Estado DIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,help:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_resolution_type
+msgid "Corresponde al tipo de resolución de la factura"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,help:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_resolution_type_test
+msgid "Corresponde al tipo de resolución de la factura (Habilitación)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Credit Note"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,help:l10n_co_electronic_invoice_self.field_account_bank_statement_line__l10n_co_radian_events_sent
+#: model:ir.model.fields,help:l10n_co_electronic_invoice_self.field_account_move__l10n_co_radian_events_sent
+msgid ""
+"Códigos de eventos RADIAN enviados, separados por coma. Ej: 030,032,033"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "DIAN - Modo de Operación"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+msgid "DIAN 2.1"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type__documento_soporte
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type_test__documento_soporte
+msgid "DOCUMENTO SOPORTE"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/wizards/l10n_co_radian_event_wizard.py:0
+msgid "Debe enviar primero '%(prereq)s' antes de enviar '%(event)s'."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Debe seleccionar el Concepto de Corrección para notas crédito y notas "
+"débito."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_operation_mode__demo
+msgid "Demostración"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,help:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_operation_mode
+msgid ""
+"Demostración: genera XML y firma con certificado demo, no envía a DIAN. "
+"Habilitación: envía al ambiente de pruebas DIAN. Producción: envía al "
+"ambiente productivo DIAN."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Diario: Debe configurar al menos el prefijo y número de inicio en el rango "
+"de numeración."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Diario: Debe configurar el rango de numeración de la facturación "
+"electrónica."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_send_bill_sync_response
+msgid "Documento procesado en modo demostración"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+msgid "Documento validado por la DIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+msgid "Documentos adjuntos"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Draft Credit Note"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Draft Invoice"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_account_edi_format
+msgid "EDI format"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"El Concepto de Corrección debe ser de tipo Nota Crédito (NC) para este "
+"documento."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"El Concepto de Corrección debe ser de tipo Nota Débito (ND) para este "
+"documento."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/wizards/l10n_co_radian_event_wizard.py:0
+msgid "El evento '%(event)s' ya fue enviado para esta factura."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Empresa: Debe configurar los parámetros fiscales para la generación de "
+"documentos electrónicos."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.l10n_co_radian_event_wizard_form
+msgid "Enviar Evento"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.l10n_co_radian_event_wizard_form
+msgid "Enviar Evento RADIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid "Error al cargar el certificado o clave privada: %s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_journal.py:0
+msgid "Error al consultar rangos de numeración: %s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/wizards/l10n_co_radian_event_wizard.py:0
+msgid "Error al enviar evento RADIAN: %s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/utils/xml_sign.py:0
+msgid "Error al firmar el XML: %s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/utils/xml_sign.py:0
+msgid "Error al firmar el mensaje SOAP: %s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid ""
+"Error al generar XML UBL:\n"
+"%s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid "Error al generar XML firmado: %s"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_bank_statement_line__l10n_co_is_support_document
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_move__l10n_co_is_support_document
+msgid "Es Documento Soporte"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_footer
+msgid "Esta"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_bank_statement_line__l10n_co_radian_status
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_move__l10n_co_radian_status
+msgid "Estado RADIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_move_form_radian_button
+msgid "Evento RADIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_move_form_radian_button
+msgid "Eventos RADIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_bank_statement_line__l10n_co_radian_events_sent
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_move__l10n_co_radian_events_sent
+msgid "Eventos RADIAN enviados"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type__factura_d_e_/p_o_s_
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type_test__factura_d_e_/p_o_s_
+msgid "FACTURA D.E. / P.O.S."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type__factura_electrónica_de_venta
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type_test__factura_electrónica_de_venta
+msgid "FACTURA ELECTRÓNICA DE VENTA"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type__factura_por_talonario_o_de_papel
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_resolution_type_test__factura_por_talonario_o_de_papel
+msgid "FACTURA POR TALONARIO O DE PAPEL"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "FE1"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__move_id
+msgid "Factura"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Factura de exportación: El cliente no puede tener país Colombia. Seleccione "
+"un cliente con país extranjero."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Factura de exportación: La moneda del documento debe ser USD (Dólar "
+"estadounidense)."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Factura de exportación: Los productos deben tener Marca configurada: %(p)s."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Factura de exportación: Los productos deben tener Modelo configurado: %(p)s."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Facturación Electrónica"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_end_resolution_date_test
+msgid "Fecha Fin Resolución (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_start_resolution_date_test
+msgid "Fecha Inicio Resolución (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_end_resolution_date
+msgid "Fecha de Fin de Resolución"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_start_resolution_date
+msgid "Fecha de Inicio de Resolución"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_operation_mode__test
+msgid "Habilitación"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "INV/2023/0001"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_credit_note_ubl_content
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_debit_note_ubl_content
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_invoice_ubl_content
+msgid "IVA"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_software_identification
+msgid "Identificación"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,help:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_test_set_id
+msgid ""
+"Identificador del set de pruebas asignado por la DIAN al registrar el "
+"software. Requerido para SendTestSetAsync en ambiente de habilitación."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Impuestos sin tipo DIAN configurado: %(taxes)s. Configure el campo 'Tipo de "
+"impuesto DIAN' en cada impuesto."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Información del software"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Invoice"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"La DIAN rechazó o reportó un error en el documento. Revise el chatter para "
+"más detalles."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid "La empresa debe tener configurado un certificado válido."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/wizards/l10n_co_radian_event_wizard.py:0
+msgid ""
+"La factura debe tener un CUFE/CUDE asignado para enviar eventos RADIAN."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"La factura referenciada (%(name)s) no ha sido aceptada por la DIAN (estado: "
+"%(status)s)."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"La factura referenciada (%(name)s) no tiene CUFE/CUDE. Debe haber sido "
+"enviada y aceptada por la DIAN antes de generar una nota."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_message_test
+msgid "Mensaje Resolución (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_message
+msgid "Mensaje de Resolución"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Mensaje de Resolución en documentos impresos"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Modo Demostración"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_operation_mode
+msgid "Modo de Operación"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid ""
+"Modo demostración: se genera y firma el XML con un\n"
+"                            certificado de prueba incluido en el módulo. No se\n"
+"                            envía nada a la DIAN. Las respuestas se simulan\n"
+"                            localmente. Ideal para verificar el flujo completo\n"
+"                            antes de conectar al ambiente de habilitación."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"NC/ND sin referencia: Debe informar el Periodo de Inicio y Periodo de Fin "
+"del período de facturación que modifica."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid "No hay CUFE ni TrackId para consultar."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_move.py:0
+msgid "No hay CUFE ni ZipKey para consultar el estado del documento."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid ""
+"No hay ZipKey para consultar. El documento debe haberse enviado primero."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid "No hay clave privada asociada al certificado"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid ""
+"No se encontraron los archivos de certificado demo. Verifique que existan en"
+" static/ del módulo."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+#: code:addons/l10n_co_electronic_invoice_self/wizards/l10n_co_radian_event_wizard.py:0
+msgid "No se encontró URL DIAN para el modo '%s'"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/l10n_co_dian_self_service.py:0
+msgid "No se encontró certificado válido para firmar el XML"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/wizards/l10n_co_radian_event_wizard.py:0
+msgid ""
+"No se puede enviar '%(event)s' porque ya se envió '%(excluded)s' para esta "
+"factura."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/res_partner.py:0
+msgid "Nombre"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__note
+msgid "Nota"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_end_number
+msgid "Número de Fin"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_end_number_test
+msgid "Número de Fin (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_start_number
+msgid "Número de Inicio"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_start_number_test
+msgid "Número de Inicio (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/res_partner.py:0
+msgid "Número de identificación (NIT/CC/ID)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Obtener resolución DIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "PROFORMA"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/res_partner.py:0
+msgid "País"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_move__l10n_co_radian_status__pending
+msgid "Pendiente"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_software_pin
+msgid "Pin"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_prefix
+msgid "Prefijo"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_prefix_test
+msgid "Prefijo (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_journal__l10n_co_dian_operation_mode__production
+msgid "Producción"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid ""
+"Productos: Deben tener configurados los parámetros fiscales para la "
+"generación de documentos electrónicos (código UNSPSC o referencia interna, "
+"impuesto, unidad de medida)."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_footer
+msgid "QR DIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Rango de numeración (Habilitación)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.view_account_journal_form_inherit
+msgid "Rango de numeración (Producción)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__l10n_co_dian_radian_event_wizard__event_type__032
+msgid "Recibo del bien y/o prestación del servicio"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__account_move__l10n_co_radian_status__rejected
+msgid "Reclamada"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields.selection,name:l10n_co_electronic_invoice_self.selection__l10n_co_dian_radian_event_wizard__event_type__031
+msgid "Reclamo de la Factura Electrónica de Venta"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_resolution
+msgid "Resolución"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_electronic_document_resolution_test
+msgid "Resolución (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/res_partner.py:0
+msgid "Responsabilidades fiscales"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/res_partner.py:0
+msgid "Régimen fiscal"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_footer
+msgid "Scan this QR Code with<br/>your banking application"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_move.py:0
+msgid ""
+"Se ha alcanzado el número final autorizado (%(end)s) para la facturación "
+"electrónica en el diario %(journal)s. Por favor, configure un nuevo rango de"
+" numeración o contacte al administrador del sistema."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_l10n_co_dian_self_service
+msgid "Service to generate XML UBL and sign it for DIAN Colombia"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_test_set_id
+msgid "TestSetId (Hab.)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_l10n_co_dian_radian_event_wizard__event_type
+msgid "Tipo de Evento"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_resolution_type
+msgid "Tipo de Resolución"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model.fields,field_description:l10n_co_electronic_invoice_self.field_account_journal__l10n_co_dian_resolution_type_test
+msgid "Tipo de Resolución (Habilitación)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/account_edi_format.py:0
+msgid "Tipo de documento no soportado para facturación electrónica."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#. odoo-python
+#: code:addons/l10n_co_electronic_invoice_self/models/res_partner.py:0
+msgid "Tipo de identificación"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_credit_note_ubl_content
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_debit_note_ubl_content
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_invoice_ubl_content
+msgid "UBL 2.1"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+msgid "UTF-8"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
+msgid "Unidad Especial Dirección de Impuestos y Aduanas Nacionales"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Vendor Bill"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_title
+msgid "Vendor Credit Note"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model:ir.model,name:l10n_co_electronic_invoice_self.model_l10n_co_dian_radian_event_wizard
+msgid "Wizard para envío de eventos RADIAN a la DIAN"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_numbering_range_response
+msgid "[DEMO] Consulta simulada"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_send_bill_sync_response
+msgid "[DEMO] Documento validado (simulación)"
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_footer
+msgid ""
+"se expide conforme\n"
+"                                al Decreto 2242 de 2015 y la Resolución DIAN\n"
+"                                No. 000042 de 2020."
+msgstr ""
+
+#. module: l10n_co_electronic_invoice_self
+#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_attached_document
+msgid "text/xml"
+msgstr ""
