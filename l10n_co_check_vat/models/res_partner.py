@@ -5,6 +5,7 @@ import re
 
 from odoo import models
 
+
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
@@ -13,5 +14,5 @@ class ResPartner(models.Model):
         Validate Colombian VAT (NIT / Cédula).
         Accepts 3-11 digits (ignoring spaces, dots, hyphens, etc.).
         """
-        cleaned = re.sub(r'\D', '', vat or '')
+        cleaned = re.sub(r"\D", "", vat or "")
         return 3 <= len(cleaned) <= 11
