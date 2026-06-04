@@ -1,0 +1,3 @@
+This module extends the functionality of the VAT validation in Odoo to support Colombian tax identification numbers (NIT and Cédula).
+
+By default, Odoo does not include a validator for Colombian VAT numbers, which causes constraint errors when saving partners with a Colombian country set. This module adds a `check_vat_co` method that Odoo automatically picks up during its standard validation flow, accepting any numeric identifier between 3 and 11 digits.
