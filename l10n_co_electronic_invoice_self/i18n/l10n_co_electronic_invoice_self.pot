@@ -14,39 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_co_electronic_invoice_self
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_send_bill_sync_response
-msgid "00"
-msgstr ""
-
-#. module: l10n_co_electronic_invoice_self
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
-msgid "0000"
-msgstr ""
-
-#. module: l10n_co_electronic_invoice_self
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_credit_note_ubl_content
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_debit_note_ubl_content
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_invoice_ubl_content
-msgid "01"
-msgstr ""
-
-#. module: l10n_co_electronic_invoice_self
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
-msgid "02"
-msgstr ""
-
-#. module: l10n_co_electronic_invoice_self
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_numbering_range_response
-msgid "100"
-msgstr ""
-
-#. module: l10n_co_electronic_invoice_self
-#: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.dian_demo_application_response
-msgid "800197268"
-msgstr ""
-
-#. module: l10n_co_electronic_invoice_self
 #: model_terms:ir.ui.view,arch_db:l10n_co_electronic_invoice_self.report_invoice_document_dian_payment
 msgid ""
 "<br/>\n"
