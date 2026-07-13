@@ -120,7 +120,7 @@ def _find_tax_by_xmlid(env, company, xmlid):
 
 def _find_account_by_code(env, company, code):
     return env["account.account"].search(
-        [("company_id", "=", company.id), ("code", "=", code)],
+        [("code", "=", code)],
         limit=1,
     )
 
