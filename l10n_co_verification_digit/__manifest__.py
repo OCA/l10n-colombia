@@ -6,7 +6,7 @@
     "version": "18.0.1.0.0",
     "development_status": "Beta",
     "category": "Accounting",
-    "website": "https://github.com/OCA/l10n-colombia/tree/18.0/l10n_co_verification_digit",
+    "website": "https://github.com/OCA/l10n-colombia",
     "author": "Juan Arcos, Odoo Community Association (OCA)",
     "maintainers": ["juanparmer"],
     "license": "AGPL-3",
