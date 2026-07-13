@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "l10n_co_withholding"
+version = "18.0.1.0.0"
+description = "Retención en la fuente (RteFte), ReteIVA y ReteICA para Colombia"
+authors = [{ name = "OCA" }]
+license = "AGPL-3.0"
+requires-python = ">=3.10"
+dependencies = ["odoo-addon-account", "odoo-addon-l10n_co"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["l10n_co_withholding"]

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_co_reteica_rate_user,l10n.co.reteica.rate.user,model_l10n_co_reteica_rate,account.group_account_invoice,1,0,0,0
+access_l10n_co_reteica_rate_manager,l10n.co.reteica.rate.manager,model_l10n_co_reteica_rate,account.group_account_manager,1,1,1,1
