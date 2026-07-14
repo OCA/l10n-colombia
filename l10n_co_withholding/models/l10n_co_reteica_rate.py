@@ -50,7 +50,7 @@ class L10nCoReteicaRate(models.Model):
 
     @api.model
     def get_rate_for_partner(self, partner):
-        """Obtiene la tarifa de ReteICA aplicable para un partner según su ciudad y actividad económica."""
+        """Get ReteICA rate for partner based on city and activity."""
         if not partner or not partner.city_id:
             return self.browse()
 

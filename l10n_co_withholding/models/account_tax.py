@@ -34,7 +34,10 @@ class AccountTax(models.Model):
             ("otros", "Otros"),
         ],
         string="Concepto de Retención",
-        help="Concepto tributario de la retención en la fuente según el Estatuto Tributario colombiano.",
+        help=(
+            "Concepto tributario de la retención en la fuente"
+            " según el Estatuto Tributario colombiano."
+        ),
     )
     l10n_co_min_base_uvt = fields.Float(
         string="Base Mínima (UVT)",

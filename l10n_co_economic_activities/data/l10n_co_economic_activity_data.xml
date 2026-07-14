@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        
         <!-- SECCIÓN A: AGRICULTURA, GANADERÍA, CAZA, SILVICULTURA Y PESCA -->
         <record id="activity_0111" model="l10n.co.economic.activity">
             <field name="code">0111</field>

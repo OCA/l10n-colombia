@@ -56,10 +56,10 @@ def _setup_withholding_for_company(env, company):
     env = api.Environment(env.cr, SUPERUSER_ID, {})
     company = company.with_company(company)
     rte_fte_0 = _get_or_create_zero_tax(
-        env, company, "RteFte 0%", "l10n_co.tax_group_r_ren_0", "rte_fte"
+        env, company, "RteFte 0%", "l10n_co.tax_group_r_ren_0", "rte_fte",
     )
     rte_iva_0 = _get_or_create_zero_tax(
-        env, company, "RteIVA 0%", "l10n_co.tax_group_r_iva_075", "rte_iva"
+        env, company, "RteIVA 0%", "l10n_co.tax_group_r_iva_075", "rte_iva",
     )
     rte_ica_0 = env["account.tax"].search(
         [
@@ -92,7 +92,7 @@ def _get_or_create_zero_tax(env, company, name, tax_group_xmlid, wh_type):
     tax_group = env.ref(tax_group_xmlid, raise_if_not_found=False)
     if not tax_group:
         tax_group = env["account.tax.group"].search(
-            [("company_id", "in", (company.id, False))], limit=1
+            [("company_id", "in", (company.id, False))], limit=1,
         )
     return env["account.tax"].create(
         {
@@ -104,7 +104,7 @@ def _get_or_create_zero_tax(env, company, name, tax_group_xmlid, wh_type):
             "company_id": company.id,
             "l10n_co_withholding_type": wh_type,
             "price_include_override": "tax_excluded",
-        }
+        },
     )
 
 
@@ -143,7 +143,7 @@ def _add_account_mappings(env, company, fp):
                         "position_id": fp.id,
                         "account_src_id": src_account.id,
                         "account_dest_id": dest_account.id,
-                    }
+                    },
                 )
 
 
@@ -160,7 +160,7 @@ def _create_fiscal_position_simple(env, company, rte_fte_0):
             {
                 "name": "Régimen Simple (Sin ReteFte)",
                 "company_id": company.id,
-            }
+            },
         )
     for xmlid in RTE_FTE_TAXES:
         src_tax = _find_tax_by_xmlid(env, company, f"l10n_co.{xmlid}")
@@ -178,14 +178,12 @@ def _create_fiscal_position_simple(env, company, rte_fte_0):
                         "position_id": fp.id,
                         "tax_src_id": src_tax.id,
                         "tax_dest_id": rte_fte_0.id,
-                    }
+                    },
                 )
     _add_account_mappings(env, company, fp)
 
 
-def _create_fiscal_position_non_taxpayer(
-    env, company, rte_fte_0, rte_iva_0, rte_ica_0
-):
+def _create_fiscal_position_non_taxpayer(env, company, rte_fte_0, rte_iva_0, rte_ica_0):
     fp = env["account.fiscal.position"].search(
         [
             ("company_id", "=", company.id),
@@ -198,7 +196,7 @@ def _create_fiscal_position_non_taxpayer(
             {
                 "name": "No Contribuyente (Sin Retenciones)",
                 "company_id": company.id,
-            }
+            },
         )
     for xmlid in RTE_FTE_TAXES:
         src_tax = _find_tax_by_xmlid(env, company, f"l10n_co.{xmlid}")
@@ -216,7 +214,7 @@ def _create_fiscal_position_non_taxpayer(
                         "position_id": fp.id,
                         "tax_src_id": src_tax.id,
                         "tax_dest_id": rte_fte_0.id,
-                    }
+                    },
                 )
     for xmlid in RTE_IVA_TAXES:
         src_tax = _find_tax_by_xmlid(env, company, f"l10n_co.{xmlid}")
@@ -234,7 +232,7 @@ def _create_fiscal_position_non_taxpayer(
                         "position_id": fp.id,
                         "tax_src_id": src_tax.id,
                         "tax_dest_id": rte_iva_0.id,
-                    }
+                    },
                 )
     for xmlid in RTE_ICA_TAXES:
         src_tax = _find_tax_by_xmlid(env, company, f"l10n_co.{xmlid}")
@@ -252,6 +250,6 @@ def _create_fiscal_position_non_taxpayer(
                         "position_id": fp.id,
                         "tax_src_id": src_tax.id,
                         "tax_dest_id": rte_ica_0.id,
-                    }
+                    },
                 )
     _add_account_mappings(env, company, fp)

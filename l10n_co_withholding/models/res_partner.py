@@ -13,7 +13,10 @@ class ResPartner(models.Model):
             ("non_taxpayer", "No Contribuyente / No Responsable"),
         ],
         string="Régimen Tributario",
-        help="Régimen tributario del partner para determinar las retenciones aplicables.",
+        help=(
+            "Régimen tributario del partner para determinar"
+            " las retenciones aplicables."
+        ),
     )
     l10n_co_is_gran_contribuyente = fields.Boolean(
         string="Gran Contribuyente",
@@ -30,7 +33,10 @@ class ResPartner(models.Model):
     city_id = fields.Many2one(
         comodel_name="res.city",
         string="Ciudad",
-        help="Ciudad/municipio del partner. Se usa para determinar las tarifas de ReteICA aplicables.",
+        help=(
+            "Ciudad/municipio del partner. Se usa para determinar"
+            " las tarifas de ReteICA aplicables."
+        ),
     )
 
     @api.onchange("l10n_co_tax_regime")

@@ -45,7 +45,7 @@ class AccountMove(models.Model):
 
         if partner.l10n_co_tax_regime == "simple":
             applicable_taxes = applicable_taxes.filtered(
-                lambda t: t.l10n_co_withholding_type != "rte_fte"
+                lambda t: t.l10n_co_withholding_type != "rte_fte",
             )
         elif partner.l10n_co_tax_regime == "non_taxpayer":
             applicable_taxes = self.env["account.tax"]
@@ -55,19 +55,34 @@ class AccountMove(models.Model):
     def l10n_co_compute_withholding_taxes(self):
         self.ensure_one()
         if self.state != "draft":
-            raise UserError(_("Solo se pueden calcular retenciones en facturas en borrador."))
+            raise UserError(
+                _("Solo se pueden calcular retenciones en facturas en borrador."),
+            )
 
-        if self.move_type not in ("in_invoice", "in_refund", "out_invoice", "out_refund"):
+        if self.move_type not in (
+            "in_invoice",
+            "in_refund",
+            "out_invoice",
+            "out_refund",
+        ):
             raise UserError(_("Este documento no soporta retenciones."))
 
         applicable_taxes = self.l10n_co_get_applicable_withholding_taxes()
 
         if not applicable_taxes:
-            return {"applied": 0, "message": _("No hay retenciones aplicables.")}
+            return {
+                "applied": 0,
+                "message": _("No hay retenciones aplicables."),
+            }
 
-        product_lines = self.line_ids.filtered(lambda l: l.display_type == "product")
+        product_lines = self.line_ids.filtered(
+            lambda line: line.display_type == "product",
+        )
         if not product_lines:
-            return {"applied": 0, "message": _("No hay líneas de producto para aplicar retenciones.")}
+            return {
+                "applied": 0,
+                "message": _("No hay líneas de producto para aplicar retenciones."),
+            }
 
         applied_count = 0
         for line in product_lines:
@@ -75,21 +90,29 @@ class AccountMove(models.Model):
             for wh_tax in applicable_taxes:
                 if wh_tax not in current_taxes:
                     base_amount = line.price_subtotal
-                    
-                    # Para ReteICA, verificar si hay tarifa específica por ciudad/CIIU
+
+                    # Para ReteICA, verificar si hay tarifa específica
                     if wh_tax.l10n_co_withholding_type == "rte_ica":
-                        reteica_rate = self.env["l10n.co.reteica.rate"].get_rate_for_partner(self.partner_id)
+                        reteica_rate = self.env[
+                            "l10n.co.reteica.rate"
+                        ].get_rate_for_partner(self.partner_id)
                         if reteica_rate:
-                            # Verificar base mínima según el tipo de operación
                             uvt_value = self.company_id._l10n_co_get_uvt_value()
-                            if self.move_type in ("in_invoice", "out_invoice"):
-                                min_base = reteica_rate.min_base_services_uvt * uvt_value
+                            if self.move_type in (
+                                "in_invoice",
+                                "out_invoice",
+                            ):
+                                min_base = (
+                                    reteica_rate.min_base_services_uvt * uvt_value
+                                )
                             else:
-                                min_base = reteica_rate.min_base_purchases_uvt * uvt_value
-                            
+                                min_base = (
+                                    reteica_rate.min_base_purchases_uvt * uvt_value
+                                )
+
                             if abs(base_amount) < min_base:
                                 continue
-                    
+
                     # Verificar base mínima del impuesto
                     if self.l10n_co_check_min_base(wh_tax, base_amount):
                         line.tax_ids = current_taxes + wh_tax

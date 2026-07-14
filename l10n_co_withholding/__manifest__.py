@@ -3,7 +3,8 @@
 {
     "name": "Colombia - Retención en la Fuente",
     "summary": "Retención en la fuente (RteFte), ReteIVA y ReteICA para Colombia",
-    "author": "OCA",
+    "author": "Juan Arcos, Odoo Community Association (OCA)",
+    "maintainers": ["juanparmer"],
     "website": "https://github.com/OCA/l10n-colombia",
     "license": "AGPL-3",
     "category": "Accounting/Localizations",

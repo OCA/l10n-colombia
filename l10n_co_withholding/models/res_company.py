@@ -16,7 +16,10 @@ class ResCompany(models.Model):
         column1="company_id",
         column2="tax_id",
         string="ReteFte por Defecto",
-        domain="[('company_id', '=', id), ('l10n_co_withholding_type', '=', 'rte_fte')]",
+        domain=[
+            ("company_id", "=", id),
+            ("l10n_co_withholding_type", "=", "rte_fte"),
+        ],
         help="Impuestos de retención en la fuente que se aplican por defecto.",
     )
     l10n_co_default_rte_iva_tax_ids = fields.Many2many(
@@ -25,7 +28,10 @@ class ResCompany(models.Model):
         column1="company_id",
         column2="tax_id",
         string="ReteIVA por Defecto",
-        domain="[('company_id', '=', id), ('l10n_co_withholding_type', '=', 'rte_iva')]",
+        domain=[
+            ("company_id", "=", id),
+            ("l10n_co_withholding_type", "=", "rte_iva"),
+        ],
         help="Impuestos de retención de IVA que se aplican por defecto.",
     )
     l10n_co_default_rte_ica_tax_ids = fields.Many2many(
@@ -34,7 +40,10 @@ class ResCompany(models.Model):
         column1="company_id",
         column2="tax_id",
         string="ReteICA por Defecto",
-        domain="[('company_id', '=', id), ('l10n_co_withholding_type', '=', 'rte_ica')]",
+        domain=[
+            ("company_id", "=", id),
+            ("l10n_co_withholding_type", "=", "rte_ica"),
+        ],
         help="Impuestos de retención de ICA que se aplican por defecto.",
     )
 

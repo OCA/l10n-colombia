@@ -24,7 +24,7 @@ class TestVerificationDigit(TransactionCase):
     def test_compute_verification_digit_short_nit(self):
         """Test DV for a short NIT (less than 9 digits)."""
         result = compute_verification_digit("123456")
-        self.assertIn(result, range(0, 10))
+        self.assertIn(result, range(10))
 
     def test_partner_computes_dv(self):
         """Test that the partner computes the verification digit."""
@@ -34,7 +34,7 @@ class TestVerificationDigit(TransactionCase):
                 "name": "Test CO Partner",
                 "country_id": country_co.id,
                 "vat": "900123456",
-            }
+            },
         )
         self.assertEqual(partner.l10n_co_verification_digit, "8")
 
@@ -45,6 +45,6 @@ class TestVerificationDigit(TransactionCase):
                 "name": "Test US Partner",
                 "country_id": self.env.ref("base.us").id,
                 "vat": "123456789",
-            }
+            },
         )
         self.assertFalse(partner.l10n_co_verification_digit)
