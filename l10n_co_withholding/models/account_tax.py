@@ -53,3 +53,39 @@ class AccountTax(models.Model):
         string="Tipo de Retención",
         help="Tipo de retención: Renta, IVA o ICA.",
     )
+    l10n_co_withholding_counterpart = fields.Boolean(
+        string="Contrapartida de Retención",
+        help=(
+            "Impuesto positivo que compensa la retención en ventas para que el "
+            "total de la factura no se reduzca ante la DIAN."
+        ),
+    )
+    l10n_co_withholding_compensates_tax_id = fields.Many2one(
+        "account.tax",
+        string="Retención Compensada",
+        help="Impuesto de retención de venta que esta contrapartida compensa.",
+    )
+
+    def l10n_co_get_positive_counterpart(self):
+        self.ensure_one()
+        return self.env["account.tax"].search(
+            [
+                ("company_id", "=", self.company_id.id),
+                ("type_tax_use", "=", "sale"),
+                ("l10n_co_withholding_compensates_tax_id", "=", self.id),
+                ("l10n_co_withholding_counterpart", "=", True),
+            ],
+            limit=1,
+        )
+
+
+class AccountTaxGroup(models.Model):
+    _inherit = "account.tax.group"
+
+    l10n_co_withholding_counterpart = fields.Boolean(
+        string="Grupo de Contrapartida de Retención",
+        help=(
+            "Marca este grupo como el que agrupa las contrapartidas positivas "
+            "de las retenciones de venta."
+        ),
+    )

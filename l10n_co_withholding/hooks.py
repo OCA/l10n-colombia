@@ -37,12 +37,166 @@ ACCOUNT_MAPPINGS = {
     "co_puc_236800": "co_puc_135518",
 }
 
+# Cuenta de pasivo (tipo 23) equivalente a la de activo (tipo 13) usada
+# por las retenciones de venta del módulo base l10n_co.
+LIABILITY_ACCOUNT_CODE_MAP = {
+    "135515": "236500",  # Withheld at source
+    "135517": "236700",  # Sales tax withheld
+    "135518": "236800",  # Industry and commerce tax withheld
+}
+
+RETE_NAME_PATTERN = "rte"
+
+COUNTERPART_TAX_GROUP_NAME = "Retenciones (Contrapartida)"
+
 
 def _l10n_co_withholding_post_init(env):
     _set_default_uvt_value(env)
     companies = env["res.company"].search([("chart_template", "=", "co")])
     for company in companies:
         _setup_withholding_for_company(env, company)
+        _create_sales_withholding_counterparts(env, company)
+
+
+def _get_sales_withholding_taxes(env, company):
+    """Filtro de impuestos de retención de ventas.
+
+    Impuestos cuyo nombre contiene "Rte" y son de tipo venta, con monto
+    negativo (retención que reduce el total de la factura).
+    """
+    domain = [
+        ("company_id", "=", company.id),
+        ("type_tax_use", "=", "sale"),
+        ("amount", "<", 0),
+    ]
+    taxes = env["account.tax"].search(domain)
+    return taxes.filtered(
+        lambda t: RETE_NAME_PATTERN in (t.name or "").lower(),
+    )
+
+
+def _get_or_create_counterpart_tax_group(env, company):
+    tax_group = env["account.tax.group"].search(
+        [
+            ("name", "=", COUNTERPART_TAX_GROUP_NAME),
+            ("company_id", "=", company.id),
+        ],
+        limit=1,
+    )
+    if not tax_group:
+        tax_group = env["account.tax.group"].create(
+            {
+                "name": COUNTERPART_TAX_GROUP_NAME,
+                "company_id": company.id,
+                "country_id": company.country_id.id,
+                "l10n_co_withholding_counterpart": True,
+            },
+        )
+    return tax_group
+
+
+def _get_or_create_liability_account(env, company, asset_account):
+    """Cuenta de pasivo (tipo 23) con el mismo nombre que la de activo (tipo 13)."""
+    if not asset_account:
+        return False
+    asset_code = asset_account.with_company(company).code
+    code = LIABILITY_ACCOUNT_CODE_MAP.get(asset_code, "2365" + asset_code[-3:])
+    account_env = env["account.account"].with_company(company)
+    liability_account = account_env.search(
+        [("code_store", "=", code), ("company_ids", "in", [company.id])],
+        limit=1,
+    )
+    if not liability_account:
+        liability_account = account_env.create(
+            {
+                "code": code,
+                "name": asset_account.name,
+                "account_type": "liability_current",
+                "company_ids": [(6, 0, [company.id])],
+                "reconcile": True,
+            },
+        )
+    return liability_account
+
+
+def _get_or_create_positive_counterpart(
+    env, company, wh_tax, tax_group, liability_account
+):
+    counterpart = env["account.tax"].search(
+        [
+            ("company_id", "=", company.id),
+            ("type_tax_use", "=", "sale"),
+            ("l10n_co_withholding_compensates_tax_id", "=", wh_tax.id),
+            ("l10n_co_withholding_counterpart", "=", True),
+        ],
+        limit=1,
+    )
+    if counterpart:
+        if counterpart.tax_group_id != tax_group:
+            counterpart.tax_group_id = tax_group.id
+        if liability_account:
+            for line in counterpart.invoice_repartition_line_ids.filtered(
+                lambda r: r.repartition_type == "tax" and not r.account_id,
+            ):
+                line.account_id = liability_account.id
+            for line in counterpart.refund_repartition_line_ids.filtered(
+                lambda r: r.repartition_type == "tax" and not r.account_id,
+            ):
+                line.account_id = liability_account.id
+        return counterpart
+    vals = {
+        "name": f"Compensación {wh_tax.name}",
+        "amount": abs(wh_tax.amount),
+        "amount_type": "percent",
+        "type_tax_use": "sale",
+        "tax_group_id": tax_group.id,
+        "company_id": company.id,
+        "l10n_co_withholding_type": wh_tax.l10n_co_withholding_type,
+        "l10n_co_withholding_counterpart": True,
+        "l10n_co_withholding_compensates_tax_id": wh_tax.id,
+        "price_include_override": "tax_excluded",
+    }
+    if liability_account:
+        repartition_vals = [
+            (0, 0, {"repartition_type": "base", "factor_percent": 100.0}),
+            (
+                0,
+                0,
+                {
+                    "repartition_type": "tax",
+                    "factor_percent": 100.0,
+                    "account_id": liability_account.id,
+                },
+            ),
+        ]
+        vals["invoice_repartition_line_ids"] = list(repartition_vals)
+        vals["refund_repartition_line_ids"] = list(repartition_vals)
+    return env["account.tax"].create(vals)
+
+
+def _create_sales_withholding_counterparts(env, company):
+    """Crea la contrapartida positiva de cada retención de venta.
+
+    Al aplicar retención + contrapartida sobre una línea de venta, el neto
+    sobre el subtotal queda en 0 y el total de la factura coincide con el
+    total que se envía a la DIAN.
+    """
+    env = api.Environment(env.cr, SUPERUSER_ID, {})
+    company = company.with_company(company)
+    sales_wh_taxes = _get_sales_withholding_taxes(env, company)
+    if not sales_wh_taxes:
+        return
+    tax_group = _get_or_create_counterpart_tax_group(env, company)
+    for wh_tax in sales_wh_taxes:
+        asset_account = wh_tax.invoice_repartition_line_ids.filtered(
+            lambda r: r.repartition_type == "tax",
+        )[:1].account_id
+        liability_account = _get_or_create_liability_account(
+            env, company, asset_account,
+        )
+        _get_or_create_positive_counterpart(
+            env, company, wh_tax, tax_group, liability_account,
+        )
 
 
 def _set_default_uvt_value(env):
@@ -119,8 +273,8 @@ def _find_tax_by_xmlid(env, company, xmlid):
 
 
 def _find_account_by_code(env, company, code):
-    return env["account.account"].search(
-        [("code", "=", code)],
+    return env["account.account"].with_company(company).search(
+        [("code_store", "=", code), ("company_ids", "in", [company.id])],
         limit=1,
     )
 
