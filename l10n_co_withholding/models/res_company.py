@@ -17,7 +17,6 @@ class ResCompany(models.Model):
         column2="tax_id",
         string="ReteFte por Defecto",
         domain=[
-            ("company_id", "=", id),
             ("l10n_co_withholding_type", "=", "rte_fte"),
         ],
         help="Impuestos de retención en la fuente que se aplican por defecto.",
@@ -29,7 +28,6 @@ class ResCompany(models.Model):
         column2="tax_id",
         string="ReteIVA por Defecto",
         domain=[
-            ("company_id", "=", id),
             ("l10n_co_withholding_type", "=", "rte_iva"),
         ],
         help="Impuestos de retención de IVA que se aplican por defecto.",
@@ -41,7 +39,6 @@ class ResCompany(models.Model):
         column2="tax_id",
         string="ReteICA por Defecto",
         domain=[
-            ("company_id", "=", id),
             ("l10n_co_withholding_type", "=", "rte_ica"),
         ],
         help="Impuestos de retención de ICA que se aplican por defecto.",
