@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="account.view_account_tax_search" />
         <field name="arch" type="xml">
             <filter name="inactive" position="after">
-                <separator/>
+                <separator />
                 <filter
                     string="Contrapartidas de Retención"
                     name="counterpart"

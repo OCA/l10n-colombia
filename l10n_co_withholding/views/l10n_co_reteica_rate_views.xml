@@ -45,8 +45,16 @@
                 <field name="city_id" />
                 <field name="economic_activity_id" />
                 <group expand="0" string="Agrupar por">
-                    <filter string="Ciudad" name="group_city" context="{'group_by': 'city_id'}" />
-                    <filter string="Actividad Económica" name="group_activity" context="{'group_by': 'economic_activity_id'}" />
+                    <filter
+                        string="Ciudad"
+                        name="group_city"
+                        context="{'group_by': 'city_id'}"
+                    />
+                    <filter
+                        string="Actividad Económica"
+                        name="group_activity"
+                        context="{'group_by': 'economic_activity_id'}"
+                    />
                 </group>
             </search>
         </field>

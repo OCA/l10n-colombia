@@ -192,10 +192,16 @@ def _create_sales_withholding_counterparts(env, company):
             lambda r: r.repartition_type == "tax",
         )[:1].account_id
         liability_account = _get_or_create_liability_account(
-            env, company, asset_account,
+            env,
+            company,
+            asset_account,
         )
         _get_or_create_positive_counterpart(
-            env, company, wh_tax, tax_group, liability_account,
+            env,
+            company,
+            wh_tax,
+            tax_group,
+            liability_account,
         )
 
 
@@ -210,10 +216,18 @@ def _setup_withholding_for_company(env, company):
     env = api.Environment(env.cr, SUPERUSER_ID, {})
     company = company.with_company(company)
     rte_fte_0 = _get_or_create_zero_tax(
-        env, company, "RteFte 0%", "l10n_co.tax_group_r_ren_0", "rte_fte",
+        env,
+        company,
+        "RteFte 0%",
+        "l10n_co.tax_group_r_ren_0",
+        "rte_fte",
     )
     rte_iva_0 = _get_or_create_zero_tax(
-        env, company, "RteIVA 0%", "l10n_co.tax_group_r_iva_075", "rte_iva",
+        env,
+        company,
+        "RteIVA 0%",
+        "l10n_co.tax_group_r_iva_075",
+        "rte_iva",
     )
     rte_ica_0 = env["account.tax"].search(
         [
@@ -246,7 +260,8 @@ def _get_or_create_zero_tax(env, company, name, tax_group_xmlid, wh_type):
     tax_group = env.ref(tax_group_xmlid, raise_if_not_found=False)
     if not tax_group:
         tax_group = env["account.tax.group"].search(
-            [("company_id", "in", (company.id, False))], limit=1,
+            [("company_id", "in", (company.id, False))],
+            limit=1,
         )
     return env["account.tax"].create(
         {
@@ -273,9 +288,13 @@ def _find_tax_by_xmlid(env, company, xmlid):
 
 
 def _find_account_by_code(env, company, code):
-    return env["account.account"].with_company(company).search(
-        [("code_store", "=", code), ("company_ids", "in", [company.id])],
-        limit=1,
+    return (
+        env["account.account"]
+        .with_company(company)
+        .search(
+            [("code_store", "=", code), ("company_ids", "in", [company.id])],
+            limit=1,
+        )
     )
 
 
