@@ -1,0 +1,600 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_withholding
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__economic_activity_id
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_l10n_co_reteica_rate_search
+msgid "Actividad Económica"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_l10n_co_reteica_rate__economic_activity_id
+msgid "Actividad económica CIIU para la cual aplica esta tarifa de ReteICA."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:l10n.co.economic.activity,name:l10n_co_withholding.activity_0000
+msgid "Actividad general (otros CIIU)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__vehiculos
+msgid "Adquisición de Vehículos"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_company__l10n_co_is_retention_agent
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_partner__l10n_co_is_retention_agent
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_users__l10n_co_is_retention_agent
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "Agente de Retención"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_config_settings__l10n_co_is_retention_agent
+msgid "Agente de Retención Colombia"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_l10n_co_reteica_rate_search
+msgid "Agrupar por"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__arrendamiento_inmueble
+msgid "Arrendamiento Bienes Inmuebles"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__arrendamiento_mueble
+msgid "Arrendamiento Bienes Muebles"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_partner__l10n_co_is_authorretenedor
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_users__l10n_co_is_authorretenedor
+msgid "Autorretenedor"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:res.city,name:l10n_co_withholding.city_barranquilla
+msgid "Barranquilla"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_account_tax__l10n_co_min_base_uvt
+msgid "Base Mínima (UVT)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__min_base_purchases_uvt
+msgid "Base Mínima Compras (UVT)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__min_base_services_uvt
+msgid "Base Mínima Servicios (UVT)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_l10n_co_reteica_rate__min_base_purchases_uvt
+msgid "Base mínima en UVT para aplicar ReteICA en compras."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_l10n_co_reteica_rate__min_base_services_uvt
+msgid "Base mínima en UVT para aplicar ReteICA en servicios."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__agricola
+msgid "Bienes Agrícolas"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__inmuebles
+msgid "Bienes Raíces"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__inmuebles_comerciales
+msgid "Bienes Raíces Comerciales"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:res.city,name:l10n_co_withholding.city_bogota
+msgid "Bogotá"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_l10n_co_reteica_rate_search
+msgid "Buscar Tarifas ReteICA"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__cafe
+msgid "Café"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_move_form_l10n_co_withholding
+msgid "Calcular Retenciones"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:res.city,name:l10n_co_withholding.city_cali
+msgid "Cali"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__city_id
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_partner__city_id
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_users__city_id
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_l10n_co_reteica_rate_search
+msgid "Ciudad"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_partner__city_id
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_users__city_id
+msgid ""
+"Ciudad/municipio del partner. Se usa para determinar las tarifas de ReteICA "
+"aplicables."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_l10n_co_reteica_rate__city_id
+msgid "Ciudad/municipio para la cual aplica esta tarifa de ReteICA."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__combustibles
+msgid "Combustibles"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__comisiones
+msgid "Comisiones"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__compras
+msgid "Compras"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_account_tax__l10n_co_withholding_concept
+msgid "Concepto de Retención"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_account_tax__l10n_co_withholding_concept
+msgid ""
+"Concepto tributario de la retención en la fuente según el Estatuto "
+"Tributario colombiano."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.actions.act_window,help:l10n_co_withholding.action_l10n_co_reteica_rate
+msgid "Configurar tarifas de ReteICA por ciudad y actividad económica"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__it_consulting
+msgid "Consultoría TI"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_account_tax__l10n_co_withholding_counterpart
+msgid "Contrapartida de Retención"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_tax_search_l10n_co_withholding
+msgid "Contrapartidas de Retención"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_account_tax__l10n_co_min_base_uvt
+msgid ""
+"Cuantía mínima en UVT para que aplique esta retención. Si la base gravable "
+"es inferior, la retención no se aplica."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_co_withholding
+#. odoo-python
+#: code:addons/l10n_co_withholding/models/account_move.py:0
+msgid "Este documento no soporta retenciones."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_partner__l10n_co_is_gran_contribuyente
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_users__l10n_co_is_gran_contribuyente
+msgid "Gran Contribuyente"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_account_tax_group__l10n_co_withholding_counterpart
+msgid "Grupo de Contrapartida de Retención"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__honorarios
+msgid "Honorarios"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__hoteles_restaurantes
+msgid "Hoteles y Restaurantes"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_account_tax__l10n_co_withholding_compensates_tax_id
+msgid "Impuesto de retención de venta que esta contrapartida compensa."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_account_tax__l10n_co_withholding_counterpart
+msgid ""
+"Impuesto positivo que compensa la retención en ventas para que el total de "
+"la factura no se reduzca ante la DIAN."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_company__l10n_co_default_rte_ica_tax_ids
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_config_settings__l10n_co_default_rte_ica_tax_ids
+msgid "Impuestos de retención de ICA que se aplican por defecto."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_company__l10n_co_default_rte_iva_tax_ids
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_config_settings__l10n_co_default_rte_iva_tax_ids
+msgid "Impuestos de retención de IVA que se aplican por defecto."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_company__l10n_co_default_rte_fte_tax_ids
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_config_settings__l10n_co_default_rte_fte_tax_ids
+msgid "Impuestos de retención en la fuente que se aplican por defecto."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "Impuestos de retención que se aplican por defecto en facturas"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_partner__l10n_co_is_retention_agent
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_users__l10n_co_is_retention_agent
+msgid "Indica si el partner actúa como agente de retención."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_partner__l10n_co_is_authorretenedor
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_users__l10n_co_is_authorretenedor
+msgid "Indica si el partner es autorretenedor de renta."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_partner__l10n_co_is_gran_contribuyente
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_users__l10n_co_is_gran_contribuyente
+msgid "Indica si el partner está calificado como gran contribuyente."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "Indica si la empresa actúa como agente de retención en Colombia"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_company__l10n_co_is_retention_agent
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_config_settings__l10n_co_is_retention_agent
+msgid "Indica si la empresa actúa como agente de retención."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.actions.act_window,help:l10n_co_withholding.action_l10n_co_reteica_rate
+msgid ""
+"Las tarifas de ReteICA varían según el municipio y la actividad\n"
+"                económica del proveedor. Configure aquí las tarifas\n"
+"                aplicables para cada ciudad."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__software
+msgid "Licencias de Software"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_account_tax_group__l10n_co_withholding_counterpart
+msgid ""
+"Marca este grupo como el que agrupa las contrapartidas positivas de las "
+"retenciones de venta."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:res.city,name:l10n_co_withholding.city_medellin
+msgid "Medellín"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_tax_search_l10n_co_withholding
+msgid "Mostrar solo los impuestos contrapartida de retenciones de venta"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__res_partner__l10n_co_tax_regime__non_taxpayer
+msgid "No Contribuyente / No Responsable"
+msgstr ""
+
+#. module: l10n_co_withholding
+#. odoo-python
+#: code:addons/l10n_co_withholding/models/account_move.py:0
+msgid "No hay líneas de producto para aplicar retenciones."
+msgstr ""
+
+#. module: l10n_co_withholding
+#. odoo-python
+#: code:addons/l10n_co_withholding/models/account_move.py:0
+msgid "No hay retenciones aplicables."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__obras_inmuebles
+msgid "Obras en Inmuebles"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__otros
+msgid "Otros"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__pagos_exterior
+msgid "Pagos al Exterior"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_l10n_co_reteica_rate__rate
+msgid "Porcentaje de retención de ReteICA."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__rendimientos_financieros
+msgid "Rendimientos Financieros"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "ReteFte"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_type__rte_fte
+msgid "ReteFte (Renta)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_company__l10n_co_default_rte_fte_tax_ids
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_config_settings__l10n_co_default_rte_fte_tax_ids
+msgid "ReteFte por Defecto"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_type__rte_ica
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "ReteICA"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_company__l10n_co_default_rte_ica_tax_ids
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_config_settings__l10n_co_default_rte_ica_tax_ids
+msgid "ReteICA por Defecto"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_type__rte_iva
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "ReteIVA"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_company__l10n_co_default_rte_iva_tax_ids
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_config_settings__l10n_co_default_rte_iva_tax_ids
+msgid "ReteIVA por Defecto"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_partner_form_l10n_co_withholding
+msgid "Retenciones Colombia"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.res_config_settings_view_form_l10n_co_withholding
+msgid "Retenciones por Defecto"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_account_tax__l10n_co_withholding_compensates_tax_id
+msgid "Retención Compensada"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__res_partner__l10n_co_tax_regime__ordinary
+msgid "Régimen Ordinario"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__res_partner__l10n_co_tax_regime__simple
+msgid "Régimen Simple"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_partner__l10n_co_tax_regime
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_res_users__l10n_co_tax_regime
+msgid "Régimen Tributario"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_partner__l10n_co_tax_regime
+#: model:ir.model.fields,help:l10n_co_withholding.field_res_users__l10n_co_tax_regime
+msgid ""
+"Régimen tributario del partner para determinar las retenciones aplicables."
+msgstr ""
+
+#. module: l10n_co_withholding
+#. odoo-python
+#: code:addons/l10n_co_withholding/models/account_move.py:0
+msgid "Se aplicaron %d retenciones."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__servicios
+msgid "Servicios"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__temporal
+msgid "Servicios Temporales (AIU)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__salud
+msgid "Servicios de Salud"
+msgstr ""
+
+#. module: l10n_co_withholding
+#. odoo-python
+#: code:addons/l10n_co_withholding/models/account_move.py:0
+msgid "Solo se pueden calcular retenciones en facturas en borrador."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_l10n_co_reteica_rate__rate
+msgid "Tarifa (%)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_l10n_co_reteica_rate_form
+msgid "Tarifa ReteICA"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_l10n_co_reteica_rate
+msgid "Tarifa ReteICA por Ciudad y Actividad Económica"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.actions.act_window,name:l10n_co_withholding.action_l10n_co_reteica_rate
+#: model:ir.ui.menu,name:l10n_co_withholding.menu_l10n_co_reteica_rate
+#: model_terms:ir.ui.view,arch_db:l10n_co_withholding.view_l10n_co_reteica_rate_tree
+msgid "Tarifas ReteICA"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_account_tax
+msgid "Tax"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model,name:l10n_co_withholding.model_account_tax_group
+msgid "Tax Group"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,field_description:l10n_co_withholding.field_account_tax__l10n_co_withholding_type
+msgid "Tipo de Retención"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields,help:l10n_co_withholding.field_account_tax__l10n_co_withholding_type
+msgid "Tipo de retención: Renta, IVA o ICA."
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__transporte_carga
+msgid "Transporte de Carga"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__transporte_pasajeros
+msgid "Transporte de Pasajeros"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.fields.selection,name:l10n_co_withholding.selection__account_tax__l10n_co_withholding_concept__vigilancia
+msgid "Vigilancia y Aseo (AIU)"
+msgstr ""
+
+#. module: l10n_co_withholding
+#: model:ir.model.constraint,message:l10n_co_withholding.constraint_l10n_co_reteica_rate_unique_city_activity
+msgid "Ya existe una tarifa para esta ciudad y actividad económica."
+msgstr ""
