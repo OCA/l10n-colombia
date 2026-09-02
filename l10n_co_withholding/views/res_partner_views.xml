@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_l10n_co_withholding" model="ir.ui.view">
+        <field name="name">res.partner.form.l10n_co_withholding</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='accounting']//group[@name='accounting_entries']"
+                position="after"
+            >
+                <group string="Retenciones Colombia" name="l10n_co_withholding">
+                    <field name="l10n_co_tax_regime" />
+                    <field name="city_id" />
+                    <field name="l10n_co_is_gran_contribuyente" />
+                    <field name="l10n_co_is_authorretenedor" />
+                    <field name="l10n_co_is_retention_agent" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_l10n_co_reteica_rate_tree" model="ir.ui.view">
+        <field name="name">l10n.co.reteica.rate.tree</field>
+        <field name="model">l10n.co.reteica.rate</field>
+        <field name="arch" type="xml">
+            <list string="Tarifas ReteICA">
+                <field name="city_id" />
+                <field name="economic_activity_id" />
+                <field name="rate" />
+                <field name="min_base_services_uvt" />
+                <field name="min_base_purchases_uvt" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_l10n_co_reteica_rate_form" model="ir.ui.view">
+        <field name="name">l10n.co.reteica.rate.form</field>
+        <field name="model">l10n.co.reteica.rate</field>
+        <field name="arch" type="xml">
+            <form string="Tarifa ReteICA">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="city_id" />
+                            <field name="economic_activity_id" />
+                            <field name="rate" />
+                        </group>
+                        <group>
+                            <field name="min_base_services_uvt" />
+                            <field name="min_base_purchases_uvt" />
+                            <field name="active" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_l10n_co_reteica_rate_search" model="ir.ui.view">
+        <field name="name">l10n.co.reteica.rate.search</field>
+        <field name="model">l10n.co.reteica.rate</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Tarifas ReteICA">
+                <field name="city_id" />
+                <field name="economic_activity_id" />
+                <group expand="0" string="Agrupar por">
+                    <filter
+                        string="Ciudad"
+                        name="group_city"
+                        context="{'group_by': 'city_id'}"
+                    />
+                    <filter
+                        string="Actividad Económica"
+                        name="group_activity"
+                        context="{'group_by': 'economic_activity_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_l10n_co_reteica_rate" model="ir.actions.act_window">
+        <field name="name">Tarifas ReteICA</field>
+        <field name="res_model">l10n.co.reteica.rate</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configurar tarifas de ReteICA por ciudad y actividad económica
+            </p>
+            <p>
+                Las tarifas de ReteICA varían según el municipio y la actividad
+                económica del proveedor. Configure aquí las tarifas
+                aplicables para cada ciudad.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_l10n_co_reteica_rate"
+        name="Tarifas ReteICA"
+        parent="account.account_account_menu"
+        action="action_l10n_co_reteica_rate"
+        sequence="100"
+    />
+</odoo>

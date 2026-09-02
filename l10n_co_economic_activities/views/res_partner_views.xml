@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Extend Partner Form View -->
+    <record id="view_partner_form_l10n_co_economic_activities" model="ir.ui.view">
+        <field name="name">res.partner.form.l10n.co.economic.activities</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='accounting']" position="inside">
+                <group
+                    string="Actividades Económicas Colombia"
+                    name="l10n_co_economic_activities"
+                >
+                    <group>
+                        <field
+                            name="l10n_co_economic_activity_id"
+                            options="{'no_create': True, 'no_open': True}"
+                        />
+                        <field
+                            name="l10n_co_secondary_activity_id"
+                            options="{'no_create': True, 'no_open': True}"
+                        />
+                        <field
+                            name="l10n_co_other_activity_ids"
+                            widget="many2many_tags"
+                            options="{'no_create': True}"
+                        />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

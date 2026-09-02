@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_tax_search_l10n_co_withholding" model="ir.ui.view">
+        <field name="name">account.tax.search.l10n_co_withholding</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_account_tax_search" />
+        <field name="arch" type="xml">
+            <filter name="inactive" position="after">
+                <separator />
+                <filter
+                    string="Contrapartidas de Retención"
+                    name="counterpart"
+                    domain="[('l10n_co_withholding_counterpart', '=', True)]"
+                    help="Mostrar solo los impuestos contrapartida de retenciones de venta"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_tax_form_l10n_co_withholding" model="ir.ui.view">
+        <field name="name">account.tax.form.l10n_co_withholding</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="l10n_co_withholding_type" invisible="amount >= 0" />
+                <field name="l10n_co_withholding_concept" invisible="amount >= 0" />
+                <field name="l10n_co_min_base_uvt" invisible="amount >= 0" />
+                <field name="l10n_co_withholding_counterpart" />
+                <field
+                    name="l10n_co_withholding_compensates_tax_id"
+                    invisible="not l10n_co_withholding_counterpart"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_tax_group_form_l10n_co_withholding" model="ir.ui.view">
+        <field name="name">account.tax.group.form.l10n_co_withholding</field>
+        <field name="model">account.tax.group</field>
+        <field name="inherit_id" ref="account.view_tax_group_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="l10n_co_withholding_counterpart" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

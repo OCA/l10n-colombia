@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_l10n_co_economic_activity_tree" model="ir.ui.view">
+        <field name="name">l10n.co.economic.activity.tree</field>
+        <field name="model">l10n.co.economic.activity</field>
+        <field name="arch" type="xml">
+            <list string="Actividades Económicas">
+                <field name="code" />
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_l10n_co_economic_activity_form" model="ir.ui.view">
+        <field name="name">l10n.co.economic.activity.form</field>
+        <field name="model">l10n.co.economic.activity</field>
+        <field name="arch" type="xml">
+            <form string="Actividad Económica">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="code" />
+                        <h1>
+                            <field name="code" placeholder="Ej: 6201" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="active" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_l10n_co_economic_activity_search" model="ir.ui.view">
+        <field name="name">l10n.co.economic.activity.search</field>
+        <field name="model">l10n.co.economic.activity</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Actividad Económica">
+                <field
+                    name="code"
+                    string="Código"
+                    filter_domain="[('code','ilike',self)]"
+                />
+                <field
+                    name="name"
+                    string="Descripción"
+                    filter_domain="[('name','ilike',self)]"
+                />
+                <field
+                    name="complete_name"
+                    string="Nombre Completo"
+                    filter_domain="[('complete_name','ilike',self)]"
+                />
+                <separator />
+                <filter
+                    string="Archivadas"
+                    name="inactive"
+                    domain="[('active','=',False)]"
+                />
+                <group expand="0" string="Agrupar por">
+                    <filter
+                        string="Código"
+                        name="group_by_code"
+                        context="{'group_by':'code'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_l10n_co_economic_activity" model="ir.actions.act_window">
+        <field name="name">Actividades Económicas</field>
+        <field name="res_model">l10n.co.economic.activity</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_l10n_co_economic_activity_search" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Cree la primera actividad económica
+            </p>
+            <p>
+                Las actividades económicas CIIU son utilizadas para la facturación electrónica
+                y para determinar las tarifas de retención en Colombia.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem
+        id="menu_l10n_co_economic_activity"
+        name="Actividades Económicas"
+        parent="contacts.menu_contacts"
+        action="action_l10n_co_economic_activity"
+        sequence="20"
+    />
+</odoo>

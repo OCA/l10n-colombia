@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- Actividad económica general (0000) -->
+    <record id="activity_0000" model="l10n.co.economic.activity">
+        <field name="code">0000</field>
+        <field name="name">Actividad general (otros CIIU)</field>
+    </record>
+
+    <!-- Ciudades principales de Colombia -->
+    <record id="city_bogota" model="res.city">
+        <field name="name">Bogotá</field>
+        <field name="country_id" ref="base.co" />
+        <field name="state_id" ref="base.state_co_03" />
+    </record>
+
+    <record id="city_medellin" model="res.city">
+        <field name="name">Medellín</field>
+        <field name="country_id" ref="base.co" />
+        <field name="state_id" ref="base.state_co_01" />
+    </record>
+
+    <record id="city_cali" model="res.city">
+        <field name="name">Cali</field>
+        <field name="country_id" ref="base.co" />
+        <field name="state_id" ref="base.state_co_24" />
+    </record>
+
+    <record id="city_barranquilla" model="res.city">
+        <field name="name">Barranquilla</field>
+        <field name="country_id" ref="base.co" />
+        <field name="state_id" ref="base.state_co_02" />
+    </record>
+
+    <!-- Tarifas ReteICA para Bogotá -->
+    <record id="reteica_bogota_6201" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_bogota" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6201"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_bogota_6202" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_bogota" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6202"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_bogota_6209" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_bogota" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6209"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_bogota_6920" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_bogota" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6920"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_bogota_7010" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_bogota" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_7010"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_bogota_general" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_bogota" />
+        <field name="economic_activity_id" ref="activity_0000" />
+        <field name="rate">1.104</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <!-- Tarifas ReteICA para Medellín -->
+    <record id="reteica_medellin_6201" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_medellin" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6201"
+        />
+        <field name="rate">0.4</field>
+        <field name="min_base_services_uvt">15.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_medellin_6202" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_medellin" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6202"
+        />
+        <field name="rate">0.4</field>
+        <field name="min_base_services_uvt">15.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_medellin_6209" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_medellin" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6209"
+        />
+        <field name="rate">0.4</field>
+        <field name="min_base_services_uvt">15.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_medellin_6920" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_medellin" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6920"
+        />
+        <field name="rate">0.7</field>
+        <field name="min_base_services_uvt">15.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_medellin_7010" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_medellin" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_7010"
+        />
+        <field name="rate">0.7</field>
+        <field name="min_base_services_uvt">15.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_medellin_general" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_medellin" />
+        <field name="economic_activity_id" ref="activity_0000" />
+        <field name="rate">1.0</field>
+        <field name="min_base_services_uvt">15.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <!-- Tarifas ReteICA para Cali -->
+    <record id="reteica_cali_6201" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_cali" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6201"
+        />
+        <field name="rate">0.5</field>
+        <field name="min_base_services_uvt">3.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_cali_6202" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_cali" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6202"
+        />
+        <field name="rate">0.5</field>
+        <field name="min_base_services_uvt">3.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_cali_6209" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_cali" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6209"
+        />
+        <field name="rate">0.5</field>
+        <field name="min_base_services_uvt">3.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <record id="reteica_cali_general" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_cali" />
+        <field name="economic_activity_id" ref="activity_0000" />
+        <field name="rate">0.9</field>
+        <field name="min_base_services_uvt">3.0</field>
+        <field name="min_base_purchases_uvt">15.0</field>
+    </record>
+
+    <!-- Tarifas ReteICA para Barranquilla -->
+    <record id="reteica_barranquilla_6201" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_barranquilla" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6201"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_barranquilla_6202" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_barranquilla" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6202"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_barranquilla_6209" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_barranquilla" />
+        <field
+            name="economic_activity_id"
+            ref="l10n_co_economic_activities.activity_6209"
+        />
+        <field name="rate">0.69</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+
+    <record id="reteica_barranquilla_general" model="l10n.co.reteica.rate">
+        <field name="city_id" ref="city_barranquilla" />
+        <field name="economic_activity_id" ref="activity_0000" />
+        <field name="rate">1.104</field>
+        <field name="min_base_services_uvt">4.0</field>
+        <field name="min_base_purchases_uvt">27.0</field>
+    </record>
+</odoo>

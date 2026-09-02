@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_l10n_co_withholding" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.l10n_co_withholding</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//block[@name='default_taxes_setting_container']"
+                position="after"
+            >
+                <block title="Retenciones Colombia" name="l10n_co_withholding_settings">
+                    <setting
+                        id="l10n_co_retention_agent"
+                        string="Agente de Retención"
+                        company_dependent="1"
+                        help="Indica si la empresa actúa como agente de retención en Colombia"
+                    >
+                        <field name="l10n_co_is_retention_agent" />
+                    </setting>
+                    <setting
+                        id="l10n_co_default_withholding_taxes"
+                        string="Retenciones por Defecto"
+                        company_dependent="1"
+                        help="Impuestos de retención que se aplican por defecto en facturas"
+                        invisible="not l10n_co_is_retention_agent"
+                    >
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label
+                                    string="ReteFte"
+                                    for="l10n_co_default_rte_fte_tax_ids"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    name="l10n_co_default_rte_fte_tax_ids"
+                                    widget="many2many_tags"
+                                    domain="[('company_id', '=', company_id), ('l10n_co_withholding_type', '=', 'rte_fte')]"
+                                />
+                            </div>
+                            <div class="row mt8">
+                                <label
+                                    string="ReteIVA"
+                                    for="l10n_co_default_rte_iva_tax_ids"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    name="l10n_co_default_rte_iva_tax_ids"
+                                    widget="many2many_tags"
+                                    domain="[('company_id', '=', company_id), ('l10n_co_withholding_type', '=', 'rte_iva')]"
+                                />
+                            </div>
+                            <div class="row mt8">
+                                <label
+                                    string="ReteICA"
+                                    for="l10n_co_default_rte_ica_tax_ids"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    name="l10n_co_default_rte_ica_tax_ids"
+                                    widget="many2many_tags"
+                                    domain="[('company_id', '=', company_id), ('l10n_co_withholding_type', '=', 'rte_ica')]"
+                                />
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

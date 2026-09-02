@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- SECCIÓN A: AGRICULTURA, GANADERÍA, CAZA, SILVICULTURA Y PESCA -->
+    <record id="activity_0111" model="l10n.co.economic.activity">
+        <field name="code">0111</field>
+        <field
+            name="name"
+        >Cultivo de cereales (excepto arroz), legumbres y semillas oleaginosas</field>
+    </record>
+    <record id="activity_0112" model="l10n.co.economic.activity">
+        <field name="code">0112</field>
+        <field name="name">Cultivo de arroz</field>
+    </record>
+    <record id="activity_0113" model="l10n.co.economic.activity">
+        <field name="code">0113</field>
+        <field name="name">Cultivo de hortalizas, raíces y tubérculos</field>
+    </record>
+    <record id="activity_0123" model="l10n.co.economic.activity">
+        <field name="code">0123</field>
+        <field name="name">Cultivo de café</field>
+    </record>
+    <record id="activity_0141" model="l10n.co.economic.activity">
+        <field name="code">0141</field>
+        <field name="name">Cría de ganado bovino y bufalino</field>
+    </record>
+
+    <!-- SECCIÓN B: EXPLOTACIÓN DE MINAS Y CANTERAS -->
+    <record id="activity_0510" model="l10n.co.economic.activity">
+        <field name="code">0510</field>
+        <field name="name">Extracción de hulla (carbón de piedra)</field>
+    </record>
+    <record id="activity_0610" model="l10n.co.economic.activity">
+        <field name="code">0610</field>
+        <field name="name">Extracción de petróleo crudo</field>
+    </record>
+    <record id="activity_0722" model="l10n.co.economic.activity">
+        <field name="code">0722</field>
+        <field name="name">Extracción de oro y otros metales preciosos</field>
+    </record>
+
+    <!-- SECCIÓN C: INDUSTRIAS MANUFACTURERAS -->
+    <record id="activity_1011" model="l10n.co.economic.activity">
+        <field name="code">1011</field>
+        <field
+            name="name"
+        >Procesamiento y conservación de carne y productos cárnicos</field>
+    </record>
+    <record id="activity_1040" model="l10n.co.economic.activity">
+        <field name="code">1040</field>
+        <field name="name">Elaboración de productos lácteos</field>
+    </record>
+    <record id="activity_1071" model="l10n.co.economic.activity">
+        <field name="code">1071</field>
+        <field name="name">Elaboración y refinación de azúcar</field>
+    </record>
+    <record id="activity_1101" model="l10n.co.economic.activity">
+        <field name="code">1101</field>
+        <field
+            name="name"
+        >Destilación, rectificación y mezcla de bebidas alcohólicas</field>
+    </record>
+    <record id="activity_1103" model="l10n.co.economic.activity">
+        <field name="code">1103</field>
+        <field
+            name="name"
+        >Producción de malta, elaboración de cervezas y otras bebidas malteadas</field>
+    </record>
+    <record id="activity_2011" model="l10n.co.economic.activity">
+        <field name="code">2011</field>
+        <field
+            name="name"
+        >Fabricación de sustancias y productos químicos básicos</field>
+    </record>
+    <record id="activity_2100" model="l10n.co.economic.activity">
+        <field name="code">2100</field>
+        <field
+            name="name"
+        >Fabricación de productos farmacéuticos, sustancias químicas medicinales</field>
+    </record>
+    <record id="activity_2511" model="l10n.co.economic.activity">
+        <field name="code">2511</field>
+        <field
+            name="name"
+        >Fabricación de productos metálicos para uso estructural</field>
+    </record>
+    <record id="activity_2910" model="l10n.co.economic.activity">
+        <field name="code">2910</field>
+        <field name="name">Fabricación de vehículos automotores y sus motores</field>
+    </record>
+
+    <!-- SECCIÓN D: SUMINISTRO DE ELECTRICIDAD, GAS, VAPOR Y AIRE ACONDICIONADO -->
+    <record id="activity_3511" model="l10n.co.economic.activity">
+        <field name="code">3511</field>
+        <field name="name">Generación de energía eléctrica</field>
+    </record>
+    <record id="activity_3512" model="l10n.co.economic.activity">
+        <field name="code">3512</field>
+        <field name="name">Transmisión de energía eléctrica</field>
+    </record>
+    <record id="activity_3513" model="l10n.co.economic.activity">
+        <field name="code">3513</field>
+        <field name="name">Distribución de energía eléctrica</field>
+    </record>
+    <record id="activity_3520" model="l10n.co.economic.activity">
+        <field name="code">3520</field>
+        <field
+            name="name"
+        >Producción de gas; distribución de combustibles gaseosos por tuberías</field>
+    </record>
+
+    <!-- SECCIÓN E: SUMINISTRO DE AGUA; EVACUACIÓN DE AGUAS RESIDUALES -->
+    <record id="activity_3600" model="l10n.co.economic.activity">
+        <field name="code">3600</field>
+        <field name="name">Captación, tratamiento y distribución de agua</field>
+    </record>
+
+    <!-- SECCIÓN F: CONSTRUCCIÓN -->
+    <record id="activity_4111" model="l10n.co.economic.activity">
+        <field name="code">4111</field>
+        <field name="name">Construcción de edificios residenciales</field>
+    </record>
+    <record id="activity_4112" model="l10n.co.economic.activity">
+        <field name="code">4112</field>
+        <field name="name">Construcción de edificios no residenciales</field>
+    </record>
+    <record id="activity_4210" model="l10n.co.economic.activity">
+        <field name="code">4210</field>
+        <field name="name">Construcción de carreteras y vías de ferrocarril</field>
+    </record>
+
+    <!-- SECCIÓN G: COMERCIO AL POR MAYOR Y AL POR MENOR -->
+    <record id="activity_4511" model="l10n.co.economic.activity">
+        <field name="code">4511</field>
+        <field name="name">Comercio de vehículos automotores nuevos</field>
+    </record>
+    <record id="activity_4530" model="l10n.co.economic.activity">
+        <field name="code">4530</field>
+        <field
+            name="name"
+        >Comercio de partes, piezas y accesorios para vehículos automotores</field>
+    </record>
+    <record id="activity_4631" model="l10n.co.economic.activity">
+        <field name="code">4631</field>
+        <field name="name">Comercio al por mayor de productos alimenticios</field>
+    </record>
+    <record id="activity_4651" model="l10n.co.economic.activity">
+        <field name="code">4651</field>
+        <field
+            name="name"
+        >Comercio al por mayor de computadores, equipo periférico y programas de informática</field>
+    </record>
+    <record id="activity_4661" model="l10n.co.economic.activity">
+        <field name="code">4661</field>
+        <field
+            name="name"
+        >Comercio al por mayor de combustibles sólidos, líquidos, gaseosos</field>
+    </record>
+    <record id="activity_4711" model="l10n.co.economic.activity">
+        <field name="code">4711</field>
+        <field
+            name="name"
+        >Comercio al por menor en establecimientos no especializados</field>
+    </record>
+    <record id="activity_4721" model="l10n.co.economic.activity">
+        <field name="code">4721</field>
+        <field
+            name="name"
+        >Comercio al por menor de productos agrícolas en establecimientos especializados</field>
+    </record>
+    <record id="activity_4731" model="l10n.co.economic.activity">
+        <field name="code">4731</field>
+        <field name="name">Comercio al por menor de combustible para automotores</field>
+    </record>
+    <record id="activity_4771" model="l10n.co.economic.activity">
+        <field name="code">4771</field>
+        <field
+            name="name"
+        >Comercio al por menor de prendas de vestir y sus accesorios</field>
+    </record>
+    <record id="activity_4773" model="l10n.co.economic.activity">
+        <field name="code">4773</field>
+        <field
+            name="name"
+        >Comercio al por menor de productos farmacéuticos y medicinales</field>
+    </record>
+
+    <!-- SECCIÓN H: TRANSPORTE Y ALMACENAMIENTO -->
+    <record id="activity_4923" model="l10n.co.economic.activity">
+        <field name="code">4923</field>
+        <field name="name">Transporte de carga por carretera</field>
+    </record>
+    <record id="activity_5011" model="l10n.co.economic.activity">
+        <field name="code">5011</field>
+        <field name="name">Transporte de pasajeros marítimo y de cabotaje</field>
+    </record>
+    <record id="activity_5111" model="l10n.co.economic.activity">
+        <field name="code">5111</field>
+        <field name="name">Transporte aéreo nacional de pasajeros</field>
+    </record>
+    <record id="activity_5210" model="l10n.co.economic.activity">
+        <field name="code">5210</field>
+        <field name="name">Almacenamiento y depósito</field>
+    </record>
+
+    <!-- SECCIÓN I: ACTIVIDADES DE SERVICIOS DE ALOJAMIENTO Y DE COMIDAS -->
+    <record id="activity_5511" model="l10n.co.economic.activity">
+        <field name="code">5511</field>
+        <field name="name">Alojamiento en hoteles</field>
+    </record>
+    <record id="activity_5611" model="l10n.co.economic.activity">
+        <field name="code">5611</field>
+        <field name="name">Expendio a la mesa de comidas preparadas</field>
+    </record>
+    <record id="activity_5630" model="l10n.co.economic.activity">
+        <field name="code">5630</field>
+        <field
+            name="name"
+        >Expendio de bebidas alcohólicas para el consumo dentro del establecimiento</field>
+    </record>
+
+    <!-- SECCIÓN J: INFORMACIÓN Y COMUNICACIONES -->
+    <record id="activity_5820" model="l10n.co.economic.activity">
+        <field name="code">5820</field>
+        <field name="name">Edición de programas de informática (software)</field>
+    </record>
+    <record id="activity_6110" model="l10n.co.economic.activity">
+        <field name="code">6110</field>
+        <field name="name">Actividades de telecomunicaciones alámbricas</field>
+    </record>
+    <record id="activity_6120" model="l10n.co.economic.activity">
+        <field name="code">6120</field>
+        <field name="name">Actividades de telecomunicaciones inalámbricas</field>
+    </record>
+    <record id="activity_6190" model="l10n.co.economic.activity">
+        <field name="code">6190</field>
+        <field name="name">Otras actividades de telecomunicaciones</field>
+    </record>
+    <record id="activity_6201" model="l10n.co.economic.activity">
+        <field name="code">6201</field>
+        <field name="name">Actividades de desarrollo de sistemas informáticos</field>
+    </record>
+    <record id="activity_6202" model="l10n.co.economic.activity">
+        <field name="code">6202</field>
+        <field
+            name="name"
+        >Actividades de consultaría informática y actividades de administración de equipos informáticos</field>
+    </record>
+    <record id="activity_6209" model="l10n.co.economic.activity">
+        <field name="code">6209</field>
+        <field
+            name="name"
+        >Otras actividades de tecnologías de información y actividades de servicios informáticos</field>
+    </record>
+    <record id="activity_6311" model="l10n.co.economic.activity">
+        <field name="code">6311</field>
+        <field
+            name="name"
+        >Procesamiento de datos, alojamiento (hosting) y actividades relacionadas</field>
+    </record>
+
+    <!-- SECCIÓN K: ACTIVIDADES FINANCIERAS Y DE SEGUROS -->
+    <record id="activity_6411" model="l10n.co.economic.activity">
+        <field name="code">6411</field>
+        <field name="name">Actividades de banca central</field>
+    </record>
+    <record id="activity_6412" model="l10n.co.economic.activity">
+        <field name="code">6412</field>
+        <field name="name">Actividades de establecimientos financieros</field>
+    </record>
+    <record id="activity_6511" model="l10n.co.economic.activity">
+        <field name="code">6511</field>
+        <field name="name">Seguros generales</field>
+    </record>
+    <record id="activity_6512" model="l10n.co.economic.activity">
+        <field name="code">6512</field>
+        <field name="name">Seguros de vida</field>
+    </record>
+
+    <!-- SECCIÓN L: ACTIVIDADES INMOBILIARIAS -->
+    <record id="activity_6810" model="l10n.co.economic.activity">
+        <field name="code">6810</field>
+        <field
+            name="name"
+        >Actividades inmobiliarias realizadas con bienes propios o arrendados</field>
+    </record>
+    <record id="activity_6820" model="l10n.co.economic.activity">
+        <field name="code">6820</field>
+        <field
+            name="name"
+        >Actividades inmobiliarias realizadas a cambio de una retribución o por contrata</field>
+    </record>
+
+    <!-- SECCIÓN M: ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS -->
+    <record id="activity_6910" model="l10n.co.economic.activity">
+        <field name="code">6910</field>
+        <field name="name">Actividades jurídicas</field>
+    </record>
+    <record id="activity_6920" model="l10n.co.economic.activity">
+        <field name="code">6920</field>
+        <field
+            name="name"
+        >Actividades de contabilidad, teneduría de libros, auditoría financiera y asesoría tributaria</field>
+    </record>
+    <record id="activity_7010" model="l10n.co.economic.activity">
+        <field name="code">7010</field>
+        <field name="name">Actividades de administración empresarial</field>
+    </record>
+    <record id="activity_7020" model="l10n.co.economic.activity">
+        <field name="code">7020</field>
+        <field name="name">Actividades de consultaría de gestión</field>
+    </record>
+    <record id="activity_7110" model="l10n.co.economic.activity">
+        <field name="code">7110</field>
+        <field
+            name="name"
+        >Actividades de arquitectura e ingeniería y otras actividades conexas de consultoría técnica</field>
+    </record>
+    <record id="activity_7120" model="l10n.co.economic.activity">
+        <field name="code">7120</field>
+        <field name="name">Ensayos y análisis técnicos</field>
+    </record>
+    <record id="activity_7210" model="l10n.co.economic.activity">
+        <field name="code">7210</field>
+        <field
+            name="name"
+        >Investigaciones y desarrollo experimental en el campo de las ciencias naturales y la ingeniería</field>
+    </record>
+    <record id="activity_7310" model="l10n.co.economic.activity">
+        <field name="code">7310</field>
+        <field name="name">Publicidad</field>
+    </record>
+    <record id="activity_7410" model="l10n.co.economic.activity">
+        <field name="code">7410</field>
+        <field name="name">Actividades especializadas de diseño</field>
+    </record>
+    <record id="activity_7420" model="l10n.co.economic.activity">
+        <field name="code">7420</field>
+        <field name="name">Actividades de fotografía</field>
+    </record>
+
+    <!-- SECCIÓN N: ACTIVIDADES DE SERVICIOS ADMINISTRATIVOS Y DE APOYO -->
+    <record id="activity_7810" model="l10n.co.economic.activity">
+        <field name="code">7810</field>
+        <field
+            name="name"
+        >Actividades de agencias de empleo y agencias de colocación laboral</field>
+    </record>
+    <record id="activity_7820" model="l10n.co.economic.activity">
+        <field name="code">7820</field>
+        <field name="name">Actividades de empresas de servicios temporales</field>
+    </record>
+    <record id="activity_8010" model="l10n.co.economic.activity">
+        <field name="code">8010</field>
+        <field name="name">Actividades de seguridad privada</field>
+    </record>
+    <record id="activity_8110" model="l10n.co.economic.activity">
+        <field name="code">8110</field>
+        <field name="name">Actividades combinadas de apoyo a instalaciones</field>
+    </record>
+    <record id="activity_8121" model="l10n.co.economic.activity">
+        <field name="code">8121</field>
+        <field name="name">Actividades generales de limpieza de interiores</field>
+    </record>
+    <record id="activity_8130" model="l10n.co.economic.activity">
+        <field name="code">8130</field>
+        <field name="name">Actividades de mantenimiento de áreas verdes</field>
+    </record>
+
+    <!-- SECCIÓN O: ADMINISTRACIÓN PÚBLICA Y DEFENSA -->
+    <record id="activity_8411" model="l10n.co.economic.activity">
+        <field name="code">8411</field>
+        <field name="name">Actividades de la administración pública en general</field>
+    </record>
+
+    <!-- SECCIÓN P: ENSEÑANZA -->
+    <record id="activity_8511" model="l10n.co.economic.activity">
+        <field name="code">8511</field>
+        <field name="name">Educación de la primera infancia</field>
+    </record>
+    <record id="activity_8512" model="l10n.co.economic.activity">
+        <field name="code">8512</field>
+        <field name="name">Educación preescolar</field>
+    </record>
+    <record id="activity_8513" model="l10n.co.economic.activity">
+        <field name="code">8513</field>
+        <field name="name">Educación básica primaria</field>
+    </record>
+    <record id="activity_8521" model="l10n.co.economic.activity">
+        <field name="code">8521</field>
+        <field name="name">Educación básica secundaria</field>
+    </record>
+    <record id="activity_8530" model="l10n.co.economic.activity">
+        <field name="code">8530</field>
+        <field name="name">Educación de media técnica y académica</field>
+    </record>
+    <record id="activity_8541" model="l10n.co.economic.activity">
+        <field name="code">8541</field>
+        <field name="name">Educación técnica profesional</field>
+    </record>
+    <record id="activity_8542" model="l10n.co.economic.activity">
+        <field name="code">8542</field>
+        <field name="name">Educación profesional universitaria</field>
+    </record>
+
+    <!-- SECCIÓN Q: ACTIVIDADES DE ATENCIÓN DE LA SALUD HUMANA Y DE ASISTENCIA SOCIAL -->
+    <record id="activity_8610" model="l10n.co.economic.activity">
+        <field name="code">8610</field>
+        <field name="name">Actividades de hospitales y clínicas, con internación</field>
+    </record>
+    <record id="activity_8621" model="l10n.co.economic.activity">
+        <field name="code">8621</field>
+        <field name="name">Actividades de la práctica médica, sin internación</field>
+    </record>
+    <record id="activity_8622" model="l10n.co.economic.activity">
+        <field name="code">8622</field>
+        <field name="name">Actividades de la práctica odontológica</field>
+    </record>
+    <record id="activity_8691" model="l10n.co.economic.activity">
+        <field name="code">8691</field>
+        <field name="name">Actividades de apoyo diagnóstico</field>
+    </record>
+    <record id="activity_8699" model="l10n.co.economic.activity">
+        <field name="code">8699</field>
+        <field name="name">Otras actividades de atención de la salud humana</field>
+    </record>
+
+    <!-- SECCIÓN R: ACTIVIDADES ARTÍSTICAS, DE ENTRETENIMIENTO Y RECREATIVAS -->
+    <record id="activity_9001" model="l10n.co.economic.activity">
+        <field name="code">9001</field>
+        <field
+            name="name"
+        >Actividades de creación, interpretación y ejecución artística</field>
+    </record>
+    <record id="activity_9002" model="l10n.co.economic.activity">
+        <field name="code">9002</field>
+        <field
+            name="name"
+        >Actividades de soporte a la creación, interpretación y ejecución artística</field>
+    </record>
+    <record id="activity_9311" model="l10n.co.economic.activity">
+        <field name="code">9311</field>
+        <field name="name">Gestión de instalaciones deportivas</field>
+    </record>
+    <record id="activity_9319" model="l10n.co.economic.activity">
+        <field name="code">9319</field>
+        <field name="name">Otras actividades deportivas</field>
+    </record>
+
+    <!-- SECCIÓN S: OTRAS ACTIVIDADES DE SERVICIOS -->
+    <record id="activity_9511" model="l10n.co.economic.activity">
+        <field name="code">9511</field>
+        <field name="name">Reparación de computadores y equipo periférico</field>
+    </record>
+    <record id="activity_9512" model="l10n.co.economic.activity">
+        <field name="code">9512</field>
+        <field name="name">Reparación de equipo de comunicación</field>
+    </record>
+    <record id="activity_9601" model="l10n.co.economic.activity">
+        <field name="code">9601</field>
+        <field
+            name="name"
+        >Lavado y limpieza de prendas de tela y de productos de piel</field>
+    </record>
+    <record id="activity_9602" model="l10n.co.economic.activity">
+        <field name="code">9602</field>
+        <field name="name">Corte de cabello, arreglos de belleza y manicura</field>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+/* Copyright 2026 juparmer - Juan Arcos <juanparmer@gmail.com>
+   License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
+
+.o_field_inline {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 60px !important;
+    vertical-align: middle !important;
+}
+
+.o_field_inline input {
+    width: 50px !important;
+}
