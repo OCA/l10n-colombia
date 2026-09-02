@@ -1,0 +1,667 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_economic_activities
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_form
+msgid "Actividad Económica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model,name:l10n_co_economic_activities.model_l10n_co_economic_activity
+msgid "Actividad Económica CIIU Colombia"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_res_partner__l10n_co_economic_activity_id
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_res_users__l10n_co_economic_activity_id
+msgid "Actividad Económica Principal"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_res_partner__l10n_co_secondary_activity_id
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_res_users__l10n_co_secondary_activity_id
+msgid "Actividad Económica Secundaria"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_res_partner__l10n_co_economic_activity_id
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_res_users__l10n_co_economic_activity_id
+msgid "Actividad económica principal según CIIU Colombia"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_res_partner__l10n_co_secondary_activity_id
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_res_users__l10n_co_secondary_activity_id
+msgid "Actividad económica secundaria según CIIU Colombia"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.actions.act_window,name:l10n_co_economic_activities.action_l10n_co_economic_activity
+#: model:ir.ui.menu,name:l10n_co_economic_activities.menu_l10n_co_economic_activity
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_tree
+msgid "Actividades Económicas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_partner_form_l10n_co_economic_activities
+msgid "Actividades Económicas Colombia"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8110
+msgid "Actividades combinadas de apoyo a instalaciones"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7010
+msgid "Actividades de administración empresarial"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7810
+msgid "Actividades de agencias de empleo y agencias de colocación laboral"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8691
+msgid "Actividades de apoyo diagnóstico"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7110
+msgid ""
+"Actividades de arquitectura e ingeniería y otras actividades conexas de "
+"consultoría técnica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6411
+msgid "Actividades de banca central"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7020
+msgid "Actividades de consultaría de gestión"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6202
+msgid ""
+"Actividades de consultaría informática y actividades de administración de "
+"equipos informáticos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6920
+msgid ""
+"Actividades de contabilidad, teneduría de libros, auditoría financiera y "
+"asesoría tributaria"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9001
+msgid "Actividades de creación, interpretación y ejecución artística"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6201
+msgid "Actividades de desarrollo de sistemas informáticos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7820
+msgid "Actividades de empresas de servicios temporales"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6412
+msgid "Actividades de establecimientos financieros"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7420
+msgid "Actividades de fotografía"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8610
+msgid "Actividades de hospitales y clínicas, con internación"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8411
+msgid "Actividades de la administración pública en general"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8621
+msgid "Actividades de la práctica médica, sin internación"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8622
+msgid "Actividades de la práctica odontológica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8130
+msgid "Actividades de mantenimiento de áreas verdes"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8010
+msgid "Actividades de seguridad privada"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9002
+msgid ""
+"Actividades de soporte a la creación, interpretación y ejecución artística"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6110
+msgid "Actividades de telecomunicaciones alámbricas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6120
+msgid "Actividades de telecomunicaciones inalámbricas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7410
+msgid "Actividades especializadas de diseño"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8121
+msgid "Actividades generales de limpieza de interiores"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6820
+msgid ""
+"Actividades inmobiliarias realizadas a cambio de una retribución o por "
+"contrata"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6810
+msgid "Actividades inmobiliarias realizadas con bienes propios o arrendados"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6910
+msgid "Actividades jurídicas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__active
+msgid "Activo"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_search
+msgid "Agrupar por"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5210
+msgid "Almacenamiento y depósito"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5511
+msgid "Alojamiento en hoteles"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_search
+msgid "Archivadas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_search
+msgid "Buscar Actividad Económica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_3600
+msgid "Captación, tratamiento y distribución de agua"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4661
+msgid "Comercio al por mayor de combustibles sólidos, líquidos, gaseosos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4651
+msgid ""
+"Comercio al por mayor de computadores, equipo periférico y programas de "
+"informática"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4631
+msgid "Comercio al por mayor de productos alimenticios"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4731
+msgid "Comercio al por menor de combustible para automotores"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4771
+msgid "Comercio al por menor de prendas de vestir y sus accesorios"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4721
+msgid ""
+"Comercio al por menor de productos agrícolas en establecimientos "
+"especializados"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4773
+msgid "Comercio al por menor de productos farmacéuticos y medicinales"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4711
+msgid "Comercio al por menor en establecimientos no especializados"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4530
+msgid "Comercio de partes, piezas y accesorios para vehículos automotores"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4511
+msgid "Comercio de vehículos automotores nuevos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4210
+msgid "Construcción de carreteras y vías de ferrocarril"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4112
+msgid "Construcción de edificios no residenciales"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4111
+msgid "Construcción de edificios residenciales"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model,name:l10n_co_economic_activities.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9602
+msgid "Corte de cabello, arreglos de belleza y manicura"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.actions.act_window,help:l10n_co_economic_activities.action_l10n_co_economic_activity
+msgid "Cree la primera actividad económica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0141
+msgid "Cría de ganado bovino y bufalino"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0112
+msgid "Cultivo de arroz"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0123
+msgid "Cultivo de café"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0111
+msgid "Cultivo de cereales (excepto arroz), legumbres y semillas oleaginosas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0113
+msgid "Cultivo de hortalizas, raíces y tubérculos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__code
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_search
+msgid "Código"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_l10n_co_economic_activity__code
+msgid "Código CIIU de la actividad económica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__name
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_search
+msgid "Descripción"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_l10n_co_economic_activity__name
+msgid "Descripción de la actividad económica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_1101
+msgid "Destilación, rectificación y mezcla de bebidas alcohólicas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_3513
+msgid "Distribución de energía eléctrica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5820
+msgid "Edición de programas de informática (software)"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8513
+msgid "Educación básica primaria"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8521
+msgid "Educación básica secundaria"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8511
+msgid "Educación de la primera infancia"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8530
+msgid "Educación de media técnica y académica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8512
+msgid "Educación preescolar"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8542
+msgid "Educación profesional universitaria"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8541
+msgid "Educación técnica profesional"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_form
+msgid "Ej: 6201"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.constraint,message:l10n_co_economic_activities.constraint_l10n_co_economic_activity_code_unique
+msgid "El código de actividad económica debe ser único."
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_1040
+msgid "Elaboración de productos lácteos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_1071
+msgid "Elaboración y refinación de azúcar"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7120
+msgid "Ensayos y análisis técnicos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5611
+msgid "Expendio a la mesa de comidas preparadas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5630
+msgid ""
+"Expendio de bebidas alcohólicas para el consumo dentro del establecimiento"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0510
+msgid "Extracción de hulla (carbón de piedra)"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0722
+msgid "Extracción de oro y otros metales preciosos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_0610
+msgid "Extracción de petróleo crudo"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_2100
+msgid ""
+"Fabricación de productos farmacéuticos, sustancias químicas medicinales"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_2511
+msgid "Fabricación de productos metálicos para uso estructural"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_2011
+msgid "Fabricación de sustancias y productos químicos básicos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_2910
+msgid "Fabricación de vehículos automotores y sus motores"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_3511
+msgid "Generación de energía eléctrica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9311
+msgid "Gestión de instalaciones deportivas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_l10n_co_economic_activity__active
+msgid "Indica si la actividad económica está activa"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7210
+msgid ""
+"Investigaciones y desarrollo experimental en el campo de las ciencias "
+"naturales y la ingeniería"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model_terms:ir.actions.act_window,help:l10n_co_economic_activities.action_l10n_co_economic_activity
+msgid ""
+"Las actividades económicas CIIU son utilizadas para la facturación electrónica\n"
+"                y para determinar las tarifas de retención en Colombia."
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9601
+msgid "Lavado y limpieza de prendas de tela y de productos de piel"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_l10n_co_economic_activity__complete_name
+#: model_terms:ir.ui.view,arch_db:l10n_co_economic_activities.view_l10n_co_economic_activity_search
+msgid "Nombre Completo"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_res_partner__l10n_co_other_activity_ids
+#: model:ir.model.fields,field_description:l10n_co_economic_activities.field_res_users__l10n_co_other_activity_ids
+msgid "Otras Actividades Económicas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_8699
+msgid "Otras actividades de atención de la salud humana"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6209
+msgid ""
+"Otras actividades de tecnologías de información y actividades de servicios "
+"informáticos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6190
+msgid "Otras actividades de telecomunicaciones"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9319
+msgid "Otras actividades deportivas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_res_partner__l10n_co_other_activity_ids
+#: model:ir.model.fields,help:l10n_co_economic_activities.field_res_users__l10n_co_other_activity_ids
+msgid "Otras actividades económicas según CIIU Colombia"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6311
+msgid ""
+"Procesamiento de datos, alojamiento (hosting) y actividades relacionadas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_1011
+msgid "Procesamiento y conservación de carne y productos cárnicos"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_3520
+msgid "Producción de gas; distribución de combustibles gaseosos por tuberías"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_1103
+msgid "Producción de malta, elaboración de cervezas y otras bebidas malteadas"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_7310
+msgid "Publicidad"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9511
+msgid "Reparación de computadores y equipo periférico"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_9512
+msgid "Reparación de equipo de comunicación"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6512
+msgid "Seguros de vida"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_6511
+msgid "Seguros generales"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_3512
+msgid "Transmisión de energía eléctrica"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5111
+msgid "Transporte aéreo nacional de pasajeros"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_4923
+msgid "Transporte de carga por carretera"
+msgstr ""
+
+#. module: l10n_co_economic_activities
+#: model:l10n.co.economic.activity,name:l10n_co_economic_activities.activity_5011
+msgid "Transporte de pasajeros marítimo y de cabotaje"
+msgstr ""
