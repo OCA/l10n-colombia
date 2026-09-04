@@ -23,8 +23,11 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [l10n_co_check_vat](l10n_co_check_vat/) | 18.0.1.0.0 | <a href='https://github.com/juanparmer'><img src='https://github.com/juanparmer.png' width='32' height='32' style='border-radius:50%;' alt='juanparmer'/></a> | Colombian NIT/VAT validation
 [l10n_co_currency_rate_update](l10n_co_currency_rate_update/) | 18.0.1.0.0 |  | Tasa de cambio de Superfinanciera para Colombia
+[l10n_co_economic_activities](l10n_co_economic_activities/) | 18.0.1.0.0 | <a href='https://github.com/juanparmer'><img src='https://github.com/juanparmer.png' width='32' height='32' style='border-radius:50%;' alt='juanparmer'/></a> | Códigos de actividades económicas CIIU para Colombia
 [l10n_co_electronic_invoice](l10n_co_electronic_invoice/) | 18.0.1.0.0 |  | Campos y datos de pre-configuración para la Factura Electrónica en Colombia
 [l10n_co_electronic_invoice_self](l10n_co_electronic_invoice_self/) | 18.0.2.0.0 |  | Integración con la DIAN Colombia para la emisión de Facturas Electrónicas en modo de operación software propio
+[l10n_co_verification_digit](l10n_co_verification_digit/) | 18.0.1.0.0 | <a href='https://github.com/juanparmer'><img src='https://github.com/juanparmer.png' width='32' height='32' style='border-radius:50%;' alt='juanparmer'/></a> | Compute Colombian NIT verification digit (DIAN algorithm)
+[l10n_co_withholding](l10n_co_withholding/) | 18.0.1.0.0 | <a href='https://github.com/juanparmer'><img src='https://github.com/juanparmer.png' width='32' height='32' style='border-radius:50%;' alt='juanparmer'/></a> | Retención en la fuente (RteFte), ReteIVA y ReteICA para Colombia
 [l10n_co_withholding_advance](l10n_co_withholding_advance/) | 18.0.1.0.0 |  | Soporte para retenciones anticipadas en la contabilidad colombiana.
 
 [//]: # (end addons)
