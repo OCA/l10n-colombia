@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_withholding_certificate"
+        name="Withholding Certificates"
+        parent="account.menu_finance_reports"
+        action="action_withholding_certificate_wizard"
+        groups="account.group_account_user"
+        sequence="90"/>
+</odoo>

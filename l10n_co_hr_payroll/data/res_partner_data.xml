@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2026 Juan Arcos
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!--
+        Terceros oficiales de los aportes parafiscales.
+        Por ley (PILA / Decreto 3667 de 2004) los aportes a SENA e ICBF se
+        recaudan a través de las Cajas de Compensación Familiar, pero la
+        compañía puede pagarlos a estos terceros directamente según su flujo.
+    -->
+
+    <record id="res_partner_sena" model="res.partner">
+        <field name="name">Servicio Nacional de Aprendizaje (SENA)</field>
+        <field name="is_company" eval="True" />
+        <field name="vat">899999034</field>
+        <field name="street">CL 57 # 8-69</field>
+        <field name="city" eval="'Bogotá'" />
+        <field name="country_id" ref="base.co" />
+    </record>
+
+    <record id="res_partner_icbf" model="res.partner">
+        <field name="name">Instituto Colombiano de Bienestar Familiar (ICBF)</field>
+        <field name="is_company" eval="True" />
+        <field name="vat">899999239</field>
+        <field name="street">Av. Carrera 68 # 64C-75</field>
+        <field name="city" eval="'Bogotá'" />
+        <field name="country_id" ref="base.co" />
+    </record>
+</odoo>

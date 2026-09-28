@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="withholding_certificate_wizard_view_form" model="ir.ui.view">
+        <field name="name">l10n_co.withholding.certificate.wizard.form</field>
+        <field name="model">l10n_co.withholding.certificate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Withholding Certificate">
+                <group>
+                    <group>
+                        <field name="company_id"/>
+                        <field name="certificate_type"/>
+                        <field name="fiscal_year"/>
+                        <field name="period_type"/>
+                        <field name="bimester" invisible="period_type != 'bimonthly'" required="period_type == 'bimonthly'"/>
+                    </group>
+                    <group>
+                        <field name="date_from" readonly="period_type != 'custom'"/>
+                        <field name="date_to" readonly="period_type != 'custom'"/>
+                        <field name="partner_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <separator string="Result"/>
+                <group>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="has_results" invisible="1"/>
+                    <field name="partner_count" readonly="1"/>
+                    <field name="total_base_amount" readonly="1" widget="monetary"/>
+                    <field name="total_withheld_amount" readonly="1" widget="monetary"/>
+                </group>
+                <footer>
+                    <button name="action_preview" string="Preview" type="object" class="oe_highlight"/>
+                    <button name="action_print_certificate" string="Generate PDF" type="object" class="oe_highlight"/>
+                    <button string="Close" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_withholding_certificate_wizard" model="ir.actions.act_window">
+        <field name="name">Withholding Certificates</field>
+        <field name="res_model">l10n_co.withholding.certificate.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

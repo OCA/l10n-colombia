@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2026 Juan Arcos
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="action_report_payslip_co" model="ir.actions.report">
+        <field name="name">Desprendible de Nómina (Colombia)</field>
+        <field name="model">hr.payslip</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">l10n_co_hr_payroll.report_payslip</field>
+        <field name="report_file">l10n_co_hr_payroll.report_payslip</field>
+        <field name="print_report_name">
+            'Desprendible de Nómina - %s - %s' % (object.employee_id.name,
+            object.name)
+        </field>
+        <field name="binding_model_id" ref="model_hr_payslip" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_payslip">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Desprendible de Nómina</h2>
+                        <table class="table table-sm table-bordered">
+                            <tr>
+                                <td>
+                                    <strong>Periodo</strong>
+                                </td>
+                                <td>
+                                    <span
+                                        t-field="o.date_from"
+                                        t-options='{"widget": "date"}'
+                                    />
+                                    al
+                                    <span
+                                        t-field="o.date_to"
+                                        t-options='{"widget": "date"}'
+                                    />
+                                </td>
+                                <td>
+                                    <strong>No.</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Empleado</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_id" />
+                                </td>
+                                <td>
+                                    <strong>Cédula</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_id.identification_id" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Cargo</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_id.job_id" />
+                                </td>
+                                <td>
+                                    <strong>Salario Básico</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.contract_id.wage" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>EPS</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_id.l10n_co_eps" />
+                                </td>
+                                <td>
+                                    <strong>Fondo de Pensiones (AFP)</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_id.l10n_co_afp" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <t t-set="lines"
+                           t-value="o.line_ids.filtered(lambda line: line.total and line.appears_on_payslip)" />
+                        <t
+                            t-set="devengo_lines"
+                            t-value="lines.filtered(lambda line: line.category_id.code in ('BASIC', 'SALARIAL', 'NO_SALARIAL'))"
+                        />
+                        <t
+                            t-set="deduction_lines"
+                            t-value="lines.filtered(lambda line: line.category_id.code == 'DEDUCTION')"
+                        />
+                        <t
+                            t-set="employer_lines"
+                            t-value="lines.filtered(lambda line: line.category_id.code in ('EMPLOYER_SS', 'PARAFISCAL', 'PROVISION'))"
+                        />
+
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <h5>Devengado</h5>
+                                <table class="table table-sm table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Concepto</th>
+                                            <th class="text-right">Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="devengo_lines" t-as="line">
+                                            <tr>
+                                                <td>
+                                                    <span
+                                                        t-field="line.name"
+                                                        t-options='{"widget": "text"}'
+                                                    />
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="line.total" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                            <th>Total Devengado</th>
+                                            <th class="text-right"
+                                                t-text="o.l10n_co_total_devengado" />
+                                        </tr>
+                                        <tr>
+                                            <th>IBC (cotización)</th>
+                                            <th class="text-right"
+                                                t-text="o.l10n_co_ibc" />
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h5>Deducciones</h5>
+                                <table class="table table-sm table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Concepto</th>
+                                            <th class="text-right">Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="deduction_lines" t-as="line">
+                                            <tr>
+                                                <td>
+                                                    <span
+                                                        t-field="line.name"
+                                                        t-options='{"widget": "text"}'
+                                                    />
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="line.total" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                            <th>Total Deducciones</th>
+                                            <th class="text-right"
+                                                t-text="o.l10n_co_total_deducciones" />
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h5 class="text-primary">Neto a Pagar</h5>
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <span
+                                            class="display-4 font-weight-bold text-success"
+                                            t-text="o.l10n_co_neto"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h5>Costo para el Empleador</h5>
+                                <table class="table table-sm table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Concepto</th>
+                                            <th class="text-right">Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="employer_lines" t-as="line">
+                                            <tr>
+                                                <td>
+                                                    <span
+                                                        t-field="line.name"
+                                                        t-options='{"widget": "text"}'
+                                                    />
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="line.total" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                            <th>Costo Total Empleador</th>
+                                            <th class="text-right"
+                                                t-text="o.l10n_co_employer_cost" />
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-muted small mt-2">
+                                    El costo total para el empleador equivale al
+                                    neto a pagar más los aportes a la seguridad
+                                    social, parafiscales y provisiones de
+                                    prestaciones sociales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

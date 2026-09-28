@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2026 Juan Arcos
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="hr_employee_view_form_l10n_co" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.l10n.co.payroll</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <page string="Colombia (Nómina)" name="l10n_co_payroll">
+                    <group string="Seguridad Social">
+                        <group>
+                            <field name="l10n_co_eps" />
+                            <field name="l10n_co_afp" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

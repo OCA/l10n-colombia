@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="rte_fte_certificate">
+        <t t-call="web.html_container">
+            <t t-foreach="certificates" t-as="certificate">
+                <div class="page" style="font-size: 12px;">
+                    <div style="text-align: center; margin-bottom: 18px;">
+                        <img t-if="certificate['company_logo']" t-att-src="certificate['company_logo']" style="max-height: 70px; max-width: 180px;"/>
+                        <h2 style="margin: 8px 0 2px;" t-esc="certificate['certificate_title']"/>
+                        <h3 style="margin: 0;">AÑO GRAVABLE <span t-esc="certificate['fiscal_year']"/></h3>
+                        <div t-if="certificate['certificate_type'] in ('rte_iva', 'rte_ica')">BIMESTRE: <span t-esc="certificate['period_label']"/></div>
+                        <div t-if="certificate['certificate_type'] == 'rte_fte' and certificate['period_label'] != 'January - December'">PERIODO: <span t-esc="certificate['period_label']"/></div>
+                    </div>
+
+                    <table class="table table-sm" style="width: 100%; margin-bottom: 16px;">
+                        <tr>
+                            <td style="width: 50%; vertical-align: top;">
+                                <strong>Agente retenedor</strong><br/>
+                                <span t-esc="certificate['company_name']"/><br/>
+                                <span t-if="certificate['company_vat']">NIT: <span t-esc="certificate['company_vat']"/><br/></span>
+                                <span t-esc="', '.join(certificate['company_address'])"/>
+                            </td>
+                            <td style="width: 50%; vertical-align: top;">
+                                <strong>Beneficiario</strong><br/>
+                                <span t-esc="certificate['partner_name']"/><br/>
+                                <span t-if="certificate['partner_vat']">Identificación: <span t-esc="certificate['partner_vat']"/><br/></span>
+                                <span t-esc="', '.join(certificate['partner_address'])"/>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p t-esc="certificate['certificate_description']"/>
+
+                    <table class="table table-sm table-bordered" style="width: 100%; margin-top: 18px;">
+                        <thead>
+                            <tr>
+                                <th>Concepto</th>
+                                <th class="text-end">Base</th>
+                                <th class="text-end">Tarifa</th>
+                                <th class="text-end">Retención</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="certificate['concepts']" t-as="concept">
+                                <td t-esc="concept['concept']"/>
+                                <td class="text-end" t-options="{'widget': 'monetary', 'display_currency': certificate['currency']}" t-esc="concept['base_amount']"/>
+                                <td class="text-end"><span t-esc="abs(concept['rate'])"/> %</td>
+                                <td class="text-end" t-options="{'widget': 'monetary', 'display_currency': certificate['currency']}" t-esc="concept['withheld_amount']"/>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-sm" style="width: 100%; margin-top: 12px;">
+                        <tr>
+                            <th style="width: 70%;">TOTAL BASE</th>
+                            <th class="text-end" t-options="{'widget': 'monetary', 'display_currency': certificate['currency']}" t-esc="certificate['base_amount']"/>
+                        </tr>
+                        <tr>
+                            <th t-if="certificate['certificate_type'] == 'rte_fte'">TOTAL RETENIDO</th>
+                            <th t-if="certificate['certificate_type'] == 'rte_iva'">TOTAL RETENCIÓN IVA</th>
+                            <th t-if="certificate['certificate_type'] == 'rte_ica'">TOTAL RETENCIÓN ICA</th>
+                            <th class="text-end" t-options="{'widget': 'monetary', 'display_currency': certificate['currency']}" t-esc="certificate['withheld_amount']"/>
+                        </tr>
+                    </table>
+
+                    <p style="margin-top: 24px;">Fecha de expedición: <span t-esc="certificate['issue_date']"/></p>
+                    <div style="margin-top: 55px;">
+                        __________________________________<br/>
+                        Responsable / Agente retenedor
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

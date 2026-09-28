@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2026 Juan Arcos
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="res_config_settings_view_form_l10n_co" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.payroll.colombia</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="payroll.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='payroll_structure']" position="after">
+                <block
+                    title="Colombia (Nómina)"
+                    id="l10n_co_payroll_settings"
+                    groups="payroll.group_payroll_manager"
+                >
+                    <setting
+                        string="Salario Mínimo Legal Mensual Vigente (SMMLV)"
+                        id="l10n_co_minimum_wage_setting"
+                        help="SMMLV vigente (2026: 1.750.905 COP). Se usa para el límite del auxilio de transporte (2 SMMLV)."
+                    >
+                        <field name="l10n_co_minimum_wage" />
+                    </setting>
+                    <setting
+                        string="Auxilio de Transporte"
+                        id="l10n_co_transport_assistance_setting"
+                        help="Auxilio de transporte mensual vigente (2026: 249.095 COP). No constituye salario ni hace parte del IBC."
+                    >
+                        <field name="l10n_co_transport_assistance" />
+                    </setting>
+                    <setting
+                        string="Exoneración de aportes de salud y parafiscales"
+                        id="l10n_co_exempt_setting"
+                        help="Aplica el art. 114-1 del Estatuto Tributario (Ley 1819/2016), solo si TODOS los trabajadores ganan menos de 10 SMMLV: se exoneran el 8,5% de salud (empleador), el SENA (2%) y el ICBF (3%)."
+                    >
+                        <field name="l10n_co_exempt_health_parafiscal" />
+                    </setting>
+                    <setting
+                        string="Porcentajes"
+                        id="l10n_co_rates_setting"
+                        help="Tasas legales aplicadas sobre el IBC (Ingreso Base de Cotización). Ajuste solo si la norma cambia."
+                    >
+                        <div class="row">
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_health_employee_percentage"
+                                    string="Salud (trabajador)"
+                                />
+                                <field
+                                    name="l10n_co_health_employee_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_health_employer_percentage"
+                                    string="Salud (empleador)"
+                                />
+                                <field
+                                    name="l10n_co_health_employer_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_pension_employee_percentage"
+                                    string="Pensión (trabajador)"
+                                />
+                                <field
+                                    name="l10n_co_pension_employee_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_pension_employer_percentage"
+                                    string="Pensión (empleador)"
+                                />
+                                <field
+                                    name="l10n_co_pension_employer_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_parafiscal_ccf_percentage"
+                                    string="Caja de Compensación Familiar"
+                                />
+                                <field
+                                    name="l10n_co_parafiscal_ccf_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_parafiscal_sena_percentage"
+                                    string="SENA"
+                                />
+                                <field
+                                    name="l10n_co_parafiscal_sena_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_parafiscal_icbf_percentage"
+                                    string="ICBF"
+                                />
+                                <field
+                                    name="l10n_co_parafiscal_icbf_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_provision_prima_percentage"
+                                    string="Provisión Prima de Servicios"
+                                />
+                                <field
+                                    name="l10n_co_provision_prima_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_provision_cesantias_percentage"
+                                    string="Provisión Cesantías"
+                                />
+                                <field
+                                    name="l10n_co_provision_cesantias_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_provision_interests_percentage"
+                                    string="Provisión Intereses Cesantías"
+                                />
+                                <field
+                                    name="l10n_co_provision_interests_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_provision_vacaciones_percentage"
+                                    string="Provisión Vacaciones"
+                                />
+                                <field
+                                    name="l10n_co_provision_vacaciones_percentage"
+                                    class="oe_inline"
+                                />
+                            </div>
+                        </div>
+                    </setting>
+                    <setting
+                        string="Terceros de los aportes (cuentas por pagar 237000)"
+                        id="l10n_co_third_parties_setting"
+                        help="Entidades acreedoras de los aportes de seguridad social y parafiscales. Las líneas de EPS y AFP usan el tercero del empleado (o el por defecto de la compañía si el empleado no tiene uno)."
+                    >
+                        <div class="row">
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_eps_partner_id"
+                                    string="EPS por defecto"
+                                />
+                                <field
+                                    name="l10n_co_eps_partner_id"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_afp_partner_id"
+                                    string="AFP por defecto"
+                                />
+                                <field
+                                    name="l10n_co_afp_partner_id"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_arl_partner_id"
+                                    string="ARL"
+                                />
+                                <field
+                                    name="l10n_co_arl_partner_id"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_ccf_partner_id"
+                                    string="Caja de Compensación Familiar"
+                                />
+                                <field
+                                    name="l10n_co_ccf_partner_id"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_sena_partner_id"
+                                    string="SENA"
+                                />
+                                <field
+                                    name="l10n_co_sena_partner_id"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="l10n_co_icbf_partner_id"
+                                    string="ICBF"
+                                />
+                                <field
+                                    name="l10n_co_icbf_partner_id"
+                                    class="oe_inline"
+                                />
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

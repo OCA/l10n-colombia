@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2026 Juan Arcos
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="hr_payslip_view_form_l10n_co" model="ir.ui.view">
+        <field name="name">hr.payslip.view.form.l10n.co.payroll</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="payroll.hr_payslip_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='top']" position="after">
+                <group string="Nómina Colombia" name="l10n_co_payroll">
+                    <group>
+                        <field name="l10n_co_ibc" />
+                        <field name="l10n_co_total_devengado" />
+                        <field name="l10n_co_total_deducciones" />
+                    </group>
+                    <group>
+                        <field name="l10n_co_neto" />
+                        <field name="l10n_co_employer_cost" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
